@@ -1,4 +1,6 @@
 #### Godot Basic ####
 
 - Docs EN : https://docs.godotengine.org/en/stable/
-- Docs KR : https://docs.godotengine.org/ko/stable/index.html
+- Docs KR
+  - https://docs.godotengine.org/ko/stable/index.html
+  - https://docs.godotengine.org/ko/stable/getting_started/step_by_step/index.html
