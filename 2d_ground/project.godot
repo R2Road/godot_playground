@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="2d_ground"
-run/main_scene="res://gds_step_01_keyboard_input/gds_step_keyboard_input.tscn"
+run/main_scene="res://gds_step_02_log/gds_step_log.tscn"
 config/icon="res://icon.png"
 
 [rendering]
