@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://resources/sprite/actor001/actor001_win_01.png" type="Texture" id=1]
+
+[node name="gds_step_sprite_01" type="Node2D"]
+
+[node name="actor001_win_01" type="Sprite" parent="."]
+position = Vector2( 505.782, 301.566 )
+scale = Vector2( 7.45425, 6.8434 )
+texture = ExtResource( 1 )
