@@ -5,6 +5,6 @@
 [node name="gds_step_sprite_01" type="Node2D"]
 
 [node name="actor001_win_01" type="Sprite" parent="."]
-position = Vector2( 505.782, 301.566 )
-scale = Vector2( 7.45425, 6.8434 )
+position = Vector2( 512, 300 )
+scale = Vector2( 8, 8 )
 texture = ExtResource( 1 )
