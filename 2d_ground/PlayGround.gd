@@ -2,7 +2,7 @@ extends Node2D
 
 
 var title_string = \
-	"Play Ground" \
+	"+ Play Ground" \
 	+ "\n" \
 	+ "[ESC] Exit"
 
@@ -13,7 +13,7 @@ func _ready():
 	
 	summury_node.set_position(
 		summury_node.get_position()
-		- Vector2( summury_node.rect_size.x * 0.5, summury_node.rect_size.y * 0.5 )
+		- Vector2( summury_node.get_minimum_size().x * 0.5, summury_node.get_minimum_size().y * 0.5 )
 	)
 	
 	set_process_input( true ) # is not need : default on
