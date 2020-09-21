@@ -9,6 +9,8 @@ var title_string = \
 	+ "[1] Empty" \
 	+ "\n" \
 	+ "[2] OS" \
+	+ "\n" \
+	+ "[3] Tree Order" \
 	+ ""
 
 
@@ -39,3 +41,5 @@ func _input(event):
 			get_tree().change_scene("res://gds_basic/gds_basic_EmptyScene.tscn")
 		KEY_2:
 			get_tree().change_scene("res://gds_basic/gds_basic_OSScene.tscn")
+		KEY_3:
+			get_tree().change_scene("res://gds_basic/gds_basic_TreeOrderScene.tscn")
