@@ -7,6 +7,9 @@ var title_string = \
 	+ "[ESC] Exit" \
 	+ "\n\n" \
 	+ "[1] Empty" \
+	+ "\n" \
+	+ "[2] OS" \
+	+ ""
 
 
 func _ready():
@@ -34,3 +37,5 @@ func _input(event):
 			get_tree().quit()
 		KEY_1:
 			get_tree().change_scene("res://gds_basic/gds_basic_EmptyScene.tscn")
+		KEY_2:
+			get_tree().change_scene("res://gds_basic/gds_basic_OSScene.tscn")
