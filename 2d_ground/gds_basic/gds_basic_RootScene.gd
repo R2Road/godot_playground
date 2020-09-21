@@ -26,7 +26,13 @@ func _ready():
 	
 	
 func _input(event):
-	if event is InputEventKey and event.is_pressed():
-		if event.scancode == KEY_ESCAPE:
+	if !(event is InputEventKey ):
+		return
+	
+	if !event.is_pressed():
+		return
+		
+	match event.scancode:
+		KEY_ESCAPE:
 			set_process_input( false )
 			get_tree().quit()
