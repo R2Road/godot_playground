@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="2d_ground"
-run/main_scene="res://gds_step_03_sprite/gds_step_sprite_InstanceScene02.tscn"
+run/main_scene="res://PlayGround.tscn"
 config/icon="res://icon.png"
 
 [rendering]
