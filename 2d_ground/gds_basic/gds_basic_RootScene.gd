@@ -12,7 +12,9 @@ var title_string = \
 	+ "\n" \
 	+ "[3] Tree Order" \
 	+ "\n" \
-	+ "[4] Keyboard Input" \
+	+ "[4] Log" \
+	+ "\n" \
+	+ "[5] Keyboard Input" \
 	+ ""
 
 
@@ -46,4 +48,6 @@ func _input(event):
 		KEY_3:
 			get_tree().change_scene("res://gds_basic/gds_basic_TreeOrderScene.tscn")
 		KEY_4:
+			get_tree().change_scene("res://gds_basic/gds_basic_LogScene.tscn")
+		KEY_5:
 			get_tree().change_scene("res://gds_basic/gds_basic_KeyboardInputScene.tscn")
