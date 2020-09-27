@@ -4,7 +4,7 @@ extends Node2D
 var title_string = \
 	"+ gds basic Root" \
 	+ "\n" \
-	+ "[ESC] Exit" \
+	+ "[ESC] Return to Root" \
 	+ "\n\n" \
 	+ "[1] Empty" \
 	+ "\n" \
@@ -39,8 +39,7 @@ func _input(event):
 		
 	match event.scancode:
 		KEY_ESCAPE:
-			set_process_input( false )
-			get_tree().quit()
+			get_tree().change_scene("res://PlayGround.tscn")
 		KEY_1:
 			get_tree().change_scene("res://gds_basic/gds_basic_EmptyScene.tscn")
 		KEY_2:
