@@ -28,6 +28,6 @@ func _input(event):
 func UpdateMessage( arg ):
 	$Message.text = str( arg )
 	$Message.set_position(
-		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.5 )
-		- Vector2( $Message.get_minimum_size().x * 0.5, $Message.get_minimum_size().y * 0.5 )
+			Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.5 )
+			- ( Vector2( $Message.get_minimum_size().x * 0.5, $Message.get_minimum_size().y * 0.5 ) * $Message.get_scale() )
 	)
