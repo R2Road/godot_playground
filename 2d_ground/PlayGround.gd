@@ -2,12 +2,12 @@ extends Node2D
 
 
 var title_string = \
-	"+ Play Ground" \
-	+ "\n" \
-	+ "[ESC] Exit" \
-	+ "\n\n" \
-	+ "[1] Basic" \
-	+ ""
+		"+ Play Ground" \
+		+ "\n" \
+		+ "[ESC] Exit" \
+		+ "\n\n" \
+		+ "[1] Basic" \
+		+ ""
 
 
 func _ready():

@@ -2,22 +2,22 @@ extends Node2D
 
 
 var title_string = \
-	"+ gds basic Root" \
-	+ "\n" \
-	+ "[ESC] Return to Root" \
-	+ "\n\n" \
-	+ "[1] Empty" \
-	+ "\n" \
-	+ "[2] OS" \
-	+ "\n" \
-	+ "[3] Tree Order" \
-	+ "\n" \
-	+ "[4] Log" \
-	+ "\n" \
-	+ "[5] Keyboard Input" \
-	+ "\n" \
-	+ "[6] Node Path" \
-	+ ""
+		"+ gds basic Root" \
+		+ "\n" \
+		+ "[ESC] Return to Root" \
+		+ "\n\n" \
+		+ "[1] Empty" \
+		+ "\n" \
+		+ "[2] OS" \
+		+ "\n" \
+		+ "[3] Tree Order" \
+		+ "\n" \
+		+ "[4] Log" \
+		+ "\n" \
+		+ "[5] Keyboard Input" \
+		+ "\n" \
+		+ "[6] Node Path" \
+		+ ""
 
 
 func _ready():

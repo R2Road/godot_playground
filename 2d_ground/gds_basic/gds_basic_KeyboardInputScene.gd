@@ -4,10 +4,10 @@ func _ready():
 	set_process_input( true ) # is not need : default on
 
 	var title_string = \
-		"+ Keyboard Input" \
-		+ "\n" \
-		+ "[ESC] Return to Root" \
-		+ ""
+			"+ Keyboard Input" \
+			+ "\n" \
+			+ "[ESC] Return to Root" \
+			+ ""
 		
 	var summury_node = get_node( "Summury" )
 	summury_node.text = title_string
@@ -26,8 +26,9 @@ func _input(event):
 			UpdateMessage( "key pressed : " + event.as_text() )
 			
 func UpdateMessage( arg ):
-	$Message.text = str( arg )
-	$Message.set_position(
+	var message_node = get_node( "Message" )
+	message_node.text = str( arg )
+	message_node.set_position(
 			Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.5 )
-			- ( Vector2( $Message.get_minimum_size().x * 0.5, $Message.get_minimum_size().y * 0.5 ) * $Message.get_scale() )
+			- ( Vector2( message_node.get_minimum_size().x * 0.5, message_node.get_minimum_size().y * 0.5 ) * $Message.get_scale() )
 	)

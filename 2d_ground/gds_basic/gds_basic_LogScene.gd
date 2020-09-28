@@ -4,10 +4,10 @@ func _ready():
 	set_process_input( true ) # is not need : default on
 
 	var title_string = \
-		"+ Log" \
-		+ "\n" \
-		+ "[ESC] Return to Root" \
-		+ ""
+			"+ Log" \
+			+ "\n" \
+			+ "[ESC] Return to Root" \
+			+ ""
 		
 	var summury_node = get_node( "Summury" )
 	summury_node.text = title_string
