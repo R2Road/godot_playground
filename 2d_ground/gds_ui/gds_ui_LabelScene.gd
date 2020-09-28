@@ -5,20 +5,17 @@ func _ready():
 	set_process_input( true ) # is not need : default on
 
 	var title_string = \
-			"+ UI" \
+			"+ Empty" \
 			+ "\n" \
 			+ "[ESC] Return to Root" \
 			+ "\n\n" \
-			+ "[1] Label" \
+			+ "[A] Change Color : Blue" \
+			+ "\n" \
+			+ "[S] Change Color : Green" \
 			+ ""
 		
 	var summury_node = get_node( "Summury" )
 	summury_node.text = title_string
-	
-	summury_node.set_position(
-		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.5 )
-		- Vector2( summury_node.get_minimum_size().x * 0.5, summury_node.get_minimum_size().y * 0.5 )
-	)
 	
 	
 func _input(event):
@@ -30,6 +27,9 @@ func _input(event):
 		
 	match event.scancode:
 		KEY_ESCAPE:
-			get_tree().change_scene("res://PlayGround.tscn")
-		KEY_1:
-			get_tree().change_scene("res://gds_ui/gds_ui_LabelScene.tscn")
+			get_tree().change_scene( "res://gds_ui/gds_ui_RootScene.tscn" )
+		KEY_A:
+			get_node( "Summury" ).add_color_override( "font_color", Color( 0, 0, 1 ) )
+		KEY_S:
+			get_node( "Summury" ).set( "custom_colors/font_color", Color( 0, 1, 0 ) )
+			
