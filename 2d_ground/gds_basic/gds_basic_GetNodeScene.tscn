@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://gds_basic/gds_basic_GetNodeScene_2_1_1.gd" type="Script" id=1]
 [ext_resource path="res://gds_basic/gds_basic_GetNodeScene.gd" type="Script" id=2]
+[ext_resource path="res://gds_basic/gds_basic_GetNodeScene_4.gd" type="Script" id=3]
 
 [node name="gds_basic_GetNodeScene" type="Node2D"]
 script = ExtResource( 2 )
@@ -62,3 +63,33 @@ text = "3_1"
 margin_right = 40.0
 margin_bottom = 14.0
 text = "3_1_1"
+
+[node name="4" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "4"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4_1" type="Label" parent="4"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "4_1"
+
+[node name="4_2" type="Label" parent="4"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "4_2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4_3" type="Label" parent="4"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "4_3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
