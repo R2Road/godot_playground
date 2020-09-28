@@ -7,6 +7,8 @@ var title_string = \
 		+ "[ESC] Exit" \
 		+ "\n\n" \
 		+ "[1] Basic" \
+		+ "\n" \
+		+ "[2] UI" \
 		+ ""
 
 
@@ -35,4 +37,6 @@ func _input(event):
 			get_tree().quit()
 		KEY_1:
 			get_tree().change_scene("res://gds_basic/gds_basic_RootScene.tscn")
+		KEY_2:
+			get_tree().change_scene("res://gds_ui/gds_ui_RootScene.tscn")
 
