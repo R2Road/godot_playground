@@ -16,7 +16,7 @@ var title_string = \
 		+ "\n" \
 		+ "[5] Keyboard Input" \
 		+ "\n" \
-		+ "[6] Node Path" \
+		+ "[6] Get Node" \
 		+ ""
 
 
