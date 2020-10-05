@@ -17,6 +17,8 @@ var title_string = \
 		+ "[5] Keyboard Input" \
 		+ "\n" \
 		+ "[6] Get Node" \
+		+ "\n" \
+		+ "[7] Node Path" \
 		+ ""
 
 
@@ -54,3 +56,5 @@ func _input(event):
 			get_tree().change_scene("res://gds_basic/gds_basic_KeyboardInputScene.tscn")
 		KEY_6:
 			get_tree().change_scene("res://gds_basic/gds_basic_GetNodeScene.tscn")
+		KEY_7:
+			get_tree().change_scene("res://gds_basic/gds_basic_NodePathScene.tscn")

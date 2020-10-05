@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://gds_basic/gds_basic_NodePathScene_C_1_1.gd" type="Script" id=1]
+[ext_resource path="res://gds_basic/gds_basic_NodePathScene.gd" type="Script" id=2]
+
+[node name="gds_basic_GetNodeScene" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Summury" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="A" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="A_1" type="Label" parent="A"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "1_1"
+
+[node name="B" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B_1" type="Label" parent="B"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "2_1"
+
+[node name="B_1_1" type="Label" parent="B/B_1"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "2_1_1"
+
+[node name="C" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C_1" type="Label" parent="C"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "3_1"
+
+[node name="C_1_1" type="Label" parent="C/C_1"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "3_1_1"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
