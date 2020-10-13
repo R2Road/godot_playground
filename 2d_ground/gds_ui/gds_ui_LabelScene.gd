@@ -12,6 +12,8 @@ func _ready():
 			+ "[A] Change Color : Blue" \
 			+ "\n" \
 			+ "[S] Change Color : Green" \
+			+ "\n" \
+			+ "[D] Append Text" \
 			+ ""
 		
 	var summury_node = get_node( "Summury" )
@@ -32,4 +34,6 @@ func _input(event):
 			get_node( "Summury" ).add_color_override( "font_color", Color( 0, 0, 1 ) )
 		KEY_S:
 			get_node( "Summury" ).set( "custom_colors/font_color", Color( 0, 1, 0 ) )
+		KEY_D:
+			get_node( "Summury" ).text += "\nTest String"
 			
