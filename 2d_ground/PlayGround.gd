@@ -30,12 +30,12 @@ func _input(event):
 	if !event.is_pressed():
 		return
 		
-	match event.scancode:
+	match event.keycode:
 		KEY_ESCAPE:
 			set_process_input( false )
 			get_tree().quit()
 		KEY_1:
-			get_tree().change_scene("res://gds_basic/gds_basic_RootScene.tscn")
+			get_tree().change_scene_to_file("res://gds_basic/gds_basic_RootScene.tscn")
 		KEY_2:
-			get_tree().change_scene("res://gds_ui/gds_ui_RootScene.tscn")
+			get_tree().change_scene_to_file("res://gds_ui/gds_ui_RootScene.tscn")
 

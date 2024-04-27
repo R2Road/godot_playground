@@ -27,13 +27,13 @@ func _input(event):
 	if !event.is_pressed():
 		return
 		
-	match event.scancode:
+	match event.keycode:
 		KEY_ESCAPE:
-			get_tree().change_scene( "res://gds_ui/gds_ui_RootScene.tscn" )
+			get_tree().change_scene_to_file( "res://gds_ui/gds_ui_RootScene.tscn" )
 		KEY_A:
-			get_node( "Summury" ).add_color_override( "font_color", Color( 0, 0, 1 ) )
+			get_node( "Summury" ).add_theme_color_override( "font_color", Color( 0, 0, 1 ) )
 		KEY_S:
-			get_node( "Summury" ).set( "custom_colors/font_color", Color( 0, 1, 0 ) )
+			get_node( "Summury" ).set( "theme_override_colors/font_color", Color( 0, 1, 0 ) )
 		KEY_D:
 			get_node( "Summury" ).text += "\nTest String"
 			

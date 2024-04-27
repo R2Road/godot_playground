@@ -8,65 +8,65 @@
 script = ExtResource( 2 )
 
 [node name="Summury" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+offset_right = 40.0
+offset_bottom = 14.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="1" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+offset_right = 40.0
+offset_bottom = 14.0
 text = "1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="1_1" type="Label" parent="1"]
-margin_right = 40.0
-margin_bottom = 14.0
+offset_right = 40.0
+offset_bottom = 14.0
 text = "1_1"
 
 [node name="2" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+offset_right = 40.0
+offset_bottom = 14.0
 text = "2"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="2_1" type="Label" parent="2"]
-margin_right = 40.0
-margin_bottom = 14.0
+offset_right = 40.0
+offset_bottom = 14.0
 text = "2_1"
 
 [node name="2_1_1" type="Label" parent="2/2_1"]
-margin_right = 40.0
-margin_bottom = 14.0
+offset_right = 40.0
+offset_bottom = 14.0
 text = "2_1_1"
 script = ExtResource( 1 )
 
 [node name="3" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+offset_right = 40.0
+offset_bottom = 14.0
 text = "3"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="3_1" type="Label" parent="3"]
-margin_right = 40.0
-margin_bottom = 14.0
+offset_right = 40.0
+offset_bottom = 14.0
 text = "3_1"
 
 [node name="3_1_1" type="Label" parent="3/3_1"]
-margin_right = 40.0
-margin_bottom = 14.0
+offset_right = 40.0
+offset_bottom = 14.0
 text = "3_1_1"
 
 [node name="4" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+offset_right = 40.0
+offset_bottom = 14.0
 text = "4"
 script = ExtResource( 3 )
 __meta__ = {
@@ -74,21 +74,21 @@ __meta__ = {
 }
 
 [node name="4_1" type="Label" parent="4"]
-margin_right = 40.0
-margin_bottom = 14.0
+offset_right = 40.0
+offset_bottom = 14.0
 text = "4_1"
 
 [node name="4_2" type="Label" parent="4"]
-margin_right = 40.0
-margin_bottom = 14.0
+offset_right = 40.0
+offset_bottom = 14.0
 text = "4_2"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="4_3" type="Label" parent="4"]
-margin_right = 40.0
-margin_bottom = 14.0
+offset_right = 40.0
+offset_bottom = 14.0
 text = "4_3"
 __meta__ = {
 "_edit_use_anchors_": false

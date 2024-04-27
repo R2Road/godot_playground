@@ -25,13 +25,13 @@ func _input(event):
 	if !event.is_pressed():
 		return
 		
-	match event.scancode:
+	match event.keycode:
 		KEY_ESCAPE:
-			get_tree().change_scene("res://gds_basic/gds_basic_RootScene.tscn")
+			get_tree().change_scene_to_file("res://gds_basic/gds_basic_RootScene.tscn")
 		KEY_1:
 			UpdateMessage( OS.shell_open("https://godotengine.org/") )
 		KEY_2:
-			UpdateMessage( OS.get_datetime() )
+			UpdateMessage( Time.get_datetime_dict_from_system() )
 
 
 func UpdateMessage( arg ):

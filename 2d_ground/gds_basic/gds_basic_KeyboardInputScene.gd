@@ -19,9 +19,9 @@ func _input(event):
 	if !event.is_pressed():
 		return
 		
-	match event.scancode:
+	match event.keycode:
 		KEY_ESCAPE:
-			get_tree().change_scene("res://gds_basic/gds_basic_RootScene.tscn")
+			get_tree().change_scene_to_file("res://gds_basic/gds_basic_RootScene.tscn")
 		_:
 			UpdateMessage( "key pressed : " + event.as_text() )
 			

@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://resources/sprite/actor001/actor001_win_02.png" type="Texture" id=1]
+[ext_resource path="res://resources/sprite/actor001/actor001_win_02.png" type="Texture2D" id=1]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="actor001_win_01" type="Sprite" parent="."]
+[node name="actor001_win_01" type="Sprite2D" parent="."]
 scale = Vector2( 8, 8 )
 texture = ExtResource( 1 )

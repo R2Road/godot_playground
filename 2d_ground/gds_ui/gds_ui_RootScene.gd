@@ -28,8 +28,8 @@ func _input(event):
 	if !event.is_pressed():
 		return
 		
-	match event.scancode:
+	match event.keycode:
 		KEY_ESCAPE:
-			get_tree().change_scene("res://PlayGround.tscn")
+			get_tree().change_scene_to_file("res://PlayGround.tscn")
 		KEY_1:
-			get_tree().change_scene("res://gds_ui/gds_ui_LabelScene.tscn")
+			get_tree().change_scene_to_file("res://gds_ui/gds_ui_LabelScene.tscn")

@@ -18,7 +18,7 @@ var title_string = \
 		+ "\n" \
 		+ "[6] Get Node" \
 		+ "\n" \
-		+ "[7] Node Path" \
+		+ "[7] Node Path3D" \
 		+ ""
 
 
@@ -41,20 +41,20 @@ func _input(event):
 	if !event.is_pressed():
 		return
 		
-	match event.scancode:
+	match event.keycode:
 		KEY_ESCAPE:
-			get_tree().change_scene("res://PlayGround.tscn")
+			get_tree().change_scene_to_file("res://PlayGround.tscn")
 		KEY_1:
-			get_tree().change_scene("res://gds_basic/gds_basic_EmptyScene.tscn")
+			get_tree().change_scene_to_file("res://gds_basic/gds_basic_EmptyScene.tscn")
 		KEY_2:
-			get_tree().change_scene("res://gds_basic/gds_basic_OSScene.tscn")
+			get_tree().change_scene_to_file("res://gds_basic/gds_basic_OSScene.tscn")
 		KEY_3:
-			get_tree().change_scene("res://gds_basic/gds_basic_TreeOrderScene.tscn")
+			get_tree().change_scene_to_file("res://gds_basic/gds_basic_TreeOrderScene.tscn")
 		KEY_4:
-			get_tree().change_scene("res://gds_basic/gds_basic_LogScene.tscn")
+			get_tree().change_scene_to_file("res://gds_basic/gds_basic_LogScene.tscn")
 		KEY_5:
-			get_tree().change_scene("res://gds_basic/gds_basic_KeyboardInputScene.tscn")
+			get_tree().change_scene_to_file("res://gds_basic/gds_basic_KeyboardInputScene.tscn")
 		KEY_6:
-			get_tree().change_scene("res://gds_basic/gds_basic_GetNodeScene.tscn")
+			get_tree().change_scene_to_file("res://gds_basic/gds_basic_GetNodeScene.tscn")
 		KEY_7:
-			get_tree().change_scene("res://gds_basic/gds_basic_NodePathScene.tscn")
+			get_tree().change_scene_to_file("res://gds_basic/gds_basic_NodePathScene.tscn")
