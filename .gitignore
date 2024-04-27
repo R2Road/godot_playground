@@ -1,5 +1,6 @@
 
 # Godot-specific ignores
+2d_ground/.godot/
 2d_ground/.import/
 2d_ground/export.cfg
 2d_ground/export_presets.cfg
