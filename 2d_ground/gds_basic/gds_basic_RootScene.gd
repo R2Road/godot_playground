@@ -43,7 +43,7 @@ func _input(event):
 		
 	match event.keycode:
 		KEY_ESCAPE:
-			get_tree().change_scene_to_file("res://PlayGround.tscn")
+			get_tree().change_scene_to_file("res://playground_main.tscn")
 		KEY_1:
 			get_tree().change_scene_to_file("res://gds_basic/gds_basic_EmptyScene.tscn")
 		KEY_2:
