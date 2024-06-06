@@ -1,4 +1,4 @@
-class_name PlaygroundBase
+class_name NextSceneInfo
 
 
 

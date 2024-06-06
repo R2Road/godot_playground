@@ -4,9 +4,9 @@ extends Node2D
 
 ############################ Variable ############################
 var next_scenes = [
-	  PlaygroundBase.new( "Exit",  Key.KEY_ESCAPE, "res://playground_exit.tscn" )
-	, PlaygroundBase.new( "Basic",  Key.KEY_1, "res://gds_basic/gds_basic_RootScene.tscn" )
-	, PlaygroundBase.new( "UI", Key.KEY_2, "res://gds_ui/gds_ui_RootScene.tscn" )
+	  NextSceneInfo.new( "Exit",  Key.KEY_ESCAPE, "res://playground_exit.tscn" )
+	, NextSceneInfo.new( "Basic",  Key.KEY_1, "res://gds_basic/gds_basic_RootScene.tscn" )
+	, NextSceneInfo.new( "UI", Key.KEY_2, "res://gds_ui/gds_ui_RootScene.tscn" )
 ]
 
 
