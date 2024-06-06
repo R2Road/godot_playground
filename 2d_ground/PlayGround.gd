@@ -15,11 +15,8 @@ var next_scene_manager = NextSceneManager.new(	[
 func _ready():
 	set_process_input( true ) # is not need : default on
 	
-	var title_string = next_scene_manager.build_summary( "PlayGround" )
-	
 	var summury_node = get_node( "Summury" )
-	summury_node.text = title_string
-	
+	summury_node.text = next_scene_manager.build_summary( "PlayGround" )	
 	summury_node.set_position(
 		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.5 )
 		- Vector2( summury_node.get_minimum_size().x * 0.5, summury_node.get_minimum_size().y * 0.5 )
