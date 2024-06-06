@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://b3ljn5npfx6dx"]
 
-[ext_resource path="res://gds_step_03_sprite/gds_step_sprite_InstanceScene02.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://gds_step_03_sprite/gds_step_sprite_InstanceScene02.gd" id="1"]
 
 [node name="gds_step_sprite_InstanceScene02" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
