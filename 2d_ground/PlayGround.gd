@@ -15,15 +15,7 @@ var next_scene_manager = NextSceneManager.new(	[
 func _ready():
 	set_process_input( true ) # is not need : default on
 	
-	var title_string = "" \
-			+ "+ Play Ground" \
-			+ "\n" \
-			+ "[ESC] Exit" \
-			+ "\n\n" \
-			+ "[1] Basic" \
-			+ "\n" \
-			+ "[2] UI" \
-			+ ""
+	var title_string = next_scene_manager.build_summary( "PlayGround" )
 	
 	var summury_node = get_node( "Summury" )
 	summury_node.text = title_string
