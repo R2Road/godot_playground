@@ -4,7 +4,7 @@ extends Node2D
 
 ############################ Variable ############################
 var next_scenes = [
-	  PlaygroundBase.new( "Exit",  Key.KEY_ESCAPE, "" )
+	  PlaygroundBase.new( "Exit",  Key.KEY_ESCAPE, "res://playground_exit.tscn" )
 	, PlaygroundBase.new( "Basic",  Key.KEY_1, "res://gds_basic/gds_basic_RootScene.tscn" )
 	, PlaygroundBase.new( "UI", Key.KEY_2, "res://gds_ui/gds_ui_RootScene.tscn" )
 ]
@@ -40,13 +40,7 @@ func _input(event):
 	
 	if !event.is_pressed():
 		return
-		
-	match event.keycode:
-		KEY_ESCAPE:
-			set_process_input( false )
-			get_tree().quit()
-		KEY_1:
-			get_tree().change_scene_to_file("res://gds_basic/gds_basic_RootScene.tscn")
-		KEY_2:
-			get_tree().change_scene_to_file("res://gds_ui/gds_ui_RootScene.tscn")
-
+	
+	for i in next_scenes:
+		if i.key == event.keycode:
+			get_tree().change_scene_to_file( i.scene_path )
