@@ -3,7 +3,11 @@ extends Node2D
 
 
 ############################ Variable ############################
-var base = PlaygroundBase.new( "Play Ground" )
+var next_scenes = [
+	  PlaygroundBase.new( "Exit",  Key.KEY_ESCAPE, "" )
+	, PlaygroundBase.new( "Basic",  Key.KEY_1, "res://gds_basic/gds_basic_RootScene.tscn" )
+	, PlaygroundBase.new( "UI", Key.KEY_2, "res://gds_ui/gds_ui_RootScene.tscn" )
+]
 
 
 
@@ -12,7 +16,7 @@ func _ready():
 	set_process_input( true ) # is not need : default on
 	
 	var title_string = "" \
-			+ "+ " + base.name \
+			+ "+ Play Ground" \
 			+ "\n" \
 			+ "[ESC] Exit" \
 			+ "\n\n" \
