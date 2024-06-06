@@ -3,11 +3,11 @@ extends Node2D
 
 
 ############################ Variable ############################
-var next_scenes = [
+var next_scene_manager = NextSceneManager.new(	[
 	  NextSceneInfo.new( "Exit",  Key.KEY_ESCAPE, "res://playground_exit.tscn" )
 	, NextSceneInfo.new( "Basic",  Key.KEY_1, "res://gds_basic/gds_basic_RootScene.tscn" )
 	, NextSceneInfo.new( "UI", Key.KEY_2, "res://gds_ui/gds_ui_RootScene.tscn" )
-]
+] )
 
 
 
@@ -41,6 +41,6 @@ func _input(event):
 	if !event.is_pressed():
 		return
 	
-	for i in next_scenes:
+	for i in next_scene_manager.container:
 		if i.key == event.keycode:
 			get_tree().change_scene_to_file( i.scene_path )
