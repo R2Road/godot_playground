@@ -1,60 +1,42 @@
 extends Node2D
 
 
-var title_string = \
-		"+ gds basic Root" \
-		+ "\n" \
-		+ "[ESC] Return to Root" \
-		+ "\n\n" \
-		+ "[1] Empty" \
-		+ "\n" \
-		+ "[2] OS" \
-		+ "\n" \
-		+ "[3] Tree Order" \
-		+ "\n" \
-		+ "[4] Log" \
-		+ "\n" \
-		+ "[5] Keyboard Input" \
-		+ "\n" \
-		+ "[6] Get Node" \
-		+ "\n" \
-		+ "[7] Node Path3D" \
-		+ ""
+
+############################ Variable ############################
+var next_scene_manager = NextSceneManager.new(	[
+	  NextSceneInfo.new( "Return to Root", 	Key.KEY_ESCAPE, "res://playground_main.tscn" )
+	, NextSceneInfo.new( "Empty",  			Key.KEY_1, 		"res://gds_basic/gds_basic_EmptyScene.tscn" )
+	, NextSceneInfo.new( "OS", 				Key.KEY_2, 		"res://gds_basic/gds_basic_OSScene.tscn" )
+	, NextSceneInfo.new( "Tree Order", 		Key.KEY_3, 		"res://gds_basic/gds_basic_TreeOrderScene.tscn" )
+	, NextSceneInfo.new( "Log", 			Key.KEY_4, 		"res://gds_basic/gds_basic_LogScene.tscn" )
+	, NextSceneInfo.new( "Keyboard Input", 	Key.KEY_5, 		"res://gds_basic/gds_basic_KeyboardInputScene.tscn" )
+	, NextSceneInfo.new( "Get Node", 		Key.KEY_6, 		"res://gds_basic/gds_basic_GetNodeScene.tscn" )
+	, NextSceneInfo.new( "Node Path3D", 	Key.KEY_7, 		"res://gds_basic/gds_basic_NodePathScene.tscn" )
+] )
 
 
+
+############################ Override ############################
 func _ready():
-	var summury_node = get_node( "Summury" )
-	summury_node.text = title_string
+	set_process_input( true ) # is not need : default on
 	
+	var summury_node = get_node( "Summury" )	
+	summury_node.text = next_scene_manager.build_summary( "GD Script Basic" )	
 	summury_node.set_position(
 		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.5 )
 		- Vector2( summury_node.get_minimum_size().x * 0.5, summury_node.get_minimum_size().y * 0.5 )
 	)
-	
-	set_process_input( true ) # is not need : default on
-	
-	
+
+
 func _input(event):
 	if !(event is InputEventKey ):
 		return
 	
 	if !event.is_pressed():
 		return
-		
-	match event.keycode:
-		KEY_ESCAPE:
-			get_tree().change_scene_to_file("res://playground_main.tscn")
-		KEY_1:
-			get_tree().change_scene_to_file("res://gds_basic/gds_basic_EmptyScene.tscn")
-		KEY_2:
-			get_tree().change_scene_to_file("res://gds_basic/gds_basic_OSScene.tscn")
-		KEY_3:
-			get_tree().change_scene_to_file("res://gds_basic/gds_basic_TreeOrderScene.tscn")
-		KEY_4:
-			get_tree().change_scene_to_file("res://gds_basic/gds_basic_LogScene.tscn")
-		KEY_5:
-			get_tree().change_scene_to_file("res://gds_basic/gds_basic_KeyboardInputScene.tscn")
-		KEY_6:
-			get_tree().change_scene_to_file("res://gds_basic/gds_basic_GetNodeScene.tscn")
-		KEY_7:
-			get_tree().change_scene_to_file("res://gds_basic/gds_basic_NodePathScene.tscn")
+	
+	var next_scene_path = next_scene_manager.get_next_scene( event.keycode )
+	if( next_scene_path.is_empty() ):
+		return
+	
+	get_tree().change_scene_to_file( next_scene_path )
