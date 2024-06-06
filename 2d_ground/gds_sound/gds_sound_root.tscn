@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://dlp2jqljtqu1o"]
 
-[ext_resource type="Script" path="res://gds_ui/gds_ui_root.gd" id="1"]
+[ext_resource type="Script" path="res://gds_sound/gds_sound_root.gd" id="1_wv1sd"]
 
 [node name="GDS_Sound_Root" type="Node2D"]
-script = ExtResource("1")
+script = ExtResource("1_wv1sd")
 
 [node name="Summury" type="Label" parent="."]
 offset_right = 40.0
