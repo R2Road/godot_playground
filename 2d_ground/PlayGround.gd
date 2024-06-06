@@ -41,6 +41,8 @@ func _input(event):
 	if !event.is_pressed():
 		return
 	
-	for i in next_scene_manager.container:
-		if i.key == event.keycode:
-			get_tree().change_scene_to_file( i.scene_path )
+	var next_scene_path = next_scene_manager.get_next_scene( event.keycode )
+	if( next_scene_path.is_empty() ):
+		return
+	
+	get_tree().change_scene_to_file( next_scene_path )

@@ -15,3 +15,13 @@ func _init( _container : Array )->void:
 			container.push_back( i )
 		else:
 			assert( false )
+
+
+
+############################   User   ############################
+func get_next_scene( keycode : Key )->String:
+	for i in container:
+		if i.key == keycode:
+			return i.scene_path
+	
+	return ""
