@@ -5,14 +5,14 @@ extends Node2D
 ############################ Variable ############################
 var title = "GD Script Basic"
 var playground_action_manager = PlayGroundActionManager.new(	[
-	  PlayGroundAction.new( "Return to Root", 	Key.KEY_ESCAPE, "res://playground_main.tscn" )
-	, PlayGroundAction.new( "Empty",  			Key.KEY_1, 		"res://gds_basic/gds_basic_EmptyScene.tscn" )
-	, PlayGroundAction.new( "OS", 				Key.KEY_2, 		"res://gds_basic/gds_basic_OSScene.tscn" )
-	, PlayGroundAction.new( "Tree Order", 		Key.KEY_3, 		"res://gds_basic/gds_basic_TreeOrderScene.tscn" )
-	, PlayGroundAction.new( "Log", 			Key.KEY_4, 		"res://gds_basic/gds_basic_LogScene.tscn" )
-	, PlayGroundAction.new( "Keyboard Input", 	Key.KEY_5, 		"res://gds_basic/gds_basic_KeyboardInputScene.tscn" )
-	, PlayGroundAction.new( "Get Node", 		Key.KEY_6, 		"res://gds_basic/gds_basic_GetNodeScene.tscn" )
-	, PlayGroundAction.new( "Node Path3D", 	Key.KEY_7, 		"res://gds_basic/gds_basic_NodePathScene.tscn" )
+	  PlayGroundAction.new_mover( "Return to Root", 	Key.KEY_ESCAPE, "res://playground_main.tscn" )
+	, PlayGroundAction.new_mover( "Empty",  			Key.KEY_1, 		"res://gds_basic/gds_basic_EmptyScene.tscn" )
+	, PlayGroundAction.new_mover( "OS", 				Key.KEY_2, 		"res://gds_basic/gds_basic_OSScene.tscn" )
+	, PlayGroundAction.new_mover( "Tree Order", 		Key.KEY_3, 		"res://gds_basic/gds_basic_TreeOrderScene.tscn" )
+	, PlayGroundAction.new_mover( "Log", 			Key.KEY_4, 		"res://gds_basic/gds_basic_LogScene.tscn" )
+	, PlayGroundAction.new_mover( "Keyboard Input", 	Key.KEY_5, 		"res://gds_basic/gds_basic_KeyboardInputScene.tscn" )
+	, PlayGroundAction.new_mover( "Get Node", 		Key.KEY_6, 		"res://gds_basic/gds_basic_GetNodeScene.tscn" )
+	, PlayGroundAction.new_mover( "Node Path3D", 	Key.KEY_7, 		"res://gds_basic/gds_basic_NodePathScene.tscn" )
 ] )
 
 

@@ -10,10 +10,13 @@ var action = func dummy():
 
 
 
-############################ Override ############################
-func _init( _name : String, _key : Key, _scene_path : String )->void:
-	name = _name
-	key = _key
+############################   User   ############################
+static func new_mover( _name : String, _key : Key, _scene_path : String )->PlayGroundAction:
+	var ret = PlayGroundAction.new()
 	
-	action = func ( node : Node ):
+	ret.name = _name
+	ret.key = _key	
+	ret.action = func ( node : Node ):
 		node.get_tree().change_scene_to_file( _scene_path )
+	
+	return ret
