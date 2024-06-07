@@ -4,7 +4,7 @@ extends Node2D
 
 ############################ Variable ############################
 var title = "PlayGround"
-var playground_action_manager = PlayGroundActionManager.new(	[
+var playground_action_manager = PlayGroundActionManager.new( self, [
 	  PlayGroundAction.new_mover( "Exit",  Key.KEY_ESCAPE, "res://playground_exit.tscn" )
 	, PlayGroundAction.new_lf()
 	, PlayGroundAction.new_mover( "Basic",  Key.KEY_1, "res://gds_basic/gds_basic_root.tscn" )
@@ -27,4 +27,4 @@ func _ready():
 
 
 func _input(event):
-	playground_action_manager.do( self, event )
+	playground_action_manager.do( event )

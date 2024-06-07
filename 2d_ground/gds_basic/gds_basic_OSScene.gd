@@ -4,7 +4,7 @@ extends Node2D
 
 ############################ Variable ############################
 var title = "OS"
-var playground_action_manager = PlayGroundActionManager.new(	[
+var playground_action_manager = PlayGroundActionManager.new( self, [
 	  PlayGroundAction.new_mover( "Return to Root",  Key.KEY_ESCAPE, "res://gds_basic/gds_basic_root.tscn" )
 	, PlayGroundAction.new_lf()
 	, PlayGroundAction.new_action( "Shell Open",  Key.KEY_1, test_shell_open )
@@ -22,16 +22,16 @@ func _ready():
 	
 	
 func _input(event):
-	playground_action_manager.do( self, event )
+	playground_action_manager.do( event )
 
 
 
 ############################   User   ############################
-func test_shell_open( node ):
+func test_shell_open():
 	UpdateMessage( OS.shell_open("https://godotengine.org/") )
 
 
-func test_get_dates( node ):
+func test_get_dates():
 	UpdateMessage( Time.get_datetime_dict_from_system() )
 
 

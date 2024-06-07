@@ -8,10 +8,11 @@ var container : Array
 
 
 ############################ Override ############################
-func _init( _container : Array )->void:
+func _init( _owner : Node, _container : Array )->void:
 	
 	for i in _container:
 		assert( i is PlayGroundAction )
+		i.owner = _owner
 		container.push_back( i )
 
 
@@ -37,7 +38,7 @@ func get_action( keycode : Key )->PlayGroundAction:
 	return null
 
 
-func do( node : Node,  event : InputEvent ):
+func do( event : InputEvent ):
 	if !(event is InputEventKey ):
 		return
 	
@@ -48,4 +49,4 @@ func do( node : Node,  event : InputEvent ):
 	if( null == target_action ):
 		return
 	
-	target_action.action.call( node )
+	target_action.action.call()
