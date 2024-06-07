@@ -3,12 +3,14 @@ class_name PlayGroundActionManager
 
 
 ############################ Variable ############################
+var name : String
 var container : Array
 
 
 
 ############################ Override ############################
-func _init( _owner : Node, _container : Array )->void:
+func _init( _owner : Node, _name : String, _container : Array )->void:
+	name = _name
 	
 	for i in _container:
 		assert( null != _owner )
@@ -20,8 +22,8 @@ func _init( _owner : Node, _container : Array )->void:
 
 
 ############################   User   ############################
-func build_summary( current_scene_name : String )->String:
-	var ret : String = ( "+ " + current_scene_name + "\n\n" )
+func build_summary()->String:
+	var ret : String = ( "+ " + name + "\n\n" )
 	
 	for i in container:
 		if Key.KEY_NONE != i.key:
