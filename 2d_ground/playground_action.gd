@@ -29,3 +29,12 @@ static func new_lf()->PlayGroundAction:
 	ret.key = Key.KEY_NONE
 	
 	return ret
+
+
+static func new_lf2()->PlayGroundAction:
+	var ret = PlayGroundAction.new()
+	
+	ret.name = "\n\n"
+	ret.key = Key.KEY_NONE
+	
+	return ret
