@@ -3,7 +3,7 @@ extends Node2D
 
 ############################ Variable ############################
 var title = "Sound"
-var playground_action_manager = PlayGround_ActionManager.new(	[
+var playground_action_manager = PlayGroundActionManager.new(	[
 	  PlayGroundAction.new( "Return to Root",  Key.KEY_ESCAPE, "res://playground_main.tscn" )
 ] )
 #, NextSceneInfo.new( "Label",  Key.KEY_1, "res://gds_sound/gds_sound______.tscn" )

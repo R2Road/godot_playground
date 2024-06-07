@@ -4,7 +4,7 @@ extends Node2D
 
 ############################ Variable ############################
 var title = "GD Script Basic"
-var playground_action_manager = PlayGround_ActionManager.new(	[
+var playground_action_manager = PlayGroundActionManager.new(	[
 	  PlayGroundAction.new( "Return to Root", 	Key.KEY_ESCAPE, "res://playground_main.tscn" )
 	, PlayGroundAction.new( "Empty",  			Key.KEY_1, 		"res://gds_basic/gds_basic_EmptyScene.tscn" )
 	, PlayGroundAction.new( "OS", 				Key.KEY_2, 		"res://gds_basic/gds_basic_OSScene.tscn" )

@@ -1,4 +1,4 @@
-class_name PlayGround_ActionManager
+class_name PlayGroundActionManager
 
 
 
