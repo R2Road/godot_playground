@@ -5,11 +5,11 @@ extends Node2D
 ############################ Variable ############################
 var title = "PlayGround"
 var playground_action_manager = PlayGroundActionManager.new( self, [
-	  PlayGroundAction.new_mover( "Exit",  Key.KEY_ESCAPE, "res://playground_exit.tscn" )
+	  PlayGroundAction.new_mover( "Exit",	Key.KEY_ESCAPE,	"res://playground_exit.tscn" )
 	, PlayGroundAction.new_lf()
-	, PlayGroundAction.new_mover( "Basic",  Key.KEY_1, "res://gds_basic/gds_basic_root.tscn" )
-	, PlayGroundAction.new_mover( "UI", Key.KEY_2, "res://gds_ui/gds_ui_root.tscn" )
-	, PlayGroundAction.new_mover( "Sound", Key.KEY_3, "res://gds_sound/gds_sound_root.tscn" )
+	, PlayGroundAction.new_mover( "Basic",  Key.KEY_1, 		"res://gds_basic/gds_basic_root.tscn" )
+	, PlayGroundAction.new_mover( "UI", 	Key.KEY_2, 		"res://gds_ui/gds_ui_root.tscn" )
+	, PlayGroundAction.new_mover( "Sound",	Key.KEY_3, 		"res://gds_sound/gds_sound_root.tscn" )
 ] )
 
 
