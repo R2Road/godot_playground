@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cki2rkufm7nbx"]
 
-[ext_resource type="Script" path="res://gds_basic/gds_basic_TreeOrderScene.gd" id="1"]
-[ext_resource type="Script" path="res://gds_basic/gds_basic_TreeOrderTest.gd" id="2"]
+[ext_resource type="Script" path="res://gds_basic/gds_basic_tree_order.gd" id="1_2y8fb"]
+[ext_resource type="Script" path="res://gds_basic/gds_basic_tree_order_helper.gd" id="2_ddk68"]
 
 [node name="gds_basic_TreeOrderScene" type="Node2D"]
-script = ExtResource("1")
+script = ExtResource("1_2y8fb")
 
 [node name="Summury" type="Label" parent="."]
 offset_right = 40.0
@@ -19,16 +19,16 @@ scale = Vector2(3, 3)
 text = "Look : Editor > Output"
 
 [node name="Node_1" type="Node" parent="."]
-script = ExtResource("2")
+script = ExtResource("2_ddk68")
 
 [node name="Node_1_1" type="Node" parent="Node_1"]
-script = ExtResource("2")
+script = ExtResource("2_ddk68")
 
 [node name="Node_2" type="Node" parent="."]
-script = ExtResource("2")
+script = ExtResource("2_ddk68")
 
 [node name="Node_3" type="Node" parent="."]
-script = ExtResource("2")
+script = ExtResource("2_ddk68")
 
 [node name="Node_3_1" type="Node" parent="Node_3"]
-script = ExtResource("2")
+script = ExtResource("2_ddk68")
