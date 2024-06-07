@@ -1,11 +1,11 @@
 extends Node2D
 
 
+
 ############################ Variable ############################
 var playground_action_manager = PlayGroundActionManager.new( self, "Sound", [
 	  PlayGroundAction.new_mover( "Return to Root",  Key.KEY_ESCAPE, "res://playground_main.tscn" )
 ] )
-#, NextSceneInfo.new( "Label",  Key.KEY_1, "res://gds_sound/gds_sound______.tscn" )
 
 
 
@@ -21,5 +21,5 @@ func _ready():
 	)
 
 
-func _input(event):
+func _input( event ):
 	playground_action_manager.do( event )

@@ -20,7 +20,7 @@ func _ready():
 	summury_node.text = playground_action_manager.build_summary()
 	
 	
-func _input(event):
+func _input( event ):
 	playground_action_manager.do( event )
 
 
