@@ -1,37 +1,38 @@
 extends Node2D
 
 
+
+############################ Variable ############################
+var title = "OS"
+var playground_action_manager = PlayGroundActionManager.new(	[
+	  PlayGroundAction.new_mover( "Return to Root",  Key.KEY_ESCAPE, "res://gds_basic/gds_basic_root.tscn" )
+	, PlayGroundAction.new_lf()
+	, PlayGroundAction.new_action( "Shell Open",  Key.KEY_1, test_shell_open )
+	, PlayGroundAction.new_action( "Get Dates",  Key.KEY_2, test_get_dates )
+] )
+
+
+
+############################ Override ############################
 func _ready():
 	set_process_input( true ) # is not need : default on
-
-	var title_string = \
-			"+ OS" \
-			+ "\n" \
-			+ "[ESC] Return to Root" \
-			+ "\n\n" \
-			+ "[1] Shell Open" \
-			+ "\n" \
-			+ "[2] Get Dates" \
-			+ ""
 		
 	var summury_node = get_node( "Summury" )
-	summury_node.text = title_string
+	summury_node.text = playground_action_manager.build_summary( title )
 	
 	
 func _input(event):
-	if !(event is InputEventKey ):
-		return
-	
-	if !event.is_pressed():
-		return
-		
-	match event.keycode:
-		KEY_ESCAPE:
-			get_tree().change_scene_to_file("res://gds_basic/gds_basic_root.tscn")
-		KEY_1:
-			UpdateMessage( OS.shell_open("https://godotengine.org/") )
-		KEY_2:
-			UpdateMessage( Time.get_datetime_dict_from_system() )
+	playground_action_manager.do( self, event )
+
+
+
+############################   User   ############################
+func test_shell_open( node ):
+	UpdateMessage( OS.shell_open("https://godotengine.org/") )
+
+
+func test_get_dates( node ):
+	UpdateMessage( Time.get_datetime_dict_from_system() )
 
 
 func UpdateMessage( arg ):

@@ -22,6 +22,16 @@ static func new_mover( _name : String, _key : Key, _scene_path : String )->PlayG
 	return ret
 
 
+static func new_action( _name : String, _key : Key, functor : Callable )->PlayGroundAction:
+	var ret = PlayGroundAction.new()
+	
+	ret.name = _name
+	ret.key = _key	
+	ret.action = functor
+	
+	return ret
+
+
 static func new_lf()->PlayGroundAction:
 	var ret = PlayGroundAction.new()
 	
