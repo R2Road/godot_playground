@@ -4,8 +4,8 @@ extends Node2D
 ############################ Variable ############################
 var title = "UI"
 var playground_action_manager = PlayGround_ActionManager.new(	[
-	  NextSceneInfo.new( "Return to Root",  Key.KEY_ESCAPE, "res://playground_main.tscn" )
-	, NextSceneInfo.new( "Label",  Key.KEY_1, "res://gds_ui/gds_ui_LabelScene.tscn" )
+	  PlayGroundAction.new( "Return to Root",  Key.KEY_ESCAPE, "res://playground_main.tscn" )
+	, PlayGroundAction.new( "Label",  Key.KEY_1, "res://gds_ui/gds_ui_LabelScene.tscn" )
 ] )
 
 

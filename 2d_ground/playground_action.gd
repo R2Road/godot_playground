@@ -1,4 +1,4 @@
-class_name NextSceneInfo
+class_name PlayGroundAction
 
 
 

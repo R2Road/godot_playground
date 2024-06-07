@@ -11,7 +11,7 @@ var container : Array
 func _init( _container : Array )->void:
 	
 	for i in _container:
-		assert( i is NextSceneInfo )
+		assert( i is PlayGroundAction )
 		container.push_back( i )
 
 
@@ -26,7 +26,7 @@ func build_summary( current_scene_name : String )->String:
 	return ret
 
 
-func get_action( keycode : Key )->NextSceneInfo:
+func get_action( keycode : Key )->PlayGroundAction:
 	for i in container:
 		if i.key == keycode:
 			return i
