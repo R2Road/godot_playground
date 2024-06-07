@@ -11,7 +11,9 @@ var container : Array
 func _init( _owner : Node, _container : Array )->void:
 	
 	for i in _container:
+		assert( null != _owner )
 		assert( i is PlayGroundAction )
+		
 		i.owner = _owner
 		container.push_back( i )
 
