@@ -14,7 +14,7 @@ func _ready():
 # This ensures we only print *once* in process().
 
 var test = true
-func _process(delta):
+func _process( _delta ):
 	if test:
 		print(name + " process")
 	test = false

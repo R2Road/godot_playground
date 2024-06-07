@@ -12,7 +12,7 @@ func _enter_tree():
 
 
 var test = true
-func _process(delta):
+func _process( _delta ):
 	if test:
 		print(name + " process")
 	test = false
