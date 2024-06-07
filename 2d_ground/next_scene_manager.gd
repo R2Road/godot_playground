@@ -26,17 +26,17 @@ func build_summary( current_scene_name : String )->String:
 	return ret
 
 
-func get_next_scene( keycode : Key )->String:
+func get_action( keycode : Key )->NextSceneInfo:
 	for i in container:
 		if i.key == keycode:
-			return i.scene_path
+			return i
 	
-	return ""
+	return null
 
 
 func do( node : Node,  keycode : Key ):
-	var next_scene_path = get_next_scene( keycode )
-	if( next_scene_path.is_empty() ):
+	var target_action = get_action( keycode )
+	if( null == target_action ):
 		return
 	
-	node.get_tree().change_scene_to_file( next_scene_path )
+	target_action.action.call( node )
