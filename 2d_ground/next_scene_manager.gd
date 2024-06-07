@@ -34,8 +34,14 @@ func get_action( keycode : Key )->NextSceneInfo:
 	return null
 
 
-func do( node : Node,  keycode : Key ):
-	var target_action = get_action( keycode )
+func do( node : Node,  event : InputEventKey ):
+	if !(event is InputEventKey ):
+		return
+	
+	if !event.is_pressed():
+		return
+		
+	var target_action = get_action( event.keycode )
 	if( null == target_action ):
 		return
 	

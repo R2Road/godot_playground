@@ -26,10 +26,4 @@ func _ready():
 
 
 func _input(event):
-	if !(event is InputEventKey ):
-		return
-	
-	if !event.is_pressed():
-		return
-	
-	next_scene_manager.do( self, event.keycode )
+	next_scene_manager.do( self, event )
