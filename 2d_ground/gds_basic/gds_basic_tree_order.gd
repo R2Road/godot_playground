@@ -1,5 +1,3 @@
-# ref : https://kidscancode.org/godot_recipes/basics/tree_ready_order/
-
 extends GDSBasic_TreeOrder_Helper
 
 

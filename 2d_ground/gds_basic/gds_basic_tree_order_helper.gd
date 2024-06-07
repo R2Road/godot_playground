@@ -1,3 +1,6 @@
+#
+# ref : https://kidscancode.org/godot_recipes/basics/tree_ready_order/
+#
 class_name GDSBasic_TreeOrder_Helper extends Node
 
 
