@@ -23,7 +23,7 @@ func _input(event):
 		
 	match event.keycode:
 		KEY_ESCAPE:
-			get_tree().change_scene_to_file("res://gds_basic/gds_basic_RootScene.tscn")
+			get_tree().change_scene_to_file("res://gds_basic/gds_basic_root.tscn")
 	
 func DoLogTest():
 	push_error( "push_error" )

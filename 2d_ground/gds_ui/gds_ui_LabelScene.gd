@@ -29,7 +29,7 @@ func _input(event):
 		
 	match event.keycode:
 		KEY_ESCAPE:
-			get_tree().change_scene_to_file( "res://gds_ui/gds_ui_RootScene.tscn" )
+			get_tree().change_scene_to_file( "res://gds_ui/gds_ui_root.tscn" )
 		KEY_A:
 			get_node( "Summury" ).add_theme_color_override( "font_color", Color( 0, 0, 1 ) )
 		KEY_S:
