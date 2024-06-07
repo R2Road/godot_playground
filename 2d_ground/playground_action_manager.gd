@@ -21,7 +21,10 @@ func build_summary( current_scene_name : String )->String:
 	var ret : String = ( "+ " + current_scene_name + "\n\n" )
 	
 	for i in container:
-		ret += ( "[" + OS.get_keycode_string( i.key ) + "] " + i.name + "\n" )
+		if Key.KEY_NONE != i.key:
+			ret += ( "[" + OS.get_keycode_string( i.key ) + "] " + i.name + "\n" )
+		else:
+			ret += ( i.name )
 	
 	return ret
 
