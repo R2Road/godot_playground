@@ -17,4 +17,4 @@ var test = true
 func _process( _delta ):
 	if test:
 		print(name + " process")
-	test = false
+		test = false
