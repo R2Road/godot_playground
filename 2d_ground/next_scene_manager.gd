@@ -32,3 +32,11 @@ func get_next_scene( keycode : Key )->String:
 			return i.scene_path
 	
 	return ""
+
+
+func do( node : Node,  keycode : Key ):
+	var next_scene_path = get_next_scene( keycode )
+	if( next_scene_path.is_empty() ):
+		return
+	
+	node.get_tree().change_scene_to_file( next_scene_path )
