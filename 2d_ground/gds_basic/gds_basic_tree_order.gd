@@ -1,26 +1,11 @@
 # ref : https://kidscancode.org/godot_recipes/basics/tree_ready_order/
 
-extends Node2D
+extends GDSBasic_TreeOrder_Helper
 
 
-func _init():
-	print(name + " init")
 
-
-func _enter_tree():
-	print(name + " enter tree")
-
-
-var test = true
-func _process( _delta ):
-	if test:
-		print(name + " process")
-	test = false
-
-
+############################ Override ############################
 func _ready():
-	print(name + " ready")
-	
 	set_process_input( true ) # is not need : default on
 
 	var title_string = \

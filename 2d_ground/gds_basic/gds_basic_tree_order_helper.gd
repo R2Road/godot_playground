@@ -1,4 +1,4 @@
-extends Node
+class_name GDSBasic_TreeOrder_Helper extends Node
 
 
 
