@@ -34,7 +34,7 @@ func get_action( keycode : Key )->NextSceneInfo:
 	return null
 
 
-func do( node : Node,  event : InputEventKey ):
+func do( node : Node,  event : InputEvent ):
 	if !(event is InputEventKey ):
 		return
 	
