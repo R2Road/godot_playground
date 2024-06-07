@@ -6,8 +6,8 @@ extends Node2D
 var playground_action_manager = PlayGroundActionManager.new( self, "OS", [
 	  PlayGroundAction.new_mover( "Return to Root",  Key.KEY_ESCAPE, "res://gds_basic/gds_basic_root.tscn" )
 	, PlayGroundAction.new_lf()
-	, PlayGroundAction.new_action( "Shell Open",  Key.KEY_1, test_shell_open )
-	, PlayGroundAction.new_action( "Get Dates",  Key.KEY_2, test_get_dates )
+	, PlayGroundAction.new_action( "OS.shell_open( url )",  Key.KEY_1, test_shell_open )
+	, PlayGroundAction.new_action( "Time.get_datetime_dict_from_system()",  Key.KEY_2, test_get_dates )
 ] )
 
 
