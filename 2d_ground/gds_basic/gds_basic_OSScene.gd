@@ -8,11 +8,11 @@ func _init():
 	
 	scene_type = eSceneType.TEST
 	
-	playground_action_manager.set_name( "OS" )
-	playground_action_manager.add_mover( "Return to Root",  Key.KEY_ESCAPE, "res://gds_basic/gds_basic_root.tscn" )
-	playground_action_manager.add_lf()
-	playground_action_manager.add_action( "OS.shell_open( url )",  Key.KEY_1, test_shell_open )
-	playground_action_manager.add_action( "Time.get_datetime_dict_from_system()",  Key.KEY_2, test_get_dates )
+	pam.set_name( "OS" )
+	pam.add_mover( "Return to Root",  Key.KEY_ESCAPE, "res://gds_basic/gds_basic_root.tscn" )
+	pam.add_lf()
+	pam.add_action( "OS.shell_open( url )",  Key.KEY_1, test_shell_open )
+	pam.add_action( "Time.get_datetime_dict_from_system()",  Key.KEY_2, test_get_dates )
 
 
 
