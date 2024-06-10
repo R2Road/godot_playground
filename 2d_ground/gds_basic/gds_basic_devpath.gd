@@ -4,12 +4,9 @@ extends PlaygroundScene
 
 ############################ Override ############################
 func _ready():
-	scene_type = eSceneType.TEST
-	
 	pam.set_name( "Dev Path" )
 	pam.add_back( Key.KEY_ESCAPE )
-	
-	build_summary()
+	build_summary( eSceneType.TEST )
 	
 	var path_string : String
 	
