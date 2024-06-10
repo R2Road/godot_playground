@@ -1,27 +1,15 @@
-extends Node2D
-
-
-
-############################ Variable ############################
-var playground_action_manager = PlayGroundActionManager.new( self, "OS", [
-	  PlayGroundAction.new_mover( "Return to Root",  Key.KEY_ESCAPE, "res://gds_basic/gds_basic_root.tscn" )
-	, PlayGroundAction.new_lf()
-	, PlayGroundAction.new_action( "OS.shell_open( url )",  Key.KEY_1, test_shell_open )
-	, PlayGroundAction.new_action( "Time.get_datetime_dict_from_system()",  Key.KEY_2, test_get_dates )
-] )
+extends PlaygroundScene
 
 
 
 ############################ Override ############################
-func _ready():
-	set_process_input( true ) # is not need : default on
-		
-	var summury_node = get_node( "Summury" )
-	summury_node.text = playground_action_manager.build_summary()
-
-
-func _input( event ):
-	playground_action_manager.do( event )
+func _init():
+	playground_action_manager = PlayGroundActionManager.new( self, "OS", [
+		  PlayGroundAction.new_mover( "Return to Root",  Key.KEY_ESCAPE, "res://gds_basic/gds_basic_root.tscn" )
+		, PlayGroundAction.new_lf()
+		, PlayGroundAction.new_action( "OS.shell_open( url )",  Key.KEY_1, test_shell_open )
+		, PlayGroundAction.new_action( "Time.get_datetime_dict_from_system()",  Key.KEY_2, test_get_dates )
+	] )
 
 
 
