@@ -4,6 +4,10 @@ extends PlaygroundScene
 
 ############################ Override ############################
 func _init():
+	super._init()
+	
+	scene_type = eSceneType.TEST
+	
 	playground_action_manager = PlayGroundActionManager.new( self, "OS", [
 		  PlayGroundAction.new_mover( "Return to Root",  Key.KEY_ESCAPE, "res://gds_basic/gds_basic_root.tscn" )
 		, PlayGroundAction.new_lf()

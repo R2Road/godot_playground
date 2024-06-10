@@ -4,7 +4,3 @@
 
 [node name="GDS_Sound_Root" type="Node2D"]
 script = ExtResource("1_wv1sd")
-
-[node name="Summury" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 14.0

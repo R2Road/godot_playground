@@ -4,6 +4,10 @@ extends PlaygroundScene
 
 ############################ Override ############################
 func _init():
+	super._init()
+	
+	scene_type = eSceneType.ROOT
+	
 	playground_action_manager = PlayGroundActionManager.new( self, "PlayGround", [
 		  PlayGroundAction.new_mover( "Exit",	Key.KEY_ESCAPE,	"res://playground_exit.tscn" )
 		, PlayGroundAction.new_lf()
