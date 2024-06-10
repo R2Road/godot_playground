@@ -29,7 +29,6 @@ func add_mover( _name : String, _key : Key, _scene_path : String ):
 
 func add_action( _name : String, _key : Key, _functor : Callable ):
 	var pga = PlayGroundAction.new_action( _name, _key, _functor )
-	pga.owner = owner
 	container.push_back( pga )
 
 
