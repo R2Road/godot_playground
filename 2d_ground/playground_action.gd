@@ -3,7 +3,6 @@ class_name PlayGroundAction
 
 
 ############################ Variable ############################
-var owner : Node
 var name : String
 var key : Key
 var action = func dummy():
@@ -15,11 +14,10 @@ var action = func dummy():
 static func new_mover( _owner : Node, _name : String, _key : Key, _scene_path : String )->PlayGroundAction:
 	var ret = PlayGroundAction.new()
 	
-	ret.owner = _owner
 	ret.name = _name
 	ret.key = _key	
 	ret.action = func ():
-		ret.owner.get_tree().change_scene_to_file( _scene_path )
+		_owner.get_tree().change_scene_to_file( _scene_path )
 	
 	return ret
 
