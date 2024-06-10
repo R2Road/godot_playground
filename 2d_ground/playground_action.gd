@@ -23,6 +23,8 @@ static func new_exit( _owner : Node )->PlayGroundAction:
 
 
 static func new_mover( _owner : Node, _name : String, _key : Key, _next_scene_path : String )->PlayGroundAction:
+	assert( not _next_scene_path.is_empty() )
+	
 	var ret = PlayGroundAction.new()
 	
 	ret.name = _name
@@ -34,6 +36,8 @@ static func new_mover( _owner : Node, _name : String, _key : Key, _next_scene_pa
 		
 		# SceneTree 의 change scene 을 사용하지 않고 scene 전환 효과를 만든다.
 		var next_scene = ResourceLoader.load( _next_scene_path ).instantiate()
+		next_scene.pam.last_scene_name = _owner.name
+		next_scene.pam.last_scene_path = _owner.scene_file_path
 		_owner.get_tree().root.add_child( next_scene )
 	
 	return ret

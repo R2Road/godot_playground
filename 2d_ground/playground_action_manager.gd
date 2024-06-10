@@ -7,6 +7,9 @@ var owner : Node
 var name : String
 var container : Array
 
+var last_scene_path : String
+var last_scene_name : String
+
 
 
 ############################ Override ############################
@@ -23,6 +26,10 @@ func set_name( _name : String ):
 
 func add_exit():
 	container.push_back( PlayGroundAction.new_exit( owner ) )
+
+
+func add_back( _key : Key ):
+	container.push_back( PlayGroundAction.new_mover( owner, last_scene_name, _key, last_scene_path ) )
 
 
 func add_mover( _name : String, _key : Key, _scene_path : String ):
