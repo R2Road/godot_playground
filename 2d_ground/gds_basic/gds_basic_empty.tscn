@@ -4,7 +4,3 @@
 
 [node name="gds_basic_empty" type="Node2D"]
 script = ExtResource("1_62i4j")
-
-[node name="Summury" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 14.0

@@ -1,27 +1,12 @@
-extends Node2D
+extends PlaygroundScene
 
 
-func _ready():
-	set_process_input( true ) # is not need : default on
 
-	var title_string = \
-			"+ Empty" \
-			+ "\n" \
-			+ "[ESC] Return to Root" \
-			+ ""
-		
-	var summury_node = get_node( "Summury" )
-	summury_node.text = title_string
+############################ Override ############################
+func _init():
+	super._init()
 	
+	scene_type = eSceneType.TEST
 	
-func _input(event):
-	if !(event is InputEventKey ):
-		return
-	
-	if !event.is_pressed():
-		return
-		
-	match event.keycode:
-		KEY_ESCAPE:
-			get_tree().change_scene_to_file("res://gds_basic/gds_basic_root.tscn")
-			
+	pam.set_name( "Empty" )
+	pam.add_mover( "Return to Root",  Key.KEY_ESCAPE, "res://gds_basic/gds_basic_root.tscn" )
