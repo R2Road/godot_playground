@@ -11,6 +11,17 @@ var action = func dummy():
 
 
 ############################   User   ############################
+static func new_exit( _owner : Node, _name : String, _key : Key, _scene_path : String )->PlayGroundAction:
+	var ret = PlayGroundAction.new()
+	
+	ret.name = _name
+	ret.key = _key	
+	ret.action = func ():
+		_owner.get_tree().change_scene_to_file( _scene_path )
+	
+	return ret
+
+
 static func new_mover( _owner : Node, _name : String, _key : Key, _scene_path : String )->PlayGroundAction:
 	var ret = PlayGroundAction.new()
 	

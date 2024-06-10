@@ -22,7 +22,7 @@ func set_name( _name : String ):
 
 
 func add_exit():
-	container.push_back( PlayGroundAction.new_mover( owner, "Exit", Key.KEY_ESCAPE, "res://playground_exit.tscn" ) )
+	container.push_back( PlayGroundAction.new_exit( owner, "Exit", Key.KEY_ESCAPE, "res://playground_exit.tscn" ) )
 
 
 func add_mover( _name : String, _key : Key, _scene_path : String ):
