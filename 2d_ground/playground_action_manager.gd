@@ -10,17 +10,9 @@ var container : Array
 
 
 ############################ Override ############################
-func _init( _owner : Node, _name : String, _container : Array )->void:
+func _init( _owner : Node )->void:
 	assert( null != _owner )
-	
 	owner = _owner
-	name = _name
-	
-	for i in _container:
-		assert( i is PlayGroundAction )
-		
-		i.owner = owner
-		container.push_back( i )
 
 
 
