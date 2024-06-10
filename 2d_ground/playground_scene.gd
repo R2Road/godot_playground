@@ -13,7 +13,7 @@ enum eSceneType
 
 ############################ Variable ############################
 var scene_type : eSceneType = eSceneType.TEST
-var playground_action_manager : PlayGroundActionManager
+var playground_action_manager : PlayGroundActionManager = PlayGroundActionManager.new( self, "", [] )
 
 
 

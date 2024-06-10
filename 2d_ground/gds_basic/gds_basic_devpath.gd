@@ -8,9 +8,8 @@ func _init():
 	
 	scene_type = eSceneType.TEST
 	
-	playground_action_manager = PlayGroundActionManager.new( self, "Dev Path", [
-		  PlayGroundAction.new_mover( "Exit",	Key.KEY_ESCAPE,	"res://gds_basic/gds_basic_root.tscn" )
-	] )
+	playground_action_manager.set_name( "Dev Path" )
+	playground_action_manager.add_mover( "Exit",	Key.KEY_ESCAPE,	"res://gds_basic/gds_basic_root.tscn" )
 
 
 func _ready():
