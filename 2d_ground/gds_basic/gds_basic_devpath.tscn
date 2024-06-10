@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgkku4rmyhfl0"]
+
+[ext_resource type="Script" path="res://gds_basic/gds_basic_devpath.gd" id="1_ofuo4"]
+
+[node name="gds_basic_EmptyScene" type="Node2D"]
+script = ExtResource("1_ofuo4")
