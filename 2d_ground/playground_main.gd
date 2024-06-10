@@ -8,8 +8,9 @@ func _init():
 	
 	scene_type = eSceneType.ROOT
 	
-	playground_action_manager = PlayGroundActionManager.new( self, "PlayGround", [] )
+	playground_action_manager = PlayGroundActionManager.new( self, "", [] )
 	
+	playground_action_manager.set_name( "PlayGround" )
 	playground_action_manager.add_mover( "Exit",	Key.KEY_ESCAPE,	"res://playground_exit.tscn" )
 	playground_action_manager.add_lf()
 	playground_action_manager.add_mover( "Basic",	Key.KEY_1, 		"res://gds_basic/gds_basic_root.tscn" )

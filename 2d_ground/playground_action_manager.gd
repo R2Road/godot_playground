@@ -25,6 +25,11 @@ func _init( _owner : Node, _name : String, _container : Array )->void:
 
 
 ############################   User   ############################
+func set_name( _name : String ):
+	name = _name
+	
+
+
 func add_mover( _name : String, _key : Key, _scene_path : String ):
 	var pga = PlayGroundAction.new_mover( _name, _key, _scene_path )
 	pga.owner = owner
