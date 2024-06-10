@@ -68,4 +68,4 @@ func do( event : InputEvent ):
 	if( null == target_action ):
 		return
 	
-	target_action.action.call()
+	target_action.action.call_deferred()
