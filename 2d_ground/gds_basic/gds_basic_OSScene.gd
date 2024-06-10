@@ -3,9 +3,7 @@ extends PlaygroundScene
 
 
 ############################ Override ############################
-func _init():
-	super._init()
-	
+func _ready():
 	scene_type = eSceneType.TEST
 	
 	pam.set_name( "OS" )

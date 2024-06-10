@@ -3,9 +3,7 @@ extends PlaygroundScene
 
 
 ############################ Override ############################
-func _init():
-	super._init()
-	
+func _ready():
 	scene_type = eSceneType.ROOT
 	
 	pam.set_name( "GD Script Basic" )
@@ -19,3 +17,5 @@ func _init():
 	pam.add_mover( "Keyboard Input", 	Key.KEY_7, 		"res://gds_basic/gds_basic_KeyboardInputScene.tscn" )
 	pam.add_mover( "Get Node", 			Key.KEY_8, 		"res://gds_basic/gds_basic_GetNodeScene.tscn" )
 	pam.add_mover( "Node Path3D", 		Key.KEY_9, 		"res://gds_basic/gds_basic_NodePathScene.tscn" )
+	
+	build_summary()

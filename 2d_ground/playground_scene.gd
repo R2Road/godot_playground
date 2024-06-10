@@ -23,11 +23,15 @@ func _init():
 	var label = Label.new()
 	label.name = "Summary"
 	add_child( label )
-	
-	
-func _ready():
-	set_process_input( true ) # is not need : default on
-	
+
+
+func _input( event ):
+	playground_action_manager.do( event )
+
+
+
+############################   User   ############################
+func build_summary():
 	var summary_node = get_node( "Summary" )
 	summary_node.text = playground_action_manager.build_summary()
 	
@@ -36,7 +40,3 @@ func _ready():
 			Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.5 )
 			- Vector2( summary_node.get_minimum_size().x * 0.5, summary_node.get_minimum_size().y * 0.5 )
 		)
-
-
-func _input( event ):
-	playground_action_manager.do( event )

@@ -3,10 +3,10 @@ extends PlaygroundScene
 
 
 ############################ Override ############################
-func _init():
-	super._init()
-	
+func _ready():
 	scene_type = eSceneType.TEST
 	
 	pam.set_name( "Empty" )
 	pam.add_back( Key.KEY_ESCAPE )
+	
+	build_summary()

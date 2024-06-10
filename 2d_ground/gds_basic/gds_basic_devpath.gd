@@ -3,17 +3,13 @@ extends PlaygroundScene
 
 
 ############################ Override ############################
-func _init():
-	super._init()
-	
+func _ready():
 	scene_type = eSceneType.TEST
 	
 	pam.set_name( "Dev Path" )
 	pam.add_mover( "Exit",	Key.KEY_ESCAPE,	"res://gds_basic/gds_basic_root.tscn" )
-
-
-func _ready():
-	super._ready()
+	
+	build_summary()
 	
 	var path_string : String
 	
