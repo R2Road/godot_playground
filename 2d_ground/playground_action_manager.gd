@@ -19,17 +19,14 @@ func _init( _owner : Node )->void:
 ############################   User   ############################
 func set_name( _name : String ):
 	name = _name
-	
 
 
 func add_mover( _name : String, _key : Key, _scene_path : String ):
-	var pga = PlayGroundAction.new_mover( owner, _name, _key, _scene_path )
-	container.push_back( pga )
+	container.push_back( PlayGroundAction.new_mover( owner, _name, _key, _scene_path ) )
 
 
 func add_action( _name : String, _key : Key, _functor : Callable ):
-	var pga = PlayGroundAction.new_action( _name, _key, _functor )
-	container.push_back( pga )
+	container.push_back( PlayGroundAction.new_action( _name, _key, _functor ) )
 
 
 func add_lf():
