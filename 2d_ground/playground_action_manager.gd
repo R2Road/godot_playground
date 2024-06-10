@@ -21,6 +21,10 @@ func set_name( _name : String ):
 	name = _name
 
 
+func add_exit():
+	container.push_back( PlayGroundAction.new_mover( owner, "Exit", Key.KEY_ESCAPE, "res://playground_exit.tscn" ) )
+
+
 func add_mover( _name : String, _key : Key, _scene_path : String ):
 	container.push_back( PlayGroundAction.new_mover( owner, _name, _key, _scene_path ) )
 
