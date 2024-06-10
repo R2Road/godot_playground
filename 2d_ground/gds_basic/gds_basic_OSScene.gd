@@ -7,7 +7,7 @@ func _ready():
 	scene_type = eSceneType.TEST
 	
 	pam.set_name( "OS" )
-	pam.add_mover( "Return to Root",  Key.KEY_ESCAPE, "res://gds_basic/gds_basic_root.tscn" )
+	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
 	pam.add_action( "OS.shell_open( url )",  Key.KEY_1, test_shell_open )
 	pam.add_action( "Time.get_datetime_dict_from_system()",  Key.KEY_2, test_get_dates )

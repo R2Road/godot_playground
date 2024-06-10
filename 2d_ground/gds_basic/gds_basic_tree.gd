@@ -7,7 +7,7 @@ func _ready():
 	scene_type = eSceneType.TEST
 	
 	pam.set_name( "Tree" )
-	pam.add_mover( "Exit",	Key.KEY_ESCAPE,	"res://gds_basic/gds_basic_root.tscn" )
+	pam.add_back( Key.KEY_ESCAPE )
 	
 	build_summary()
 	
