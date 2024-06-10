@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgwm5cfocw47c"]
+
+[ext_resource type="Script" path="res://gds_basic/gds_basic_empty.gd" id="1_62i4j"]
+
+[node name="gds_basic_empty" type="Node2D"]
+script = ExtResource("1_62i4j")
+
+[node name="Summury" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 14.0

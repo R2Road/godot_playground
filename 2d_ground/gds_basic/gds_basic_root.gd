@@ -10,7 +10,7 @@ func _init():
 	
 	pam.set_name( "GD Script Basic" )
 	pam.add_mover( "Return to Root", 	Key.KEY_ESCAPE, "res://playground_main.tscn" )
-	pam.add_mover( "Empty",  			Key.KEY_1, 		"res://gds_basic/gds_basic_EmptyScene.tscn" )
+	pam.add_mover( "Empty",  			Key.KEY_1, 		"res://gds_basic/gds_basic_empty.tscn" )
 	pam.add_mover( "Dev Path",  		Key.KEY_2, 		"res://gds_basic/gds_basic_devpath.tscn" )
 	pam.add_mover( "Tree",  			Key.KEY_3, 		"res://gds_basic/gds_basic_tree.tscn" )
 	pam.add_mover( "OS", 				Key.KEY_4, 		"res://gds_basic/gds_basic_OSScene.tscn" )
