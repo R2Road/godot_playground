@@ -23,8 +23,7 @@ func set_name( _name : String ):
 
 
 func add_mover( _name : String, _key : Key, _scene_path : String ):
-	var pga = PlayGroundAction.new_mover( _name, _key, _scene_path )
-	pga.owner = owner
+	var pga = PlayGroundAction.new_mover( owner, _name, _key, _scene_path )
 	container.push_back( pga )
 
 
