@@ -3,6 +3,7 @@ class_name PlayGroundActionManager
 
 
 ############################ Variable ############################
+var owner : Node
 var name : String
 var container : Array
 
@@ -10,27 +11,29 @@ var container : Array
 
 ############################ Override ############################
 func _init( _owner : Node, _name : String, _container : Array )->void:
+	assert( null != _owner )
+	
+	owner = _owner
 	name = _name
 	
 	for i in _container:
-		assert( null != _owner )
 		assert( i is PlayGroundAction )
 		
-		i.owner = _owner
+		i.owner = owner
 		container.push_back( i )
 
 
 
 ############################   User   ############################
-func add_mover( _owner : Node, _name : String, _key : Key, _scene_path : String ):
+func add_mover( _name : String, _key : Key, _scene_path : String ):
 	var pga = PlayGroundAction.new_mover( _name, _key, _scene_path )
-	pga.owner = _owner
+	pga.owner = owner
 	container.push_back( pga )
 
 
-func add_action( _owner : Node, _name : String, _key : Key, _functor : Callable ):
+func add_action( _name : String, _key : Key, _functor : Callable ):
 	var pga = PlayGroundAction.new_action( _name, _key, _functor )
-	pga.owner = _owner
+	pga.owner = owner
 	container.push_back( pga )
 
 
