@@ -22,6 +22,22 @@ func _init( _owner : Node, _name : String, _container : Array )->void:
 
 
 ############################   User   ############################
+func add_mover( _owner : Node, _name : String, _key : Key, _scene_path : String ):
+	var pga = PlayGroundAction.new_mover( _name, _key, _scene_path )
+	pga.owner = _owner
+	container.push_back( pga )
+
+
+func add_action( _owner : Node, _name : String, _key : Key, _functor : Callable ):
+	var pga = PlayGroundAction.new_action( _name, _key, _functor )
+	pga.owner = _owner
+	container.push_back( pga )
+
+
+func add_lf():
+	container.push_back( PlayGroundAction.new_lf() )
+
+
 func build_summary()->String:
 	var ret : String = ( "+ " + name + "\n\n" )
 	
