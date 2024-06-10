@@ -22,13 +22,19 @@ static func new_exit( _owner : Node, _name : String, _key : Key, _scene_path : S
 	return ret
 
 
-static func new_mover( _owner : Node, _name : String, _key : Key, _scene_path : String )->PlayGroundAction:
+static func new_mover( _owner : Node, _name : String, _key : Key, _next_scene_path : String )->PlayGroundAction:
 	var ret = PlayGroundAction.new()
 	
 	ret.name = _name
 	ret.key = _key	
 	ret.action = func ():
-		_owner.get_tree().change_scene_to_file( _scene_path )
+		# 현재 Scene의 모든 개체를 제거한다.
+		for c in _owner.get_tree().root.get_children():
+			c.queue_free()
+		
+		# SceneTree 의 change scene 을 사용하지 않고 scene 전환 효과를 만든다.
+		var next_scene = ResourceLoader.load( _next_scene_path ).instantiate()
+		_owner.get_tree().root.add_child( next_scene )
 	
 	return ret
 
