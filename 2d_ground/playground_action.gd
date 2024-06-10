@@ -11,13 +11,13 @@ var action = func dummy():
 
 
 ############################   User   ############################
-static func new_exit( _owner : Node, _name : String, _key : Key, _scene_path : String )->PlayGroundAction:
+static func new_exit( _owner : Node )->PlayGroundAction:
 	var ret = PlayGroundAction.new()
 	
-	ret.name = _name
-	ret.key = _key	
+	ret.name = "Exit"
+	ret.key = Key.KEY_ESCAPE
 	ret.action = func ():
-		_owner.get_tree().change_scene_to_file( _scene_path )
+		_owner.get_tree().change_scene_to_file( "res://playground_exit.tscn" )
 	
 	return ret
 
