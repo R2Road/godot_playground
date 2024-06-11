@@ -13,6 +13,6 @@ func _ready():
 	pam.add_mover( "Tree Order", 		Key.KEY_5, 		"res://gds_basic/gds_basic_tree_order.tscn" )
 	pam.add_mover( "Log", 				Key.KEY_6, 		"res://gds_basic/gds_basic_LogScene.tscn" )
 	pam.add_mover( "Keyboard Input", 	Key.KEY_7, 		"res://gds_basic/gds_basic_KeyboardInputScene.tscn" )
-	pam.add_mover( "Get Node", 			Key.KEY_8, 		"res://gds_basic/gds_basic_GetNodeScene.tscn" )
+	pam.add_mover( "Get Node", 			Key.KEY_8, 		"res://gds_basic/gds_basic_getnode.tscn" )
 	pam.add_mover( "Node Path3D", 		Key.KEY_9, 		"res://gds_basic/gds_basic_NodePathScene.tscn" )
 	build_summary( eSceneType.ROOT )

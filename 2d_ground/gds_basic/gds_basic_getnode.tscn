@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource path="res://gds_basic/gds_basic_GetNodeScene_2_1_1.gd" type="Script" id=1]
-[ext_resource path="res://gds_basic/gds_basic_GetNodeScene.gd" type="Script" id=2]
-[ext_resource path="res://gds_basic/gds_basic_GetNodeScene_4.gd" type="Script" id=3]
+[ext_resource type="Script" path="res://gds_basic/gds_basic_getnode_2_1_1.gd" id="1"]
+[ext_resource type="Script" path="res://gds_basic/gds_basic_getnode.gd" id="2"]
+[ext_resource type="Script" path="res://gds_basic/gds_basic_getnode_4.gd" id="3"]
 
 [node name="gds_basic_GetNodeScene" type="Node2D"]
 script = ExtResource( 2 )
