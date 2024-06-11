@@ -68,7 +68,7 @@ func build_summary()->String:
 					# action name
 					for j in container:
 						if j.name.length() > split_length:
-							split_length = j.name.length()
+							split_length = ( OS.get_keycode_string( j.key ).length() + j.name.length() + 3 )
 					# build split string
 					split_string = ( i.name.repeat( split_length ) + "\n" )
 				
