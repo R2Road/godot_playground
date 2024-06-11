@@ -48,27 +48,32 @@ func add_lf():
 	container.push_back( PlayGroundAction.new_lf() )
 
 
+func get_keycode_string( key : Key )->String:
+	if Key.KEY_ESCAPE == key:
+		return "ESC"
+	else:
+		return OS.get_keycode_string( key )
+
+
 func build_summary()->String:
 	var ret : String = ( "+ " + name + "\n" )
 	
 	var split_string : String
 	
 	for i in container:
-		if Key.KEY_ESCAPE == i.key:
-			ret += ( "[" + "ESC" + "] " + i.name + "\n" )
-		elif Key.KEY_NONE != i.key:
-			ret += ( "[" + OS.get_keycode_string( i.key ) + "] " + i.name + "\n" )
+		if Key.KEY_NONE != i.key:
+			ret += ( "[" + get_keycode_string( i.key ) + "] " + i.name + "\n" )
 		else:
 			if "=" == i.name:
 				if split_string.is_empty():
 					var split_length = 0
 					# scene name
 					if name.length() > split_length:
-							split_length = name.length() + 2
+							split_length = name.length() + 2 # 2 is decoration
 					# action name
 					for j in container:
 						if j.name.length() > split_length:
-							split_length = ( OS.get_keycode_string( j.key ).length() + j.name.length() + 3 )
+							split_length = ( get_keycode_string( j.key ).length() + j.name.length() + 3 ) # 3 is decoration
 					# build split string
 					split_string = ( i.name.repeat( split_length ) + "\n" )
 				
