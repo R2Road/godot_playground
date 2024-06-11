@@ -36,8 +36,11 @@ static func new_mover( _owner : Node, _name : String, _key : Key, _next_scene_pa
 		
 		# SceneTree 의 change scene 을 사용하지 않고 scene 전환 효과를 만든다.
 		var next_scene = ResourceLoader.load( _next_scene_path ).instantiate()
-		next_scene.pam.last_scene_name = _owner.pam.name
-		next_scene.pam.last_scene_path = _owner.scene_file_path
+		if next_scene is PlaygroundScene:
+			next_scene.pam.last_scene_name = _owner.pam.name
+			next_scene.pam.last_scene_path = _owner.scene_file_path
+		else:
+			print_debug( "warning : is not PlayGroundScene" )
 		_owner.get_tree().root.add_child( next_scene )
 	
 	return ret
