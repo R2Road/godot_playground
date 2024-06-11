@@ -24,6 +24,11 @@ func set_name( _name : String ):
 	name = _name
 
 
+func set_last_scene( _last_scene_name : String, _last_scene_path : String ):
+	last_scene_name = _last_scene_name
+	last_scene_path = _last_scene_path
+
+
 func add_exit():
 	container.push_back( PlayGroundAction.new_exit( owner ) )
 
