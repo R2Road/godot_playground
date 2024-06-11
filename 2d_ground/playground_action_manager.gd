@@ -51,13 +51,30 @@ func add_lf():
 func build_summary()->String:
 	var ret : String = ( "+ " + name + "\n" )
 	
+	var split_string : String
+	
 	for i in container:
 		if Key.KEY_ESCAPE == i.key:
 			ret += ( "[" + "ESC" + "] " + i.name + "\n" )
 		elif Key.KEY_NONE != i.key:
 			ret += ( "[" + OS.get_keycode_string( i.key ) + "] " + i.name + "\n" )
 		else:
-			ret += ( i.name )
+			if "=" == i.name:
+				if split_string.is_empty():
+					var split_length = 0
+					# scene name
+					if name.length() > split_length:
+							split_length = name.length() + 2
+					# action name
+					for j in container:
+						if j.name.length() > split_length:
+							split_length = j.name.length()
+					# build split string
+					split_string = ( i.name.repeat( split_length ) + "\n" )
+				
+				ret += split_string
+			else:
+				ret += ( i.name )
 	
 	return ret
 

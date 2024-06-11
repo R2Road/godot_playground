@@ -5,6 +5,7 @@ extends PlaygroundScene
 ############################ Override ############################
 func _ready():
 	pam.set_name( "PlayGround" )
+	pam.add_split()
 	pam.add_exit()
 	pam.add_lf()
 	pam.add_mover( "Basic",	Key.KEY_1, 		"res://gds_basic/gds_basic_root.tscn" )
