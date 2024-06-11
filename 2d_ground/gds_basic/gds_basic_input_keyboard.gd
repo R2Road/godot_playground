@@ -1,18 +1,19 @@
-extends Node
+extends PlaygroundScene
 
+
+
+############################ Override ############################
 func _ready():
-	set_process_input( true ) # is not need : default on
+	pam.set_name( "Keyboard Input" )
+	pam.add_back( Key.KEY_ESCAPE )
+	build_summary( eSceneType.TEST )
 
-	var title_string = \
-			"+ Keyboard Input" \
-			+ "\n" \
-			+ "[ESC] Return to Root" \
-			+ ""
-		
-	var summury_node = get_node( "Summury" )
-	summury_node.text = title_string
 
 func _input(event):
+	# for PlaygroundScene
+	super._input( event )
+	
+	
 	if !(event is InputEventKey ):
 		return
 	
@@ -20,11 +21,11 @@ func _input(event):
 		return
 		
 	match event.keycode:
-		KEY_ESCAPE:
-			get_tree().change_scene_to_file("res://gds_basic/gds_basic_root.tscn")
 		_:
 			UpdateMessage( "key pressed : " + event.as_text() )
-			
+
+
+############################   User   ############################
 func UpdateMessage( arg ):
 	var message_node = get_node( "Message" )
 	message_node.text = str( arg )
