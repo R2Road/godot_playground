@@ -49,7 +49,7 @@ func add_lf():
 
 
 func build_summary()->String:
-	var ret : String = ( "+ " + name + "\n\n" )
+	var ret : String = ( "+ " + name + "\n" )
 	
 	for i in container:
 		if Key.KEY_ESCAPE == i.key:
