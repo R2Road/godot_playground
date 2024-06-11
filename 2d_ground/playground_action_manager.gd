@@ -48,7 +48,9 @@ func build_summary()->String:
 	var ret : String = ( "+ " + name + "\n\n" )
 	
 	for i in container:
-		if Key.KEY_NONE != i.key:
+		if Key.KEY_ESCAPE == i.key:
+			ret += ( "[" + "ESC" + "] " + i.name + "\n" )
+		elif Key.KEY_NONE != i.key:
 			ret += ( "[" + OS.get_keycode_string( i.key ) + "] " + i.name + "\n" )
 		else:
 			ret += ( i.name )
