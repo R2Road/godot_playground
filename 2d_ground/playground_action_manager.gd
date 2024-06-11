@@ -56,30 +56,34 @@ func get_keycode_string( key : Key )->String:
 
 
 func build_summary()->String:
-	var ret : String = ( "+ " + name + "\n" )
-	
+	#
+	# build split string
+	#
 	var split_string : String
+	var split_length = 0
+	
+	# scene name
+	if name.length() > split_length:
+			split_length = name.length() + 2 # 2 is decoration
+	
+	# action name
+	for j in container:
+		if j.name.length() > split_length:
+			split_length = ( get_keycode_string( j.key ).length() + j.name.length() + 3 ) # 3 is decoration
+	
+	split_string = ( ( "=" ).repeat( split_length ) + "\n" )
+	
+	
+	#
+	# build summary
+	#
+	var ret : String = ( "+ " + name + "\n" )
 	
 	for i in container:
 		if Key.KEY_NONE != i.key:
 			ret += ( "[" + get_keycode_string( i.key ) + "] " + i.name + "\n" )
 		else:
 			if "=" == i.name:
-				if split_string.is_empty():
-					var split_length = 0
-					
-					# scene name
-					if name.length() > split_length:
-							split_length = name.length() + 2 # 2 is decoration
-					
-					# action name
-					for j in container:
-						if j.name.length() > split_length:
-							split_length = ( get_keycode_string( j.key ).length() + j.name.length() + 3 ) # 3 is decoration
-					
-					# build split string
-					split_string = ( i.name.repeat( split_length ) + "\n" )
-				
 				ret += split_string
 			else:
 				ret += ( i.name )
