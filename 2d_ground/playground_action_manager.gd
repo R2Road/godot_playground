@@ -67,13 +67,16 @@ func build_summary()->String:
 			if "=" == i.name:
 				if split_string.is_empty():
 					var split_length = 0
+					
 					# scene name
 					if name.length() > split_length:
 							split_length = name.length() + 2 # 2 is decoration
+					
 					# action name
 					for j in container:
 						if j.name.length() > split_length:
 							split_length = ( get_keycode_string( j.key ).length() + j.name.length() + 3 ) # 3 is decoration
+					
 					# build split string
 					split_string = ( i.name.repeat( split_length ) + "\n" )
 				
