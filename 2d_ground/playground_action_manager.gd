@@ -40,6 +40,10 @@ func add_action( _name : String, _key : Key, _functor : Callable ):
 	container.push_back( PlayGroundAction.new_action( _name, _key, _functor ) )
 
 
+func add_split():
+	container.push_back( PlayGroundAction.new_split() )
+
+
 func add_lf():
 	container.push_back( PlayGroundAction.new_lf() )
 

@@ -53,6 +53,15 @@ static func new_action( _name : String, _key : Key, functor : Callable )->PlayGr
 	return ret
 
 
+static func new_split()->PlayGroundAction:
+	var ret = PlayGroundAction.new()
+	
+	ret.name = "========================================\n"
+	ret.key = Key.KEY_NONE
+	
+	return ret
+
+
 static func new_lf()->PlayGroundAction:
 	var ret = PlayGroundAction.new()
 	
