@@ -20,19 +20,19 @@ func DoPractice():
 	
 	
 	# 2
-	get_node( "2" ).set_position( Vector2( 350, 150 ) )
-	get_node( "2/2_1" ).set_position( Vector2( 50, 50 ) )
-	get_node( "2/2_1/2_1_1" ).set_position( Vector2( 50, 50 ) )
+	$"2".set_position( Vector2( 350, 150 ) )
+	$"2/2_1".set_position( Vector2( 50, 50 ) )
+	$"2/2_1/2_1_1".set_position( Vector2( 50, 50 ) )
 	
 	
 	# 3 : 계층 거슬러 올라가기
-	var node_3_1_1 = get_node( "3/3_1/3_1_1" )
+	var node_3_1_1 = $"3/3_1/3_1_1"
 	node_3_1_1.get_node( "../../../3" ).set_position( Vector2( 550, 150 ) )
 	
 	var label_3_1_1 = node_3_1_1.get_node( "../../../3/3_1/3_1_1" )
 	label_3_1_1.set_position( Vector2( 50, 50 ) )
 	
-	label_3_1_1.get_node( "../../3_1").set_position( Vector2( 50, 50 ) )
+	label_3_1_1.get_node( "../../3_1" ).set_position( Vector2( 50, 50 ) )
 	
 	
 	# 4

@@ -14,5 +14,4 @@ func _ready():
 	pam.add_mover( "Log", 				Key.KEY_6, 		"res://gds_basic/gds_basic_log.tscn" )
 	pam.add_mover( "Keyboard Input", 	Key.KEY_7, 		"res://gds_basic/gds_basic_input_keyboard.tscn" )
 	pam.add_mover( "Get Node", 			Key.KEY_8, 		"res://gds_basic/gds_basic_getnode.tscn" )
-	pam.add_mover( "Node Path3D", 		Key.KEY_9, 		"res://gds_basic/gds_basic_NodePathScene.tscn" )
 	build_summary( eSceneType.ROOT )
