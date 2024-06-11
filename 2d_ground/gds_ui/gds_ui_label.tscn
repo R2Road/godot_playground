@@ -34,12 +34,25 @@ func _input(event):
 		KEY_ESCAPE:
 			get_tree().change_scene_to_file( \"res://gds_ui/gds_ui_root.tscn\" )
 		KEY_A:
-			get_node( \"Summury\" ).add_theme_color_override( \"font_color\", Color( 0, 0, 1 ) )
+			change_font_color_blue()
 		KEY_S:
-			get_node( \"Summury\" ).set( \"theme_override_colors/font_color\", Color( 0, 1, 0 ) )
+			change_font_color_green()
 		KEY_D:
-			get_node( \"Summury\" ).text += \"\\nTest String\"
-			
+			append_text()
+
+
+
+############################   User   ############################
+func change_font_color_blue():
+	get_node( \"Summury\" ).add_theme_color_override( \"font_color\", Color( 0, 0, 1 ) )
+
+
+func change_font_color_green():
+	get_node( \"Summury\" ).set( \"theme_override_colors/font_color\", Color( 0, 1, 0 ) )
+
+
+func append_text():
+	get_node( \"Summury\" ).text += \"\\nTest String\"
 "
 
 [node name="gds_ui_label" type="Node2D"]
