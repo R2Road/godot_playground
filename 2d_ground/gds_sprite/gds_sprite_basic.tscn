@@ -3,10 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://dxvweghqhlqmv" path="res://resources/sprite/actor001/actor001_win_01.png" id="1_galxh"]
 [ext_resource type="Script" path="res://gds_sprite/gds_sprite_basic.gd" id="1_lm26s"]
 
-[node name="gds_step_basic" type="Node2D"]
+[node name="gds_sprite_basic" type="Node2D"]
 script = ExtResource("1_lm26s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(512, 300)
-scale = Vector2(8, 8)
+scale = Vector2(3.5, 3.5)
 texture = ExtResource("1_galxh")
