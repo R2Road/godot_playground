@@ -4,7 +4,7 @@ extends PlaygroundScene
 
 ############################ Variable ############################
 @export var test_scene_resource_1 : PackedScene
-@export var test_scene_resource_2 : PackedScene = load( "res://gds_basic/gds_basic_helper_sprite2d.tscn" )
+@export var test_scene_resource_2 : PackedScene = load( "res://gds_helper/gds_helper_sprite2d_01.tscn" )
 
 
 
