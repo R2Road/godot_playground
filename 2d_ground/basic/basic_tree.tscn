@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://meciqyjgafts"]
 
-[ext_resource type="Script" path="res://basic/gds_basic_tree.gd" id="1_0f3j7"]
+[ext_resource type="Script" path="res://basic/basic_tree.gd" id="1_0f3j7"]
 
 [node name="gds_basic_tree" type="Node2D"]
 script = ExtResource("1_0f3j7")

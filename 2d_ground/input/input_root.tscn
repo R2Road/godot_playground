@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dlp2jqljtqu1o"]
 
-[ext_resource type="Script" path="res://input/gds_input_root.gd" id="1_8din4"]
+[ext_resource type="Script" path="res://input/input_root.gd" id="1_8din4"]
 
 [node name="gds_input_root" type="Node2D"]
 script = ExtResource("1_8din4")

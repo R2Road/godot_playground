@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dlp2jqljtqu1o"]
 
-[ext_resource type="Script" path="res://sound/gds_sound_root.gd" id="1_wv1sd"]
+[ext_resource type="Script" path="res://sound/sound_root.gd" id="1_wv1sd"]
 
 [node name="gds_sound_root" type="Node2D"]
 script = ExtResource("1_wv1sd")
