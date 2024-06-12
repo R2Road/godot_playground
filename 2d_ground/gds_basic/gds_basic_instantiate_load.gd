@@ -4,7 +4,7 @@ extends PlaygroundScene
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Load + Instantiate" )
+	pam.set_name( "Instantiate + Load" )
 	pam.add_lf()
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )
