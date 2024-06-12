@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://6smcc7kp4eg1"]
+
+[ext_resource type="Texture2D" uid="uid://br7733mi0v430" path="res://resources/sprite/actor001/actor001_win_02.png" id="1_xo0l5"]
+
+[node name="gds_basic_helper_sprite2d" type="Sprite2D"]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_xo0l5")

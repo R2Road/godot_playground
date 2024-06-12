@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfyo3gpxn353g"]
+
+[ext_resource type="Script" path="res://basic/gds_basic_instantiate_packedscene.gd" id="1_ayy3k"]
+[ext_resource type="PackedScene" uid="uid://6smcc7kp4eg1" path="res://helper/gds_helper_sprite2d_01.tscn" id="2_2scef"]
+
+[node name="gds_basic_instantiate_packedscene" type="Node2D"]
+script = ExtResource("1_ayy3k")
+test_scene_resource_1 = ExtResource("2_2scef")
