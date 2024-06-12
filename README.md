@@ -1,2 +1,13 @@
 # godot_playground
-godot playground
+
+
+## 개괄 | Overview
+- gdscript를 학습한 기록겸 메모장 | gdscript training record
+
+
+## 작업환경 | Environment
+- OS
+  - Windows 10
+
+- Engine Version
+  - v4.2.2 Stable Official
