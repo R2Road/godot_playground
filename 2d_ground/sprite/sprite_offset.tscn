@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtwh8g7qjnsj7"]
 
-[ext_resource type="Script" path="res://sprite/sprite_pivot.gd" id="1_gqxuy"]
-[ext_resource type="Texture2D" uid="uid://dxvweghqhlqmv" path="res://resources/sprite/actor001/actor001_win_01.png" id="2_fujua"]
+[ext_resource type="Script" path="res://sprite/sprite_offset.gd" id="1_pg6vy"]
+[ext_resource type="Texture2D" uid="uid://dxvweghqhlqmv" path="res://resources/sprite/actor001/actor001_win_01.png" id="2_3bcks"]
 
-[node name="sprite_pivot" type="Node2D"]
-script = ExtResource("1_gqxuy")
+[node name="sprite_offset" type="Node2D"]
+script = ExtResource("1_pg6vy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(3.5, 3.5)
-texture = ExtResource("2_fujua")
+texture = ExtResource("2_3bcks")
 
 [node name="Label" type="Label" parent="Sprite2D"]
 anchors_preset = 7

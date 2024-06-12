@@ -4,7 +4,7 @@ extends PlaygroundScene
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Pivot" )
+	pam.set_name( "Offset" )
 	pam.add_lf()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
