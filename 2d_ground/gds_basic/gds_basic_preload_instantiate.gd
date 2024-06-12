@@ -1,6 +1,6 @@
 extends Node
 
-var test_sprite_node = preload( "res://gds_step_03_sprite/TestSpriteNode.tscn" )
+var test_sprite_node = preload( "res://gds_basic/gds_basic_preload_instantiate_helper.tscn" )
 
 func _ready():
 	var tsn = test_sprite_node.instantiate()
