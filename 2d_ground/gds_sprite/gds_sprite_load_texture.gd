@@ -1,6 +1,17 @@
-extends Node
+extends PlaygroundScene
 
+
+
+############################ Override ############################
 func _ready():
+	pam.set_name( "Load Texture" )
+	pam.add_lf()
+	pam.add_back( Key.KEY_ESCAPE )
+	build_summary( eSceneType.TEST )
+	
+	#
+	# Start Practice
+	#
 	var sprite_resource_actor0001_idle_01 = load( "res://resources/sprite/actor001/actor001_idle_01.png" )
 	
 	var sprite_node = Sprite2D.new()
