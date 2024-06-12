@@ -8,10 +8,10 @@ func _ready():
 	pam.add_lf()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
-	pam.add_action( "Move Offset : U", Key.KEY_S, move_offset_up )
-	pam.add_action( "Move Offset : D", Key.KEY_W, move_offset_down )
-	pam.add_action( "Move Offset : R", Key.KEY_D, move_offset_right )
-	pam.add_action( "Move Offset : L", Key.KEY_A, move_offset_left )
+	pam.add_action( "Change Offset : U", Key.KEY_S, change_offset_up )
+	pam.add_action( "Change Offset : D", Key.KEY_W, change_offset_down )
+	pam.add_action( "Change Offset : R", Key.KEY_D, change_offset_right )
+	pam.add_action( "Change Offset : L", Key.KEY_A, change_offset_left )
 	build_summary( eSceneType.TEST )
 	
 	#
@@ -30,16 +30,16 @@ func _ready():
 
 
 ############################   User   ############################
-func move_offset_up():
+func change_offset_up():
 	$Sprite2D.offset.y += 1
 	update_info()
-func move_offset_down():
+func change_offset_down():
 	$Sprite2D.offset.y -= 1
 	update_info()
-func move_offset_right():
+func change_offset_right():
 	$Sprite2D.offset.x += 1
 	update_info()
-func move_offset_left():
+func change_offset_left():
 	$Sprite2D.offset.x -= 1
 	update_info()
 
