@@ -9,7 +9,7 @@ var test_node_resource = preload( "res://gds_basic/gds_basic_helper_sprite2d.tsc
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Basic" )
+	pam.set_name( "Preload + Instantiate" )
 	pam.add_lf()
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )
