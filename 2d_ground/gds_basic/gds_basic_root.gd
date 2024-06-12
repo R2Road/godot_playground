@@ -17,6 +17,7 @@ func _ready():
 	pam.add_mover( "Get Node", 			Key.KEY_7, 		"res://gds_basic/gds_basic_getnode.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Preload + Instantiate",		Key.KEY_Q,	"res://gds_basic/gds_basic_preload_instantiate.tscn" )
+	pam.add_mover( "Load + Instantiate",		Key.KEY_W,	"res://gds_basic/gds_basic_load_instantiate.tscn" )
 	pam.add_lf()
 	pam.add_mover( "OS", 				Key.KEY_Z, 		"res://gds_basic/gds_basic_os.tscn" )
 	build_summary( eSceneType.ROOT )

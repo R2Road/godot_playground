@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjgesitgnedgo"]
+
+[ext_resource type="Script" path="res://gds_basic/gds_basic_load_instantiate.gd" id="1_tl03c"]
+
+[node name="gds_basic_load_instantiate" type="Node2D"]
+script = ExtResource("1_tl03c")
