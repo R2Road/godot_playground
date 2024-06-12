@@ -23,8 +23,6 @@ static func new_exit( _owner : Node )->PlayGroundAction:
 
 
 static func new_mover( _owner : Node, _name : String, _key : Key, _next_scene_path : String )->PlayGroundAction:
-	assert( not _next_scene_path.is_empty() )
-	
 	var ret = PlayGroundAction.new()
 	
 	ret.name = _name
