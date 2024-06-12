@@ -86,7 +86,7 @@ func build_summary()->String:
 	#
 	# build summary
 	#
-	var ret : String = ( "+ " + name + "\n" )
+	var ret : String = ( "# " + name + "\n" )
 	
 	for i in container:
 		if Key.KEY_NONE != i.key:
