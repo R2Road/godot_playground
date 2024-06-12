@@ -34,11 +34,7 @@ func add_exit():
 
 
 func add_back( _key : Key ):
-	assert( not last_scene_path.is_empty() )
-	if last_scene_path.is_empty():
-		return
-		
-	container.push_back( PlayGroundAction.new_mover( owner, last_scene_name, _key, last_scene_path ) )
+	add_mover( last_scene_name, _key, last_scene_path )
 
 
 func add_mover( _name : String, _key : Key, _scene_path : String ):
