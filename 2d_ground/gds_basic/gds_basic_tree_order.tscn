@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://gds_basic/gds_basic_tree_order.gd" id="1_2y8fb"]
 [ext_resource type="Script" path="res://gds_basic/gds_basic_tree_order_helper.gd" id="2_ddk68"]
 
-[node name="gds_basic_TreeOrderScene" type="Node2D"]
+[node name="gds_basic_treeorder" type="Node2D"]
 script = ExtResource("1_2y8fb")
 
 [node name="Message" type="Label" parent="."]
