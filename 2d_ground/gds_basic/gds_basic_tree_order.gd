@@ -5,7 +5,7 @@ extends PlaygroundScene
 ############################ Override ############################
 func _init():
 	super._init()
-	print( name + " init" )
+	print( "init : " + name )
 
 
 func _ready():
@@ -14,15 +14,15 @@ func _ready():
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )
 	
-	print( name + " ready" )
+	print( "ready : " + name )
 
 
 func _enter_tree():
-	print( name + " enter tree" )
+	print( "enter tree : " + name )
 
 
 var test = true
 func _process( _delta ):
 	if test:
-		print( name + " process" )
+		print( "process : " + name )
 		test = false

@@ -8,15 +8,15 @@ class_name GDSBasic_TreeOrder_Helper extends Node
 ############################ Override ############################
 func _init():
 	# Note: a Node doesn't have a "name" yet here.
-	print( name + " init" )
+	print( "init : " + name )
 
 
 func _enter_tree():
-	print( name + " enter tree" )
+	print( "enter tree : " + name )
 
 
 func _ready():
-	print( name + " ready" )
+	print( "ready : " + name )
 
 
 # This ensures we only print *once* in process().
@@ -24,5 +24,5 @@ func _ready():
 var test = true
 func _process( _delta ):
 	if test:
-		print( name + " process" )
+		print( "process : " + name )
 		test = false
