@@ -12,7 +12,7 @@ func _ready():
 	#
 	# Start Practice
 	#
-	var test_node_resource = ResourceLoader.load( "res://helper/gds_helper_sprite2d_01.tscn" )
+	var test_node_resource = ResourceLoader.load( "res://helper/helper_sprite2d_01.tscn" )
 	
 	var test_node = test_node_resource.instantiate()
 	test_node.position = ( get_viewport().size * 0.5 )
