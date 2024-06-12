@@ -3,7 +3,7 @@ extends PlaygroundScene
 
 
 ############################ Variable ############################
-var test_node_resource = preload( "res://gds_helper/gds_helper_sprite2d_01.tscn" )
+var test_node_resource = preload( "res://helper/gds_helper_sprite2d_01.tscn" )
 
 
 
