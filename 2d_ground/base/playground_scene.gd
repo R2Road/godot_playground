@@ -22,6 +22,10 @@ func _init():
 	var label = Label.new()
 	label.name = "Summary"
 	add_child( label )
+	
+	var fps_label = ResourceLoader.load( "res://base/playground_scene_helper.tscn" ).instantiate()
+	fps_label.name = "FPS"
+	add_child( fps_label )
 
 
 func _input( event ):
@@ -39,3 +43,5 @@ func build_summary( _scene_type : eSceneType ):
 			( get_viewport().size * 0.5 )
 			- ( summary_node.get_minimum_size() * 0.5 )
 		)
+	
+	$FPS.position.y = get_viewport().size.y - $FPS.get_minimum_size().y
