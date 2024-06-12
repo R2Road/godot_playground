@@ -6,10 +6,6 @@
 [node name="gds_basic_TreeOrderScene" type="Node2D"]
 script = ExtResource("1_2y8fb")
 
-[node name="Summury" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 14.0
-
 [node name="Message" type="Label" parent="."]
 offset_left = 300.0
 offset_top = 280.0
