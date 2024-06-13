@@ -10,7 +10,7 @@ script = ExtResource("1_pwojf")
 texture_filter = 1
 scale = Vector2(3.5, 3.5)
 sprite_frames = ExtResource("2_c82ra")
-animation = &"ani_2"
+animation = &"ani_1"
 offset = Vector2(0, -22)
 
 [node name="Label" type="Label" parent="AnimatedSprite2D_1"]
@@ -34,5 +34,20 @@ offset_right = 113.286
 offset_bottom = 49.0
 scale = Vector2(0.5, 0.5)
 text = "load sprite frames
+in script"
+horizontal_alignment = 1
+
+[node name="AnimatedSprite2D_3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3.5, 3.5)
+animation = &""
+offset = Vector2(0, -22)
+
+[node name="Label" type="Label" parent="AnimatedSprite2D_3"]
+offset_left = -37.7143
+offset_right = 113.286
+offset_bottom = 49.0
+scale = Vector2(0.5, 0.5)
+text = "build sprite frames
 in script"
 horizontal_alignment = 1
