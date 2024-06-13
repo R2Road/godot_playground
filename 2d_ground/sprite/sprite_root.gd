@@ -14,6 +14,6 @@ func _ready():
 	pam.add_mover( "Aliasing",		Key.KEY_4, "res://sprite/sprite_aliasing.tscn" )
 	pam.add_mover( "Sheet",			Key.KEY_5, "res://sprite/sprite_sheet.tscn" )
 	pam.add_lf()
-	pam.add_mover( "Animation",			Key.KEY_Q, "res://sprite/sprite_animation.tscn" )
+	pam.add_mover( "Animation Basic",	Key.KEY_Q, "res://sprite/sprite_animation_basic.tscn" )
 	pam.add_mover( "Animation Control",	Key.KEY_W, "res://sprite/sprite_animation_control.tscn" )
 	build_summary( eSceneType.ROOT )
