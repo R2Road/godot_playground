@@ -53,6 +53,10 @@ func add_split():
 	container.push_back( PlayGroundAction.new_split() )
 
 
+func add_message( _message : String ):
+	container.push_back( PlayGroundAction.new_message( _message ) )
+
+
 func add_lf():
 	container.push_back( PlayGroundAction.new_lf() )
 

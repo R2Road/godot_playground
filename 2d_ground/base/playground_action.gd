@@ -88,6 +88,15 @@ static func new_action( _name : String, _key : Key, _functor : Callable )->PlayG
 	return ret
 
 
+static func new_message( _message : String )->PlayGroundAction:
+	var ret = PlayGroundAction.new()
+	
+	ret.name = _message
+	ret.key = Key.KEY_NONE
+	
+	return ret
+
+
 static func new_split()->PlayGroundAction:
 	var ret = PlayGroundAction.new()
 	
