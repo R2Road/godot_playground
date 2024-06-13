@@ -16,6 +16,6 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( "Animation Basic",	Key.KEY_Q, "res://sprite/sprite_animation_basic.tscn" )
 	pam.add_mover( "Animation Control",	Key.KEY_W, "res://sprite/sprite_animation_control.tscn" )
-	pam.add_mover( "Animation Load",	Key.KEY_E, "res://sprite/sprite_animation_load.tscn" )
+	pam.add_mover( "Animation Load : Sprite Textures",	Key.KEY_E, "res://sprite/sprite_animation_load_sprite_textures.tscn" )
 	pam.add_mover( "Animation Load : Atlas Texture",	Key.KEY_R, "res://sprite/sprite_animation_load_atlas_texture.tscn" )
 	build_summary( eSceneType.ROOT )

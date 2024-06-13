@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjc1o0jpthgvu"]
 
-[ext_resource type="Script" path="res://sprite/sprite_animation_load.gd" id="1_pwojf"]
-[ext_resource type="SpriteFrames" uid="uid://dofsxbhmho4gb" path="res://resources/sprite/actor001/sprite2d_animation_actor001.tres" id="2_c82ra"]
+[ext_resource type="Script" path="res://sprite/sprite_animation_load_sprite_textures.gd" id="1_w8usp"]
+[ext_resource type="SpriteFrames" uid="uid://dofsxbhmho4gb" path="res://resources/sprite/actor001/sprite2d_animation_actor001.tres" id="2_nvujc"]
 
-[node name="sprite_animation_load" type="Node2D"]
-script = ExtResource("1_pwojf")
+[node name="sprite_animation_load_sprite_textures" type="Node2D"]
+script = ExtResource("1_w8usp")
 
 [node name="AnimatedSprite2D_1" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(3.5, 3.5)
-sprite_frames = ExtResource("2_c82ra")
+sprite_frames = ExtResource("2_nvujc")
 animation = &"ani_1"
 offset = Vector2(0, -22)
 
