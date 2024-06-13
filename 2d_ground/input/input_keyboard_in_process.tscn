@@ -8,4 +8,5 @@ script = ExtResource("1_78oum")
 [node name="Message" type="Label" parent="."]
 offset_right = 120.0
 offset_bottom = 23.0
+scale = Vector2(3, 3)
 text = "Message Label"
