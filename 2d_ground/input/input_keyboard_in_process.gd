@@ -4,7 +4,7 @@ extends PlaygroundScene
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Keyboard Input : In Process" )
+	pam.set_name( "Input Keyboard : In Process" )
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )
 	
