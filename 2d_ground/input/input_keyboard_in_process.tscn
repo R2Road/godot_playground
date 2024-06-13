@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bglmtrc1ewhcc"]
+
+[ext_resource type="Script" path="res://input/input_keyboard_in_process.gd" id="1_78oum"]
+
+[node name="input_keyboard_in_process" type="Node2D"]
+script = ExtResource("1_78oum")
+
+[node name="Message" type="Label" parent="."]
+offset_right = 120.0
+offset_bottom = 23.0
+text = "Message Label"
