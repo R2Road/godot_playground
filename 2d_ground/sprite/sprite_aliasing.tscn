@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmaoyvjt4256k"]
+
+[ext_resource type="Script" path="res://sprite/sprite_aliasing.gd" id="1_2ib11"]
+[ext_resource type="Texture2D" uid="uid://dxvweghqhlqmv" path="res://resources/sprite/actor001/actor001_win_01.png" id="1_galxh"]
+
+[node name="sprite_aliasing" type="Node2D"]
+script = ExtResource("1_2ib11")
+
+[node name="Sprite2D_Default" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_galxh")
+
+[node name="Label" type="Label" parent="Sprite2D_Default"]
+offset_left = -14.2857
+offset_top = 18.2857
+offset_right = 42.7143
+offset_bottom = 41.2857
+scale = Vector2(0.5, 0.5)
+text = "Default"
+
+[node name="Sprite2D_Aliasing_In_Editor" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_galxh")
+
+[node name="Label" type="Label" parent="Sprite2D_Aliasing_In_Editor"]
+offset_left = -55.7143
+offset_top = 18.0
+offset_right = 167.286
+offset_bottom = 67.0
+scale = Vector2(0.5, 0.5)
+text = "Aliasing In Editor
+Show : CanvasItem > Texture"
+horizontal_alignment = 1
+
+[node name="Sprite2D_Aliasing_In_Script" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_galxh")
+
+[node name="Label" type="Label" parent="Sprite2D_Aliasing_In_Script"]
+offset_left = -56.0
+offset_top = 20.5714
+offset_right = 167.0
+offset_bottom = 69.5714
+scale = Vector2(0.5, 0.5)
+text = "Aliasing In Script"
+horizontal_alignment = 1
