@@ -25,7 +25,7 @@ horizontal_alignment = 1
 [node name="AnimatedSprite2D_2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(3.5, 3.5)
-animation = &"ani_2"
+animation = &""
 offset = Vector2(0, -22)
 
 [node name="Label" type="Label" parent="AnimatedSprite2D_2"]
