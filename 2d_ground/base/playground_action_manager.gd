@@ -46,7 +46,7 @@ func add_mover( _name : String, _key : Key, _scene_path : String ):
 
 
 func add_action( _name : String, _key : Key, _functor : Callable ):
-	container.push_back( PlayGroundAction.new_action( _name, _key, _functor ) )
+	container.push_back( PlayGroundAction.new_action( owner, _name, _key, _functor ) )
 
 
 func add_split():
