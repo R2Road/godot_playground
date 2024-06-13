@@ -17,7 +17,7 @@ func _ready():
 	#
 	$Sprite2D.set_position( get_viewport().size * 0.5 )
 	
-	update_frame_view( $Sprite2D.frame )
+	update_frame( $Sprite2D.frame )
 
 
 
@@ -25,14 +25,13 @@ func _ready():
 func increase_frame():
 	var new_frame = ( ( $Sprite2D.frame + 1 ) % $Sprite2D.hframes )
 	
-	$Sprite2D.frame = new_frame
-	update_frame_view( $Sprite2D.frame )
+	update_frame( new_frame )
 
 func decrease_frame():
 	var new_frame = ( ( $Sprite2D.hframes - 1 ) if ( 0 == $Sprite2D.frame ) else ( $Sprite2D.frame - 1 ) )
 	
-	$Sprite2D.frame = new_frame
-	update_frame_view( $Sprite2D.frame )
+	update_frame( new_frame )
 
-func update_frame_view( frame : int ):
-	$Sprite2D/Label.text = ( "frame : " + str( frame ) )
+func update_frame( new_frame : int ):
+	$Sprite2D.frame = new_frame
+	$Sprite2D/Label.text = ( "frame : " + str( new_frame ) )
