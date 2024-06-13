@@ -36,4 +36,4 @@ func change_scene_manually():
 	
 	var next_scene = load( "res://basic/basic_root.tscn" ).instantiate()
 	get_tree().root.add_child( next_scene )
-	get_tree().set_current_scene( load( "res://basic/basic_root.tscn" ).instantiate() )
+	get_tree().set_current_scene( next_scene )
