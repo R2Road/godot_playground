@@ -8,7 +8,7 @@ func _ready():
 	pam.add_lf()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
-	pam.add_message( "[Q|W] Press" )
+	pam.add_message( "[A|S|D|F] Press" )
 	build_summary( eSceneType.TEST )
 	
 	#
