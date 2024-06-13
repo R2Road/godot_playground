@@ -18,10 +18,14 @@ func _ready():
 
 
 func _process( _delta ):
-	if Input.is_key_pressed( KEY_Q ):
-		UpdateMessage( "Q" )
-	if Input.is_key_pressed( KEY_W ):
-		UpdateMessage( "W" )
+	if Input.is_key_pressed( KEY_A ):
+		UpdateMessage( "A" )
+	if Input.is_key_pressed( KEY_S ):
+		UpdateMessage( "S" )
+	if Input.is_key_pressed( KEY_D ):
+		UpdateMessage( "D" )
+	if Input.is_key_pressed( KEY_F ):
+		UpdateMessage( "F" )
 
 
 ############################   User   ############################
