@@ -11,12 +11,12 @@ texture_filter = 1
 scale = Vector2(3.5, 3.5)
 sprite_frames = ExtResource("2_c82ra")
 animation = &"ani_2"
+offset = Vector2(0, -22)
 
 [node name="Label" type="Label" parent="AnimatedSprite2D_1"]
 offset_left = -37.7143
-offset_top = 21.1429
 offset_right = 113.286
-offset_bottom = 70.1429
+offset_bottom = 49.0
 scale = Vector2(0.5, 0.5)
 text = "load sprite frames
 in editor"
@@ -26,12 +26,12 @@ horizontal_alignment = 1
 texture_filter = 1
 scale = Vector2(3.5, 3.5)
 animation = &"ani_2"
+offset = Vector2(0, -22)
 
 [node name="Label" type="Label" parent="AnimatedSprite2D_2"]
 offset_left = -37.7143
-offset_top = 21.1429
 offset_right = 113.286
-offset_bottom = 70.1429
+offset_bottom = 49.0
 scale = Vector2(0.5, 0.5)
 text = "load sprite frames
 in script"
