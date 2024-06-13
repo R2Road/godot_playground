@@ -23,14 +23,16 @@ func _ready():
 
 ############################   User   ############################
 func increase_frame():
-	if $Sprite2D.hframes > ( $Sprite2D.frame + 1 ):
-		$Sprite2D.frame = $Sprite2D.frame + 1
-		update_frame_view( $Sprite2D.frame )
+	var new_frame = ( ( $Sprite2D.frame + 1 ) % $Sprite2D.hframes )
+	
+	$Sprite2D.frame = new_frame
+	update_frame_view( $Sprite2D.frame )
 
 func decrease_frame():
-	if 0 <= ( $Sprite2D.frame - 1 ):
-		$Sprite2D.frame = $Sprite2D.frame - 1
-		update_frame_view( $Sprite2D.frame )
+	var new_frame = ( ( $Sprite2D.hframes - 1 ) if ( 0 == $Sprite2D.frame ) else ( $Sprite2D.frame - 1 ) )
+	
+	$Sprite2D.frame = new_frame
+	update_frame_view( $Sprite2D.frame )
 
 func update_frame_view( frame : int ):
 	$Sprite2D/Label.text = ( "frame : " + str( frame ) )
