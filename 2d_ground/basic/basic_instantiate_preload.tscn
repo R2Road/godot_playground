@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://basic/basic_instantiate_preload.gd" id="1"]
 
-[node name="gds_basic_instantiate_preload" type="Node2D"]
+[node name="basic_instantiate_preload" type="Node2D"]
 script = ExtResource("1")

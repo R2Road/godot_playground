@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://basic/basic_getnode.gd" id="2"]
 
-[node name="gds_basic_getnode" type="Node2D"]
+[node name="basic_getnode" type="Node2D"]
 script = ExtResource("2")
 
 [node name="1" type="Label" parent="."]

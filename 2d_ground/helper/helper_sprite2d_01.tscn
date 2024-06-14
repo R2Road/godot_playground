@@ -2,6 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://br7733mi0v430" path="res://resources/sprite/actor001/actor001_win_02.png" id="1_bo30q"]
 
-[node name="gds_basic_helper_sprite2d" type="Sprite2D"]
+[node name="helper_sprite2d_01" type="Sprite2D"]
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("1_bo30q")
