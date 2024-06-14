@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://input/input_map_actions.gd" id="1_g6kd6"]
 
-[node name="input_map_in_script" type="Node2D"]
+[node name="input_map_actions" type="Node2D"]
 script = ExtResource("1_g6kd6")
 
 [node name="Message" type="Label" parent="."]
