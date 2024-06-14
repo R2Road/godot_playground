@@ -91,7 +91,7 @@ static func new_action( _name : String, _key : Key, _functor : Callable )->PlayG
 static func new_message( _message : String )->PlayGroundAction:
 	var ret = PlayGroundAction.new()
 	
-	ret.name = _message
+	ret.name = ( _message + "\n" )
 	ret.key = Key.KEY_NONE
 	
 	return ret
