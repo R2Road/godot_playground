@@ -12,12 +12,12 @@ func _ready():
 	#
 	# Start Practice
 	#	
-	update_my_action_list()
+	show_my_action_list()
 
 
 
 ############################   User   ############################
-func update_my_action_list():
+func show_my_action_list():
 	var s : String = ""
 	for a in InputMap.get_actions():
 		if not a.contains( "test" ):
