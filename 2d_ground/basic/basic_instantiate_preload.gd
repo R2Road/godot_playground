@@ -12,6 +12,8 @@ func _ready():
 	pam.set_name( "Instantiate + Preload" )
 	pam.add_lf()
 	pam.add_back( Key.KEY_ESCAPE )
+	pam.add_lf()
+	pam.add_message( "> Show Script" )
 	build_summary( eSceneType.TEST )
 	
 	#
