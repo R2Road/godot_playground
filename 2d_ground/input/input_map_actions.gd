@@ -25,7 +25,10 @@ func show_my_action_list():
 			
 		s += a + " : "
 		for e in InputMap.action_get_events( a ):
-			s += " " + OS.get_keycode_string( e.physical_keycode )
+			if 0 != e.keycode:
+				s += " " + OS.get_keycode_string( e.keycode )
+			else:
+				s += " " + OS.get_keycode_string( e.physical_keycode )
 		s += "\n"
 	
 	var message_node = get_node( "Message" )
