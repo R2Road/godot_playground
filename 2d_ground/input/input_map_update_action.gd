@@ -19,7 +19,7 @@ func _ready():
 	#
 	# Start Practice
 	#	
-	key_change_4_test_space_action()
+	change_key()
 	
 	collect_my_input_action_names()
 	show_my_input_action_infos()
@@ -39,7 +39,7 @@ func _process( _delta ):
 
 
 func _exit_tree():
-	rollback_key_test_space_action()	
+	rollback_key()	
 
 
 
@@ -53,7 +53,7 @@ func update_message( text ):
 	)
 
 
-func key_change_4_test_space_action():
+func change_key():
 	InputMap.erase_action( "test_space" )
 	
 	InputMap.add_action( "test_q" )
@@ -62,7 +62,7 @@ func key_change_4_test_space_action():
 	InputMap.action_add_event( "test_q", new_input_event_key )
 
 
-func rollback_key_test_space_action():
+func rollback_key():
 	InputMap.erase_action( "test_q" )
 	
 	InputMap.add_action( "test_space" )	
