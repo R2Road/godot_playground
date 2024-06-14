@@ -30,7 +30,7 @@ func _process( _delta ):
 	if Input.is_action_pressed( "test_d" ):
 		text += "d" + " "
 	if Input.is_action_pressed( "test_space" ):
-		text += "space" + " "
+		text += "z" + " "
 	
 	if not text.is_empty():
 		update_message( text )
