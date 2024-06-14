@@ -19,7 +19,7 @@ func _ready():
 	#
 	# Start Practice
 	#	
-	key_change_4_test_space_action()
+	change_key()
 	
 	collect_my_input_action_names()
 	show_my_input_action_infos()
@@ -39,7 +39,7 @@ func _process( _delta ):
 
 
 func _exit_tree():
-	rollback_key_test_space_action()	
+	rollback_key()	
 
 
 
@@ -53,7 +53,7 @@ func update_message( text ):
 	)
 
 
-func key_change_4_test_space_action():
+func change_key():
 	print( "[test_space] event count : " + str( InputMap.action_get_events( "test_space" ).size() ) )
 	
 	InputMap.action_erase_events( "test_space" )
@@ -67,7 +67,7 @@ func key_change_4_test_space_action():
 	print( "[test_space] event count : " + str( InputMap.action_get_events( "test_space" ).size() ) )
 
 
-func rollback_key_test_space_action():
+func rollback_key():
 	InputMap.action_erase_events( "test_space" )	
 	var new_input_event_key = InputEventKey.new()
 	new_input_event_key.physical_keycode = KEY_SPACE
