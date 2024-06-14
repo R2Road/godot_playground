@@ -39,6 +39,6 @@ func update_message( text ):
 	var message_node = get_node( "Message" )
 	message_node.text = text
 	message_node.set_position(
-			( get_viewport().size * 0.5 )
+			Vector2( get_viewport().size.x * 0.17, get_viewport().size.y * 0.5 )
 			- ( message_node.get_minimum_size() * message_node.get_scale() * 0.5 )
 	)
