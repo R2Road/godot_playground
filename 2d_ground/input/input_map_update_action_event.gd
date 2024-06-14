@@ -36,6 +36,11 @@ func _process( _delta ):
 		update_message( text )
 
 
+func _exit_tree():
+	rollback_action()	
+
+
+
 ############################   User   ############################
 func update_message( text ):
 	var message_node = get_node( "Message" )
@@ -58,3 +63,10 @@ func update_action():
 	InputMap.action_add_event( "test_space", new_input_event_key )
 	
 	print( "[test_space] event count : " + str( InputMap.action_get_events( "test_space" ).size() ) )
+
+
+func rollback_action():	
+	InputMap.action_erase_events( "test_space" )	
+	var new_input_event_key = InputEventKey.new()
+	new_input_event_key.keycode = KEY_SPACE
+	InputMap.action_add_event( "test_space", new_input_event_key )
