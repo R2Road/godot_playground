@@ -20,9 +20,13 @@ func _ready():
 func update_my_action_list():
 	var s : String = ""
 	for a in InputMap.get_actions():
-		if a.contains( "test" ):
-			s += a
-			s += "\n"
+		if not a.contains( "test" ):
+			continue
+			
+		s += a + " : "
+		for e in InputMap.action_get_events( a ):
+			s += " " + OS.get_keycode_string( e.physical_keycode )
+		s += "\n"
 	
 	var message_node = get_node( "Message" )
 	message_node.text = s
