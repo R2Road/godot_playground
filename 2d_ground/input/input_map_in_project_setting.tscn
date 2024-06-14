@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://dcvnl8p8tt6vl"]
 
-[ext_resource type="Script" path="res://input/input_map.gd" id="1_ftber"]
-[ext_resource type="Texture2D" uid="uid://lexqerbglvbw" path="res://resources/wiki/input_map.png" id="2_0sdqe"]
+[ext_resource type="Script" path="res://input/input_map_in_project_setting.gd" id="1_w0vxm"]
+[ext_resource type="Texture2D" uid="uid://lexqerbglvbw" path="res://resources/wiki/input_map.png" id="2_1o5rt"]
 
-[node name="input_map" type="Node2D"]
-script = ExtResource("1_ftber")
+[node name="input_map_in_project_setting" type="Node2D"]
+script = ExtResource("1_w0vxm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(769.863, 324.25)
 scale = Vector2(0.827186, 0.827186)
-texture = ExtResource("2_0sdqe")
+texture = ExtResource("2_1o5rt")
 
 [node name="Message" type="Label" parent="."]
 offset_right = 120.0
