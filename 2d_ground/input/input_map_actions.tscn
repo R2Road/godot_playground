@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dax3njd853exh"]
+
+[ext_resource type="Script" path="res://input/input_map_actions.gd" id="1_g6kd6"]
+
+[node name="input_map_in_script" type="Node2D"]
+script = ExtResource("1_g6kd6")
+
+[node name="Message" type="Label" parent="."]
+texture_filter = 1
+offset_right = 120.0
+offset_bottom = 23.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Message Label"
