@@ -21,7 +21,7 @@ func _ready():
 	#	
 	change_key()
 	
-	collect_my_input_action_names()
+	collect_my_input_action_infos()
 	show_my_input_action_infos()
 	
 	update_message( "Press Keyboard" )
@@ -71,7 +71,7 @@ func rollback_key():
 	InputMap.action_add_event( "test_space", new_input_event_key )
 
 
-func collect_my_input_action_names():
+func collect_my_input_action_infos():
 	for a in InputMap.get_actions():
 		if not a.contains( "test" ):
 			continue
