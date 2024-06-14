@@ -4,7 +4,7 @@ extends PlaygroundScene
 
 ############################ Variable ############################
 @export var test_scene_resource_1 : PackedScene
-@export var test_scene_resource_2 : PackedScene = load( "res://helper/helper_sprite2d_02.tscn" )
+@export var test_scene_resource_2 : PackedScene = preload( "res://helper/helper_sprite2d_02.tscn" )
 
 
 
