@@ -2,7 +2,7 @@
 
 
 ## 개괄 | Overview
-- gdscript를 학습한 기록겸 메모장 | gdscript training record
+- gdscript 학습 기록겸 메모장 | gdscript training record
 
 
 ## 작업환경 | Environment
