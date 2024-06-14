@@ -18,6 +18,7 @@ offset_left = -37.7143
 offset_right = 113.286
 offset_bottom = 49.0
 scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "load sprite frames
 in editor"
 horizontal_alignment = 1
@@ -32,6 +33,7 @@ offset_left = -37.7143
 offset_right = 113.286
 offset_bottom = 49.0
 scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "load sprite frames
 in script"
 horizontal_alignment = 1
@@ -46,6 +48,7 @@ offset_left = -37.7143
 offset_right = 113.286
 offset_bottom = 49.0
 scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "build sprite frames
 in script"
 horizontal_alignment = 1
