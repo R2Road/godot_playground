@@ -33,6 +33,7 @@ func _exit_tree():
 ############################   User   ############################
 func generate_file():
 	var f = FileAccess.open( file_path,FileAccess.WRITE )
+	f.store_string( "abcd\nefgh\n1234\n가나다라마바사" )
 	show_directory()
 
 func remove_file():
