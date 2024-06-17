@@ -14,6 +14,7 @@ func _ready():
 	#
 	array_2_json_string()
 	dictionary_2_json_string()
+	apply_indent()
 
 
 
@@ -24,7 +25,7 @@ func array_2_json_string():
 	
 	$Array.text = s
 	$Array.set_position(
-		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.4 )
+		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.2 )
 		- ( $Array.get_minimum_size() * $Array.get_scale() * 0.5 )
 	)
 
@@ -35,6 +36,24 @@ func dictionary_2_json_string():
 	
 	$Dictionary.text = s
 	$Dictionary.set_position(
-		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.6 )
+		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.3 )
 		- ( $Dictionary.get_minimum_size() * $Dictionary.get_scale() * 0.5 )
 	)
+
+
+func apply_indent():
+	var d : Dictionary = { "a" = 1, "b" = 2, "c" = 3, "d" = [1, 2, 3, 4] }
+	var s = JSON.stringify( d, "        " )
+	
+	$Indent.text = s
+	$Indent.set_position(
+		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.4 )
+		- Vector2(
+			$Indent.get_minimum_size().x * ( $Indent.get_scale().x * 0.5 )
+			, $Indent.get_minimum_size().y * ( $Indent.get_scale().y * 0.0 )
+		)
+	)
+	
+	# Label 은 \t를 정상 출력하지 못한다
+	s = JSON.stringify( d, "\t" )
+	print( s )

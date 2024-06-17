@@ -12,3 +12,7 @@ offset_bottom = 23.0
 [node name="Dictionary" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="Indent" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
