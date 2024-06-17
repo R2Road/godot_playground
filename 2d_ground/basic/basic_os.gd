@@ -16,22 +16,23 @@ func _ready():
 
 ############################   User   ############################
 func test_shell_open_url():
-	UpdateMessage( OS.shell_open("https://godotengine.org/") )
+	OS.shell_open( "https://godotengine.org/" )
+	update_message( "OS.shell_open( \"https://godotengine.org/\" )" )
 
 
 func test_shell_open_dir():
 	OS.shell_open( "C://" )
-	UpdateMessage( "OS.shell_open( \"C://\" )" )
+	update_message( "OS.shell_open( \"C://\" )" )
 
 
 func test_get_dates():
-	UpdateMessage( Time.get_datetime_dict_from_system() )
+	update_message( Time.get_datetime_dict_from_system() )
 
 
-func UpdateMessage( arg ):
+func update_message( arg ):
 	var message_node = get_node( "Message" )
 	message_node.text = str( arg )
 	message_node.set_position(
-			Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.5 )
-			- ( Vector2( message_node.get_minimum_size().x * 0.5, message_node.get_minimum_size().y * 0.5 ) * $Message.get_scale() )
+			get_viewport().size * 0.5
+			- ( message_node.get_minimum_size() * message_node.get_scale() * 0.5 )
 	)
