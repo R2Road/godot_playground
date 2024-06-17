@@ -3,7 +3,8 @@ extends PlaygroundScene
 
 
 ############################ Variable ############################
-var file_path = ( OS.get_user_data_dir() + "/basic_file_generate_remove.txt" )
+var dir_path = OS.get_user_data_dir()
+var file_path = ( dir_path + "/basic_file_generate_remove.txt" )
 
 
 
@@ -39,17 +40,17 @@ func remove_file():
 	show_directory()
 
 func open_directory():
-	OS.shell_open( OS.get_user_data_dir() )
+	OS.shell_open( dir_path )
 
 func show_directory():
 	var str : String = ( 
 		"# Directories"
 		+ "\n"
-		+ "( " + OS.get_user_data_dir() + " )"
+		+ "( " + dir_path + " )"
 		+ "\n"
 	)
 	
-	var dir : DirAccess = DirAccess.open( OS.get_user_data_dir() )
+	var dir : DirAccess = DirAccess.open( dir_path )
 	for d in dir.get_directories():
 		str += "     d > "
 		str += d
