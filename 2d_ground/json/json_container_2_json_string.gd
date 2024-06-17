@@ -1,0 +1,40 @@
+extends PlaygroundScene
+
+
+
+############################ Override ############################
+func _ready():
+	pam.set_name( "Json : Container 2 Json String" )
+	pam.add_split()
+	pam.add_back( Key.KEY_ESCAPE )
+	build_summary( eSceneType.TEST )
+	
+	#
+	# Start Practice
+	#
+	array_2_json_string()
+	dictionary_2_json_string()
+
+
+
+############################   User   ############################
+func array_2_json_string():
+	var a : Array = [ "a", "b", "c" ]
+	var s = JSON.stringify( a )
+	
+	$Array.text = s
+	$Array.set_position(
+		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.4 )
+		- ( $Array.get_minimum_size() * $Array.get_scale() * 0.5 )
+	)
+
+
+func dictionary_2_json_string():
+	var d : Dictionary = { "a" = 1, "b" = 2, "c" = 3 }
+	var s = JSON.stringify( d )
+	
+	$Dictionary.text = s
+	$Dictionary.set_position(
+		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.6 )
+		- ( $Dictionary.get_minimum_size() * $Dictionary.get_scale() * 0.5 )
+	)
