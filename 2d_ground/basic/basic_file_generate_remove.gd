@@ -25,7 +25,7 @@ func _ready():
 
 
 func _exit_tree():
-	if DirAccess.dir_exists_absolute( file_path ):
+	if FileAccess.file_exists( file_path ):
 		remove_file()
 
 
