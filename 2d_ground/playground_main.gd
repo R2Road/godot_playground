@@ -16,6 +16,8 @@ func _ready():
 	pam.add_mover( "Sound",		Key.KEY_6, 		"res://sound/sound_root.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Json",		Key.KEY_Q, 		"res://json/json_root.tscn" )
+	pam.add_lf()
+	pam.add_mover( "ETC",		Key.KEY_Z, 		"res://etc/etc_root.tscn" )
 	pam.add_split()
 	pam.add_mover( "Test change scene without PlaygroundScene",	Key.KEY_SPACE,	"res://dummy.tscn" )
 	build_summary( eSceneType.ROOT )
