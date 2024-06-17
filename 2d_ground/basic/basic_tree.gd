@@ -29,6 +29,8 @@ func _ready():
 	tree_string += "# get_tree().root.get_children() ~ name"
 	tree_string += "\n"
 	for c in get_tree().root.get_children():
+		if c.is_queued_for_deletion():
+			continue
 		tree_string += ( "     > " + c.name + "\n" )
 	
 	var label = Label.new()
