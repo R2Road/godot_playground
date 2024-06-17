@@ -23,4 +23,5 @@ func _ready():
 	pam.add_mover( "Change Scene",				Key.KEY_F,	"res://basic/basic_change_scene.tscn" )
 	pam.add_lf()
 	pam.add_mover( "OS", 				Key.KEY_Z, 		"res://basic/basic_os.tscn" )
+	pam.add_mover( "Directory View",	Key.KEY_X, 		"res://basic/basic_directory_view.tscn" )
 	build_summary( eSceneType.ROOT )
