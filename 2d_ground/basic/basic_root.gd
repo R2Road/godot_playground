@@ -25,4 +25,5 @@ func _ready():
 	pam.add_mover( "OS", 						Key.KEY_Z, 		"res://basic/basic_os.tscn" )
 	pam.add_mover( "Directory View",			Key.KEY_X, 		"res://basic/basic_directory_view.tscn" )
 	pam.add_mover( "Directory Generate/Remove",	Key.KEY_C, 		"res://basic/basic_directory_generate_remove.tscn" )
+	pam.add_mover( "File Generate/Remove",		Key.KEY_V, 		"res://basic/basic_file_generate_remove.tscn" )
 	build_summary( eSceneType.ROOT )
