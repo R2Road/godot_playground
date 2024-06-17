@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmmcd1sihtl6g"]
+
+[ext_resource type="Script" path="res://json/json_parse.gd" id="1_cawtk"]
+
+[node name="json_parse" type="Node2D"]
+script = ExtResource("1_cawtk")
+
+[node name="Label_1" type="Label" parent="."]
+offset_right = 1.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+
+[node name="Label_2" type="Label" parent="."]
+offset_right = 1.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+
+[node name="Label_3" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+
+[node name="Label_4" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)

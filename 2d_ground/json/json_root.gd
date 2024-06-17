@@ -10,4 +10,5 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( "Container 2 Json String",		Key.KEY_1, "res://json/json_container_2_json_string.tscn" )
 	pam.add_mover( "parse_string()",				Key.KEY_2, "res://json/json_parse_string.tscn" )
+	pam.add_mover( "parse()",						Key.KEY_3, "res://json/json_parse.tscn" )
 	build_summary( eSceneType.ROOT )
