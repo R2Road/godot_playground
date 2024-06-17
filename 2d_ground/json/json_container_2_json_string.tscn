@@ -8,11 +8,14 @@ script = ExtResource("1_ybsmx")
 [node name="Array" type="Label" parent="."]
 offset_right = 1.0
 offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
 
 [node name="Dictionary" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
 
 [node name="Indent" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
