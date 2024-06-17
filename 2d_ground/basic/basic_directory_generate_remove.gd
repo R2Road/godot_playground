@@ -14,7 +14,7 @@ func _ready():
 	pam.add_lf()
 	pam.add_action( "generate dir", Key.KEY_1, generate_directory )
 	pam.add_action( "remove dir", Key.KEY_2, remove_directory )
-	pam.add_action( "open dir", Key.KEY_3, open_directory )
+	pam.add_action( "open file explorer", Key.KEY_3, open_directory )
 	build_summary( eSceneType.TEST )
 	
 	#
