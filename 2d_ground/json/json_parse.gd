@@ -12,66 +12,23 @@ func _ready():
 	#
 	# Start Practice
 	#
-	parse_failed_1()
-	parse_failed_2()
-	parse_succeed_1()
-	parse_succeed_2()
+	parse_and_show( $Label_1, "", 0.5, 0.2 )
+	parse_and_show( $Label_2, "[1,2,3", 0.5, 0.4 )
+	parse_and_show( $Label_3, "[2,3,4]", 0.5, 0.6 )
+	parse_and_show( $Label_4, "[2, 3, 4, 5, 6, ]", 0.5, 0.8 )
 
 
 
 ############################   User   ############################
-func parse_failed_1():
-	var s : String = ""
-	var c = JSON.parse_string( s )
+func parse_and_show( label_node : Label, json_string : String, x : float, y : float  ):
+	var c = JSON.parse_string( json_string )
 	
-	$Failed_1.text = (
-		"string : " + s
+	label_node.text = (
+		"string : " + json_string
 		+ "\n"
 		+ "result : " + str( c )
 	)
-	$Failed_1.set_position(
-		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.2 )
-		- ( $Failed_1.get_minimum_size() * $Failed_1.get_scale() * 0.5 )
-	)
-func parse_failed_2():
-	var s : String = "[1, 2, 3"
-	var c = JSON.parse_string( s )
-	
-	$Failed_2.text = (
-		"string : " + s
-		+ "\n"
-		+ "result : " + str( c )
-	)
-	$Failed_2.set_position(
-		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.4 )
-		- ( $Failed_2.get_minimum_size() * $Failed_2.get_scale() * 0.5 )
-	)
-
-
-func parse_succeed_1():
-	var s : String = "[2, 3, 4]"
-	var c = JSON.parse_string( s )
-	
-	$Succeed_1.text = (
-		"string : " + s
-		+ "\n"
-		+ "result : " + str( c )
-	)
-	$Succeed_1.set_position(
-		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.6 )
-		- ( $Succeed_1.get_minimum_size() * $Succeed_1.get_scale() * 0.5 )
-	)
-
-func parse_succeed_2():
-	var s : String = "[2, 3, 4, 5, 6, ]"
-	var c = JSON.parse_string( s )
-	
-	$Succeed_2.text = (
-		"string : " + s
-		+ "\n"
-		+ "result : " + str( c )
-	)
-	$Succeed_2.set_position(
-		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.8 )
-		- ( $Succeed_2.get_minimum_size() * $Succeed_2.get_scale() * 0.5 )
+	label_node.set_position(
+		Vector2( get_viewport().size.x * x, get_viewport().size.y * y )
+		- ( label_node.get_minimum_size() * label_node.get_scale() * 0.5 )
 	)
