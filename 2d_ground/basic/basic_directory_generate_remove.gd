@@ -45,7 +45,7 @@ func show_directory():
 	var str : String = ( 
 		"# Directories"
 		+ "\n"
-		+ "( " + file_path + " )"
+		+ "( " + OS.get_user_data_dir() + " )"
 		+ "\n"
 	)
 	
