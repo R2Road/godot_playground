@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctqkajib8hdkf"]
+
+[ext_resource type="Script" path="res://json/json_parse.gd" id="1_4rsrv"]
+
+[node name="json_parse" type="Node2D"]
+script = ExtResource("1_4rsrv")
+
+[node name="Failed_1" type="Label" parent="."]
+offset_right = 1.0
+offset_bottom = 23.0
+
+[node name="Failed_2" type="Label" parent="."]
+offset_right = 1.0
+offset_bottom = 23.0
+
+[node name="Succeed_1" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Succeed_2" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
