@@ -10,4 +10,5 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( "Basic",	Key.KEY_1, "res://area2d/area2d_basic.tscn" )
 	pam.add_mover( "Load",	Key.KEY_2, "res://area2d/area2d_load.tscn" )
+	pam.add_mover( "Connect Signal in Script",	Key.KEY_3, "res://area2d/area2d_connect_signal_in_script.tscn" )
 	build_summary( eSceneType.ROOT )
