@@ -33,19 +33,19 @@ offset_bottom = -109.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "Player"
 
-[node name="Area2D_Area" type="Area2D" parent="."]
+[node name="Area2D_Sensor" type="Area2D" parent="."]
 position = Vector2(615, 320)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Sensor"]
 shape = SubResource("RectangleShape2D_sc8r6")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D_Area"]
+[node name="Sprite2D" type="Sprite2D" parent="Area2D_Sensor"]
 texture_filter = 1
 scale = Vector2(5.61539, 5.61539)
 texture = ExtResource("3_s28b8")
 
-[node name="Label" type="Label" parent="Area2D_Area"]
+[node name="Label" type="Label" parent="Area2D_Sensor"]
 offset_left = -24.0
 offset_top = -132.0
 offset_right = 25.0
