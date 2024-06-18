@@ -2,6 +2,11 @@ extends PlaygroundScene
 
 
 
+############################ Variable ############################
+var click_count : int = 0
+
+
+
 ############################ Override ############################
 func _ready():
 	pam.set_name( "Click Sprite" )
@@ -23,4 +28,5 @@ func _unhandled_input( event ):
 		if not $Sprite2D.get_rect().has_point( $Sprite2D.to_local( event.position ) ):
 			return
 		
-		print( "done" )
+		click_count += 1
+		$Sprite2D/Label.text = str( click_count )
