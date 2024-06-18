@@ -20,15 +20,15 @@ func _ready():
 	#
 	
 	# Area2D_Area_Load_Shape_In_Script
-	$Area2D_Area_Load_Shape_In_Script/CollisionShape2D.shape = RectangleShape2D.new()
-	$Area2D_Area_Load_Shape_In_Script/CollisionShape2D.shape.size = Vector2( 134, 216 )
+	$Area2D_Load_Shape_In_Script/CollisionShape2D.shape = RectangleShape2D.new()
+	$Area2D_Load_Shape_In_Script/CollisionShape2D.shape.size = Vector2( 134, 216 )
 	
 	
 	# Area2D_Load_In_Script
 	var area2d_load_in_script = Area2D.new()
 	area2d_load_in_script.name = "Area2D_Load_In_Script"
 	add_child( area2d_load_in_script )
-	$Area2D_Load_In_Script.set_position( $Area2D_Area_Load_Shape_In_Script.position + Vector2( 350, 0 ) )
+	$Area2D_Load_In_Script.set_position( $Area2D_Load_Shape_In_Script.position + Vector2( 350, 0 ) )
 	
 	var cs2d = CollisionShape2D.new()
 	cs2d.name = "CollisionShape2D"
