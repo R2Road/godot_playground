@@ -24,6 +24,11 @@ func _ready():
 	#
 	for r in audio_list:
 		r.loop = false
+	
+	$Label.set_position(
+		( get_viewport().size * 0.5 )
+		- ( $Label.get_minimum_size() * $Label.get_scale() * 0.5 )
+	)
 
 
 
