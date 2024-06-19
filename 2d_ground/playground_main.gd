@@ -13,7 +13,7 @@ func _ready():
 	pam.add_mover( "Sprite", 	Key.KEY_3, 		"res://sprite/sprite_root.tscn" )
 	pam.add_mover( "Area2D", 	Key.KEY_4, 		"res://area2d/area2d_root.tscn" )
 	pam.add_mover( "UI", 		Key.KEY_5, 		"res://ui/ui_root.tscn" )
-	pam.add_mover( "Sound",		Key.KEY_6, 		"res://sound/sound_root.tscn" )
+	pam.add_mover( "Audio",		Key.KEY_6, 		"res://audio/audio_root.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Json",		Key.KEY_Q, 		"res://json/json_root.tscn" )
 	pam.add_lf()
