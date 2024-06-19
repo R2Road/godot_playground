@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv3rc6tetw6jf"]
+
+[ext_resource type="Script" path="res://audio/audio_stream_randomizer.gd" id="1_bt0nj"]
+[ext_resource type="AudioStream" uid="uid://dbhnb0allu3pg" path="res://resources/sound/audio_stream_randomizer_sfx.tres" id="2_cjbfw"]
+
+[node name="audio_stream_randomizer" type="Node2D"]
+script = ExtResource("1_bt0nj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cjbfw")
+volume_db = -25.0
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "-"
+horizontal_alignment = 1

@@ -1,0 +1,18 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://dbhnb0allu3pg"]
+
+[ext_resource type="AudioStream" uid="uid://cl7c72a7g0y8b" path="res://resources/sound/fx/coin_001.ogg" id="1_fdcow"]
+[ext_resource type="AudioStream" uid="uid://cgs4ymknk63ss" path="res://resources/sound/fx/damaged_001.ogg" id="2_dq3rw"]
+[ext_resource type="AudioStream" uid="uid://b4gbfav7vf068" path="res://resources/sound/fx/jump_001.ogg" id="3_fcoc4"]
+[ext_resource type="AudioStream" uid="uid://d2ao03yl18m2n" path="res://resources/sound/fx/powerup_001.ogg" id="4_nphbh"]
+
+[resource]
+playback_mode = 1
+streams_count = 4
+stream_0/stream = ExtResource("2_dq3rw")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("1_fdcow")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_fcoc4")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_nphbh")
+stream_3/weight = 1.0
