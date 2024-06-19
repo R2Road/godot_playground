@@ -10,9 +10,19 @@ script = ExtResource("1_u78kq")
 [node name="helper_point" parent="." instance=ExtResource("2_5typv")]
 position = Vector2(439, 249)
 
-[node name="helper_rect" parent="." instance=ExtResource("3_s4q3e")]
+[node name="helper_rect_1" parent="." instance=ExtResource("3_s4q3e")]
 position = Vector2(238, 392)
 color = Color(1, 0, 0, 1)
 
-[node name="helper_point" parent="helper_rect" instance=ExtResource("2_5typv")]
+[node name="helper_point" parent="helper_rect_1" instance=ExtResource("2_5typv")]
+scale = Vector2(1, 1)
+
+[node name="helper_rect_2" parent="." instance=ExtResource("3_s4q3e")]
+position = Vector2(239, 460)
+color = Color(1, 0, 0, 1)
+fill = false
+out_line_bold = 3.0
+metadata/_edit_group_ = true
+
+[node name="helper_point" parent="helper_rect_2" instance=ExtResource("2_5typv")]
 scale = Vector2(1, 1)
