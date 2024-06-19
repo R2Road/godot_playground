@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://k5vx7qt2cevj"]
+[gd_scene load_steps=4 format=3 uid="uid://k5vx7qt2cevj"]
 
 [ext_resource type="Script" path="res://helper/helper_root.gd" id="1_u78kq"]
 [ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://helper/helper_point.tscn" id="2_5typv"]
+[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://helper/helper_rect.tscn" id="3_s4q3e"]
 
 [node name="helper_root" type="Node2D"]
 script = ExtResource("1_u78kq")
 
 [node name="helper_point" parent="." instance=ExtResource("2_5typv")]
 position = Vector2(439, 249)
+
+[node name="helper_rect" parent="." instance=ExtResource("3_s4q3e")]
+position = Vector2(238, 392)
+color = Color(1, 0, 0, 1)
+
+[node name="helper_point" parent="helper_rect" instance=ExtResource("2_5typv")]
+scale = Vector2(1, 1)
