@@ -3,7 +3,9 @@ extends Node2D
 
 
 ############################ Variable ############################
+@export var offset : Vector2 = Vector2( 0, 0 )
 @export var color = Color( 0, 1, 0 )
+@export var radius : float = 1
 
 
 
@@ -14,4 +16,4 @@ func _init():
 
 
 func _draw():
-	draw_circle( Vector2( 0, 0 ), 1, color )
+	draw_circle( offset, radius, color )

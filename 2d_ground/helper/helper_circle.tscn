@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://gpu5f7fm35o4"]
+
+[ext_resource type="Script" path="res://helper/helper_circle.gd" id="1_ggefx"]
+
+[node name="helper_circle" type="Node2D"]
+z_as_relative = false
+scale = Vector2(3.5, 3.5)
+script = ExtResource("1_ggefx")
