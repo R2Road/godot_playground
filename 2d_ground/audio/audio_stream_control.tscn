@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://db821cp8ibmsp"]
+
+[ext_resource type="Script" path="res://audio/audio_stream_control.gd" id="1_fjims"]
+[ext_resource type="AudioStream" uid="uid://cgguebcum7c7p" path="res://resources/sound/bgm/Somewhere_in_the_Elevator.ogg" id="2_1gn8h"]
+
+[node name="audio_stream_control" type="Node2D"]
+script = ExtResource("1_fjims")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_1gn8h")
+volume_db = -20.0
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+horizontal_alignment = 1
