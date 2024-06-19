@@ -8,7 +8,7 @@ const move_speed : int = 200
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Area2d : Basic" )
+	pam.set_name( "Area2D : Basic" )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
