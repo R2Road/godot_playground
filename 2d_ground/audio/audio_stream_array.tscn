@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://cj4oo7fn7yt4f"]
+
+[ext_resource type="Script" path="res://audio/audio_stream_array.gd" id="1_1exh3"]
+[ext_resource type="AudioStream" uid="uid://cl7c72a7g0y8b" path="res://resources/sound/fx/coin_001.ogg" id="2_s6pnd"]
+[ext_resource type="AudioStream" uid="uid://cgs4ymknk63ss" path="res://resources/sound/fx/damaged_001.ogg" id="3_0kt03"]
+[ext_resource type="AudioStream" uid="uid://b4gbfav7vf068" path="res://resources/sound/fx/jump_001.ogg" id="4_atpqg"]
+[ext_resource type="AudioStream" uid="uid://d2ao03yl18m2n" path="res://resources/sound/fx/powerup_001.ogg" id="5_xcaf7"]
+
+[node name="audio_stream_array" type="Node2D"]
+script = ExtResource("1_1exh3")
+audio_list = Array[AudioStream]([ExtResource("2_s6pnd"), ExtResource("3_0kt03"), ExtResource("4_atpqg"), ExtResource("5_xcaf7")])
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -25.0
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "-"
+horizontal_alignment = 1
