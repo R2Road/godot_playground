@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://k5vx7qt2cevj"]
+[gd_scene load_steps=6 format=3 uid="uid://k5vx7qt2cevj"]
 
 [ext_resource type="Script" path="res://helper/helper_root.gd" id="1_u78kq"]
 [ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://helper/helper_point.tscn" id="2_5typv"]
 [ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://helper/helper_rect.tscn" id="3_s4q3e"]
 [ext_resource type="PackedScene" uid="uid://gpu5f7fm35o4" path="res://helper/helper_circle.tscn" id="4_ixfyo"]
+[ext_resource type="PackedScene" uid="uid://cmqwendenqxuy" path="res://helper/helper_line.tscn" id="5_spmwa"]
 
 [node name="helper_root" type="Node2D"]
 script = ExtResource("1_u78kq")
@@ -35,4 +36,11 @@ color = Color(0.00380502, 0.592167, 0.724739, 1)
 radius = 10.0
 
 [node name="helper_point" parent="helper_circle" instance=ExtResource("2_5typv")]
+scale = Vector2(1, 1)
+
+[node name="helper_line" parent="." instance=ExtResource("5_spmwa")]
+position = Vector2(611, 399)
+color = Color(1, 0.335514, 0.269596, 1)
+
+[node name="helper_point" parent="helper_line" instance=ExtResource("2_5typv")]
 scale = Vector2(1, 1)
