@@ -2,6 +2,11 @@ extends PlaygroundScene
 
 
 
+############################ Variable ############################
+var elapsed_time = 0
+
+
+
 ############################ Override ############################
 func _ready():
 	pam.set_name( "Path2D Basic" )
@@ -25,3 +30,12 @@ func _ready():
 		( get_viewport().size * 0.5 )
 		- ( $Label.get_minimum_size() * $Label.get_scale() * 0.5 )
 	)
+
+
+func _process( delta ):
+	elapsed_time += delta
+	
+	if ( $Path2D.curve.point_count - 1 ) < elapsed_time:
+		elapsed_time = 0
+		
+	$Player.position = $Path2D.curve.samplef( elapsed_time )
