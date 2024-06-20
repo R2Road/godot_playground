@@ -9,7 +9,7 @@ bounce = 1.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_07eur"]
 size = Vector2(50, 50)
 
-[node name="rigidbody2d_basic_player" type="RigidBody2D"]
+[node name="rigidbody2d_helper_player" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_ntg1u")
 gravity_scale = 0.0
 contact_monitor = true

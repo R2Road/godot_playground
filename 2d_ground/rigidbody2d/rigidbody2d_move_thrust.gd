@@ -12,7 +12,8 @@ var spin = 0
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "RigidBody2D : Move : Thrust" )
+	pam.set_name( "RigidBody2D : Move : Thrust
+	" )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()

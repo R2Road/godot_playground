@@ -9,7 +9,7 @@ bounce = 1.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sc8r6"]
 size = Vector2(50, 50)
 
-[node name="rigidbody2d_basic_static" type="StaticBody2D"]
+[node name="rigidbody2d_helper_static" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_xlyxy")
 metadata/_edit_group_ = true
 

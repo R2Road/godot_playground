@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dmop7sjv8n7ek"]
 
 [ext_resource type="Script" path="res://rigidbody2d/rigidbody2d_basic.gd" id="1_6cqdg"]
-[ext_resource type="PackedScene" uid="uid://chqiu7b6xye50" path="res://rigidbody2d/rigidbody2d_basic_player.tscn" id="2_4i7xn"]
-[ext_resource type="PackedScene" uid="uid://de7mk8n8pw7t" path="res://rigidbody2d/rigidbody2d_basic_static.tscn" id="3_lyq7h"]
-[ext_resource type="PackedScene" uid="uid://bus1rcti1b3k5" path="res://rigidbody2d/rigidbody2d_basic_box.tscn" id="3_rh65u"]
+[ext_resource type="PackedScene" uid="uid://chqiu7b6xye50" path="res://rigidbody2d/rigidbody2d_helper_player.tscn" id="2_4i7xn"]
+[ext_resource type="PackedScene" uid="uid://de7mk8n8pw7t" path="res://rigidbody2d/rigidbody2d_helper_static.tscn" id="3_lyq7h"]
+[ext_resource type="PackedScene" uid="uid://bus1rcti1b3k5" path="res://rigidbody2d/rigidbody2d_helper_box.tscn" id="3_rh65u"]
 
 [node name="rigidbody2d_basic" type="Node2D"]
 script = ExtResource("1_6cqdg")
