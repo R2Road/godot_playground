@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bus1rcti1b3k5" path="res://rigidbody2d/rigidbody2d_helper_box.tscn" id="3_byl0k"]
 [ext_resource type="PackedScene" uid="uid://de7mk8n8pw7t" path="res://rigidbody2d/rigidbody2d_helper_static.tscn" id="4_h5ess"]
 
-[node name="rigidbody2d_basic" type="Node2D"]
+[node name="rigidbody2d_demo" type="Node2D"]
 script = ExtResource("1_r3ibw")
 
 [node name="Player" parent="." instance=ExtResource("2_a5e28")]
