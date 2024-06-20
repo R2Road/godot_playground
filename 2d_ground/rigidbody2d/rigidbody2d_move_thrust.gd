@@ -16,7 +16,8 @@ func _ready():
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
-	pam.add_message( "[ W | A | S | D ] Move Player" )
+	pam.add_message( "[ W ] Thrust" )
+	pam.add_message( "[ S | D ] Rotation" )
 	build_summary( eSceneType.TEST )
 
 
