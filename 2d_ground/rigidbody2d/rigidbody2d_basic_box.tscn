@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bus1rcti1b3k5"]
+
+[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://helper/helper_rect.tscn" id="1_h1vty"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://helper/helper_point.tscn" id="2_dlt3f"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ntg1u"]
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07eur"]
+size = Vector2(50, 50)
+
+[node name="rigidbody2d_basic_box" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_ntg1u")
+gravity_scale = 0.0
+contact_monitor = true
+linear_damp_mode = 1
+angular_damp_mode = 1
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_07eur")
+
+[node name="helper_rect" parent="." instance=ExtResource("1_h1vty")]
+scale = Vector2(1, 1)
+rect = Rect2(-25, -25, 50, 50)
+color = Color(0, 0.352941, 0.47451, 1)
+
+[node name="helper_point" parent="." instance=ExtResource("2_dlt3f")]
+scale = Vector2(1, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -37.0
+offset_top = -48.0
+offset_right = 37.0
+offset_bottom = -25.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "rigidbody"
