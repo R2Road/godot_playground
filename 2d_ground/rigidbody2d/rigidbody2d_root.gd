@@ -9,6 +9,6 @@ func _ready():
 	pam.add_mover( "Playground",		Key.KEY_ESCAPE, "res://playground_main.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Basic",			Key.KEY_1, "res://rigidbody2d/rigidbody2d_basic.tscn" )
-	pam.add_mover( "Move 4-Way",	Key.KEY_2, "res://rigidbody2d/rigidbody2d_move_4way.tscn" )
-	pam.add_mover( "Move",			Key.KEY_3, "res://rigidbody2d/rigidbody2d_move.tscn" )
+	pam.add_mover( "Move : 4-Way",	Key.KEY_2, "res://rigidbody2d/rigidbody2d_move_4way.tscn" )
+	pam.add_mover( "Move : Thrust ",			Key.KEY_3, "res://rigidbody2d/rigidbody2d_move_thrust.tscn" )
 	build_summary( eSceneType.ROOT )

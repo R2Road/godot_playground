@@ -9,7 +9,7 @@ extends PlaygroundScene
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "RigidBody2D : Move 4-Way" )
+	pam.set_name( "RigidBody2D : Move : 4-Way" )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
