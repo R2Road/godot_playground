@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmop7sjv8n7ek"]
+
+[ext_resource type="Script" path="res://rigidbody2d/rigidbody2d_demo.gd" id="1_r3ibw"]
+[ext_resource type="PackedScene" uid="uid://chqiu7b6xye50" path="res://rigidbody2d/rigidbody2d_helper_player.tscn" id="2_a5e28"]
+[ext_resource type="PackedScene" uid="uid://bus1rcti1b3k5" path="res://rigidbody2d/rigidbody2d_helper_box.tscn" id="3_byl0k"]
+[ext_resource type="PackedScene" uid="uid://de7mk8n8pw7t" path="res://rigidbody2d/rigidbody2d_helper_static.tscn" id="4_h5ess"]
+
+[node name="rigidbody2d_basic" type="Node2D"]
+script = ExtResource("1_r3ibw")
+
+[node name="Player" parent="." instance=ExtResource("2_a5e28")]
+position = Vector2(466, 318)
+linear_damp = 1.0
+
+[node name="Box" parent="." instance=ExtResource("3_byl0k")]
+position = Vector2(616, 270)
+
+[node name="Static" parent="." instance=ExtResource("4_h5ess")]
+position = Vector2(616, 390)
