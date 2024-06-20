@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://1kp5pvi0330o"]
+
+[ext_resource type="Script" path="res://path2d/path2d_basic.gd" id="1_xa1nv"]
+
+[sub_resource type="Curve2D" id="Curve2D_37gp1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 73, 178, 0, 0, 0, 0, 272, 67, 0, 0, 0, 0, 729, 28, 0, 0, 0, 0, 1043, 102, 0, 0, 0, 0, 1096, 405, 0, 0, 0, 0, 955, 604, 0, 0, 0, 0, 603, 626, 0, 0, 0, 0, 321, 601, 0, 0, 0, 0, 79, 441, 0, 0, 0, 0, 115, 265, 0, 0, 0, 0, 390, 211, 0, 0, 0, 0, 805, 261)
+}
+point_count = 12
+
+[node name="path2d_basic" type="Node2D"]
+script = ExtResource("1_xa1nv")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_37gp1")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0.76456, 0.945285, 1)
