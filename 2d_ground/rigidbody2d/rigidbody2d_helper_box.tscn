@@ -23,7 +23,7 @@ shape = SubResource("RectangleShape2D_07eur")
 [node name="helper_rect" parent="." instance=ExtResource("1_h1vty")]
 scale = Vector2(1, 1)
 rect = Rect2(-25, -25, 50, 50)
-color = Color(0, 0.352941, 0.47451, 1)
+color = Color(0.922119, 0.221714, 0.397675, 1)
 
 [node name="helper_point" parent="." instance=ExtResource("2_dlt3f")]
 scale = Vector2(1, 1)
