@@ -10,4 +10,5 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( "Click Sprite",		Key.KEY_1, 		"res://etc/etc_click_sprite.tscn" )
 	pam.add_mover( "Timer",				Key.KEY_2, 		"res://etc/etc_timer.tscn" )
+	pam.add_mover( "Screen Exit",		Key.KEY_3, 		"res://etc/etc_screen_exit.tscn" )
 	build_summary( eSceneType.ROOT )
