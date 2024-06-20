@@ -10,6 +10,7 @@ script = ExtResource("1_r3ibw")
 
 [node name="Player" parent="." instance=ExtResource("2_a5e28")]
 position = Vector2(466, 318)
+max_contacts_reported = 1
 linear_damp = 1.0
 
 [node name="Box" parent="." instance=ExtResource("3_byl0k")]
@@ -17,3 +18,12 @@ position = Vector2(616, 270)
 
 [node name="Static" parent="." instance=ExtResource("4_h5ess")]
 position = Vector2(616, 390)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "0"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="Player" to="." method="_on_player_body_entered"]
