@@ -29,13 +29,24 @@ metadata/_edit_group_ = true
 [node name="helper_point" parent="helper_rect_2" instance=ExtResource("2_5typv")]
 scale = Vector2(1, 1)
 
-[node name="helper_circle" parent="." instance=ExtResource("4_ixfyo")]
-position = Vector2(432, 394)
-offset = Vector2(-5, 0)
+[node name="helper_circle_1" parent="." instance=ExtResource("4_ixfyo")]
+position = Vector2(434, 393)
+scale = Vector2(3.5, 3.5)
+color = Color(0, 0.632718, 0.672899, 1)
+radius = 5.0
+metadata/_edit_group_ = true
+
+[node name="helper_point" parent="helper_circle_1" instance=ExtResource("2_5typv")]
+scale = Vector2(1, 1)
+
+[node name="helper_circle_2" parent="." instance=ExtResource("4_ixfyo")]
+position = Vector2(433, 467)
+offset = Vector2(-10, 0)
 color = Color(0.00380502, 0.592167, 0.724739, 1)
 radius = 10.0
+metadata/_edit_group_ = true
 
-[node name="helper_point" parent="helper_circle" instance=ExtResource("2_5typv")]
+[node name="helper_point" parent="helper_circle_2" instance=ExtResource("2_5typv")]
 scale = Vector2(1, 1)
 
 [node name="helper_line" parent="." instance=ExtResource("5_spmwa")]
