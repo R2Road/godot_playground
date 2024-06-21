@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://daty50gdafm6q"]
+
+[ext_resource type="Texture2D" uid="uid://c5acmiscqv7ia" path="res://resources/sprite/actor001/actor001_run_03.png" id="1_ckqc4"]
+
+[sub_resource type="Curve2D" id="Curve2D_njg0e"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 218, 94, 0, 0, 0, 0, 1156.93, 94.8333, 123.134, -115.427, -123.134, 115.427, 986.935, 490.833, 108.936, 78.7916, -108.936, -78.7916, 432.935, 513.833, 0, 0, 0, 0, 218, 94)
+}
+point_count = 5
+
+[node name="path2d_follow_helper" type="Sprite2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-100.935, -11.8333)
+curve = SubResource("Curve2D_njg0e")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(218, 94)
+rotation = 0.000887525
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ckqc4")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -20.0
+offset_top = 23.0
+offset_right = 20.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "3"
+horizontal_alignment = 1
