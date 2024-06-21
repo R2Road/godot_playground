@@ -30,12 +30,24 @@ func _ready():
 	$Path2D_1.curve = Curve2D.new()
 	$Path2D_1.curve.add_point( Vector2( 150, y ) )
 	$Path2D_1.curve.add_point( Vector2( get_viewport().size.x * 0.5, y ) )
-	$Path2D_1.curve.add_point( Vector2( get_viewport().size.x - 100, y ) )
+	$Path2D_1.curve.add_point( Vector2( get_viewport().size.x - 150, y ) )
 	
 	for i in $Path2D_1.curve.point_count:
 		var hp = ResourceLoader.load( "res://helper/helper_point.tscn" ).instantiate()
 		hp.set_position( $Path2D_1.curve.get_point_position( i ) )
 		add_child( hp )
+		if Vector2.ZERO != $Path2D_1.curve.get_point_in( i ):
+			var ip = hp.duplicate()
+			ip.color = Color( 1, 0, 0 )
+			ip.set_position( hp.position + $Path2D_1.curve.get_point_in( i ) )
+			add_child( ip )
+		if Vector2.ZERO != $Path2D_1.curve.get_point_out( i ):
+			var op = hp.duplicate()
+			op.color = Color( 0, 0, 1 )
+			op.set_position( hp.position + $Path2D_1.curve.get_point_out( i ) )
+			add_child( op )
+	
+	$Label_1.position = Vector2( get_viewport().size.x * 0.5, y )
 	
 	
 	# 2
@@ -46,13 +58,25 @@ func _ready():
 	y = get_viewport().size.y * 0.5
 	$Path2D_2.curve = Curve2D.new()
 	$Path2D_2.curve.add_point( Vector2( 150, y ) )
-	$Path2D_2.curve.add_point( Vector2( get_viewport().size.x * 0.5, y ), Vector2( -50, 100 ) )
-	$Path2D_2.curve.add_point( Vector2( get_viewport().size.x - 100, y ) )
+	$Path2D_2.curve.add_point( Vector2( get_viewport().size.x * 0.5, y ), Vector2( -50, 70 ) )
+	$Path2D_2.curve.add_point( Vector2( get_viewport().size.x - 150, y ) )
 	
 	for i in $Path2D_2.curve.point_count:
 		var hp = ResourceLoader.load( "res://helper/helper_point.tscn" ).instantiate()
 		hp.set_position( $Path2D_2.curve.get_point_position( i ) )
 		add_child( hp )
+		if Vector2.ZERO != $Path2D_2.curve.get_point_in( i ):
+			var ip = hp.duplicate()
+			ip.color = Color( 1, 0, 0 )
+			ip.set_position( hp.position + $Path2D_2.curve.get_point_in( i ) )
+			add_child( ip )
+		if Vector2.ZERO != $Path2D_2.curve.get_point_out( i ):
+			var op = hp.duplicate()
+			op.color = Color( 0, 0, 1 )
+			op.set_position( hp.position + $Path2D_2.curve.get_point_out( i ) )
+			add_child( op )
+	
+	$Label_2.position = Vector2( get_viewport().size.x * 0.5, y )
 	
 	
 	# 3
@@ -63,13 +87,25 @@ func _ready():
 	y = get_viewport().size.y * 0.8
 	$Path2D_3.curve = Curve2D.new()
 	$Path2D_3.curve.add_point( Vector2( 150, y ) )
-	$Path2D_3.curve.add_point( Vector2( get_viewport().size.x * 0.5, y ), Vector2( -50, 100 ), Vector2( 50, -100 ) )
-	$Path2D_3.curve.add_point( Vector2( get_viewport().size.x - 100, y ) )
+	$Path2D_3.curve.add_point( Vector2( get_viewport().size.x * 0.5, y ), Vector2( -50, 70 ), Vector2( 50, -70 ) )
+	$Path2D_3.curve.add_point( Vector2( get_viewport().size.x - 150, y ) )
 	
 	for i in $Path2D_3.curve.point_count:
 		var hp = ResourceLoader.load( "res://helper/helper_point.tscn" ).instantiate()
 		hp.set_position( $Path2D_3.curve.get_point_position( i ) )
 		add_child( hp )
+		if Vector2.ZERO != $Path2D_3.curve.get_point_in( i ):
+			var ip = hp.duplicate()
+			ip.color = Color( 1, 0, 0 )
+			ip.set_position( hp.position + $Path2D_3.curve.get_point_in( i ) )
+			add_child( ip )
+		if Vector2.ZERO != $Path2D_3.curve.get_point_out( i ):
+			var op = hp.duplicate()
+			op.color = Color( 0, 0, 1 )
+			op.set_position( hp.position + $Path2D_3.curve.get_point_out( i ) )
+			add_child( op )
+	
+	$Label_3.position = Vector2( get_viewport().size.x * 0.5, y )
 
 
 func _process( delta ):
