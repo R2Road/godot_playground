@@ -22,14 +22,13 @@ func _ready():
 		hp.set_position( $Path2D.curve.get_point_position( i ) )
 		add_child( hp )
 	
-	$Label.text = (
-		"Baked Length : "
-		+ str( $Path2D.curve.get_baked_length() )
+	$Label_1.text = ( "Baked Length : %.2f" % $Path2D.curve.get_baked_length() )
+	$Label_1.set_position(
+		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.45 )
+		- ( $Label_1.get_minimum_size() * $Label_1.get_scale() * 0.5 )
 	)
-	$Label.set_position(
-		( get_viewport().size * 0.5 )
-		- ( $Label.get_minimum_size() * $Label.get_scale() * 0.5 )
-	)
+	
+	show_elapsed_time()
 
 
 func _process( delta ):
@@ -39,3 +38,15 @@ func _process( delta ):
 		elapsed_time = 0
 		
 	$Player.position = $Path2D.curve.samplef( elapsed_time )
+	
+	show_elapsed_time()
+
+
+
+############################   User   ############################
+func show_elapsed_time():
+	$Label_2.text = ( "Elapsed Time : %.2f" % elapsed_time )
+	$Label_2.set_position(
+		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.55 )
+		- ( $Label_2.get_minimum_size() * $Label_2.get_scale() * 0.5 )
+	)
