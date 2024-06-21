@@ -10,4 +10,5 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( "Basic",			Key.KEY_1, "res://path2d/path2d_basic.tscn" )
 	pam.add_mover( "Load",			Key.KEY_2, "res://path2d/path2d_load.tscn" )
+	pam.add_mover( "In/Out",		Key.KEY_3, "res://path2d/path2d_in_out.tscn" )
 	build_summary( eSceneType.ROOT )

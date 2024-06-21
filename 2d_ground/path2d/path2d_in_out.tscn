@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnk2utousbq2m"]
+
+[ext_resource type="Script" path="res://path2d/path2d_in_out.gd" id="1_fhwam"]
+[ext_resource type="PackedScene" uid="uid://6smcc7kp4eg1" path="res://helper/helper_sprite2d_01.tscn" id="2_6cf84"]
+
+[node name="path2d_in_out" type="Node2D"]
+script = ExtResource("1_fhwam")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0.76456, 0.945285, 1)
+
+[node name="Player_1" parent="." instance=ExtResource("2_6cf84")]
+scale = Vector2(1, 1)
+
+[node name="Player_2" parent="." instance=ExtResource("2_6cf84")]
+scale = Vector2(1, 1)
+
+[node name="Player_3" parent="." instance=ExtResource("2_6cf84")]
+scale = Vector2(1, 1)
