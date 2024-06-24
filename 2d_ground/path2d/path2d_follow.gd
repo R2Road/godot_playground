@@ -30,6 +30,7 @@ func _physics_process( delta ):
 	# Sprite2D_2기
 	#
 	$Sprite2D_2.position = ( get_viewport().size * 0.5 ) + follow.global_position
+	$Sprite2D_2.rotation = follow.global_rotation
 	
 	#
 	# $path2d_follow_helper/Sprite2D : Scene 으로 만들어서 써보기.

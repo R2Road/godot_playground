@@ -16,7 +16,7 @@ curve = SubResource("Curve2D_njg0e")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2(218, 94)
-rotation = 0.000887525
+rotation = 0.000887497
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ckqc4")
@@ -27,5 +27,6 @@ offset_top = 23.0
 offset_right = 20.0
 offset_bottom = 46.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
-text = "3"
+text = "3
+별도 Scene Instantiate"
 horizontal_alignment = 1
