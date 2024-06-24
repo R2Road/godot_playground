@@ -14,10 +14,6 @@ func _ready():
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )
-	
-	#
-	# Start Practice
-	#
 
 
 func _physics_process( delta ):
