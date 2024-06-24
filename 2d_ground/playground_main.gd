@@ -19,6 +19,7 @@ func _ready():
 	pam.add_mover( "Audio",		Key.KEY_Q, 		"res://audio/audio_root.tscn" )
 	pam.add_mover( "Json",		Key.KEY_W, 		"res://json/json_root.tscn" )
 	pam.add_mover( "UI", 		Key.KEY_E, 		"res://ui/ui_root.tscn" )
+	pam.add_mover( "Shader",	Key.KEY_R, 		"res://shader/shader_root.tscn" )
 	pam.add_lf()
 	pam.add_mover( "ETC",		Key.KEY_Z, 		"res://etc/etc_root.tscn" )
 	pam.add_mover( "Helper",	Key.KEY_X, 		"res://helper/helper_root.tscn" )
