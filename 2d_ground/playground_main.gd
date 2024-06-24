@@ -15,7 +15,7 @@ func _ready():
 	pam.add_mover( "RigidBody2D",	Key.KEY_5, 		"res://rigidbody2d/rigidbody2d_root.tscn" )
 	pam.add_mover( "Path2D",		Key.KEY_6, 		"res://path2d/path2d_root.tscn" )
 	pam.add_mover( "Animation",		Key.KEY_7, 		"res://animation/animation_root.tscn" )
-	pam.add_mover( "Particle2D",	Key.KEY_8, 		"res://particle2d/particle2d_root.tscn" )
+	pam.add_mover( "Particles2D",	Key.KEY_8, 		"res://particles2d/particles2d_root.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Audio",		Key.KEY_Q, 		"res://audio/audio_root.tscn" )
 	pam.add_mover( "Json",		Key.KEY_W, 		"res://json/json_root.tscn" )
