@@ -4,5 +4,4 @@
 
 [node name="helper_rect" type="Node2D"]
 z_as_relative = false
-scale = Vector2(3.5, 3.5)
 script = ExtResource("1_ds26s")

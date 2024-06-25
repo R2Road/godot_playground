@@ -4,5 +4,4 @@
 
 [node name="helper_line" type="Node2D"]
 z_as_relative = false
-scale = Vector2(3.5, 3.5)
 script = ExtResource("1_n1pe7")
