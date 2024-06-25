@@ -36,10 +36,6 @@ horizontal_alignment = 1
 
 [node name="helper_point" parent="CPUParticles2D_Shape_Rectangle" instance=ExtResource("2_m7w3e")]
 
-[node name="helper_point" parent="." instance=ExtResource("2_m7w3e")]
-position = Vector2(100, 100)
-scale = Vector2(1, 1)
-
 [node name="CPUParticles2D_Shape_Sphere" type="CPUParticles2D" parent="."]
 local_coords = true
 emission_shape = 1
@@ -53,3 +49,5 @@ offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "Sphere"
 horizontal_alignment = 1
+
+[node name="helper_point" parent="CPUParticles2D_Shape_Sphere" instance=ExtResource("2_m7w3e")]
