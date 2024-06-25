@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtwh8g7qjnsj7"]
 
-[ext_resource type="Script" path="res://sprite/sprite_offset.gd" id="1_pg6vy"]
+[ext_resource type="Script" path="res://sprite/sprite2d_offset.gd" id="1_pg6vy"]
 [ext_resource type="Texture2D" uid="uid://dxvweghqhlqmv" path="res://resources/sprite/actor001/actor001_win_01.png" id="2_3bcks"]
 
 [node name="sprite_offset" type="Node2D"]

@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://dmaoyvjt4256k"]
 
-[ext_resource type="Script" path="res://sprite/sprite_aliasing.gd" id="1_2ib11"]
-[ext_resource type="Texture2D" uid="uid://dxvweghqhlqmv" path="res://resources/sprite/actor001/actor001_win_01.png" id="1_galxh"]
+[ext_resource type="Script" path="res://sprite/sprite2d_aliasing.gd" id="1_1apsh"]
+[ext_resource type="Texture2D" uid="uid://dxvweghqhlqmv" path="res://resources/sprite/actor001/actor001_win_01.png" id="2_qq60p"]
 
 [node name="sprite_aliasing" type="Node2D"]
-script = ExtResource("1_2ib11")
+script = ExtResource("1_1apsh")
 
 [node name="Sprite2D_Default" type="Sprite2D" parent="."]
 scale = Vector2(3.5, 3.5)
-texture = ExtResource("1_galxh")
+texture = ExtResource("2_qq60p")
 offset = Vector2(0, -20)
 
 [node name="Label" type="Label" parent="Sprite2D_Default"]
@@ -23,7 +23,7 @@ text = "Default"
 [node name="Sprite2D_Aliasing_In_Editor" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(3.5, 3.5)
-texture = ExtResource("1_galxh")
+texture = ExtResource("2_qq60p")
 offset = Vector2(0, -20)
 
 [node name="Label" type="Label" parent="Sprite2D_Aliasing_In_Editor"]
@@ -39,7 +39,7 @@ horizontal_alignment = 1
 
 [node name="Sprite2D_Aliasing_In_Script" type="Sprite2D" parent="."]
 scale = Vector2(3.5, 3.5)
-texture = ExtResource("1_galxh")
+texture = ExtResource("2_qq60p")
 offset = Vector2(0, -20)
 
 [node name="Label" type="Label" parent="Sprite2D_Aliasing_In_Script"]
