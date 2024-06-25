@@ -8,7 +8,7 @@ script = ExtResource("1_w7qsj")
 
 [node name="CPUParticles2D_Shape_Point" type="CPUParticles2D" parent="."]
 local_coords = true
-gravity = Vector2(0, 0)
+gravity = Vector2(0, -500)
 
 [node name="Label" type="Label" parent="CPUParticles2D_Shape_Point"]
 offset_left = -59.0
@@ -24,7 +24,7 @@ horizontal_alignment = 1
 local_coords = true
 emission_shape = 3
 emission_rect_extents = Vector2(100, 100)
-gravity = Vector2(0, 0)
+gravity = Vector2(0, -500)
 
 [node name="Label" type="Label" parent="CPUParticles2D_Shape_Rectangle"]
 offset_left = -59.0
@@ -40,7 +40,7 @@ horizontal_alignment = 1
 local_coords = true
 emission_shape = 1
 emission_sphere_radius = 50.0
-gravity = Vector2(0, 0)
+gravity = Vector2(0, -500)
 
 [node name="Label" type="Label" parent="CPUParticles2D_Shape_Sphere"]
 offset_left = -59.0
