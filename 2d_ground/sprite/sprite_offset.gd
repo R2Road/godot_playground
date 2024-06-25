@@ -44,4 +44,12 @@ func change_offset_left():
 	update_info()
 
 func update_info():
-	$Sprite2D/Label.text = str( $Sprite2D.position ) + "\n" + str( $Sprite2D.offset )
+	$Label.text = (
+			"position : " + str( $Sprite2D.position )
+		+ 	"\n"
+		+ 	"offset : " + str( $Sprite2D.offset ) )
+	
+	$Label.set_position(
+		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.7 )
+		- ( $Label.get_minimum_size() * $Label.get_scale() * 0.5 )
+	)

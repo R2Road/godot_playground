@@ -10,18 +10,11 @@ script = ExtResource("1_pg6vy")
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("2_3bcks")
 
-[node name="Label" type="Label" parent="Sprite2D"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -44.5
-offset_top = -22.0
-offset_right = 18.5
-offset_bottom = 27.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="Label" type="Label" parent="."]
+offset_right = 63.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "position
 offset
 "
+horizontal_alignment = 1
