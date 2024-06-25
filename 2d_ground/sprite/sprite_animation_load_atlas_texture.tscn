@@ -11,12 +11,13 @@ texture_filter = 1
 scale = Vector2(3.5, 3.5)
 sprite_frames = ExtResource("2_ctpr7")
 animation = &"ani_2"
-offset = Vector2(0, -22)
+offset = Vector2(0, -10)
 
 [node name="Label" type="Label" parent="AnimatedSprite2D_1"]
 offset_left = -37.7143
+offset_top = 13.7143
 offset_right = 113.286
-offset_bottom = 49.0
+offset_bottom = 62.7143
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "load sprite frames
@@ -26,12 +27,13 @@ horizontal_alignment = 1
 [node name="AnimatedSprite2D_2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(3.5, 3.5)
-offset = Vector2(0, -22)
+offset = Vector2(0, -10)
 
 [node name="Label" type="Label" parent="AnimatedSprite2D_2"]
 offset_left = -37.7143
+offset_top = 13.7143
 offset_right = 113.286
-offset_bottom = 49.0
+offset_bottom = 62.7143
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "load sprite frames
@@ -41,12 +43,13 @@ horizontal_alignment = 1
 [node name="AnimatedSprite2D_3" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(3.5, 3.5)
-offset = Vector2(0, -22)
+offset = Vector2(0, -10)
 
 [node name="Label" type="Label" parent="AnimatedSprite2D_3"]
 offset_left = -37.7143
+offset_top = 13.7143
 offset_right = 113.286
-offset_bottom = 49.0
+offset_bottom = 62.7143
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "build sprite frames
