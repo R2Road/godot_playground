@@ -4,7 +4,7 @@ extends PlaygroundScene
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Load Texture" )
+	pam.set_name( "Sprite2D : Load Texture" )
 	pam.add_lf()
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )

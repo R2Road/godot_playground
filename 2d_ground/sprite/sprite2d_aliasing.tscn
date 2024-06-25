@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://sprite/sprite2d_aliasing.gd" id="1_1apsh"]
 [ext_resource type="Texture2D" uid="uid://dxvweghqhlqmv" path="res://resources/sprite/actor001/actor001_win_01.png" id="2_qq60p"]
 
-[node name="sprite_aliasing" type="Node2D"]
+[node name="sprite2d_aliasing" type="Node2D"]
 script = ExtResource("1_1apsh")
 
 [node name="Sprite2D_Default" type="Sprite2D" parent="."]
