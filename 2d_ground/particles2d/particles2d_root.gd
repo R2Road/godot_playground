@@ -9,4 +9,5 @@ func _ready():
 	pam.add_mover( "Playground",		Key.KEY_ESCAPE, "res://playground_main.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Basic",				Key.KEY_1, "res://particles2d/particles2d_cpu_shape.tscn" )
+	pam.add_mover( "Control",			Key.KEY_2, "res://particles2d/particles2d_cpu_control.tscn" )
 	build_summary( eSceneType.ROOT )
