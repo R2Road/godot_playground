@@ -8,4 +8,8 @@ func _ready():
 
 
 func _process( _delta ):
-	self.text = "fps : " + str( Engine.get_frames_per_second() )
+	self.text = (
+		str( get_viewport().size.x ) + " x " + str( get_viewport().size.y )
+		+ "\n"
+		+ "fps : " + str( Engine.get_frames_per_second() )
+	)

@@ -3,7 +3,11 @@
 [ext_resource type="Script" path="res://base/playground_scene_helper.gd" id="1_i7b8w"]
 
 [node name="playground_scene_helper" type="Label"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
 offset_right = 197.0
-offset_bottom = 23.0
+grow_vertical = 0
 text = "playground_scene_helper"
 script = ExtResource("1_i7b8w")
