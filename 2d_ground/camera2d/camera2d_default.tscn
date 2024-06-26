@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://h2i3ahn8kcvm"]
+
+[ext_resource type="Script" path="res://camera2d/camera2d_default.gd" id="1_hjfp6"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://helper/helper_point.tscn" id="2_vfvg1"]
+
+[node name="camera2d_default" type="Node2D"]
+script = ExtResource("1_hjfp6")
+
+[node name="helper_point" parent="." instance=ExtResource("2_vfvg1")]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "+ Update
+get_viewport().get_camera_2d().position
+
+
+별도의 Camera 노드를 추가하지 않았다면
+get_viewport().get_camera_2d() 는 null을 반환한다."
+horizontal_alignment = 1
