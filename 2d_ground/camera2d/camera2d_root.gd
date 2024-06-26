@@ -8,5 +8,6 @@ func _ready():
 	pam.add_split()
 	pam.add_mover( "Playground",		Key.KEY_ESCAPE, "res://playground_main.tscn" )
 	pam.add_lf()
-	pam.add_mover( "Camera Swap",		Key.KEY_1, 		"res://etc/etc_camera2d_swap.tscn" )
+	pam.add_mover( "ViewPort",			Key.KEY_1, 		"res://camera2d/viewport_basic.tscn" )
+	pam.add_mover( "Camera Swap",		Key.KEY_2, 		"res://etc/etc_camera2d_swap.tscn" )
 	build_summary( eSceneType.ROOT )
