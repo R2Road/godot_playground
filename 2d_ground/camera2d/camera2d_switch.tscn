@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://bxryv7u41kual"]
 
-[ext_resource type="Script" path="res://etc/etc_camera2d_swap.gd" id="1_w3o5o"]
-[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://helper/helper_point.tscn" id="2_ptsf7"]
+[ext_resource type="Script" path="res://camera2d/camera2d_switch.gd" id="1_j778w"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://helper/helper_point.tscn" id="2_jp6e3"]
 
 [node name="etc_camera2d_swap" type="Node2D"]
-script = ExtResource("1_w3o5o")
+script = ExtResource("1_j778w")
 
-[node name="helper_point_1" parent="." instance=ExtResource("2_ptsf7")]
+[node name="helper_point_1" parent="." instance=ExtResource("2_jp6e3")]
 position = Vector2(317, 133)
 metadata/_edit_group_ = true
 
@@ -18,7 +18,7 @@ offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 1, 1)
 text = "Camera 1"
 
-[node name="helper_point_2" parent="." instance=ExtResource("2_ptsf7")]
+[node name="helper_point_2" parent="." instance=ExtResource("2_jp6e3")]
 position = Vector2(531, 241)
 metadata/_edit_group_ = true
 
@@ -31,7 +31,7 @@ offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 1, 1)
 text = "Camera 2"
 
-[node name="helper_point_3" parent="." instance=ExtResource("2_ptsf7")]
+[node name="helper_point_3" parent="." instance=ExtResource("2_jp6e3")]
 position = Vector2(736, 316)
 metadata/_edit_group_ = true
 

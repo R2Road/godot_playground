@@ -10,5 +10,5 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( "ViewPort",			Key.KEY_1, 		"res://camera2d/viewport_basic.tscn" )
 	pam.add_mover( "Default",			Key.KEY_2, 		"res://camera2d/camera2d_default.tscn" )
-	pam.add_mover( "Camera Swap",		Key.KEY_3, 		"res://etc/etc_camera2d_swap.tscn" )
+	pam.add_mover( "Camera Switch",		Key.KEY_3, 		"res://camera2d/camera2d_switch.tscn" )
 	build_summary( eSceneType.ROOT )
