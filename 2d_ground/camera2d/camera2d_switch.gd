@@ -10,11 +10,11 @@ extends PlaygroundScene
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Camera : Swap" )
+	pam.set_name( "Camera : Switch" )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
-	pam.add_action( "Swap Camera ( 1 <> 3 )", Key.KEY_1, swap_camera )
+	pam.add_action( "Switch Camera ( 1 <> 3 )", Key.KEY_1, swap_camera )
 	build_summary( eSceneType.TEST )
 
 
