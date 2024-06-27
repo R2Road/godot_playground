@@ -13,7 +13,11 @@ func _ready():
 	var tree_string : String
 	
 	# Subject
-	tree_string += "# root scene은 항상 존재 하며 그 아래에 사용자가 정의한 main scene이 배치된다"
+	tree_string += "# root scene은 항상 존재 한다."
+	tree_string += "\n"
+	tree_string += "# root scene 아래에 사용자가 정의한 auto load scene이 배치된다."
+	tree_string += "\n"
+	tree_string += "# root scene 아래에 사용자가 정의한 main scene이 배치된다"
 	
 	tree_string += "\n\n"
 	tree_string += "\n\n"

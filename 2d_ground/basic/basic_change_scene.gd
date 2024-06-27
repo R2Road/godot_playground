@@ -28,7 +28,11 @@ func change_scene_manually():
 	# 현재 Main Scene 을 제거하고 새 Scene을 직접 설정한다.
 	#
 	for c in get_tree().root.get_children():
-		# queue free 는 삭제 대기 queue이다.
+		# Auto Load Scene은 남겨준
+		if "PGG" == c.name:
+			continue
+			
+		# queue free 는 삭제 대기 queue이다.다
 		# update 단계가 끝나고 나면 삭제 처리를 시작한다.
 		# free 보다는 queue_free 가 권장된다.
 		# 안전하게 처리 되는 환경을 조성하면 free를 사용해도 된다.
