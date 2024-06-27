@@ -45,3 +45,7 @@ func _physics_process( delta ):
 	if 0 != move_vec.x or 0 != move_vec.y:
 		move_vec *=( move_speed * delta )
 		get_viewport().global_canvas_transform.origin += move_vec
+
+
+func _exit_tree():
+	get_viewport().global_canvas_transform.origin = Vector2.ZERO
