@@ -14,7 +14,8 @@ var last_scene_name : String
 
 ############################ Override ############################
 func _init( _owner : Node )->void:
-	assert( null != _owner )
+	if PGG.on_assert:
+		assert( null != _owner )
 	owner = _owner
 
 
@@ -38,7 +39,9 @@ func add_back( _key : Key ):
 
 
 func add_mover( _name : String, _key : Key, _scene_path : String ):
-	assert( not _scene_path.is_empty() )
+	if PGG.on_assert:
+		assert( not _scene_path.is_empty() )
+		
 	if _scene_path.is_empty():
 		return
 		
