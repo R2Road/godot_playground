@@ -24,6 +24,6 @@ func swap_camera():
 	if camera_1.enabled :
 		camera_1.enabled = false
 		camera_3.enabled = true
-	else:
+	elif camera_3.enabled :
 		camera_1.enabled = true
 		camera_3.enabled = false

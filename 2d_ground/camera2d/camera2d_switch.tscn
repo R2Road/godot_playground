@@ -50,5 +50,5 @@ offset_top = 9.0
 offset_right = 735.0
 offset_bottom = 58.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
-text = "할당된 카메라가 모두 enabled 상태면
-Z 값이 높은 카메라가 사용되는 것으로 보인다"
+text = "동시에 여러 카메라가 enabled 상태면
+애매하게 동작한다."
