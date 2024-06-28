@@ -16,6 +16,7 @@ func _ready():
 	pam.add_mover( "Tree",  			Key.KEY_Q, 		"res://basic/basic_tree.tscn" )
 	pam.add_mover( "Tree Order", 		Key.KEY_W, 		"res://basic/basic_tree_order.tscn" )
 	pam.add_mover( "Get Node", 			Key.KEY_E, 		"res://basic/basic_getnode.tscn" )
+	pam.add_mover( "Auto Load", 		Key.KEY_R, 		"res://basic/basic_autoload.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Instantiate + Preload",		Key.KEY_A,	"res://basic/basic_instantiate_preload.tscn" )
 	pam.add_mover( "Instantiate + Load",		Key.KEY_S,	"res://basic/basic_instantiate_load.tscn" )
