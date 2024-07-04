@@ -19,6 +19,10 @@ config/icon="res://icon.png"
 
 PGG="*res://playground_global.tscn"
 
+[editor]
+
+movie_writer/movie_file="F:/Record/gd.avi"
+
 [filesystem]
 
 import/blender/enabled=false
