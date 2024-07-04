@@ -1,9 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://mt8isksj3qvl"]
+[gd_scene load_steps=5 format=3 uid="uid://mt8isksj3qvl"]
 
 [ext_resource type="Script" path="res://tilemap/tilemap_demo_1.gd" id="1_dw2um"]
+[ext_resource type="Texture2D" uid="uid://cm77tcetndcfn" path="res://resources/tiles/tilesheet_01.png" id="2_cvyaj"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p5lw5"]
+texture = ExtResource("2_cvyaj")
+margins = Vector2i(1, 9)
+separation = Vector2i(2, 2)
+0:27/0 = 0
+0:25/0 = 0
+1:25/0 = 0
+2:25/0 = 0
+0:23/0 = 0
+1:23/0 = 0
+2:23/0 = 0
+3:23/0 = 0
+4:23/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6nj0k"]
+sources/0 = SubResource("TileSetAtlasSource_p5lw5")
 
 [node name="tilemap_demo_1" type="Node2D"]
 script = ExtResource("1_dw2um")
 
 [node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_6nj0k")
 format = 2
