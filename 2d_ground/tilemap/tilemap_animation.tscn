@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://b21f8i8j0dyyr"]
+
+[ext_resource type="Script" path="res://tilemap/tilemap_animation.gd" id="1_3rjtg"]
+[ext_resource type="Texture2D" uid="uid://cm77tcetndcfn" path="res://resources/tiles/tilesheet_01.png" id="2_cvyaj"]
+[ext_resource type="Texture2D" uid="uid://biirnhpy8usyy" path="res://resources/wiki/tilemap_animation_01.png" id="3_0dddy"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p5lw5"]
+texture = ExtResource("2_cvyaj")
+margins = Vector2i(1, 9)
+separation = Vector2i(2, 2)
+0:27/0 = 0
+0:25/0 = 0
+1:25/animation_columns = 2
+1:25/animation_frame_0/duration = 1.0
+1:25/animation_frame_1/duration = 1.0
+1:25/0 = 0
+0:23/0 = 0
+1:23/animation_columns = 4
+1:23/animation_frame_0/duration = 1.0
+1:23/animation_frame_1/duration = 1.0
+1:23/animation_frame_2/duration = 1.0
+1:23/animation_frame_3/duration = 1.0
+1:23/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6nj0k"]
+sources/0 = SubResource("TileSetAtlasSource_p5lw5")
+
+[node name="tilemap_animation" type="Node2D"]
+script = ExtResource("1_3rjtg")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_6nj0k")
+format = 2
+layer_0/tile_data = PackedInt32Array(786437, 0, 23, 262156, 0, 23, 458756, 0, 23, 524292, 0, 23, 393221, 0, 23, 589829, 0, 23, 655365, 0, 23, 720901, 0, 23, 851973, 0, 23, 917509, 0, 23, 327686, 0, 23, 917510, 0, 23, 262151, 0, 23, 917511, 0, 23, 262152, 0, 23, 917512, 0, 23, 262153, 0, 23, 917513, 0, 23, 262154, 0, 23, 917514, 0, 23, 262155, 0, 23, 917515, 0, 23, 917516, 0, 23, 262157, 0, 23, 917517, 0, 23, 262158, 0, 23, 917518, 0, 23, 327695, 0, 23, 917519, 0, 23, 393232, 0, 23, 589840, 0, 23, 655376, 0, 23, 720912, 0, 23, 786448, 0, 23, 851984, 0, 23, 917520, 0, 23, 458769, 0, 23, 524305, 0, 23, 458757, 65536, 23, 458758, 65536, 23, 458759, 65536, 23, 458760, 65536, 23, 458761, 65536, 23, 458762, 65536, 23, 458763, 65536, 23, 458764, 65536, 23, 458765, 65536, 23, 458766, 65536, 23, 458767, 65536, 23, 458768, 65536, 23, 524304, 65536, 23, 524303, 65536, 23, 524302, 65536, 23, 524301, 65536, 23, 524300, 65536, 23, 524299, 65536, 23, 524298, 65536, 23, 524297, 65536, 23, 524296, 65536, 23, 524295, 65536, 23, 524294, 65536, 23, 524293, 65536, 23, 786442, 65536, 25, 786443, 65536, 25, 720907, 65536, 25, 720906, 65536, 25, 720903, 65536, 25, 720902, 65536, 25, 786438, 65536, 25, 786439, 65536, 25, 720910, 65536, 25, 720911, 65536, 25, 786447, 65536, 25, 786446, 65536, 25)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 409.0
+offset_top = 11.0
+offset_right = 667.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "\"요소 추가\" 를 누르면 선택( 3 )한 타일의 오른쪽의 타일이 Animation 프레임으로 추가 된다.
+
+설정에서 타일을 활성화 했다면 Animation 프레임 추가에 실패한다.
+
+\"열\" 을 지정하면 해당 열을 넘어가면 다음 줄로 내려간다."
+
+[node name="Sprite2D_1" type="Sprite2D" parent="."]
+position = Vector2(744, 402)
+texture = ExtResource("3_0dddy")
