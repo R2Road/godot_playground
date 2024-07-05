@@ -16,10 +16,10 @@ separation = Vector2i(2, 2)
 1:25/0 = 0
 0:23/0 = 0
 1:23/animation_columns = 4
-1:23/animation_frame_0/duration = 1.0
-1:23/animation_frame_1/duration = 1.0
-1:23/animation_frame_2/duration = 1.0
-1:23/animation_frame_3/duration = 1.0
+1:23/animation_frame_0/duration = 0.5
+1:23/animation_frame_1/duration = 0.5
+1:23/animation_frame_2/duration = 0.5
+1:23/animation_frame_3/duration = 0.5
 1:23/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_6nj0k"]
@@ -41,7 +41,7 @@ offset_bottom = 60.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "\"요소 추가\" 를 누르면 선택( 3 )한 타일의 오른쪽의 타일이 Animation 프레임으로 추가 된다.
 
-설정에서 타일을 활성화 했다면 Animation 프레임 추가에 실패한다.
+설정에서 활성화 한 타일은 Animation 프레임에 추가 할 수 없다. 추가에 실패한다.
 
 \"열\" 을 지정하면 해당 열을 넘어가면 다음 줄로 내려간다."
 
