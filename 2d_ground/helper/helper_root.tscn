@@ -10,6 +10,8 @@
 [node name="helper_root" type="Node2D"]
 script = ExtResource("1_u78kq")
 
+[node name="helper_point_left_top" parent="." instance=ExtResource("2_5typv")]
+
 [node name="helper_point" parent="." instance=ExtResource("2_5typv")]
 position = Vector2(273, 249)
 
