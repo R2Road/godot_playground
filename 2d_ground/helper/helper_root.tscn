@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://k5vx7qt2cevj"]
+[gd_scene load_steps=8 format=3 uid="uid://k5vx7qt2cevj"]
 
 [ext_resource type="Script" path="res://helper/helper_root.gd" id="1_u78kq"]
 [ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://helper/helper_point.tscn" id="2_5typv"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://gpu5f7fm35o4" path="res://helper/helper_circle.tscn" id="4_ixfyo"]
 [ext_resource type="PackedScene" uid="uid://cmqwendenqxuy" path="res://helper/helper_line.tscn" id="5_spmwa"]
 [ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://helper/helper_move2center.tscn" id="6_wm2l6"]
+[ext_resource type="PackedScene" uid="uid://8pengjsakrxj" path="res://helper/helper_center_pivot.tscn" id="7_442a6"]
 
 [node name="helper_root" type="Node2D"]
 script = ExtResource("1_u78kq")
@@ -74,3 +75,5 @@ text = "Move2Center"
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Move2Center Test Root"
+
+[node name="helper_center_pivot" parent="." instance=ExtResource("7_442a6")]
