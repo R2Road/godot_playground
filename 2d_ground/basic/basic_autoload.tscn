@@ -8,27 +8,33 @@
 [node name="basic_autoload" type="Node2D"]
 script = ExtResource("1_jxdju")
 
-[node name="Sprite2D_1" type="Sprite2D" parent="."]
-position = Vector2(696, 104)
+[node name="1" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D_1" type="Sprite2D" parent="1"]
+position = Vector2(829, 101)
 texture = ExtResource("2_c8nja")
 
-[node name="Sprite2D_2" type="Sprite2D" parent="."]
-position = Vector2(966, 369)
+[node name="Sprite2D_2" type="Sprite2D" parent="1"]
+position = Vector2(1099, 366)
 texture = ExtResource("3_7fvd4")
 
-[node name="Label_1" type="Label" parent="."]
-offset_left = 306.0
-offset_top = 210.0
-offset_right = 776.0
-offset_bottom = 233.0
+[node name="Label_1" type="Label" parent="1"]
+offset_left = 439.0
+offset_top = 207.0
+offset_right = 909.0
+offset_bottom = 230.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "AutoLoad 에 설정된 노드는 Root 아래에 Scene 과 함께 배치된다."
 
-[node name="Sprite2D_3" type="Sprite2D" parent="."]
+[node name="2" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D_3" type="Sprite2D" parent="2"]
 position = Vector2(308, 467)
 texture = ExtResource("4_gso28")
 
-[node name="Label_2" type="Label" parent="."]
+[node name="Label_2" type="Label" parent="2"]
 offset_left = 616.0
 offset_top = 613.0
 offset_right = 1086.0
