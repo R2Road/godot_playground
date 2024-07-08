@@ -1,15 +1,15 @@
 [gd_scene load_steps=11 format=3 uid="uid://mt8isksj3qvl"]
 
-[ext_resource type="Script" path="res://tilemap/tilemap_demo_1.gd" id="1_dw2um"]
-[ext_resource type="Texture2D" uid="uid://cm77tcetndcfn" path="res://resources/tiles/tilesheet_01.png" id="2_cvyaj"]
-[ext_resource type="Texture2D" uid="uid://b75t27pvktswg" path="res://resources/wiki/tilemap_physics_01.png" id="3_e3ogf"]
-[ext_resource type="Texture2D" uid="uid://bcckxhdmm8311" path="res://resources/wiki/tilemap_physics_02.png" id="4_u0bkw"]
-[ext_resource type="Texture2D" uid="uid://buhvkd4w1xu04" path="res://resources/wiki/tilemap_physics_03.png" id="5_qnosk"]
-[ext_resource type="Texture2D" uid="uid://dra5ov4causye" path="res://resources/wiki/tilemap_physics_04.png" id="6_lwpc5"]
-[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://helper/helper_rect.tscn" id="7_pit7k"]
+[ext_resource type="Script" path="res://tilemap/tilemap_physics_01.gd" id="1_wmwpf"]
+[ext_resource type="Texture2D" uid="uid://cm77tcetndcfn" path="res://resources/tiles/tilesheet_01.png" id="2_pcwxy"]
+[ext_resource type="Texture2D" uid="uid://b75t27pvktswg" path="res://resources/wiki/tilemap_physics_01.png" id="3_tpmw4"]
+[ext_resource type="Texture2D" uid="uid://bcckxhdmm8311" path="res://resources/wiki/tilemap_physics_02.png" id="4_eiygh"]
+[ext_resource type="Texture2D" uid="uid://buhvkd4w1xu04" path="res://resources/wiki/tilemap_physics_03.png" id="5_plegh"]
+[ext_resource type="Texture2D" uid="uid://dra5ov4causye" path="res://resources/wiki/tilemap_physics_04.png" id="6_gki8v"]
+[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://helper/helper_rect.tscn" id="7_sb7vr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p5lw5"]
-texture = ExtResource("2_cvyaj")
+texture = ExtResource("2_pcwxy")
 margins = Vector2i(1, 9)
 separation = Vector2i(2, 2)
 0:27/0 = 0
@@ -54,8 +54,8 @@ sources/0 = SubResource("TileSetAtlasSource_p5lw5")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kbhmb"]
 
-[node name="tilemap_demo_1" type="Node2D"]
-script = ExtResource("1_dw2um")
+[node name="tilemap_physics_01" type="Node2D"]
+script = ExtResource("1_wmwpf")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(0, -1)
@@ -65,11 +65,11 @@ layer_0/tile_data = PackedInt32Array(2555954, 0, 27, 2621491, 0, 27, 2687028, 0,
 
 [node name="Sprite2D_1" type="Sprite2D" parent="."]
 position = Vector2(608, 161)
-texture = ExtResource("3_e3ogf")
+texture = ExtResource("3_tpmw4")
 
 [node name="Sprite2D_2" type="Sprite2D" parent="."]
 position = Vector2(1019, 185)
-texture = ExtResource("4_u0bkw")
+texture = ExtResource("4_eiygh")
 
 [node name="Label" type="Label" parent="Sprite2D_2"]
 offset_left = -701.0
@@ -81,7 +81,7 @@ text = "1. 물리 레이어 추가"
 
 [node name="Sprite2D_3" type="Sprite2D" parent="."]
 position = Vector2(356, 535)
-texture = ExtResource("5_qnosk")
+texture = ExtResource("5_plegh")
 
 [node name="Label" type="Label" parent="Sprite2D_3"]
 offset_left = -351.0
@@ -93,7 +93,7 @@ text = "2. 각 타일에 물리 영역 설정"
 
 [node name="Sprite2D_4" type="Sprite2D" parent="."]
 position = Vector2(210, 153)
-texture = ExtResource("6_lwpc5")
+texture = ExtResource("6_gki8v")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(1026, 559)
@@ -103,7 +103,7 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource("RectangleShape2D_kbhmb")
 
-[node name="helper_rect" parent="RigidBody2D" instance=ExtResource("7_pit7k")]
+[node name="helper_rect" parent="RigidBody2D" instance=ExtResource("7_sb7vr")]
 rect = Rect2(-10, -10, 20, 20)
 color = Color(0, 1, 0, 0.392157)
 
@@ -115,7 +115,7 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
 shape = SubResource("RectangleShape2D_kbhmb")
 
-[node name="helper_rect" parent="RigidBody2D2" instance=ExtResource("7_pit7k")]
+[node name="helper_rect" parent="RigidBody2D2" instance=ExtResource("7_sb7vr")]
 rect = Rect2(-10, -10, 20, 20)
 color = Color(0, 1, 0, 0.392157)
 
@@ -127,6 +127,6 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
 shape = SubResource("RectangleShape2D_kbhmb")
 
-[node name="helper_rect" parent="RigidBody2D3" instance=ExtResource("7_pit7k")]
+[node name="helper_rect" parent="RigidBody2D3" instance=ExtResource("7_sb7vr")]
 rect = Rect2(-10, -10, 20, 20)
 color = Color(0, 1, 0, 0.392157)
