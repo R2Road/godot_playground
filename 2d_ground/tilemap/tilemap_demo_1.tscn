@@ -1,7 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://mt8isksj3qvl"]
+[gd_scene load_steps=11 format=3 uid="uid://mt8isksj3qvl"]
 
 [ext_resource type="Script" path="res://tilemap/tilemap_demo_1.gd" id="1_dw2um"]
 [ext_resource type="Texture2D" uid="uid://cm77tcetndcfn" path="res://resources/tiles/tilesheet_01.png" id="2_cvyaj"]
+[ext_resource type="Texture2D" uid="uid://b75t27pvktswg" path="res://resources/wiki/tilemap_physics_01.png" id="3_e3ogf"]
+[ext_resource type="Texture2D" uid="uid://bcckxhdmm8311" path="res://resources/wiki/tilemap_physics_02.png" id="4_u0bkw"]
+[ext_resource type="Texture2D" uid="uid://buhvkd4w1xu04" path="res://resources/wiki/tilemap_physics_03.png" id="5_qnosk"]
+[ext_resource type="Texture2D" uid="uid://dra5ov4causye" path="res://resources/wiki/tilemap_physics_04.png" id="6_lwpc5"]
+[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://helper/helper_rect.tscn" id="7_pit7k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p5lw5"]
 texture = ExtResource("2_cvyaj")
@@ -26,7 +31,6 @@ separation = Vector2i(2, 2)
 0:23/0 = 0
 0:23/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:23/0/physics_layer_0/angular_velocity = 0.0
-0:23/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:23/0 = 0
 1:23/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:23/0/physics_layer_0/angular_velocity = 0.0
@@ -46,12 +50,83 @@ separation = Vector2i(2, 2)
 
 [sub_resource type="TileSet" id="TileSet_6nj0k"]
 physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_p5lw5")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbhmb"]
 
 [node name="tilemap_demo_1" type="Node2D"]
 script = ExtResource("1_dw2um")
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(0, -1)
 tile_set = SubResource("TileSet_6nj0k")
 format = 2
+layer_0/tile_data = PackedInt32Array(2555954, 0, 27, 2621491, 0, 27, 2687028, 0, 27, 2687029, 0, 27, 2687030, 0, 27, 2687031, 0, 27, 2621496, 0, 27, 2621497, 0, 27, 2621498, 0, 27, 2621499, 0, 27, 2621500, 0, 27, 2752573, 0, 27, 2752574, 0, 27, 2752575, 0, 27, 2752576, 0, 27, 2752577, 0, 27, 2752578, 0, 27, 2752579, 0, 27, 2752580, 0, 27, 2752581, 0, 27, 2752582, 0, 27, 2752583, 0, 27, 2752584, 0, 27, 2687049, 0, 27, 2687050, 0, 27, 2621515, 0, 27, 2555980, 0, 27, 2359345, 0, 27, 2424881, 0, 27, 2490417, 0, 27, 2555953, 0, 27, 2621490, 0, 27, 2687027, 0, 27, 2621495, 0, 27, 2687036, 0, 27, 2752572, 0, 27, 2687048, 0, 27, 2621514, 0, 27, 2555979, 0, 27, 2359372, 0, 27, 2424908, 0, 27, 2490444, 0, 27)
+
+[node name="Sprite2D_1" type="Sprite2D" parent="."]
+position = Vector2(608, 161)
+texture = ExtResource("3_e3ogf")
+
+[node name="Sprite2D_2" type="Sprite2D" parent="."]
+position = Vector2(1019, 185)
+texture = ExtResource("4_u0bkw")
+
+[node name="Label" type="Label" parent="Sprite2D_2"]
+offset_left = -701.0
+offset_top = -181.0
+offset_right = -562.0
+offset_bottom = -158.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "1. 물리 레이어 추가"
+
+[node name="Sprite2D_3" type="Sprite2D" parent="."]
+position = Vector2(356, 535)
+texture = ExtResource("5_qnosk")
+
+[node name="Label" type="Label" parent="Sprite2D_3"]
+offset_left = -351.0
+offset_top = -211.0
+offset_right = -169.0
+offset_bottom = -188.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "2. 각 타일에 물리 영역 설정"
+
+[node name="Sprite2D_4" type="Sprite2D" parent="."]
+position = Vector2(210, 153)
+texture = ExtResource("6_lwpc5")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(1026, 559)
+gravity_scale = 0.3
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_kbhmb")
+
+[node name="helper_rect" parent="RigidBody2D" instance=ExtResource("7_pit7k")]
+rect = Rect2(-10, -10, 20, 20)
+color = Color(0, 1, 0, 0.392157)
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(942, 482)
+gravity_scale = 0.3
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+shape = SubResource("RectangleShape2D_kbhmb")
+
+[node name="helper_rect" parent="RigidBody2D2" instance=ExtResource("7_pit7k")]
+rect = Rect2(-10, -10, 20, 20)
+color = Color(0, 1, 0, 0.392157)
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+position = Vector2(1092, 441)
+gravity_scale = 0.3
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+shape = SubResource("RectangleShape2D_kbhmb")
+
+[node name="helper_rect" parent="RigidBody2D3" instance=ExtResource("7_pit7k")]
+rect = Rect2(-10, -10, 20, 20)
+color = Color(0, 1, 0, 0.392157)
