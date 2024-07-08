@@ -30,6 +30,14 @@ metadata/_edit_group_ = true
 
 [node name="helper_point" parent="helper_rect_2" instance=ExtResource("2_5typv")]
 
+[node name="helper_rect_3" parent="." instance=ExtResource("3_s4q3e")]
+position = Vector2(73, 528)
+color = Color(1, 0, 0, 1)
+fill = true
+metadata/_edit_group_ = true
+
+[node name="helper_point" parent="helper_rect_3" instance=ExtResource("2_5typv")]
+
 [node name="helper_circle_1" parent="." instance=ExtResource("4_ixfyo")]
 position = Vector2(268, 393)
 color = Color(0, 0.632718, 0.672899, 1)
