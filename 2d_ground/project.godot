@@ -19,6 +19,11 @@ config/icon="res://icon.png"
 
 PGG="*res://playground_global.tscn"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
 [editor]
 
 movie_writer/movie_file="F:/Record/gd.avi"
