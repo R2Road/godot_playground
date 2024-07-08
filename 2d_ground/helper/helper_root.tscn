@@ -1,34 +1,34 @@
-[gd_scene load_steps=6 format=3 uid="uid://k5vx7qt2cevj"]
+[gd_scene load_steps=7 format=3 uid="uid://k5vx7qt2cevj"]
 
 [ext_resource type="Script" path="res://helper/helper_root.gd" id="1_u78kq"]
 [ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://helper/helper_point.tscn" id="2_5typv"]
 [ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://helper/helper_rect.tscn" id="3_s4q3e"]
 [ext_resource type="PackedScene" uid="uid://gpu5f7fm35o4" path="res://helper/helper_circle.tscn" id="4_ixfyo"]
 [ext_resource type="PackedScene" uid="uid://cmqwendenqxuy" path="res://helper/helper_line.tscn" id="5_spmwa"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://helper/helper_move2center.tscn" id="6_wm2l6"]
 
 [node name="helper_root" type="Node2D"]
 script = ExtResource("1_u78kq")
 
 [node name="helper_point" parent="." instance=ExtResource("2_5typv")]
-position = Vector2(439, 249)
+position = Vector2(273, 249)
 
 [node name="helper_rect_1" parent="." instance=ExtResource("3_s4q3e")]
-position = Vector2(238, 392)
+position = Vector2(72, 392)
 color = Color(1, 0, 0, 1)
 
 [node name="helper_point" parent="helper_rect_1" instance=ExtResource("2_5typv")]
 
 [node name="helper_rect_2" parent="." instance=ExtResource("3_s4q3e")]
-position = Vector2(239, 460)
+position = Vector2(73, 460)
 color = Color(1, 0, 0, 1)
-fill = false
 out_line_bold = 3.0
 metadata/_edit_group_ = true
 
 [node name="helper_point" parent="helper_rect_2" instance=ExtResource("2_5typv")]
 
 [node name="helper_circle_1" parent="." instance=ExtResource("4_ixfyo")]
-position = Vector2(434, 393)
+position = Vector2(268, 393)
 color = Color(0, 0.632718, 0.672899, 1)
 radius = 15.0
 metadata/_edit_group_ = true
@@ -36,7 +36,7 @@ metadata/_edit_group_ = true
 [node name="helper_point" parent="helper_circle_1" instance=ExtResource("2_5typv")]
 
 [node name="helper_circle_2" parent="." instance=ExtResource("4_ixfyo")]
-position = Vector2(433, 467)
+position = Vector2(267, 467)
 offset = Vector2(-10, 0)
 color = Color(0.00380502, 0.592167, 0.724739, 1)
 radius = 20.0
@@ -45,8 +45,30 @@ metadata/_edit_group_ = true
 [node name="helper_point" parent="helper_circle_2" instance=ExtResource("2_5typv")]
 
 [node name="helper_line" parent="." instance=ExtResource("5_spmwa")]
-position = Vector2(611, 399)
+position = Vector2(445, 399)
 color = Color(1, 0.335514, 0.269596, 1)
 point_end = Vector2(0, 100)
 
 [node name="helper_point" parent="helper_line" instance=ExtResource("2_5typv")]
+
+[node name="helper_move2center_test" parent="." instance=ExtResource("2_5typv")]
+position = Vector2(916, 98)
+metadata/_edit_group_ = true
+
+[node name="helper_rect" parent="helper_move2center_test" instance=ExtResource("3_s4q3e")]
+position = Vector2(61, 61)
+rect = Rect2(-15, -15, 30, 30)
+
+[node name="helper_move2center" parent="helper_move2center_test/helper_rect" instance=ExtResource("6_wm2l6")]
+
+[node name="helper_point" parent="helper_move2center_test/helper_rect" instance=ExtResource("2_5typv")]
+
+[node name="Label" type="Label" parent="helper_move2center_test/helper_rect"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Move2Center"
+
+[node name="Label" type="Label" parent="helper_move2center_test"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Move2Center Test Root"

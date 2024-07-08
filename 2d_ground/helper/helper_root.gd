@@ -7,4 +7,4 @@ func _ready():
 	pam.set_name( "Helper Root" )
 	pam.add_split()
 	pam.add_mover( "Playground",		Key.KEY_ESCAPE, "res://playground_main.tscn" )
-	build_summary( eSceneType.ROOT )
+	build_summary( eSceneType.TEST )
