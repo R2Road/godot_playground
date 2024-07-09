@@ -10,5 +10,7 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( "Basic", 		Key.KEY_1, "res://tilemap/tilemap_basic.tscn" )
 	pam.add_mover( "Animation", 	Key.KEY_2, "res://tilemap/tilemap_animation.tscn" )
-	pam.add_mover( "Physics", 		Key.KEY_3, "res://tilemap/tilemap_physics_01.tscn" )
+	pam.add_mover( "Pattern", 		Key.KEY_3, "res://tilemap/tilemap_pattern.tscn" )
+	pam.add_lf()
+	pam.add_mover( "Physics", 		Key.KEY_Q, "res://tilemap/tilemap_physics_01.tscn" )
 	build_summary( eSceneType.ROOT )
