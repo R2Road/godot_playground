@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://h2i3ahn8kcvm"]
+
+[ext_resource type="Script" path="res://2d/camera2d/ui_camera.gd" id="1_p1q6c"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://2d/helper/helper_point.tscn" id="2_4qevv"]
+[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://2d/helper/helper_rect.tscn" id="3_wmrb3"]
+
+[node name="ui_camera" type="Node2D"]
+script = ExtResource("1_p1q6c")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 352.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Canvas Layer 는 custom_viewport 를 사용한다.
+null로 설정하면 기본 viewport 를 사용한다."
+horizontal_alignment = 1
+
+[node name="helper_point" parent="." instance=ExtResource("2_4qevv")]
+
+[node name="helper_rect" parent="." instance=ExtResource("3_wmrb3")]
+fill = false
+out_line_bold = 3.0
+
+[node name="Camera2D" type="Camera2D" parent="."]

@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd0webfkjsd8v"]
+
+[ext_resource type="Script" path="res://2d/etc/etc_pause.gd" id="1_h3ugp"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://2d/helper/helper_point.tscn" id="2_lhcj0"]
+[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://2d/helper/helper_rect.tscn" id="3_7uhep"]
+
+[node name="etc_pause" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_h3ugp")
+
+[node name="CPUParticles2D_Shape_Rectangle" type="CPUParticles2D" parent="."]
+process_mode = 1
+amount = 20
+lifetime = 1.5
+local_coords = true
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+direction = Vector2(45, 45)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 300.0
+initial_velocity_max = 400.0
+scale_amount_min = 2.0
+scale_amount_max = 8.0
+
+[node name="helper_point" parent="CPUParticles2D_Shape_Rectangle" instance=ExtResource("2_lhcj0")]
+
+[node name="helper_rect" parent="CPUParticles2D_Shape_Rectangle" instance=ExtResource("3_7uhep")]
+fill = false
+
+[node name="helper_rect" parent="." instance=ExtResource("3_7uhep")]
+fill = false
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 534.0
+offset_top = 556.0
+offset_right = 685.0
+offset_bottom = 631.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "pause 상황의 동작은 
+Process > Mode
+설정으로 조절 가능"

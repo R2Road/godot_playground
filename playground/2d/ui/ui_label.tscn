@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxhogd1ieu1nb"]
+
+[ext_resource type="Script" path="res://2d/ui/ui_label.gd" id="1_l07d1"]
+
+[node name="label_basic" type="Node2D"]
+script = ExtResource("1_l07d1")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 140.0
+offset_bottom = 23.0
+text = "This is Label Node"

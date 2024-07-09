@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmylaow5cb214"]
+
+[ext_resource type="Script" path="res://2d/camera2d/viewport_basic.gd" id="1_os41b"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://2d/helper/helper_point.tscn" id="2_syt35"]
+
+[node name="viewport_basic" type="Node2D"]
+script = ExtResource("1_os41b")
+
+[node name="helper_point" parent="." instance=ExtResource("2_syt35")]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "+ Update
+get_viewport().global_canvas_transform.origin
+"
+horizontal_alignment = 1

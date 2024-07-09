@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c742xfwxxbqjp"]
+
+[ext_resource type="Script" path="res://2d/etc/etc_click_sprite.gd" id="1_8x585"]
+[ext_resource type="Texture2D" uid="uid://br7733mi0v430" path="res://resources/sprite/actor001/actor001_win_02.png" id="2_2oqjo"]
+
+[node name="etc_click_sprite" type="Node2D"]
+script = ExtResource("1_8x585")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_2oqjo")
+offset = Vector2(0, -20)
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -19.6667
+offset_right = 20.3333
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "0"
+horizontal_alignment = 1

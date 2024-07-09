@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://b86mcp01qttq0"]
+
+[ext_resource type="Script" path="res://2d/particles2d/particles2d_cpu_control.gd" id="1_w7qsj"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://2d/helper/helper_point.tscn" id="2_m7w3e"]
+
+[node name="particles2d_cpu_control" type="Node2D"]
+script = ExtResource("1_w7qsj")
+
+[node name="CPUParticles2D_Shape_Point" type="CPUParticles2D" parent="."]
+local_coords = true
+gravity = Vector2(0, -500)
+
+[node name="Label" type="Label" parent="CPUParticles2D_Shape_Point"]
+offset_left = -59.0
+offset_right = 60.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Point"
+horizontal_alignment = 1
+
+[node name="helper_point" parent="CPUParticles2D_Shape_Point" instance=ExtResource("2_m7w3e")]
+
+[node name="CPUParticles2D_Shape_Rectangle" type="CPUParticles2D" parent="."]
+local_coords = true
+emission_shape = 3
+emission_rect_extents = Vector2(100, 100)
+gravity = Vector2(0, -500)
+
+[node name="Label" type="Label" parent="CPUParticles2D_Shape_Rectangle"]
+offset_left = -59.0
+offset_right = 60.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Rectangle"
+horizontal_alignment = 1
+
+[node name="helper_point" parent="CPUParticles2D_Shape_Rectangle" instance=ExtResource("2_m7w3e")]
+
+[node name="CPUParticles2D_Shape_Sphere" type="CPUParticles2D" parent="."]
+local_coords = true
+emission_shape = 1
+emission_sphere_radius = 50.0
+gravity = Vector2(0, -500)
+
+[node name="Label" type="Label" parent="CPUParticles2D_Shape_Sphere"]
+offset_left = -59.0
+offset_right = 60.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Sphere"
+horizontal_alignment = 1
+
+[node name="helper_point" parent="CPUParticles2D_Shape_Sphere" instance=ExtResource("2_m7w3e")]

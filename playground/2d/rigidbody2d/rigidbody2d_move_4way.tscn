@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3gwbyrg1fm40"]
+
+[ext_resource type="Script" path="res://2d/rigidbody2d/rigidbody2d_move_4way.gd" id="1_1dps0"]
+[ext_resource type="PackedScene" uid="uid://chqiu7b6xye50" path="res://2d/rigidbody2d/rigidbody2d_helper_player.tscn" id="2_4i7xn"]
+
+[node name="rigidbody2d_move_4way" type="Node2D"]
+script = ExtResource("1_1dps0")
+
+[node name="Player" parent="." instance=ExtResource("2_4i7xn")]
+position = Vector2(466, 318)
+linear_damp = 2.0
+angular_damp = 2.0

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bftevaep1maai"]
+
+[ext_resource type="Script" path="res://2d/etc/etc_root.gd" id="1_i72a2"]
+
+[node name="etc_root" type="Node2D"]
+script = ExtResource("1_i72a2")

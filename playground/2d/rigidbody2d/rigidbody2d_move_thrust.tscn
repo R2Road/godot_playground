@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://1b67qng8yurr"]
+
+[ext_resource type="Script" path="res://2d/rigidbody2d/rigidbody2d_move_thrust.gd" id="1_qwx1k"]
+[ext_resource type="PackedScene" uid="uid://chqiu7b6xye50" path="res://2d/rigidbody2d/rigidbody2d_helper_player.tscn" id="2_4crco"]
+[ext_resource type="PackedScene" uid="uid://cmqwendenqxuy" path="res://2d/helper/helper_line.tscn" id="3_svevl"]
+
+[node name="rigidbody2d_move_thrust" type="Node2D"]
+script = ExtResource("1_qwx1k")
+
+[node name="Player" parent="." instance=ExtResource("2_4crco")]
+position = Vector2(466, 318)
+linear_damp = 2.0
+angular_damp = 2.0
+
+[node name="helper_line" parent="Player" instance=ExtResource("3_svevl")]
+position = Vector2(25, 0)
+rotation = -1.5708
