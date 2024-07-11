@@ -6,7 +6,7 @@ extends PlaygroundScene
 func _ready():
 	pam.set_name( "Particles2D Root" )
 	pam.add_split()
-	pam.add_mover( "Playground",		Key.KEY_ESCAPE, "res://playground_main.tscn" )
+	pam.add_mover( "2D Root",		Key.KEY_ESCAPE, "res://2d/2d_root.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Basic",				Key.KEY_1, "res://2d/particles2d/particles2d_cpu_shape.tscn" )
 	pam.add_mover( "Control",			Key.KEY_2, "res://2d/particles2d/particles2d_cpu_control.tscn" )

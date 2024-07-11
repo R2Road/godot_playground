@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5784orgdvilu"]
+
+[ext_resource type="Script" path="res://2d/2d_root.gd" id="1_p8ng7"]
+
+[node name="2d_root" type="Node2D"]
+script = ExtResource("1_p8ng7")

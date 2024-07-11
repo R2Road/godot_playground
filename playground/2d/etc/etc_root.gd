@@ -6,7 +6,7 @@ extends PlaygroundScene
 func _ready():
 	pam.set_name( "ETC Root" )
 	pam.add_split()
-	pam.add_mover( "Playground",		Key.KEY_ESCAPE, "res://playground_main.tscn" )
+	pam.add_mover( "2D Root",		Key.KEY_ESCAPE, "res://2d/2d_root.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Click Sprite",		Key.KEY_1, 		"res://2d/etc/etc_click_sprite.tscn" )
 	pam.add_mover( "Timer",				Key.KEY_2, 		"res://2d/etc/etc_timer.tscn" )

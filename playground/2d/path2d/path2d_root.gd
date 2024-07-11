@@ -6,7 +6,7 @@ extends PlaygroundScene
 func _ready():
 	pam.set_name( "Path2D Root" )
 	pam.add_split()
-	pam.add_mover( "Playground",		Key.KEY_ESCAPE, "res://playground_main.tscn" )
+	pam.add_mover( "2D Root",		Key.KEY_ESCAPE, "res://2d/2d_root.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Basic",			Key.KEY_1, "res://2d/path2d/path2d_basic.tscn" )
 	pam.add_mover( "Load",			Key.KEY_2, "res://2d/path2d/path2d_load.tscn" )
