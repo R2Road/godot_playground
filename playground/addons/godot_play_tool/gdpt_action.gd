@@ -1,4 +1,4 @@
-class_name GDPTAction
+class_name GDPTAction extends RefCounted
 
 
 

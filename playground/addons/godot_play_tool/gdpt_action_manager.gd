@@ -1,4 +1,4 @@
-class_name GDPTActionManager
+class_name GDPTActionManager extends RefCounted
 
 
 
