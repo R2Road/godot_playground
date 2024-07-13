@@ -8,4 +8,4 @@ func _ready():
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )
 	
-	PGG.on_assert
+	GDPT.on_assert

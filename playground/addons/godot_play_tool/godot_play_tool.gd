@@ -14,10 +14,10 @@ func _enter_tree():
 	# "Project Setting > Auto Load" 에서 확인해라.
 	#
 	add_autoload_singleton( 
-		"PGG"
+		"GDPT"
 		, "res://addons/godot_play_tool/godot_play_tool_global.gd"
 	)
 
 
 func _exit_tree():
-	remove_autoload_singleton( "PGG" )
+	remove_autoload_singleton( "GDPT" )

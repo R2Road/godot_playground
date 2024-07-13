@@ -29,7 +29,7 @@ func change_scene_manually():
 	#
 	for c in get_tree().root.get_children():
 		# Auto Load Scene은 남겨준
-		if "PGG" == c.name:
+		if "GDPT" == c.name:
 			continue
 			
 		# queue free 는 삭제 대기 queue이다.다

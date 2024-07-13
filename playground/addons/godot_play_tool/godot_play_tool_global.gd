@@ -10,10 +10,10 @@ var on_assert = true
 ############################ Override ############################
 func _enter_tree():
 	# 호출 된다.
-	print( "PGG : Enter Tree" )
+	print( "GDPT : Enter Tree" )
 func _exit_tree():
 	# 호출 안된다. ( 왜? )
-	print( "PGG : Exit Tree" )
+	print( "GDPT : Exit Tree" )
 
 
 
