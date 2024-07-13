@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://tfcwiy1nir1u"]
 
-[ext_resource type="Script" path="res://playground_exit.gd" id="1_i3vfj"]
+[ext_resource type="Script" path="res://addons/godot_play_tool/gdpt_exit_scene.gd" id="1_i3vfj"]
 
 [node name="playground_exit" type="Node2D"]
 script = ExtResource("1_i3vfj")

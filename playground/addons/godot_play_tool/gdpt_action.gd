@@ -26,7 +26,7 @@ static func new_exit( _owner : Node )->GDPTAction:
 		if _owner != _owner.get_tree().current_scene:
 			return
 		
-		_owner.get_tree().change_scene_to_file( "res://playground_exit.tscn" )
+		_owner.get_tree().change_scene_to_file( "res://addons/godot_play_tool/gdpt_exit_scene.tscn" )
 	
 	return ret
 
