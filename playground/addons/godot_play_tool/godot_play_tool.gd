@@ -15,7 +15,7 @@ func _enter_tree():
 	#
 	add_autoload_singleton( 
 		"GDPT"
-		, "res://addons/godot_play_tool/godot_play_tool_global.gd"
+		, "res://addons/godot_play_tool/gdpt_global.gd"
 	)
 
 

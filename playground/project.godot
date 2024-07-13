@@ -17,7 +17,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-GDPT="*res://addons/godot_play_tool/godot_play_tool_global.gd"
+GDPT="*res://addons/godot_play_tool/gdpt_global.gd"
 
 [display]
 
