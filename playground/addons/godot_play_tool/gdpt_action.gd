@@ -1,4 +1,4 @@
-class_name PlayGroundAction
+class_name GDPTAction
 
 
 
@@ -11,15 +11,15 @@ var action = func dummy():
 
 
 ############################   User   ############################
-static func new_exit( _owner : Node )->PlayGroundAction:
-	var ret = PlayGroundAction.new()
+static func new_exit( _owner : Node )->GDPTAction:
+	var ret = GDPTAction.new()
 	
 	ret.name = "Exit"
 	ret.key = Key.KEY_ESCAPE
 	ret.action = func ():
 		#
 		# Scene 전환이 이미 일어났는지 확인
-		# PlaygroundAction은 call_deferred 로 작동한다.
+		# GDPTAction은 call_deferred 로 작동한다.
 		# 키를 동시에 2개 이상 누른 경우
 		# 한 프레임에 여러번의 Scene 전환 가능
 		#
@@ -31,15 +31,15 @@ static func new_exit( _owner : Node )->PlayGroundAction:
 	return ret
 
 
-static func new_mover( _owner : Node, _name : String, _key : Key, _next_scene_path : String )->PlayGroundAction:
-	var ret = PlayGroundAction.new()
+static func new_mover( _owner : Node, _name : String, _key : Key, _next_scene_path : String )->GDPTAction:
+	var ret = GDPTAction.new()
 	
 	ret.name = _name
 	ret.key = _key
 	ret.action = func ():
 		#
 		# Scene 전환이 이미 일어났는지 확인
-		# PlaygroundAction은 call_deferred 로 작동한다.
+		# GDPTAction은 call_deferred 로 작동한다.
 		# 키를 동시에 2개 이상 누른 경우
 		# 한 프레임에 여러번의 Scene 전환 가능
 		#
@@ -58,10 +58,10 @@ static func new_mover( _owner : Node, _name : String, _key : Key, _next_scene_pa
 		# SceneTree 의 change scene 을 사용하지 않고 scene 전환 효과를 만든다.
 		#
 		var next_scene = ResourceLoader.load( _next_scene_path ).instantiate()
-		if next_scene is PlaygroundScene:
+		if next_scene is GDPTScene:
 			next_scene.pam.set_last_scene( _owner.pam.name, _owner.scene_file_path )
 		else:
-			print_debug( "warning : is not PlayGroundScene" )
+			print_debug( "warning : is not GDPTScene" )
 		
 		#
 		# Scene 설정
@@ -79,8 +79,8 @@ static func new_mover( _owner : Node, _name : String, _key : Key, _next_scene_pa
 	return ret
 
 
-static func new_action( _name : String, _key : Key, _functor : Callable )->PlayGroundAction:
-	var ret = PlayGroundAction.new()
+static func new_action( _name : String, _key : Key, _functor : Callable )->GDPTAction:
+	var ret = GDPTAction.new()
 	
 	ret.name = _name
 	ret.key = _key	
@@ -89,8 +89,8 @@ static func new_action( _name : String, _key : Key, _functor : Callable )->PlayG
 	return ret
 
 
-static func new_message( _message : String )->PlayGroundAction:
-	var ret = PlayGroundAction.new()
+static func new_message( _message : String )->GDPTAction:
+	var ret = GDPTAction.new()
 	
 	ret.name = ( _message + "\n" )
 	ret.key = Key.KEY_NONE
@@ -98,8 +98,8 @@ static func new_message( _message : String )->PlayGroundAction:
 	return ret
 
 
-static func new_split()->PlayGroundAction:
-	var ret = PlayGroundAction.new()
+static func new_split()->GDPTAction:
+	var ret = GDPTAction.new()
 	
 	ret.name = "="
 	ret.key = Key.KEY_NONE
@@ -107,8 +107,8 @@ static func new_split()->PlayGroundAction:
 	return ret
 
 
-static func new_lf()->PlayGroundAction:
-	var ret = PlayGroundAction.new()
+static func new_lf()->GDPTAction:
+	var ret = GDPTAction.new()
 	
 	ret.name = "\n"
 	ret.key = Key.KEY_NONE
@@ -116,8 +116,8 @@ static func new_lf()->PlayGroundAction:
 	return ret
 
 
-static func new_lf2()->PlayGroundAction:
-	var ret = PlayGroundAction.new()
+static func new_lf2()->GDPTAction:
+	var ret = GDPTAction.new()
 	
 	ret.name = "\n\n"
 	ret.key = Key.KEY_NONE

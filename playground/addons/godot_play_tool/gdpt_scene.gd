@@ -1,4 +1,4 @@
-class_name PlaygroundScene extends Node
+class_name GDPTScene extends Node
 
 
 
@@ -12,8 +12,8 @@ enum eSceneType
 
 
 ############################ Variable ############################
-var playground_action_manager : PlayGroundActionManager = PlayGroundActionManager.new( self )
-var pam  = playground_action_manager # alias
+var gdpt_action_manager : GDPTActionManager = GDPTActionManager.new( self )
+var pam  = gdpt_action_manager # alias
 
 
 
@@ -28,20 +28,20 @@ func _init():
 	canvas_layer.add_child( label )
 	
 	var fps_label = Label.new()
-	fps_label.set_script( ResourceLoader.load( "res://base/playground_scene_helper.gd" ) )
+	fps_label.set_script( ResourceLoader.load( "res://addons/godot_play_tool/gdpt_scene_helper.gd" ) )
 	fps_label.name = "FPS"
 	canvas_layer.add_child( fps_label )
 
 
 func _input( event ):
-	playground_action_manager.do( event )
+	gdpt_action_manager.do( event )
 
 
 
 ############################   User   ############################
 func build_summary( _scene_type : eSceneType ):
 	var summary_node = $PGCanvas/Summary
-	summary_node.text = playground_action_manager.build_summary()
+	summary_node.text = gdpt_action_manager.build_summary()
 	
 	if eSceneType.ROOT == _scene_type:
 		summary_node.set_position( 

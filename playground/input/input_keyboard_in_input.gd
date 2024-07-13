@@ -1,4 +1,4 @@
-extends PlaygroundScene
+extends GDPTScene
 
 
 
@@ -18,7 +18,7 @@ func _ready():
 
 
 func _input(event):
-	# for PlaygroundScene
+	# for GDPTScene
 	super._input( event )
 	
 	

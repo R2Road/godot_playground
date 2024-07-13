@@ -1,4 +1,4 @@
-class_name PlayGroundActionManager
+class_name GDPTActionManager
 
 
 
@@ -30,7 +30,7 @@ func set_last_scene( _last_scene_name : String, _last_scene_path : String ):
 
 
 func add_exit():
-	container.push_back( PlayGroundAction.new_exit( owner ) )
+	container.push_back( GDPTAction.new_exit( owner ) )
 
 
 func add_back( _key : Key ):
@@ -43,23 +43,23 @@ func add_mover( _name : String, _key : Key, _scene_path : String ):
 	if _scene_path.is_empty():
 		return
 		
-	container.push_back( PlayGroundAction.new_mover( owner, _name, _key, _scene_path ) )
+	container.push_back( GDPTAction.new_mover( owner, _name, _key, _scene_path ) )
 
 
 func add_action( _name : String, _key : Key, _functor : Callable ):
-	container.push_back( PlayGroundAction.new_action( _name, _key, _functor ) )
+	container.push_back( GDPTAction.new_action( _name, _key, _functor ) )
 
 
 func add_split():
-	container.push_back( PlayGroundAction.new_split() )
+	container.push_back( GDPTAction.new_split() )
 
 
 func add_message( _message : String ):
-	container.push_back( PlayGroundAction.new_message( _message ) )
+	container.push_back( GDPTAction.new_message( _message ) )
 
 
 func add_lf():
-	container.push_back( PlayGroundAction.new_lf() )
+	container.push_back( GDPTAction.new_lf() )
 
 
 func get_keycode_string( key : Key )->String:
@@ -105,7 +105,7 @@ func build_summary()->String:
 	return ret
 
 
-func get_action( keycode : Key )->PlayGroundAction:
+func get_action( keycode : Key )->GDPTAction:
 	for i in container:
 		if i.key == keycode:
 			return i
