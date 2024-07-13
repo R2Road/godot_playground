@@ -28,6 +28,10 @@ window/size/viewport_height=720
 
 movie_writer/movie_file="F:/Record/gd.avi"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_play_tool/plugin.cfg")
+
 [filesystem]
 
 import/blender/enabled=false
