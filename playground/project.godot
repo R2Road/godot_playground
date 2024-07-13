@@ -17,7 +17,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-PGG="*res://base/playground_global.tscn"
+PGG="*res://base/playground_global.gd"
 
 [display]
 
