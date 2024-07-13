@@ -17,7 +17,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-PGG="*res://base/godot_play_tool_global.gd"
+PGG="*res://addons/godot_play_tool/godot_play_tool_global.gd"
 
 [display]
 
