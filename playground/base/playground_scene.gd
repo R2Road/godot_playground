@@ -27,7 +27,8 @@ func _init():
 	label.name = "Summary"
 	canvas_layer.add_child( label )
 	
-	var fps_label = ResourceLoader.load( "res://base/playground_scene_helper.tscn" ).instantiate()
+	var fps_label = Label.new()
+	fps_label.set_script( ResourceLoader.load( "res://base/playground_scene_helper.gd" ) )
 	fps_label.name = "FPS"
 	canvas_layer.add_child( fps_label )
 
