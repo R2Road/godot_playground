@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://8rp2cwtgkswi"]
 
 [ext_resource type="Script" path="res://basic/basic_log.gd" id="1"]
-[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://2d/helper/helper_move2center.tscn" id="2_elbxy"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="2_elbxy"]
+
 
 [node name="basic_log" type="Node2D"]
 script = ExtResource("1")

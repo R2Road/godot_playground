@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://ljh7garocuhe"]
 
-[ext_resource type="Script" path="res://2d/helper/helper_point.gd" id="2_0f4a2"]
+[ext_resource type="Script" path="res://addons/godot_play_tool/helper/helper_point.gd" id="2_0f4a2"]
+
 
 [node name="helper_point" type="Node2D"]
 z_as_relative = false

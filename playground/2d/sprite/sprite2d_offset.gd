@@ -20,7 +20,7 @@ func _ready():
 	$Sprite2D.set_position( get_viewport().size * 0.5 )
 	
 	# sprite2d position pivot
-	var pivot_scene = ResourceLoader.load( "res://2d/helper/helper_point.tscn" ).instantiate()
+	var pivot_scene = GDPT.helper_point.instantiate()
 	pivot_scene.position = $Sprite2D.position
 	add_child( pivot_scene )
 	

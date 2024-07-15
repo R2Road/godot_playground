@@ -18,7 +18,7 @@ func _ready():
 	# Start Practice
 	#
 	for i in $Path2D.curve.point_count:
-		var hp = ResourceLoader.load( "res://2d/helper/helper_point.tscn" ).instantiate()
+		var hp = GDPT.helper_point.instantiate()
 		hp.set_position( $Path2D.curve.get_point_position( i ) )
 		add_child( hp )
 	

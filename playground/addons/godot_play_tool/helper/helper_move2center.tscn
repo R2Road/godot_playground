@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://bj2i1q1ilr6ld"]
 
-[ext_resource type="Script" path="res://2d/helper/helper_move2center.gd" id="1_prjw8"]
+[ext_resource type="Script" path="res://addons/godot_play_tool/helper/helper_move2center.gd" id="1_prjw8"]
+
 
 [node name="helper_move2center" type="Node2D"]
 z_as_relative = false

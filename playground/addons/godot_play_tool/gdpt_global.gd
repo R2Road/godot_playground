@@ -6,6 +6,13 @@ extends Node
 var version : String
 var on_assert = true
 
+var helper_center_pivot = preload( "res://addons/godot_play_tool/helper/helper_center_pivot.tscn" )
+var helper_circle = preload( "res://addons/godot_play_tool/helper/helper_circle.tscn" )
+var helper_line = preload( "res://addons/godot_play_tool/helper/helper_line.tscn" )
+var helper_move2center = preload( "res://addons/godot_play_tool/helper/helper_move2center.tscn" )
+var helper_point = preload( "res://addons/godot_play_tool/helper/helper_point.tscn" )
+var helper_rect = preload( "res://addons/godot_play_tool/helper/helper_rect.tscn" )
+
 
 
 ############################ Override ############################

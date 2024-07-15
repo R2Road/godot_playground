@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bcckxhdmm8311" path="res://resources/wiki/tilemap_physics_02.png" id="4_eiygh"]
 [ext_resource type="Texture2D" uid="uid://buhvkd4w1xu04" path="res://resources/wiki/tilemap_physics_03.png" id="5_plegh"]
 [ext_resource type="Texture2D" uid="uid://dra5ov4causye" path="res://resources/wiki/tilemap_physics_04.png" id="6_gki8v"]
-[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://2d/helper/helper_rect.tscn" id="7_sb7vr"]
+[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://addons/godot_play_tool/helper/helper_rect.tscn" id="7_sb7vr"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p5lw5"]
 texture = ExtResource("2_pcwxy")

@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://cqs4vsoi6mx62"]
 
 [ext_resource type="Script" path="res://2d/particles2d/particles2d_cpu_shape.gd" id="1_nnmk2"]
-[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://2d/helper/helper_point.tscn" id="2_3olwp"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="2_3olwp"]
+
 
 [node name="particles2d_cpu_shape" type="Node2D"]
 script = ExtResource("1_nnmk2")
