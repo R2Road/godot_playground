@@ -76,10 +76,10 @@ func build_summary()->String:
 	var split_string : String
 	var split_length = 0
 	
-	# scene name
+	# calculate length of split string : with scene name
 	split_length = name.length() + 2 # 2 is decoration ( '#', ' ' )
 	
-	# action name
+	# calculate length of split string : with action name
 	for j in container:
 		var new_split_length = ( get_keycode_string( j.key ).length() + j.name.length() + 3 ) # 3 is decoration( '[', ']', ' ' )
 		if new_split_length > split_length:

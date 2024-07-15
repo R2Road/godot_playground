@@ -4,7 +4,7 @@ extends GDPTScene
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "PlayGround" )
+	pam.set_name( "PlayGround <" + GDPT.version + ">" )
 	pam.add_split()
 	pam.add_exit()
 	pam.add_lf()
