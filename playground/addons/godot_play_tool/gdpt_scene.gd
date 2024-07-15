@@ -21,16 +21,8 @@ var pam  = play_action_manager # alias
 func _init():
 	var canvas_layer = CanvasLayer.new()
 	canvas_layer.name = "PlayCanvas"
+	canvas_layer.set_script( ResourceLoader.load( "res://addons/godot_play_tool/gdpt_scene_helper.gd" ) )
 	add_child( canvas_layer )
-	
-	var label = Label.new()
-	label.name = "Summary"
-	canvas_layer.add_child( label )
-	
-	var fps_label = Label.new()
-	fps_label.set_script( ResourceLoader.load( "res://addons/godot_play_tool/gdpt_scene_helper.gd" ) )
-	fps_label.name = "FPS"
-	canvas_layer.add_child( fps_label )
 
 
 func _input( event ):
