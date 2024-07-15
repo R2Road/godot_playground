@@ -12,13 +12,6 @@ var last_scene_name : String
 
 
 
-############################ Override ############################
-func _init( _owner : Node )->void:
-	GDPT._assert( null != _owner )
-	owner = _owner
-
-
-
 ############################   User   ############################
 func set_name( _name : String ):
 	name = _name
