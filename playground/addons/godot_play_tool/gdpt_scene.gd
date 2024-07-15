@@ -40,7 +40,7 @@ func _input( event ):
 
 ############################   User   ############################
 func build_summary( _scene_type : eSceneType ):
-	var summary_node = $PGCanvas/Summary
+	var summary_node = $PlayCanvas/Summary
 	summary_node.text = play_action_manager.build_summary()
 	
 	if eSceneType.ROOT == _scene_type:
