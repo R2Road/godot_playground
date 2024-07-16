@@ -21,6 +21,5 @@ func _ready():
 	pam.add_mover( "Shader",	Key.KEY_E, 		"res://2d/shader/shader_root.tscn" )
 	pam.add_lf()
 	pam.add_mover( "ETC",		Key.KEY_Z, 		"res://2d/etc/etc_root.tscn" )
-	pam.add_mover( "Helper",	Key.KEY_X, 		"res://2d/helper/helper_root.tscn" )
 	pam.add_split()
 	build_summary( eSceneType.ROOT )
