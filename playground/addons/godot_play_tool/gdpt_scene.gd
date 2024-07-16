@@ -20,7 +20,7 @@ var pam : GDPTActionManager
 func _init():
 	var canvas_layer = CanvasLayer.new()
 	canvas_layer.name = "PlayCanvas"
-	canvas_layer.set_script( ResourceLoader.load( "res://addons/godot_play_tool/gdpt_scene_helper.gd" ) )
+	canvas_layer.set_script( GDPT.scene_helper )
 	add_child( canvas_layer )
 	
 	pam = canvas_layer.play_action_manager

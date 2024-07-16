@@ -6,6 +6,8 @@ extends Node
 var version : String
 var on_assert = true
 
+var scene_helper = preload( "res://addons/godot_play_tool/gdpt_scene_helper.gd" )
+
 var helper_center_pivot = preload( "res://addons/godot_play_tool/helper/helper_center_pivot.tscn" )
 var helper_circle = preload( "res://addons/godot_play_tool/helper/helper_circle.tscn" )
 var helper_line = preload( "res://addons/godot_play_tool/helper/helper_line.tscn" )
