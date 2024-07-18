@@ -16,6 +16,12 @@ var pam : GDPTActionManager
 
 
 
+######################### GDPT Override ##########################
+static func scene_name()->String:
+	return "GDPTScene"
+
+
+
 ############################ Override ############################
 func _init():
 	var canvas_layer = CanvasLayer.new()
