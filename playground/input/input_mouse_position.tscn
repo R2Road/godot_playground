@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bemjduspfhrlu"]
+
+[ext_resource type="Script" path="res://input/input_mouse_position.gd" id="1_li8v1"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="2_42gxa"]
+[ext_resource type="PackedScene" uid="uid://8pengjsakrxj" path="res://addons/godot_play_tool/helper/helper_reticle.tscn" id="3_m25jy"]
+
+[node name="input_mouse_position" type="Node2D"]
+script = ExtResource("1_li8v1")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 120.0
+offset_bottom = 23.0
+text = "Message Label"
+horizontal_alignment = 1
+
+[node name="helper_move2center" parent="Label" instance=ExtResource("2_42gxa")]
+
+[node name="Camera2D" type="Camera2D" parent="Label"]
+
+[node name="helper_reticle" parent="." instance=ExtResource("3_m25jy")]
+
+[node name="helper_move2center" parent="helper_reticle" instance=ExtResource("2_42gxa")]

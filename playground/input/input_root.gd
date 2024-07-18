@@ -10,6 +10,7 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( "Keyboard Input : In Input", 		Key.KEY_1, 		"res://input/input_keyboard_in_input.tscn" )
 	pam.add_mover( "Keyboard Input : In Process", 		Key.KEY_2, 		"res://input/input_keyboard_in_process.tscn" )
+	pam.add_mover( input_mouse_position.scene_name(), 	Key.KEY_3, 		"res://input/input_mouse_position.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Input Map : In Project Setting",	Key.KEY_Q, 		"res://input/input_map_in_project_setting.tscn" )
 	pam.add_mover( "Input Map : Show Actions",			Key.KEY_W, 		"res://input/input_map_show_actions.tscn" )
