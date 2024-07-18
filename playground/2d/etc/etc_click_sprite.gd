@@ -18,15 +18,17 @@ func _ready():
 
 
 func _unhandled_input( event ):
-	if event is InputEventMouseButton:
-		if not event.is_pressed():
-			return
+	if not event is InputEventMouseButton:
+		return
 		
-		if MOUSE_BUTTON_LEFT != event.button_index:
-			return
-		
-		if not $Sprite2D.get_rect().has_point( $Sprite2D.to_local( event.position ) ):
-			return
-		
-		click_count += 1
-		$Sprite2D/Label.text = str( click_count )
+	if not event.is_pressed():
+		return
+	
+	if MOUSE_BUTTON_LEFT != event.button_index:
+		return
+	
+	if not $Sprite2D.get_rect().has_point( $Sprite2D.to_local( event.position ) ):
+		return
+	
+	click_count += 1
+	$Sprite2D/Label.text = str( click_count )
