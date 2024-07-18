@@ -1,4 +1,4 @@
-class_name GDPTScene extends Node
+class_name GDPTScene extends Node2D
 
 
 
