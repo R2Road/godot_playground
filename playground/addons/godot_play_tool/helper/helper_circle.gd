@@ -6,6 +6,7 @@ extends Node2D
 @export var offset : Vector2 = Vector2( 0, 0 )
 @export var color = Color( 0, 1, 0 )
 @export var radius : float = 1
+@export var fill = false
 
 
 
@@ -16,4 +17,7 @@ func _init():
 
 
 func _draw():
-	draw_circle( offset, radius, color )
+	if fill:
+		draw_circle( offset, radius, color )
+	else:
+		draw_arc( offset, radius, 0, TAU, 1000, color )

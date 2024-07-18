@@ -2,14 +2,26 @@ extends Node2D
 
 
 
+############################ Summary ############################
+#
+# Scene 기동시에 부모의 위치를 Viewport 중앙 또는 Camera 위치로 옮겨준다.
+#
+#################################################################
+
+
+
 ############################ Override ############################
 func _ready():
-	var target_position = get_viewport().size * 0.5
+	var target_world_position
 	
-	if get_parent() is Control:
-		get_parent().position = get_parent().get_parent().to_local(
-			target_position
-			 - ( get_parent().size * get_parent().scale * 0.5 )
-		)
+	# 목표 world position 확보
+	if get_viewport().get_camera_2d():
+		target_world_position = get_viewport().get_camera_2d().get_screen_center_position()
 	else:
-		get_parent().position = get_parent().get_parent().to_local( target_position )
+		target_world_position = get_viewport().size * 0.5
+	
+	# 부피가 있는 부모 Node 라면 절반만큼 당겨준다.
+	if get_parent() is Control:
+		target_world_position -= ( get_parent().size * get_parent().scale * 0.5 )
+	
+	get_parent().position = get_parent().get_parent().to_local( target_world_position )

@@ -16,10 +16,6 @@ func _init():
 	#self.z_index = RenderingServer.CANVAS_ITEM_Z_MAX
 
 
-func _ready():
-	position = get_parent().to_local( get_viewport().size * 0.5 )
-
-
 func _draw():
 	draw_line( Vector2( -length * 0.5, 0 ), Vector2( length * 0.5, 0 ), color_h, line_width )
 	draw_line( Vector2( 0, -length * 0.5 ), Vector2( 0, length * 0.5 ), color_v, line_width )

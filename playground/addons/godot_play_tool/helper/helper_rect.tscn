@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://addons/godot_play_tool/helper/helper_rect.gd" id="1_ds26s"]
 
-
 [node name="helper_rect" type="Node2D"]
 z_as_relative = false
 script = ExtResource("1_ds26s")

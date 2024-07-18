@@ -18,10 +18,6 @@ func _ready():
 
 
 func _input(event):
-	# for GDPTScene
-	super._input( event )
-	
-	
 	if !(event is InputEventKey ):
 		return
 	
