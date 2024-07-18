@@ -39,9 +39,11 @@ func _unhandled_input( event ):
 	if drag_on:
 		if event.is_released():
 			drag_on = false
-			return
 	else:
 		if event.is_pressed():
 			if $Sprite2D.get_rect().has_point( $Sprite2D.to_local( event.position ) ):
 				drag_on = true
 				last_mouse_position = get_viewport().get_mouse_position()
+	
+	# Input 전파 중지.
+	get_viewport().set_input_as_handled()
