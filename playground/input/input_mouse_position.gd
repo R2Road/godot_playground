@@ -10,7 +10,7 @@ static func scene_name()->String:
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( scene_name() )
+	pam.set_name( input_mouse_position.scene_name() )
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
 	pam.add_message( "> DisplayServer.mouse_get_position() : Windows의 마우스 좌표." )
