@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3s4s1jev3uuk"]
+
+[ext_resource type="Script" path="res://inspector/inspector_struct.gd" id="1_5hmss"]
+[ext_resource type="PackedScene" uid="uid://gpu5f7fm35o4" path="res://addons/godot_play_tool/helper/helper_circle.tscn" id="2_es604"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="2_xuf6w"]
+[ext_resource type="Script" path="res://inspector/inspector_struct_helper.gd" id="3_f50nx"]
+[ext_resource type="PackedScene" uid="uid://cmqwendenqxuy" path="res://addons/godot_play_tool/helper/helper_line.tscn" id="4_41nit"]
+
+[sub_resource type="Resource" id="Resource_k0gbi"]
+script = ExtResource("3_f50nx")
+count = 1000
+scene = ExtResource("2_es604")
+
+[sub_resource type="Resource" id="Resource_l8r74"]
+script = ExtResource("3_f50nx")
+count = 2000
+scene = ExtResource("4_41nit")
+
+[node name="inspector_struct" type="Node2D"]
+script = ExtResource("1_5hmss")
+container = Array[ExtResource("3_f50nx")]([SubResource("Resource_k0gbi"), SubResource("Resource_l8r74")])
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.5
+offset_top = -11.5
+offset_right = 59.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Show Inspector"
+
+[node name="helper_move2center" parent="Label" instance=ExtResource("2_xuf6w")]
