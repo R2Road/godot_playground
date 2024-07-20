@@ -1,10 +1,16 @@
-extends GDPTScene
+class_name playground_main extends GDPTScene
+
+
+
+######################### GDPT Override ##########################
+static func scene_name()->String:
+	return "PlayGround <" + GDPT.version + ">"
 
 
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "PlayGround <" + GDPT.version + ">" )
+	pam.set_name( playground_main.scene_name() )
 	pam.add_split()
 	pam.add_exit()
 	pam.add_lf()

@@ -6,7 +6,7 @@ extends GDPTScene
 func _ready():
 	pam.set_name( "Json Root" )
 	pam.add_split()
-	pam.add_mover( "Playground",		Key.KEY_ESCAPE, "res://playground_main.tscn" )
+	pam.add_mover( playground_main.scene_name(),		Key.KEY_ESCAPE, "res://playground_main.tscn" )
 	pam.add_lf()
 	pam.add_mover( "parse_string()",				Key.KEY_1, "res://json/json_parse_string.tscn" )
 	pam.add_mover( "parse()",						Key.KEY_2, "res://json/json_parse.tscn" )
