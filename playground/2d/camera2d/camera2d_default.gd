@@ -36,6 +36,7 @@ func _physics_process( delta ):
 		
 	if 0 != move_vec.x or 0 != move_vec.y:
 		get_viewport().get_camera_2d().position += ( move_vec * move_speed * delta )
+		$Cam/Lbl.text = str( get_viewport().get_camera_2d().position )
 
 
 
@@ -45,7 +46,11 @@ func camera_on():
 	if null == camera2d:
 		camera2d = Camera2D.new()
 		camera2d.name = "Cam"
-		add_child( camera2d )	
+		add_child( camera2d )
+		
+		var label = Label.new()
+		label.name = "Lbl"
+		camera2d.add_child( label )
 	
 	if null == get_viewport().get_camera_2d():	
 		get_node_or_null( "Cam" ).enabled = true
