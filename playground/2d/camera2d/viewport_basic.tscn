@@ -1,13 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmylaow5cb214"]
+[gd_scene load_steps=5 format=3 uid="uid://bmylaow5cb214"]
 
 [ext_resource type="Script" path="res://2d/camera2d/viewport_basic.gd" id="1_os41b"]
+[ext_resource type="PackedScene" uid="uid://dsuaumbxcknhr" path="res://addons/godot_play_tool/helper/helper_0_0.tscn" id="2_elf5p"]
 [ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="2_syt35"]
-
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="4_o1lyo"]
 
 [node name="viewport_basic" type="Node2D"]
 script = ExtResource("1_os41b")
 
+[node name="helper_0_0" parent="." instance=ExtResource("2_elf5p")]
+
 [node name="helper_point" parent="." instance=ExtResource("2_syt35")]
+z_index = 4096
+
+[node name="helper_move2center" parent="helper_point" instance=ExtResource("4_o1lyo")]
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
@@ -17,3 +23,12 @@ text = "+ Update
 get_viewport().global_canvas_transform.origin
 "
 horizontal_alignment = 1
+
+[node name="helper_move2center" parent="Label" instance=ExtResource("4_o1lyo")]
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 98.0
+offset_right = 200.0
+offset_bottom = 121.0

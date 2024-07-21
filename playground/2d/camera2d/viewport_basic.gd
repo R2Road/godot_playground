@@ -19,12 +19,7 @@ func _ready():
 	#
 	# Start Practice
 	#
-	$helper_point.position = ( get_viewport().size * 0.5 )
-	
-	$Label.position = (
-		( get_viewport().size * 0.5 )
-		- ( $Label.get_minimum_size() * $Label.get_scale() * 0.5 )		
-	)
+	show_viewport_info()
 
 
 func _physics_process( delta ):
@@ -45,7 +40,19 @@ func _physics_process( delta ):
 	if 0 != move_vec.x or 0 != move_vec.y:
 		move_vec *=( move_speed * delta )
 		get_viewport().global_canvas_transform.origin += move_vec
+		show_viewport_info()
 
 
 func _exit_tree():
 	get_viewport().global_canvas_transform.origin = Vector2.ZERO
+
+
+
+func show_viewport_info():
+	$Label/Label.text = (
+		"x : %4.2f\ny : %4.2f"
+		% [
+			get_viewport().global_canvas_transform.origin.x
+			, get_viewport().global_canvas_transform.origin.y
+		]
+	)
