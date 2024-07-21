@@ -1,4 +1,4 @@
-extends GDPTScene
+class_name timer_basic extends GDPTScene
 
 
 
@@ -8,9 +8,15 @@ var timeout_count_2 : int = 0
 
 
 
+######################### GDPT Override ##########################
+static func scene_name()->String:
+	return "Timer Basic"
+
+
+
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Timer" )
+	pam.set_name( timer_basic.scene_name() )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )
