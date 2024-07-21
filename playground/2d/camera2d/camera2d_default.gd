@@ -13,18 +13,10 @@ func _ready():
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
-	pam.add_action( "Add Camera", Key.KEY_1, add_camera )
+	pam.add_action( "Camera On", 	Key.KEY_1, camera_on )
+	pam.add_action( "Camera Off", 	Key.KEY_2, camera_off )
 	pam.add_message( "[ W | A | S | D ] Move Camera( Add Camera First )" )
 	build_summary( eSceneType.TEST )
-	
-	#
-	# Start Practice
-	#
-	$helper_point.position = ( get_viewport().size * 0.5 )
-	$Label.position = (
-		( get_viewport().size * 0.5 )
-		- ( $Label.get_minimum_size() * $Label.get_scale() * 0.5 )		
-	)
 
 
 func _physics_process( delta ):
@@ -48,8 +40,17 @@ func _physics_process( delta ):
 
 
 ############################   User   ############################
-func add_camera():
+func camera_on():
+	var camera2d = get_node_or_null( "Cam" )
+	if null == camera2d:
+		camera2d = Camera2D.new()
+		camera2d.name = "Cam"
+		add_child( camera2d )	
+	
+	if null == get_viewport().get_camera_2d():	
+		get_node_or_null( "Cam" ).enabled = true
+
+
+func camera_off():
 	if null != get_viewport().get_camera_2d():
-		return
-		
-	add_child( Camera2D.new() )
+		get_viewport().get_camera_2d().enabled = false

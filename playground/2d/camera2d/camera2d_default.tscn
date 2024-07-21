@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://h2i3ahn8kcvm"]
+[gd_scene load_steps=4 format=3 uid="uid://h2i3ahn8kcvm"]
 
 [ext_resource type="Script" path="res://2d/camera2d/camera2d_default.gd" id="1_hjfp6"]
-[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="2_vfvg1"]
-
+[ext_resource type="PackedScene" uid="uid://dsuaumbxcknhr" path="res://addons/godot_play_tool/helper/helper_0_0.tscn" id="2_t0hxc"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="3_a4j43"]
 
 [node name="camera2d_default" type="Node2D"]
 script = ExtResource("1_hjfp6")
 
-[node name="helper_point" parent="." instance=ExtResource("2_vfvg1")]
+[node name="helper_0_0" parent="." instance=ExtResource("2_t0hxc")]
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
@@ -20,3 +20,5 @@ get_viewport().get_camera_2d().position
 별도의 Camera 노드를 추가하지 않았다면
 get_viewport().get_camera_2d() 는 null을 반환한다."
 horizontal_alignment = 1
+
+[node name="helper_move2center" parent="Label" instance=ExtResource("3_a4j43")]
