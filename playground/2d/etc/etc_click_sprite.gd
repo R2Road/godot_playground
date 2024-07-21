@@ -1,4 +1,4 @@
-extends GDPTScene
+class_name click_sprite extends GDPTScene
 
 
 
@@ -7,9 +7,15 @@ var click_count : int = 0
 
 
 
+######################### GDPT Override ##########################
+static func scene_name()->String:
+	return "Click Sprite"
+
+
+
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Click Sprite" )
+	pam.set_name( click_sprite.scene_name() )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )
