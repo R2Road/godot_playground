@@ -16,7 +16,7 @@ static func scene_name()->String:
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( scene_name() )
+	pam.set_name( DragSprite.scene_name() )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )
@@ -24,7 +24,7 @@ func _ready():
 	$Sprite2D.set_position( get_viewport().size * 0.5 )
 
 
-func _process( delta ):
+func _process( _delta ):
 	if drag_on:
 		$Sprite2D.position += ( get_viewport().get_mouse_position() - last_mouse_position )
 		last_mouse_position = get_viewport().get_mouse_position()
