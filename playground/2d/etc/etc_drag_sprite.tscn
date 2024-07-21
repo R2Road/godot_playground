@@ -17,4 +17,5 @@ offset = Vector2(0, -20)
 [node name="helper_move2center" parent="Sprite2D" instance=ExtResource("3_p2t1w")]
 
 [node name="helper_point" parent="Sprite2D" instance=ExtResource("4_urf8v")]
+z_index = 4096
 scale = Vector2(0.333333, 0.333333)

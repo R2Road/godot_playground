@@ -23,9 +23,11 @@ grow_vertical = 2
 text = "Message Label"
 
 [node name="helper_reticle" parent="." instance=ExtResource("3_m25jy")]
+z_index = 4096
 
 [node name="helper_move2center" parent="helper_reticle" instance=ExtResource("2_42gxa")]
 
 [node name="Camera2D" type="Camera2D" parent="helper_reticle"]
 
 [node name="helper_point" parent="." instance=ExtResource("4_maauf")]
+z_index = 4096

@@ -1,3 +1,4 @@
+@tool
 extends Node2D
 
 
@@ -32,6 +33,9 @@ func _draw():
 
 
 func _process( _delta ):
+	if not Engine.is_editor_hint():
+		return
+		
 	if drag_on:
 		get_parent().position = (
 			( get_parent().get_parent().to_local( get_global_mouse_position() )
@@ -40,6 +44,9 @@ func _process( _delta ):
 
 
 func _unhandled_input(event):
+	if not Engine.is_editor_hint():
+		return
+		
 	if not event is InputEventMouseButton:
 		return
 	
@@ -52,6 +59,9 @@ func _unhandled_input(event):
 			# _draw is only called once
 			# need redraw : use CanvasItem.queue_redraw()
 			queue_redraw()
+			
+			# Input 전파 중지.
+			get_viewport().set_input_as_handled()
 	else:
 		if event.is_pressed():
 			var mouse_local_position = to_local( get_global_mouse_position() )
@@ -62,6 +72,6 @@ func _unhandled_input(event):
 				# _draw is only called once
 				# need redraw : use CanvasItem.queue_redraw()
 				queue_redraw()
-	
-	# Input 전파 중지.
-	get_viewport().set_input_as_handled()
+				
+				# Input 전파 중지.
+				get_viewport().set_input_as_handled()

@@ -3,5 +3,6 @@
 [ext_resource type="Script" path="res://addons/godot_play_tool/helper/helper_drag.gd" id="1_4trg0"]
 
 [node name="helper_drag" type="Node2D"]
+z_index = 4096
 z_as_relative = false
 script = ExtResource("1_4trg0")

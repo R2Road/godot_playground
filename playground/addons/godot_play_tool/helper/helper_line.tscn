@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://addons/godot_play_tool/helper/helper_line.gd" id="1_n1pe7"]
 
-
 [node name="helper_line" type="Node2D"]
+z_index = 4096
 z_as_relative = false
 script = ExtResource("1_n1pe7")

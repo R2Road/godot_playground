@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsuaumbxcknhr"]
+
+[ext_resource type="PackedScene" uid="uid://8pengjsakrxj" path="res://addons/godot_play_tool/helper/helper_reticle.tscn" id="1_8up7e"]
+
+[node name="helper_0_0" type="Node2D"]
+
+[node name="helper_reticle" parent="." instance=ExtResource("1_8up7e")]
+z_index = 4096
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "( 0, 0 )"
