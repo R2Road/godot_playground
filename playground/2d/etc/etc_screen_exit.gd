@@ -1,4 +1,4 @@
-extends GDPTScene
+class_name screen_exit extends GDPTScene
 
 
 
@@ -7,9 +7,15 @@ const move_speed : int = 200
 
 
 
+######################### GDPT Override ##########################
+static func scene_name()->String:
+	return "Screen Exit"
+
+
+
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Screen Exit" )
+	pam.set_name( screen_exit.scene_name() )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )
