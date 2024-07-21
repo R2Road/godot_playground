@@ -33,7 +33,7 @@ func _draw():
 
 
 func _process( _delta ):
-	if not Engine.is_editor_hint():
+	if Engine.is_editor_hint():
 		return
 		
 	if drag_on:
@@ -44,7 +44,7 @@ func _process( _delta ):
 
 
 func _unhandled_input(event):
-	if not Engine.is_editor_hint():
+	if Engine.is_editor_hint():
 		return
 		
 	if not event is InputEventMouseButton:

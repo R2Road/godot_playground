@@ -47,6 +47,14 @@ static func new_mover( _owner : Node, _name : String, _key : Key, _next_scene_pa
 			return
 		
 		#
+		# 현재 Scene의 Camera Off
+		#
+		if _owner.get_viewport().get_camera_2d():
+			_owner.get_viewport().get_camera_2d().enabled = false
+		if _owner.get_viewport().get_camera_3d():
+			_owner.get_viewport().get_camera_3d().enabled = false
+		
+		#
 		# 현재 Scene의 모든 개체를 제거한다.
 		#
 		var tree = _owner.get_tree()
