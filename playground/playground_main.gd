@@ -22,6 +22,7 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( "Audio",		Key.KEY_A, 		"res://audio/audio_root.tscn" )
 	pam.add_mover( "Json",		Key.KEY_S, 		"res://json/json_root.tscn" )
-	pam.add_mover( inspector_struct.scene_name(),	Key.KEY_D, 		"res://inspector/inspector_struct.tscn" )
+	pam.add_mover( config_root.scene_name(),	Key.KEY_D, 		"res://config/config_root.tscn" )
+	pam.add_mover( inspector_struct.scene_name(),	Key.KEY_F, 		"res://inspector/inspector_struct.tscn" )
 	pam.add_split()
 	build_summary( eSceneType.ROOT )
