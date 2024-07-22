@@ -26,8 +26,21 @@ func _ready():
 	#
 	config.load( path )
 	
+	$Label.text = ( "[get_sections()]" + "\n" )
+	$Label.text += "\n"
+	$Label.text += "\n"
+	
 	for s in config.get_sections():
 		$Label.text += s
 		$Label.text += "\n"
+	
+	#
+	#
+	#
+	var file = FileAccess.open( path, FileAccess.READ )
+	$Label4Source.text = ( "[" + path + "]" + "\n" )
+	$Label4Source.text += "\n"
+	$Label4Source.text += "\n"
+	$Label4Source.text += file.get_as_text()
 	
 	
