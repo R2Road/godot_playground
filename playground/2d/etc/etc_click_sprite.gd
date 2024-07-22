@@ -19,8 +19,6 @@ func _ready():
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )
-	
-	$Sprite2D.set_position( get_viewport().size * 0.5 )
 
 
 func _unhandled_input( event ):

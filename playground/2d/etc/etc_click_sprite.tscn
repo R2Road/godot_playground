@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c742xfwxxbqjp"]
+[gd_scene load_steps=4 format=3 uid="uid://c7awe2vvtc7ne"]
 
 [ext_resource type="Script" path="res://2d/etc/etc_click_sprite.gd" id="1_8x585"]
 [ext_resource type="Texture2D" uid="uid://br7733mi0v430" path="res://resources/sprite/actor001/actor001_win_02.png" id="2_2oqjo"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="3_qml7j"]
 
 [node name="etc_click_sprite" type="Node2D"]
 script = ExtResource("1_8x585")
@@ -19,3 +20,5 @@ offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "0"
 horizontal_alignment = 1
+
+[node name="helper_move2center" parent="Sprite2D" instance=ExtResource("3_qml7j")]
