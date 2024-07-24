@@ -24,19 +24,16 @@ static func scene_name()->String:
 
 ############################ Override ############################
 func _init():
-	var canvas_layer = CanvasLayer.new()
-	canvas_layer.name = "PlayCanvas"
-	canvas_layer.set_script( GDPT.scene_helper )
-	add_child( canvas_layer )
+	add_child( GDPT.build_scene_helper() )
 	
-	pam = canvas_layer.play_action_manager
+	pam = $GDPTSceneHelper.play_action_manager
 	pam.owner = self
 
 
 
 ############################   User   ############################
 func build_summary( _scene_type : eSceneType ):
-	var summary_node = $PlayCanvas/Summary
+	var summary_node = $GDPTSceneHelper/Summary
 	summary_node.text = pam.build_summary()
 	
 	if eSceneType.ROOT == _scene_type:

@@ -12,6 +12,12 @@ extends Node2D
 
 ############################ Override ############################
 func _ready():
+	do()
+
+
+
+############################   User   ############################
+func do():
 	var target_world_position
 	
 	# 목표 world position 확보

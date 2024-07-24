@@ -65,7 +65,6 @@ func _unhandled_input(event):
 	else:
 		if event.is_pressed():
 			var mouse_local_position = to_local( get_global_mouse_position() )
-			print( mouse_local_position )
 			if rect.has_point( mouse_local_position ):
 				drag_on = true
 				drag_offset = mouse_local_position

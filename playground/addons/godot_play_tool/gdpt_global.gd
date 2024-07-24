@@ -4,6 +4,8 @@ extends Node
 
 ############################ Variable ############################
 var version : String
+
+var on_debug = true
 var on_assert = true
 
 var scene_helper = preload( "res://addons/godot_play_tool/scene/gdpt_scene_helper.gd" )
@@ -34,6 +36,18 @@ func _exit_tree():
 
 
 ############################   User   ############################
+func build_scene_helper()->Node:
+	var canvas_layer = CanvasLayer.new()
+	canvas_layer.name = "GDPTSceneHelper"
+	canvas_layer.set_script( GDPT.scene_helper )
+	return canvas_layer
+
+
 func _assert( flag ):
 	if on_assert:
 		assert( flag )
+
+
+func _debug_print( f : Callable ):
+	if on_debug:
+		print( f.call() )
