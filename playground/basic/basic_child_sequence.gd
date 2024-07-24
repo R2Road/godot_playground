@@ -14,6 +14,8 @@ func _ready():
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
 	pam.add_action( "Add Child", Key.KEY_1, do )
+	pam.add_lf()
+	pam.add_action( "Change Z-order : First Child", Key.KEY_2, change_z )
 	build_summary( eSceneType.TEST )
 	
 	#
@@ -35,6 +37,12 @@ func do():
 func show_childs():
 	$Label.text = ""
 	for c in get_children():
-		$Label.text += c.name + "\n"
+		$Label.text += ( "[" + str( c.get_index() ) + "] " + c.name + "\n" )
 	
 	$Label/helper_move2center.do()
+
+
+func change_z():
+	move_child( get_children()[0], -1 )
+	
+	show_childs()
