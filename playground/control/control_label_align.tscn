@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0l62v61fycw2"]
+
+[ext_resource type="Script" path="res://control/control_label_align.gd" id="1_8gg2w"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="2_v4eu4"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="3_2hugm"]
+[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://addons/godot_play_tool/helper/helper_rect.tscn" id="4_rgjle"]
+
+[node name="control_label_align" type="Node2D"]
+script = ExtResource("1_8gg2w")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 452.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "This is Label Node"
+
+[node name="helper_point" parent="Label" instance=ExtResource("2_v4eu4")]
+z_index = 4096
+
+[node name="helper_move2center" parent="Label" instance=ExtResource("3_2hugm")]
+
+[node name="helper_rect" parent="Label" instance=ExtResource("4_rgjle")]
+z_index = 4096

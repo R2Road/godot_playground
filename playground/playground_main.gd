@@ -19,6 +19,7 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( "2D", 			Key.KEY_Q, 		"res://2d/2d_root.tscn" )
 	pam.add_mover( "3D", 			Key.KEY_W, 		"res://3d/3d_root.tscn" )
+	pam.add_mover( "Control", 		Key.KEY_E, 		"res://control/control_root.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Audio",		Key.KEY_A, 		"res://audio/audio_root.tscn" )
 	pam.add_mover( "Json",		Key.KEY_S, 		"res://json/json_root.tscn" )

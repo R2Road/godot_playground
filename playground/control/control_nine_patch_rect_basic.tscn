@@ -1,22 +1,22 @@
 [gd_scene load_steps=5 format=3 uid="uid://dehhvb2dvtxyf"]
 
-[ext_resource type="Script" path="res://2d/nine_patch_rect_basic.gd" id="1_miqrt"]
-[ext_resource type="Texture2D" uid="uid://br7733mi0v430" path="res://resources/sprite/actor001/actor001_win_02.png" id="2_0ldno"]
-[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="3_t8v0a"]
-[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="4_scssd"]
+[ext_resource type="Script" path="res://control/control_nine_patch_rect_basic.gd" id="1_8qdq0"]
+[ext_resource type="Texture2D" uid="uid://br7733mi0v430" path="res://resources/sprite/actor001/actor001_win_02.png" id="2_qlicw"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="3_smdod"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="4_gg17e"]
 
-[node name="nine_patch_rect_basic" type="Node2D"]
-script = ExtResource("1_miqrt")
+[node name="control_nine_patch_rect_basic" type="Node2D"]
+script = ExtResource("1_8qdq0")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 texture_filter = 1
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_0ldno")
+texture = ExtResource("2_qlicw")
 
-[node name="helper_move2center" parent="NinePatchRect" instance=ExtResource("3_t8v0a")]
+[node name="helper_move2center" parent="NinePatchRect" instance=ExtResource("3_smdod")]
 
-[node name="helper_point" parent="NinePatchRect" instance=ExtResource("4_scssd")]
+[node name="helper_point" parent="NinePatchRect" instance=ExtResource("4_gg17e")]
 z_index = 4096
 
 [node name="HSlider_W" type="HSlider" parent="."]

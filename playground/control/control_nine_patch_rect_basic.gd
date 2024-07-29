@@ -1,4 +1,4 @@
-class_name nine_patch_rect_basic extends GDPTScene
+class_name control_nine_patch_rect_basic extends GDPTScene
 
 
 
@@ -15,7 +15,7 @@ static func scene_name()->String:
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( nine_patch_rect_basic.scene_name() )
+	pam.set_name( control_nine_patch_rect_basic.scene_name() )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )

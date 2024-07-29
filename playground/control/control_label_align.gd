@@ -1,4 +1,4 @@
-class_name ui_label_align extends GDPTScene
+class_name control_label_align extends GDPTScene
 
 
 
@@ -10,7 +10,7 @@ static func scene_name()->String:
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( ui_label_align.scene_name() )
+	pam.set_name( control_label_align.scene_name() )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
