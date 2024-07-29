@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2rp35k0a13t3"]
+
+[ext_resource type="Script" path="res://control/control_progress_bar_basic.gd" id="1_y2voe"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="3_ta4dh"]
+
+[node name="control_progress_bar_basic" type="Node2D"]
+script = ExtResource("1_y2voe")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_right = 500.0
+offset_bottom = 27.0
+step = 1.0
+
+[node name="helper_move2center" parent="ProgressBar" instance=ExtResource("3_ta4dh")]
+
+[node name="HSlider" type="HSlider" parent="ProgressBar"]
+layout_mode = 0
+offset_top = 47.0
+offset_right = 500.0
+offset_bottom = 63.0
+value = 50.0
+
+[node name="Label" type="Label" parent="ProgressBar/HSlider"]
+layout_mode = 0
+offset_left = -60.0
+offset_top = -4.0
+offset_bottom = 19.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Move > "
+
+[connection signal="value_changed" from="ProgressBar/HSlider" to="." method="_on_h_slider_value_changed"]
