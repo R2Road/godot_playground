@@ -15,6 +15,7 @@ func _ready():
 	pam.add_mover( "Animation",		Key.KEY_5, 		"res://2d/animation/animation_root.tscn" )
 	pam.add_mover( "Particles2D",	Key.KEY_6, 		"res://2d/particles2d/particles2d_root.tscn" )
 	pam.add_mover( "Tilemap",		Key.KEY_7, 		"res://2d/tilemap/tilemap_root.tscn" )
+	pam.add_mover( nine_patch_rect_basic.scene_name(),	Key.KEY_8, 		"res://2d/nine_patch_rect_basic.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Camera2D",	Key.KEY_Q, 		"res://2d/camera2d/camera2d_root.tscn" )
 	pam.add_mover( "UI", 		Key.KEY_W, 		"res://2d/ui/ui_root.tscn" )

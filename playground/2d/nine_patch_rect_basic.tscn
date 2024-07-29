@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://dehhvb2dvtxyf"]
+
+[ext_resource type="Script" path="res://2d/nine_patch_rect_basic.gd" id="1_miqrt"]
+[ext_resource type="Texture2D" uid="uid://br7733mi0v430" path="res://resources/sprite/actor001/actor001_win_02.png" id="2_0ldno"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="3_t8v0a"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="4_scssd"]
+
+[node name="nine_patch_rect_basic" type="Node2D"]
+script = ExtResource("1_miqrt")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_0ldno")
+
+[node name="helper_move2center" parent="NinePatchRect" instance=ExtResource("3_t8v0a")]
+
+[node name="helper_point" parent="NinePatchRect" instance=ExtResource("4_scssd")]
+z_index = 4096
+
+[node name="HSlider_W" type="HSlider" parent="."]
+offset_left = 1075.0
+offset_top = 23.0
+offset_right = 1275.0
+offset_bottom = 39.0
+max_value = 1000.0
+value = 100.0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="HSlider_W"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 47.0
+offset_bottom = -17.0
+grow_vertical = 0
+text = "Width"
+
+[node name="HSlider_H" type="HSlider" parent="."]
+offset_left = 1075.0
+offset_top = 68.0
+offset_right = 1275.0
+offset_bottom = 84.0
+max_value = 1000.0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="HSlider_H"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 47.0
+offset_bottom = -17.0
+grow_vertical = 0
+text = "Height"
+
+[connection signal="value_changed" from="HSlider_W" to="." method="_on_h_slider_w_value_changed"]
+[connection signal="value_changed" from="HSlider_H" to="." method="_on_h_slider_h_value_changed"]
