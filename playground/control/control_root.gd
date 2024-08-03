@@ -13,5 +13,5 @@ func _ready():
 	pam.add_mover( control_nine_patch_rect_basic.scene_name(),	Key.KEY_3, 		"res://control/control_nine_patch_rect_basic.tscn" )
 	pam.add_mover( control_progress_bar_basic.scene_name(),		Key.KEY_4, 		"res://control/control_progress_bar_basic.tscn" )
 	pam.add_mover( control_richtextlabel_basic.scene_name(),	Key.KEY_5, 		"res://control/control_richtextlabel_basic.tscn" )
-	pam.add_mover( control_richtextlabel_auto_resize.scene_name(),	Key.KEY_6, 		"res://control/control_richtextlabel_auto_resize.tscn" )
+	pam.add_mover( control_richtextlabel_size.scene_name(),		Key.KEY_6, 		"res://control/control_richtextlabel_size.tscn" )
 	build_summary( eSceneType.ROOT )

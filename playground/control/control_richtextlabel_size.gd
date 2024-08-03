@@ -1,18 +1,18 @@
 # REF : https://docs.godotengine.org/en/stable/tutorials/ui/bbcode_in_richtextlabel.html
 
-class_name control_richtextlabel_auto_resize extends GDPTScene
+class_name control_richtextlabel_size extends GDPTScene
 
 
 
 ######################### GDPT Override ##########################
 static func scene_name()->String:
-	return "RichTextLabel : Auto-Resize"
+	return "RichTextLabel : Size"
 
 
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( control_richtextlabel_auto_resize.scene_name() )
+	pam.set_name( control_richtextlabel_size.scene_name() )
 	pam.add_lf()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
