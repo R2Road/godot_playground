@@ -4,7 +4,10 @@ extends Node2D
 
 
 ############################ Variable ############################
-@export var color = Color( 0, 1, 0 )
+@export var color = Color( 0, 1, 0 ):
+	set( value ):
+		color = value
+		self.queue_redraw()
 
 
 

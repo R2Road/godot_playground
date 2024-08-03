@@ -59,7 +59,7 @@ static func new_mover( _owner : Node, _name : String, _key : Key, _next_scene_pa
 		#
 		var tree = _owner.get_tree()
 		for c in tree.root.get_children():
-			if "GDPT" != c.name:
+			if not c.is_in_group( "autoload" ):
 				c.queue_free()
 		
 		#

@@ -4,10 +4,22 @@ extends Node2D
 
 
 ############################ Variable ############################
-@export var color = Color( 0, 1, 0 )
-@export var point_start = Vector2.ZERO
-@export var point_end = Vector2( 0, 10 )
-@export var line_width = 1
+@export var color = Color( 0, 1, 0 ):
+	set( value ):
+		color = value
+		self.queue_redraw()
+@export var point_start = Vector2.ZERO:
+	set( value ):
+		point_start = value
+		self.queue_redraw()
+@export var point_end = Vector2( 0, 10 ):
+	set( value ):
+		point_end = value
+		self.queue_redraw()
+@export var line_width = 1:
+	set( value ):
+		line_width = value
+		self.queue_redraw()
 
 
 

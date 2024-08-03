@@ -70,7 +70,8 @@ func build_summary()->String:
 	var split_length = 0
 	
 	# calculate length of split string : with scene name
-	split_length = name.length() + 2 # 2 is decoration ( '#', ' ' )
+	if not name.is_empty():
+		split_length = name.length() + 2 # 2 is decoration ( '#', ' ' )
 	
 	# calculate length of split string : with action name
 	for j in container:
@@ -84,7 +85,9 @@ func build_summary()->String:
 	#
 	# build summary
 	#
-	var ret : String = ( "# " + name + "\n" )
+	var ret : String
+	if not name.is_empty():
+		ret = ( "# " + name + "\n" )
 	
 	for i in container:
 		if Key.KEY_NONE != i.key:

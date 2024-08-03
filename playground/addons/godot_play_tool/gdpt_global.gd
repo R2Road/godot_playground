@@ -20,6 +20,9 @@ var helper_reticle = preload( "res://addons/godot_play_tool/helper/helper_reticl
 
 
 ############################ Override ############################
+func _init():
+	add_to_group( "autoload" )
+
 func _enter_tree():
 	# 호출 된다.
 	print( "GDPT : Enter Tree" )
@@ -43,9 +46,12 @@ func build_scene_helper()->Node:
 	return canvas_layer
 
 
-func _assert( flag ):
+func _assert( flag = false ):
 	if on_assert:
 		assert( flag )
+
+func _assert_f( flag = false ):
+	assert( flag )
 
 
 func _debug_print( f : Callable ):

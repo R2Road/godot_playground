@@ -4,10 +4,22 @@ extends Node2D
 
 
 ############################ Variable ############################
-@export var color_h = Color( 1, 0, 0 )
-@export var color_v = Color( 0, 0, 1 )
-@export var length = 50.0
-@export var line_width = 1
+@export var color_h = Color( 1, 0, 0 ):
+	set( value ):
+		color_h = value
+		self.queue_redraw()
+@export var color_v = Color( 0, 0, 1 ):
+	set( value ):
+		color_v = value
+		self.queue_redraw()
+@export var length = 50.0:
+	set( value ):
+		length = value
+		self.queue_redraw()
+@export var line_width = 1:
+	set( value ):
+		line_width = value
+		self.queue_redraw()
 
 
 

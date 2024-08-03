@@ -3,11 +3,26 @@ extends Node2D
 
 
 ############################  Export  ############################
-@export var rect : Rect2 = Rect2( 0, 0, 10, 10 )
-@export var color_drag_on = Color( 0, 1, 0 )
-@export var color_drag_off = Color( 1, 0, 0 )
-@export var show_guide = true
-@export var out_line_bold = 1.0
+@export var rect : Rect2 = Rect2( 0, 0, 10, 10 ):
+	set( value ):
+		rect = value
+		self.queue_redraw()
+@export var color_drag_on = Color( 0, 1, 0 ):
+	set( value ):
+		color_drag_on = value
+		self.queue_redraw()
+@export var color_drag_off = Color( 1, 0, 0 ):
+	set( value ):
+		color_drag_off = value
+		self.queue_redraw()
+@export var show_guide = true:
+	set( value ):
+		show_guide = value
+		self.queue_redraw()
+@export var out_line_bold = 1.0:
+	set( value ):
+		out_line_bold = value
+		self.queue_redraw()
 
 
 

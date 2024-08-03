@@ -28,6 +28,6 @@ func do():
 	
 	# 부피가 있는 부모 Node 라면 절반만큼 당겨준다.
 	if get_parent() is Control:
-		target_world_position -= ( get_parent().size * get_parent().scale * 0.5 )
+		target_world_position -= ( get_parent().get_minimum_size() * get_parent().scale * 0.5 )
 	
 	get_parent().position = get_parent().get_parent().to_local( target_world_position )

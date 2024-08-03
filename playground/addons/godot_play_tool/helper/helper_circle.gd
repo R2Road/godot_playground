@@ -4,10 +4,22 @@ extends Node2D
 
 
 ############################ Variable ############################
-@export var offset : Vector2 = Vector2( 0, 0 )
-@export var color = Color( 0, 1, 0 )
-@export var radius : float = 1
-@export var fill = false
+@export var offset : Vector2 = Vector2( 0, 0 ):
+	set( value ):
+		offset = value
+		self.queue_redraw()
+@export var color = Color( 0, 1, 0 ):
+	set( value ):
+		color = value
+		self.queue_redraw()
+@export var radius : float = 1:
+	set( value ):
+		radius = value
+		self.queue_redraw()
+@export var fill = false:
+	set( value ):
+		fill = value
+		self.queue_redraw()
 
 
 
