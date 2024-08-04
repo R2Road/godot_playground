@@ -8,8 +8,8 @@ static func scene_name()->String:
 
 
 static func scene_path()->String:
-	var s = get_stack()[0]["source"]
-	return str( s )
+	var s : String = get_stack()[0]["source"]
+	return s
 
 
 
