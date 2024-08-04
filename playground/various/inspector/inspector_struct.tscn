@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://c3s4s1jev3uuk"]
 
-[ext_resource type="Script" path="res://inspector/inspector_struct.gd" id="1_5hmss"]
+[ext_resource type="Script" path="res://various/inspector/inspector_struct.gd" id="1_5hmss"]
 [ext_resource type="PackedScene" uid="uid://gpu5f7fm35o4" path="res://addons/godot_play_tool/helper/helper_circle.tscn" id="2_es604"]
 [ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="2_xuf6w"]
-[ext_resource type="Script" path="res://inspector/inspector_struct_helper.gd" id="3_f50nx"]
+[ext_resource type="Script" path="res://various/inspector/inspector_struct_helper.gd" id="3_f50nx"]
 [ext_resource type="PackedScene" uid="uid://cmqwendenqxuy" path="res://addons/godot_play_tool/helper/helper_line.tscn" id="4_41nit"]
 
 [sub_resource type="Resource" id="Resource_k0gbi"]

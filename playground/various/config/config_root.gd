@@ -12,9 +12,9 @@ static func scene_name()->String:
 func _ready():
 	pam.set_name( config_root.scene_name() )
 	pam.add_split()
-	pam.add_mover( playground_main.scene_name(),		Key.KEY_ESCAPE, "res://playground_main.tscn" )
+	pam.add_mover( various_root.scene_name(),	Key.KEY_ESCAPE, "res://various/various_root.tscn" )
 	pam.add_lf()
-	pam.add_mover( config_section.scene_name(),		Key.KEY_1, "res://config/config_section.tscn" )
-	pam.add_mover( config_parse.scene_name(),		Key.KEY_2, "res://config/config_parse.tscn" )
+	pam.add_mover( config_section.scene_name(),		Key.KEY_1, "res://various/config/config_section.tscn" )
+	pam.add_mover( config_parse.scene_name(),		Key.KEY_2, "res://various/config/config_parse.tscn" )
 	pam.add_split()
 	build_summary( eSceneType.ROOT )

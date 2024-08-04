@@ -3,7 +3,7 @@ class_name config_section extends GDPTScene
 
 
 ############################ Variable ############################
-var path = "res://config/config_section_helper.cfg"
+var path = "res://various/config/config_section_helper.cfg"
 var config = ConfigFile.new()
 
 

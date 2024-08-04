@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bod3s8visljl1"]
+
+[ext_resource type="Script" path="res://various/various_root.gd" id="1_rg8e1"]
+
+[node name="VariousRoot" type="Node2D"]
+script = ExtResource("1_rg8e1")
