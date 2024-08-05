@@ -1,10 +1,20 @@
-extends GDPTScene
+class_name json_container_2_json_string extends GDPTScene
+
+
+
+######################### GDPT Override ##########################
+static func scene_name()->String:
+	return "Json : Container 2 Json String" 
+
+
+static func scene_path()->String:
+	return super.scene_path()
 
 
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Json : Container 2 Json String" )
+	pam.set_name( json_container_2_json_string.scene_name() )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )

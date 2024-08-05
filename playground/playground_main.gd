@@ -26,6 +26,6 @@ func _ready():
 	pam.add_mover( "3D", 			Key.KEY_W, 		"res://3d/3d_root.tscn" )
 	pam.add_mover( "Control", 		Key.KEY_E, 		"res://control/control_root.tscn" )
 	pam.add_lf()
-	pam.add_mover( various_root.scene_name(),	Key.KEY_A, "res://various/various_root.tscn" )
+	pam.add_mover( various_root.scene_name(),	Key.KEY_A, various_root.scene_path() )
 	pam.add_split()
 	build_summary( eSceneType.ROOT )
