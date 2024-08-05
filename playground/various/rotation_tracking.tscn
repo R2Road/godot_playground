@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://d33k08ggnrtmc"]
+
+[ext_resource type="Script" path="res://various/rotation_tracking.gd" id="1_e4llx"]
+[ext_resource type="PackedScene" uid="uid://8pengjsakrxj" path="res://addons/godot_play_tool/helper/helper_reticle.tscn" id="2_usu3s"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="3_7k1ql"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="4_it2bw"]
+[ext_resource type="PackedScene" uid="uid://sdvpesfvson2" path="res://addons/godot_play_tool/helper/helper_drag.tscn" id="5_n2td4"]
+[ext_resource type="PackedScene" uid="uid://cmqwendenqxuy" path="res://addons/godot_play_tool/helper/helper_line.tscn" id="6_4otnb"]
+
+[node name="RotationTracking" type="Node2D"]
+script = ExtResource("1_e4llx")
+
+[node name="Center" parent="." instance=ExtResource("2_usu3s")]
+z_index = 4096
+
+[node name="helper_move2center" parent="Center" instance=ExtResource("3_7k1ql")]
+
+[node name="Target" parent="." instance=ExtResource("4_it2bw")]
+z_index = 4096
+position = Vector2(870, 162)
+metadata/_edit_group_ = true
+
+[node name="helper_drag" parent="Target" instance=ExtResource("5_n2td4")]
+rect = Rect2(-25, -25, 50, 50)
+
+[node name="Pivot" parent="." instance=ExtResource("6_4otnb")]
+color = Color(0.712129, 0.712129, 0.712129, 1)
+point_end = Vector2(100, 0)
+line_width = 3
+metadata/_edit_group_ = true
+
+[node name="helper_move2center" parent="Pivot" instance=ExtResource("3_7k1ql")]
+
+[node name="Tracker" parent="." instance=ExtResource("6_4otnb")]
+visible = false
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="helper_move2center" parent="Tracker" instance=ExtResource("3_7k1ql")]
