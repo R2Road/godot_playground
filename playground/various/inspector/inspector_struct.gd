@@ -11,6 +11,10 @@ static func scene_name()->String:
 	return "Inspector : Struct"
 
 
+static func scene_path()->String:
+	return super.scene_path()
+
+
 
 ############################ Override ############################
 func _ready():

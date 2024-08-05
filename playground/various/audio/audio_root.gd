@@ -1,10 +1,20 @@
-extends GDPTScene
+class_name audio_root extends GDPTScene
+
+
+
+######################### GDPT Override ##########################
+static func scene_name()->String:
+	return "Audio : Root"
+
+
+static func scene_path()->String:
+	return super.scene_path()
 
 
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Audio Root" )
+	pam.set_name( audio_root.scene_name() )
 	pam.add_split()
 	pam.add_mover( various_root.scene_name(),	Key.KEY_ESCAPE, "res://various/various_root.tscn" )
 	pam.add_lf()
