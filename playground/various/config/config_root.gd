@@ -16,9 +16,9 @@ static func scene_path()->String:
 func _ready():
 	pam.set_name( config_root.scene_name() )
 	pam.add_split()
-	pam.add_mover( various_root.scene_name(),	Key.KEY_ESCAPE, "res://various/various_root.tscn" )
+	pam.add_mover( various_root.scene_name(),	Key.KEY_ESCAPE, various_root.scene_path() )
 	pam.add_lf()
-	pam.add_mover( config_section.scene_name(),		Key.KEY_1, "res://various/config/config_section.tscn" )
-	pam.add_mover( config_parse.scene_name(),		Key.KEY_2, "res://various/config/config_parse.tscn" )
+	pam.add_mover( config_section.scene_name(),		Key.KEY_1, config_section.scene_path() )
+	pam.add_mover( config_parse.scene_name(),		Key.KEY_2, config_parse.scene_path() )
 	pam.add_split()
 	build_summary( eSceneType.ROOT )
