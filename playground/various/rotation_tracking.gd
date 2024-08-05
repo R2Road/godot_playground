@@ -34,3 +34,5 @@ func update_pivot( target_position ):
 	
 	$Pivot.rotation = direction.angle()
 	$Pivot.point_end.x = direction.length()
+	
+	$Target/Label.text = str( direction.angle() ).substr( 0, 5 )

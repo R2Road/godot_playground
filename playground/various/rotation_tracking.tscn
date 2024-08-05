@@ -23,6 +23,13 @@ metadata/_edit_group_ = true
 [node name="helper_drag" parent="Target" instance=ExtResource("5_n2td4")]
 rect = Rect2(-25, -25, 50, 50)
 
+[node name="Label" type="Label" parent="Target"]
+offset_left = 29.0
+offset_top = -25.0
+offset_right = 62.0
+offset_bottom = -2.0
+text = "Test"
+
 [node name="Pivot" parent="." instance=ExtResource("6_4otnb")]
 color = Color(0.712129, 0.712129, 0.712129, 1)
 point_end = Vector2(100, 0)
