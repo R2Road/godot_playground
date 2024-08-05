@@ -6,7 +6,7 @@ extends GDPTScene
 func _ready():
 	pam.set_name( "Input Root" )
 	pam.add_split()
-	pam.add_mover( playground_main.scene_name(),		Key.KEY_ESCAPE, "res://playground_main.tscn" )
+	pam.add_mover( playground_main.scene_name(),		Key.KEY_ESCAPE, playground_main.scene_path() )
 	pam.add_lf()
 	pam.add_mover( "Keyboard Input : In Input", 		Key.KEY_1, 		"res://input/input_keyboard_in_input.tscn" )
 	pam.add_mover( "Keyboard Input : In Process", 		Key.KEY_2, 		"res://input/input_keyboard_in_process.tscn" )

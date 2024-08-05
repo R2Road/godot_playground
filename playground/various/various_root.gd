@@ -12,7 +12,7 @@ static func scene_name()->String:
 func _ready():
 	pam.set_name( various_root.scene_name() )
 	pam.add_split()
-	pam.add_mover( playground_main.scene_name(),	Key.KEY_ESCAPE, "res://playground_main.tscn" )
+	pam.add_mover( playground_main.scene_name(),	Key.KEY_ESCAPE, playground_main.scene_path() )
 	pam.add_lf()
 	pam.add_mover( "Audio",		Key.KEY_A, 		"res://various/audio/audio_root.tscn" )
 	pam.add_mover( "Json",		Key.KEY_S, 		"res://various/json/json_root.tscn" )

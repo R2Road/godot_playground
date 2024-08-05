@@ -6,7 +6,7 @@ extends GDPTScene
 func _ready():
 	pam.set_name( "2D Root" )
 	pam.add_split()
-	pam.add_mover( playground_main.scene_name(),		Key.KEY_ESCAPE, "res://playground_main.tscn" )
+	pam.add_mover( playground_main.scene_name(),		Key.KEY_ESCAPE, playground_main.scene_path() )
 	pam.add_lf()
 	pam.add_mover( "Sprite", 		Key.KEY_1, 		"res://2d/sprite/sprite_root.tscn" )
 	pam.add_mover( "Area2D", 		Key.KEY_2, 		"res://2d/area2d/area2d_root.tscn" )

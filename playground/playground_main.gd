@@ -5,6 +5,10 @@ class_name playground_main extends GDPTScene
 ######################### GDPT Override ##########################
 static func scene_name()->String:
 	return "PlayGround <" + GDPT.version + ">"
+	
+
+static func scene_path()->String:
+	return super.scene_path()
 
 
 
