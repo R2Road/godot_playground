@@ -4,7 +4,7 @@ class_name rotation_tracking extends GDPTScene
 
 ######################### GDPT Override ##########################
 static func scene_name()->String:
-	return "Script Path"
+	return "Rotation Tracking"
 
 
 static func scene_path()->String:
