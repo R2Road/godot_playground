@@ -26,6 +26,13 @@ extends Node2D
 
 
 
+############################  Signal  ############################
+signal signal_position_changed( _position : Vector2 )
+signal signal_drag_on
+signal signal_drag_off
+
+
+
 ############################ Variable ############################
 var drag_on = false
 var drag_offset : Vector2
@@ -52,10 +59,15 @@ func _process( _delta ):
 		return
 		
 	if drag_on:
+		var last_position = get_parent().position
+		
 		get_parent().position = (
 			( get_parent().get_parent().to_local( get_global_mouse_position() )
 			- drag_offset )
 		)
+		
+		if last_position != get_parent().position:
+			signal_position_changed.emit( get_parent().position )
 
 
 func _unhandled_input(event):
@@ -77,6 +89,9 @@ func _unhandled_input(event):
 			
 			# Input 전파 중지.
 			get_viewport().set_input_as_handled()
+			
+			#signal
+			signal_drag_off.emit()
 	else:
 		if event.is_pressed():
 			var mouse_local_position = to_local( get_global_mouse_position() )
@@ -89,3 +104,6 @@ func _unhandled_input(event):
 				
 				# Input 전파 중지.
 				get_viewport().set_input_as_handled()
+				
+				#signal
+				signal_drag_on.emit()

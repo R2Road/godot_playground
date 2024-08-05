@@ -21,6 +21,10 @@ static func scene_name()->String:
 	return "GDPTScene"
 
 
+static func scene_path()->String:
+	return get_stack()[1]["source"].replace( ".gd", ".tscn" )
+
+
 
 ############################ Override ############################
 func _init():
