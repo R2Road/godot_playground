@@ -22,6 +22,7 @@ func _ready():
 	pam.add_mover( json_root.scene_name(),		Key.KEY_S, 		json_root.scene_path() )
 	pam.add_mover( config_root.scene_name(),		Key.KEY_D, 		config_root.scene_path() )
 	pam.add_mover( inspector_struct.scene_name(),	Key.KEY_F, 		inspector_struct.scene_path() )
-	pam.add_mover( rotation_tracking.scene_name(),	Key.KEY_G, 		rotation_tracking.scene_path() )
+	pam.add_mover( rotation_basic.scene_name(),		Key.KEY_G, 		rotation_basic.scene_path() )
+	pam.add_mover( rotation_tracking.scene_name(),	Key.KEY_H, 		rotation_tracking.scene_path() )
 	pam.add_split()
 	build_summary( eSceneType.ROOT )
