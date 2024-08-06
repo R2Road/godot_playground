@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://k5lilan0c3hx"]
+
+[ext_resource type="Script" path="res://control/control_slider_h_basic.gd" id="1_3k0mv"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="2_tg6sh"]
+
+[node name="control_slider_h_basic" type="Node2D"]
+script = ExtResource("1_3k0mv")
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_top = 47.0
+offset_right = 500.0
+offset_bottom = 63.0
+value = 50.0
+
+[node name="helper_move2center" parent="HSlider" instance=ExtResource("2_tg6sh")]
+position = Vector2(0, -47)
+
+[node name="Label" type="Label" parent="HSlider"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = -34.0
+offset_right = 396.0
+offset_bottom = -11.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Value
+"
+horizontal_alignment = 1
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
