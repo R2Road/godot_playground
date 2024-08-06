@@ -13,8 +13,9 @@ static func scene_path()->String:
 
 
 ############################ Variable ############################
-var target_direction : Vector2
-var on_tracking = false
+var tracking_vector : Vector2
+var tracking_on = false
+var tracking_direction = 1
 
 
 
@@ -35,33 +36,42 @@ func _ready():
 
 
 func _process( delta ):
-	if $Pivot.rotation != $Tracker.rotation:
-		var s = $Pivot.rotation - $Tracker.rotation
-		if 0 < s:
-			$Tracker.rotation += 1 * delta
-			if 0 > $Pivot.rotation - $Tracker.rotation:
-				$Tracker.rotation = target_direction.angle()
-		elif 0 > s:
+	if tracking_on:
+		if 0 < tracking_direction:
 			$Tracker.rotation -= 1 * delta
-			if 0 < $Pivot.rotation - $Tracker.rotation:
-				$Tracker.rotation = target_direction.angle()
+			
+			tracking_direction = tracking_vector.cross( Vector2.RIGHT.rotated( $Tracker.rotation ) )
+			if 0 > tracking_direction:
+				$Tracker.rotation = tracking_vector.angle()
+				tracking_on = false
+		elif 0 > tracking_direction:
+			$Tracker.rotation += 1 * delta
+			
+			tracking_direction = tracking_vector.cross( Vector2.RIGHT.rotated( $Tracker.rotation ) )
+			if 0 < tracking_direction:
+				$Tracker.rotation = tracking_vector.angle()
+				tracking_on = false
 		
 		$Target/T.text = str( $Tracker.rotation ).substr( 0, 5 )
-		$Target/S.text = str( s ).substr( 0, 5 )
+		$Target/S.text = str( tracking_vector.dot( Vector2.RIGHT.rotated( $Tracker.rotation ) ) ).substr( 0, 5 )
 
 
 ############################   User   ############################
 func update_pivot( target_position ):
-	target_direction = ( target_position - $Center.position )
+	tracking_vector = ( target_position - $Center.position )
 	
-	$Pivot.rotation = target_direction.angle()
-	$Pivot.point_end.x = target_direction.length()
-	$Tracker.point_end.x = target_direction.length()
+	$Pivot.rotation = tracking_vector.angle()
+	$Pivot.point_end.x = tracking_vector.length()
+	$Tracker.point_end.x = tracking_vector.length()
 	
-	$Target/P.text = str( target_direction.angle() ).substr( 0, 5 )
+	tracking_vector = tracking_vector.normalized()
 	
-	var d1 = $Pivot.rotation - $Tracker.rotation
-	print( "d1 : " + str( d1 ) )
+	$Target/P.text = str( tracking_vector.angle() ).substr( 0, 5 )
 	
 	#
-	on_tracking = $Pivot.rotation != $Tracker.rotation
+	tracking_on = $Pivot.rotation != $Tracker.rotation
+	if tracking_on:
+		tracking_direction = tracking_vector.cross( Vector2.RIGHT.rotated( $Tracker.rotation ) )
+	
+	
+	$Target/S.text = str( tracking_direction).substr( 0, 5 )
