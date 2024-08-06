@@ -52,26 +52,32 @@ func _process( delta ):
 				$Tracker.rotation = tracking_vector.angle()
 				tracking_on = false
 		
-		$Target/T.text = str( $Tracker.rotation ).substr( 0, 5 )
-		$Target/S.text = str( tracking_vector.dot( Vector2.RIGHT.rotated( $Tracker.rotation ) ) ).substr( 0, 5 )
+		show_debug_info()
 
 
 ############################   User   ############################
 func update_pivot( target_position ):
+	#
 	tracking_vector = ( target_position - $Center.position )
 	
+	#
 	$Pivot.rotation = tracking_vector.angle()
 	$Pivot.point_end.x = tracking_vector.length()
 	$Tracker.point_end.x = tracking_vector.length()
 	
+	#
 	tracking_vector = tracking_vector.normalized()
-	
-	$Target/P.text = str( tracking_vector.angle() ).substr( 0, 5 )
 	
 	#
 	tracking_on = $Pivot.rotation != $Tracker.rotation
 	if tracking_on:
 		tracking_direction = tracking_vector.cross( Vector2.RIGHT.rotated( $Tracker.rotation ) )
 	
-	
-	$Target/S.text = str( tracking_direction).substr( 0, 5 )
+	show_debug_info()
+
+
+func show_debug_info():
+	# Debug
+	$Target/P.text = "Target : " + str( tracking_vector.angle() ).substr( 0, 5 )
+	$Target/T.text = "Tracker : " + str( $Tracker.rotation ).substr( 0, 5 )
+	$Target/S.text = "Cross : " + str( tracking_direction).substr( 0, 5 )
