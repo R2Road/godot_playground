@@ -16,6 +16,7 @@ static func scene_path()->String:
 var tracking_vector : Vector2
 var tracking_on = false
 var tracking_direction = 1
+var tracking_speed = 1
 
 
 
@@ -33,19 +34,21 @@ func _ready():
 	$Target/helper_drag.signal_position_changed.connect( update_pivot )
 	
 	update_pivot( $Target.position )
+	
+	_on_h_slider_value_changed( $HSlider.value )
 
 
 func _process( delta ):
 	if tracking_on:
 		if 0 < tracking_direction:
-			$Tracker.rotation -= 1 * delta
+			$Tracker.rotation -= tracking_speed * delta
 			
 			tracking_direction = tracking_vector.cross( Vector2.RIGHT.rotated( $Tracker.rotation ) )
 			if 0 > tracking_direction:
 				$Tracker.rotation = tracking_vector.angle()
 				tracking_on = false
 		elif 0 > tracking_direction:
-			$Tracker.rotation += 1 * delta
+			$Tracker.rotation += tracking_speed * delta
 			
 			tracking_direction = tracking_vector.cross( Vector2.RIGHT.rotated( $Tracker.rotation ) )
 			if 0 < tracking_direction:
@@ -88,3 +91,7 @@ func show_debug_info():
 		+ "\n"
 		+ "Dot : " + str( tracking_vector.dot( Vector2.RIGHT.rotated( $Tracker.rotation ) ) ).substr( 0, 5 )
 	)
+
+
+func _on_h_slider_value_changed( value ):
+	tracking_speed = value
