@@ -81,6 +81,10 @@ func update_pivot( target_position ):
 
 func show_debug_info():
 	# Debug
-	$Target/P.text = "Target : " + str( tracking_vector.angle() ).substr( 0, 5 )
-	$Target/T.text = "Tracker : " + str( $Tracker.rotation ).substr( 0, 5 )
-	$Target/S.text = "Cross : " + str( tracking_direction).substr( 0, 5 )
+	$Target/P.text = "Target Angle : " + str( tracking_vector.angle() ).substr( 0, 5 )
+	$Target/T.text = "Tracker Angle: " + str( $Tracker.rotation ).substr( 0, 5 )
+	$Target/S.text = (
+		"Cross : " + str( tracking_direction ).substr( 0, 5 )
+		+ "\n"
+		+ "Dot : " + str( tracking_vector.dot( Vector2.RIGHT.rotated( $Tracker.rotation ) ) ).substr( 0, 5 )
+	)
