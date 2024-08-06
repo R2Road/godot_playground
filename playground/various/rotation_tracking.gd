@@ -61,17 +61,20 @@ func update_pivot( target_position ):
 	tracking_vector = ( target_position - $Center.position )
 	
 	#
+	tracking_on = tracking_vector.angle() != $Tracker.rotation
+	if not tracking_on:
+		return
+	
+	#
 	$Pivot.rotation = tracking_vector.angle()
 	$Pivot.point_end.x = tracking_vector.length()
 	$Tracker.point_end.x = tracking_vector.length()
 	
-	#
+	# 결과에 영향을 주지는 않지만 cross 결과가 증폭돼 나온다.
 	tracking_vector = tracking_vector.normalized()
 	
 	#
-	tracking_on = $Pivot.rotation != $Tracker.rotation
-	if tracking_on:
-		tracking_direction = tracking_vector.cross( Vector2.RIGHT.rotated( $Tracker.rotation ) )
+	tracking_direction = tracking_vector.cross( Vector2.RIGHT.rotated( $Tracker.rotation ) )
 	
 	show_debug_info()
 
