@@ -15,4 +15,6 @@ func _ready():
 	pam.add_mover( control_progress_bar_basic.scene_name(),		Key.KEY_5, 		"res://control/control_progress_bar_basic.tscn" )
 	pam.add_mover( control_richtextlabel_basic.scene_name(),	Key.KEY_6, 		"res://control/control_richtextlabel_basic.tscn" )
 	pam.add_mover( control_richtextlabel_size.scene_name(),		Key.KEY_7, 		"res://control/control_richtextlabel_size.tscn" )
+	pam.add_lf()
+	pam.add_mover( control_itemlist_basic.scene_name(),		Key.KEY_Q, 		control_itemlist_basic.scene_path() )
 	build_summary( eSceneType.ROOT )
