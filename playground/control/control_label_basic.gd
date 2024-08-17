@@ -1,10 +1,20 @@
-extends GDPTScene
+class_name control_label_basic extends GDPTScene
+
+
+
+######################### GDPT Override ##########################
+static func scene_name()->String:
+	return "Label : Basic"
+
+
+static func scene_path()->String:
+	return super.scene_path()
 
 
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Label" )
+	pam.set_name( control_label_basic.scene_name() )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
