@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://dxhogd1ieu1nb"]
 
-[ext_resource type="Script" path="res://control/control_label.gd" id="1_l07d1"]
+[ext_resource type="Script" path="res://control/control_label_basic.gd" id="1_l3o7b"]
 
 [node name="control_label_basic" type="Node2D"]
-script = ExtResource("1_l07d1")
+script = ExtResource("1_l3o7b")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 140.0
