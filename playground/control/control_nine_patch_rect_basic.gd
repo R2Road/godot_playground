@@ -7,6 +7,10 @@ static func scene_name()->String:
 	return "Nine Patch Rect : Basic"
 
 
+static func scene_path()->String:
+	return super.scene_path()
+
+
 
 ############################ Variable ############################
 @onready var target_node = $NinePatchRect
