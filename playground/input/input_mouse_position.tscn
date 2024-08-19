@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bemjduspfhrlu"]
+[gd_scene load_steps=3 format=3 uid="uid://bemjduspfhrlu"]
 
 [ext_resource type="Script" path="res://input/input_mouse_position.gd" id="1_li8v1"]
-[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="2_42gxa"]
-[ext_resource type="PackedScene" uid="uid://8pengjsakrxj" path="res://addons/godot_play_tool/helper/helper_reticle.tscn" id="3_m25jy"]
-[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="4_maauf"]
+[ext_resource type="PackedScene" uid="uid://dsuaumbxcknhr" path="res://addons/godot_play_tool/helper/helper_0_0.tscn" id="2_gxuxf"]
 
 [node name="input_mouse_position" type="Node2D"]
 script = ExtResource("1_li8v1")
@@ -22,12 +20,6 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Message Label"
 
-[node name="helper_reticle" parent="." instance=ExtResource("3_m25jy")]
-z_index = 4096
+[node name="helper_0_0" parent="." instance=ExtResource("2_gxuxf")]
 
-[node name="helper_move2center" parent="helper_reticle" instance=ExtResource("2_42gxa")]
-
-[node name="Camera2D" type="Camera2D" parent="helper_reticle"]
-
-[node name="helper_point" parent="." instance=ExtResource("4_maauf")]
-z_index = 4096
+[node name="Camera2D" type="Camera2D" parent="helper_0_0"]
