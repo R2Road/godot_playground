@@ -50,3 +50,11 @@ func _on_player_body_entered( body ):
 		( get_viewport().size * 0.5 )
 		- ( $Label.get_minimum_size() * $Label.get_scale() * 0.5 )
 	)
+
+
+func _on_area_2d_body_entered( body: Node2D ) -> void:
+	$Area2D/Label.add_theme_color_override( "font_color", Color( 1, 0, 0 ) )
+
+
+func _on_area_2d_body_exited( body: Node2D ) -> void:
+	$Area2D/Label.add_theme_color_override( "font_color", Color( 1, 1, 1 ) )
