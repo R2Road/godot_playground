@@ -58,4 +58,6 @@ text = "[pulse freq=1.0 color=#ffffff40 ease=-2.0]{text}[/pulse]
 [fade start=0 length=6]{text}[/fade]
 
 
-[rainbow freq=1.0 sat=0.8 val=0.8]{text}[/rainbow]"
+[rainbow freq=1.0 sat=0.8 val=0.8]{text}[/rainbow]
+
+[]"
