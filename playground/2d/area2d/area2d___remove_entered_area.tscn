@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbmmvpd33xxcp"]
+
+[ext_resource type="Script" path="res://2d/area2d/area2d___remove_entered_area.gd" id="1_8yr5g"]
+[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://addons/godot_play_tool/helper/helper_rect.tscn" id="2_58dp7"]
+[ext_resource type="PackedScene" uid="uid://sdvpesfvson2" path="res://addons/godot_play_tool/helper/helper_drag.tscn" id="3_0ewms"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07eur"]
+size = Vector2(200, 200)
+
+[node name="area2d___remove_entered_area" type="Node2D"]
+script = ExtResource("1_8yr5g")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MainArea" type="Area2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainArea"]
+shape = SubResource("RectangleShape2D_07eur")
+
+[node name="helper_rect" parent="MainArea" instance=ExtResource("2_58dp7")]
+z_index = 4096
+rect = Rect2(-100, -100, 200, 200)
+out_line_bold = 3.0
+
+[node name="SubArea" type="Area2D" parent="."]
+position = Vector2(323, -113)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubArea"]
+shape = SubResource("RectangleShape2D_07eur")
+
+[node name="helper_rect" parent="SubArea" instance=ExtResource("2_58dp7")]
+z_index = 4096
+rect = Rect2(-100, -100, 200, 200)
+color = Color(0, 1, 1, 1)
+fill = true
+out_line_bold = 3.0
+
+[node name="helper_drag" parent="SubArea" instance=ExtResource("3_0ewms")]
+rect = Rect2(-100, -100, 200, 200)
+
+[node name="Label" type="Label" parent="SubArea"]
+offset_left = -100.0
+offset_top = -128.0
+offset_right = 99.0
+offset_bottom = -105.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Drag This~!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = -282.0
+offset_top = 203.0
+offset_right = 284.0
+offset_bottom = 289.0
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="MainArea" to="." method="_on_main_area_area_entered"]
+[connection signal="area_exited" from="MainArea" to="." method="_on_main_area_area_exited"]
