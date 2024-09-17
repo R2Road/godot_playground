@@ -7,7 +7,7 @@ script = ExtResource("1_deuex")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ItemList" type="ItemList" parent="CanvasLayer"]
+[node name="ResolutionItemList" type="ItemList" parent="CanvasLayer"]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -16,4 +16,15 @@ offset_right = 300.0
 offset_bottom = 128.5
 grow_vertical = 2
 
-[connection signal="item_selected" from="CanvasLayer/ItemList" to="." method="_on_item_list_item_selected"]
+[node name="StretchModeItemList" type="ItemList" parent="CanvasLayer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 313.0
+offset_top = -121.5
+offset_right = 613.0
+offset_bottom = 128.5
+grow_vertical = 2
+
+[connection signal="item_selected" from="CanvasLayer/ResolutionItemList" to="." method="_on_resolution_item_list_item_selected"]
+[connection signal="item_selected" from="CanvasLayer/StretchModeItemList" to="." method="_on_stretch_mode_item_list_item_selected"]
