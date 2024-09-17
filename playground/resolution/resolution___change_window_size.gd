@@ -15,6 +15,7 @@ static func scene_path()->String:
 ############################ OnReady #############################
 @onready var resolution_item_list : ItemList = $CanvasLayer/ResolutionItemList
 @onready var content_scale_mode_item_list : ItemList = $CanvasLayer/ContentScaleModeItemList
+@onready var content_scale_aspect_item_list : ItemList = $CanvasLayer/ContentScaleAspectItemList
 
 
 
@@ -31,8 +32,16 @@ var content_scale_mode_list : Dictionary = {
 	, "Canvas Items" : Window.ContentScaleMode.CONTENT_SCALE_MODE_CANVAS_ITEMS
 	, "Viewport" : Window.ContentScaleMode.CONTENT_SCALE_MODE_VIEWPORT
 }
+var content_scale_aspect_list : Dictionary = {
+	  "Ignore" : Window.ContentScaleAspect.CONTENT_SCALE_ASPECT_IGNORE
+	, "Keep" : Window.ContentScaleAspect.CONTENT_SCALE_ASPECT_KEEP
+	, "Keep : Width" : Window.ContentScaleAspect.CONTENT_SCALE_ASPECT_KEEP_WIDTH
+	, "Keep : Height" : Window.ContentScaleAspect.CONTENT_SCALE_ASPECT_KEEP_HEIGHT
+	, "Expand" : Window.ContentScaleAspect.CONTENT_SCALE_ASPECT_EXPAND
+}
 var default_resolution : Vector2i
 var default_content_scale_mode : Window.ContentScaleMode
+var default_content_scale_aspect : Window.ContentScaleAspect
 
 
 
@@ -52,6 +61,7 @@ func _ready()->void:
 	
 	default_resolution = get_viewport().size
 	default_content_scale_mode = get_tree().root.content_scale_mode
+	default_content_scale_aspect = get_tree().root.content_scale_aspect
 	
 	var current_item_index = 0
 	for i : String in resolution_list:
@@ -68,6 +78,15 @@ func _ready()->void:
 		
 		if default_content_scale_mode == content_scale_mode_list[i]:
 			content_scale_mode_item_list.select( current_item_index )
+		
+		current_item_index += 1
+	
+	current_item_index = 0
+	for i : String in content_scale_aspect_list:
+		content_scale_aspect_item_list.add_item( i )
+		
+		if default_content_scale_aspect == content_scale_aspect_list[i]:
+			content_scale_aspect_item_list.select( current_item_index )
 		
 		current_item_index += 1
 
@@ -87,3 +106,8 @@ func _on_resolution_item_list_item_selected( index: int )->void:
 func _on_content_scale_mode_item_list_item_selected(index: int) -> void:
 	var new_content_scale_mode = content_scale_mode_list[content_scale_mode_item_list.get_item_text( index )]
 	get_tree().root.content_scale_mode = new_content_scale_mode
+
+
+func _on_content_scale_aspect_item_list_item_selected(index: int) -> void:
+	var new_content_scale_aspect = content_scale_aspect_list[content_scale_aspect_item_list.get_item_text( index )]
+	get_tree().root.content_scale_aspect = new_content_scale_aspect
