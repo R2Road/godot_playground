@@ -19,7 +19,7 @@ func _ready():
 	pam.add_exit()
 	pam.add_lf()
 	pam.add_root( basic_root.scene_name(),			Key.KEY_1, 		basic_root.scene_path() )
-	pam.add_root( "Input", 			Key.KEY_2, 		"res://input/input_root.tscn" )
+	pam.add_root( input_root.scene_name(), 			Key.KEY_2, 		input_root.scene_path() )
 	pam.add_root( script_root.scene_name(),	Key.KEY_3, 		"res://script/script_root.tscn" )
 	pam.add_lf()
 	pam.add_root( "2D", 			Key.KEY_Q, 		"res://2d/2d_root.tscn" )

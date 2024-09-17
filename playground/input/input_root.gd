@@ -1,4 +1,14 @@
-extends GDPTScene
+class_name input_root extends GDPTScene
+
+
+
+######################### GDPT Override ##########################
+static func scene_name()->String:
+	return "Input Root"
+	
+
+static func scene_path()->String:
+	return super.scene_path()
 
 
 
