@@ -33,6 +33,20 @@ movie_writer/movie_file="F:/Record/gd.avi"
 
 enabled=PackedStringArray("res://addons/godot_play_tool/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://2d/": "green",
+"res://3d/": "green",
+"res://addons/": "gray",
+"res://basic/": "green",
+"res://control/": "green",
+"res://input/": "green",
+"res://resources/": "gray",
+"res://script/": "green",
+"res://various/": "green"
+}
+
 [filesystem]
 
 import/blender/enabled=false
