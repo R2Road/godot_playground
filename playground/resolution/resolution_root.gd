@@ -19,5 +19,7 @@ func _ready():
 	pam.add_lf()
 	pam.add_front( playground_main.scene_name(),		Key.KEY_ESCAPE, playground_main.scene_path() )
 	pam.add_lf()
+	pam.add_mover( resolution___change_window_size.scene_name(),	Key.KEY_1, resolution___change_window_size.scene_path() )
+	pam.add_lf()
 	pam.add_split()
 	build_summary( eSceneType.ROOT )
