@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://drl1ho8d50ug8"]
+
+[ext_resource type="Script" path="res://addons/godot_play_tool/helper/helper_hslider.gd" id="1_mul5h"]
+
+[node name="helper_hslider" type="HSlider"]
+offset_right = 200.0
+offset_bottom = 16.0
+value = 50.0
+script = ExtResource("1_mul5h")
+metadata/_edit_group_ = true
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -20.0
+offset_right = 200.0
+offset_bottom = 3.0
+text = "Title"
+
+[node name="Value" type="Label" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = -20.0
+offset_right = 199.0
+offset_bottom = 3.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "0"
+horizontal_alignment = 2
+
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]

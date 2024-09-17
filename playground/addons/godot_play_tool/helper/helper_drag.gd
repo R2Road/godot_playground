@@ -3,7 +3,7 @@ extends Node2D
 
 
 ############################  Export  ############################
-@export var rect : Rect2 = Rect2( 0, 0, 10, 10 ):
+@export var rect : Rect2 = Rect2( -25, -25, 50, 50 ):
 	set( value ):
 		rect = value
 		self.queue_redraw()
@@ -19,7 +19,7 @@ extends Node2D
 	set( value ):
 		show_guide = value
 		self.queue_redraw()
-@export var out_line_bold = 1.0:
+@export var out_line_bold = 5.0:
 	set( value ):
 		out_line_bold = value
 		self.queue_redraw()

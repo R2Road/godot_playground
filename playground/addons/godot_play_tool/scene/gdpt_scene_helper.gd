@@ -12,7 +12,9 @@ func _init():
 	var summary = RichTextLabel.new()
 	summary.name = "Summary"
 	summary.fit_content = true
+	summary.bbcode_enabled = true
 	summary.autowrap_mode = TextServer.AutowrapMode.AUTOWRAP_OFF
+	summary.mouse_filter = Control.MouseFilter.MOUSE_FILTER_IGNORE
 	add_child( summary )
 	
 	var fps_label = Label.new()
@@ -30,7 +32,7 @@ func _process( _delta ):
 	$FPS.text = (
 		str( get_viewport().size.x ) + " x " + str( get_viewport().size.y )
 		+ "\n"
-		+ "fps : " + str( Engine.get_frames_per_second() )
+		+ "fps : " + str( Engine.get_frames_per_second() ) + "/" + str( Engine.max_fps )
 	)
 
 

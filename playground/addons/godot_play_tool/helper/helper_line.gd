@@ -12,7 +12,7 @@ extends Node2D
 	set( value ):
 		point_start = value
 		self.queue_redraw()
-@export var point_end = Vector2( 0, 10 ):
+@export var point_end = Vector2( 100, 0 ):
 	set( value ):
 		point_end = value
 		self.queue_redraw()
