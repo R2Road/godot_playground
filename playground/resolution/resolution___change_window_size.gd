@@ -31,6 +31,8 @@ var stretch_mode_list : Dictionary = {
 	, "Canvas Items" : Window.ContentScaleMode.CONTENT_SCALE_MODE_CANVAS_ITEMS
 	, "Viewport" : Window.ContentScaleMode.CONTENT_SCALE_MODE_VIEWPORT
 }
+var default_resolution : Vector2i
+var default_content_scale_mode : Window.ContentScaleMode
 
 
 
@@ -47,27 +49,36 @@ func _ready()->void:
 	#
 	#
 	#
-	var current_resolution = get_viewport().size
+	
+	default_resolution = get_viewport().size
+	default_content_scale_mode = get_tree().root.content_scale_mode
+	
 	var current_item_index = 0
 	for i in resolution_list:
 		resolution_item_list.add_item( i )
 		
-		if current_resolution == resolution_list[i]:
+		if default_resolution == resolution_list[i]:
 			resolution_item_list.select( current_item_index )
 		
 		current_item_index += 1
 	
-	var current_content_scale_mode = get_tree().root.content_scale_mode
 	current_item_index = 0
 	for i in stretch_mode_list:
 		stretch_mode_item_list.add_item( i )
 		
-		if current_content_scale_mode == stretch_mode_list[i]:
+		if default_content_scale_mode == stretch_mode_list[i]:
 			stretch_mode_item_list.select( current_item_index )
 		
 		current_item_index += 1
 
 
+func _exit_tree() -> void:
+	get_window().size = default_resolution
+	get_tree().root.content_scale_mode = default_content_scale_mode
+
+
+
+############################  Signal  ############################
 func _on_resolution_item_list_item_selected( index: int )->void:
 	var new_resolution = resolution_list[resolution_item_list.get_item_text( index )]
 	get_window().size = new_resolution
