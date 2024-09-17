@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://resolution/resolution___change_window_size.gd" id="1_deuex"]
 
-[node name="resolution___change" type="Node2D"]
+[node name="resolution___change_window_size" type="Node2D"]
 script = ExtResource("1_deuex")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
