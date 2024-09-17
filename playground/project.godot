@@ -42,6 +42,7 @@ folder_colors={
 "res://basic/": "green",
 "res://control/": "green",
 "res://input/": "green",
+"res://resolution/": "green",
 "res://resources/": "gray",
 "res://script/": "green",
 "res://various/": "green"
