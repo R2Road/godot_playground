@@ -20,7 +20,7 @@ func _ready():
 	pam.add_split()
 	pam.add_exit()
 	pam.add_lf()
-	pam.add_root( "Basic",		Key.KEY_1, 		"res://basic/basic_root.tscn" )
+	pam.add_root( basic_root.scene_name(),		Key.KEY_1, 		basic_root.scene_path() )
 	pam.add_lf()
 	pam.add_root( "Audio",		Key.KEY_Q, 		"res://audio/audio_root.tscn" )
 	pam.add_lf()
