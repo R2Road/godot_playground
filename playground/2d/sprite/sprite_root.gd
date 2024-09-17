@@ -6,7 +6,7 @@ extends GDPTScene
 func _ready():
 	pam.set_name( "Sprite Root" )
 	pam.add_split()
-	pam.add_mover( "2D Root",		Key.KEY_ESCAPE, "res://2d/2d_root.tscn" )
+	pam.add_front( "2D Root",		Key.KEY_ESCAPE, "res://2d/2d_root.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Basic",			Key.KEY_1, "res://2d/sprite/sprite2d_basic.tscn" )
 	pam.add_mover( "Load Texture",	Key.KEY_2, "res://2d/sprite/sprite2d_load_texture.tscn" )

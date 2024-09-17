@@ -6,7 +6,7 @@ extends GDPTScene
 func _ready():
 	pam.set_name( "Control" )
 	pam.add_split()
-	pam.add_mover( playground_main.scene_name(),	Key.KEY_ESCAPE, playground_main.scene_path() )
+	pam.add_front( playground_main.scene_name(),	Key.KEY_ESCAPE, playground_main.scene_path() )
 	pam.add_lf()
 	pam.add_mover( control_label_basic.scene_name(), 			Key.KEY_1, 		control_label_basic.scene_path() )
 	pam.add_mover( control_label_align.scene_name(), 			Key.KEY_2, 		control_label_align.scene_path() )

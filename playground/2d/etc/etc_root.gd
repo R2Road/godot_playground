@@ -6,7 +6,7 @@ extends GDPTScene
 func _ready():
 	pam.set_name( "ETC Root" )
 	pam.add_split()
-	pam.add_mover( "2D Root",		Key.KEY_ESCAPE, "res://2d/2d_root.tscn" )
+	pam.add_front( "2D Root",		Key.KEY_ESCAPE, "res://2d/2d_root.tscn" )
 	pam.add_lf()
 	pam.add_mover( click_sprite.scene_name(),		Key.KEY_1, 		"res://2d/etc/etc_click_sprite.tscn" )
 	pam.add_mover( drag_sprite.scene_name(),		Key.KEY_2, 		"res://2d/etc/etc_drag_sprite.tscn" )

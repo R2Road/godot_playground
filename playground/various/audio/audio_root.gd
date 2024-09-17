@@ -16,7 +16,7 @@ static func scene_path()->String:
 func _ready():
 	pam.set_name( audio_root.scene_name() )
 	pam.add_split()
-	pam.add_mover( various_root.scene_name(),	Key.KEY_ESCAPE, "res://various/various_root.tscn" )
+	pam.add_front( various_root.scene_name(),	Key.KEY_ESCAPE, "res://various/various_root.tscn" )
 	pam.add_lf()
 	pam.add_mover( "Stream Basic",		Key.KEY_1, "res://various/audio/audio_stream_basic.tscn" )
 	pam.add_mover( "Stream Control",	Key.KEY_2, "res://various/audio/audio_stream_control.tscn" )
