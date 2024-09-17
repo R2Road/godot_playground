@@ -14,10 +14,10 @@ static func scene_path()->String:
 
 ############################ Variable ############################
 var resolution_list : Dictionary = {
-	  "640 x 480" : Vector2( 640, 480 )
-	, "1024 x 768" : Vector2( 1024, 768 )
-	, "1280 x 720" : Vector2( 1280, 720 )
-	, "1920 x 1080" : Vector2( 1920, 1080 )
+	  "640 x 480" : Vector2i( 640, 480 )
+	, "1024 x 768" : Vector2i( 1024, 768 )
+	, "1280 x 720" : Vector2i( 1280, 720 )
+	, "1920 x 1080" : Vector2i( 1920, 1080 )
 }
 
 
@@ -35,8 +35,15 @@ func _ready()->void:
 	#
 	#
 	#
+	var current_resolution = get_viewport().size
+	var current_item_index = 0
 	for i in resolution_list:
 		$CanvasLayer/ItemList.add_item( i )
+		
+		if current_resolution == resolution_list[i]:
+			$CanvasLayer/ItemList.select( current_item_index )
+		
+		current_item_index += 1
 
 
 func _on_item_list_item_selected( index: int )->void:
