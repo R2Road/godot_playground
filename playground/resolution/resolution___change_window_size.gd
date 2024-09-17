@@ -54,7 +54,7 @@ func _ready()->void:
 	default_content_scale_mode = get_tree().root.content_scale_mode
 	
 	var current_item_index = 0
-	for i in resolution_list:
+	for i : String in resolution_list:
 		resolution_item_list.add_item( i )
 		
 		if default_resolution == resolution_list[i]:
@@ -63,7 +63,7 @@ func _ready()->void:
 		current_item_index += 1
 	
 	current_item_index = 0
-	for i in content_scale_mode_list:
+	for i : String in content_scale_mode_list:
 		content_scale_mode_item_list.add_item( i )
 		
 		if default_content_scale_mode == content_scale_mode_list[i]:
