@@ -7,6 +7,10 @@ static func scene_name()->String:
 	return "Script Root"
 
 
+static func scene_path()->String:
+	return super.scene_path()
+
+
 
 ############################ Override ############################
 func _ready():
