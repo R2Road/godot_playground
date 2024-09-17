@@ -21,7 +21,8 @@ static func scene_path()->String:
 
 ############################ Variable ############################
 var resolution_list : Dictionary = {
-	  "640 x 480" : Vector2i( 640, 480 )
+	  "640 x 360" : Vector2i( 640, 360 )
+	, "640 x 480" : Vector2i( 640, 480 )
 	, "1024 x 768" : Vector2i( 1024, 768 )
 	, "1152 x 648" : Vector2i( 1152, 648 )
 	, "1280 x 720" : Vector2i( 1280, 720 )
