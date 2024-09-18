@@ -20,6 +20,7 @@ func _ready():
 	pam.add_front( playground_main.scene_name(),		Key.KEY_ESCAPE, playground_main.scene_path() )
 	pam.add_lf()
 	pam.add_mover( resolution___option_test.scene_name(),	Key.KEY_1, resolution___option_test.scene_path() )
+	pam.add_mover( resolution___full_screen.scene_name(),	Key.KEY_2, resolution___full_screen.scene_path() )
 	pam.add_lf()
 	pam.add_split()
 	build_summary( eSceneType.ROOT )

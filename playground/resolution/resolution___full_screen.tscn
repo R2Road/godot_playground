@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8dsr14sodsdq"]
+
+[ext_resource type="Script" path="res://resolution/resolution___full_screen.gd" id="1_32x4t"]
+[ext_resource type="PackedScene" uid="uid://dsuaumbxcknhr" path="res://addons/godot_play_tool/helper/helper_0_0.tscn" id="2_u7khg"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="3_k38b0"]
+
+[node name="resolution___full_screen" type="Node2D"]
+script = ExtResource("1_32x4t")
+
+[node name="helper_0_0" parent="." instance=ExtResource("2_u7khg")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="helper_point" parent="Points" instance=ExtResource("3_k38b0")]
+z_index = 4096
+position = Vector2(-640, 0)
+
+[node name="helper_point2" parent="Points" instance=ExtResource("3_k38b0")]
+z_index = 4096
+position = Vector2(-640, -360)
+
+[node name="helper_point3" parent="Points" instance=ExtResource("3_k38b0")]
+z_index = 4096
+position = Vector2(-640, 360)
+
+[node name="helper_point4" parent="Points" instance=ExtResource("3_k38b0")]
+z_index = 4096
+position = Vector2(640, 0)
+
+[node name="helper_point5" parent="Points" instance=ExtResource("3_k38b0")]
+z_index = 4096
+position = Vector2(640, -360)
+
+[node name="helper_point6" parent="Points" instance=ExtResource("3_k38b0")]
+z_index = 4096
+position = Vector2(640, 360)
+
+[node name="helper_point7" parent="Points" instance=ExtResource("3_k38b0")]
+z_index = 4096
+position = Vector2(0, -360)
+
+[node name="helper_point8" parent="Points" instance=ExtResource("3_k38b0")]
+z_index = 4096
+position = Vector2(0, 360)
