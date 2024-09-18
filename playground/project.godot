@@ -24,7 +24,8 @@ GDPT="*res://addons/godot_play_tool/gdpt_global.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [editor]
 
