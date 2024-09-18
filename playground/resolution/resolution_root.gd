@@ -21,6 +21,7 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( resolution___option_test.scene_name(),	Key.KEY_1, resolution___option_test.scene_path() )
 	pam.add_mover( resolution___full_screen.scene_name(),	Key.KEY_2, resolution___full_screen.scene_path() )
+	pam.add_mover( resolution___content_scale_size.scene_name(),	Key.KEY_3, resolution___content_scale_size.scene_path() )
 	pam.add_lf()
 	pam.add_split()
 	build_summary( eSceneType.ROOT )
