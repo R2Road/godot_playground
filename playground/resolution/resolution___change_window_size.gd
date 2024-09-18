@@ -44,6 +44,10 @@ var content_scale_aspect_list : Dictionary = {
 }
 var content_scale_factor_list : Dictionary = {
 	  "0.5" : 0.5
+	, "0.6" : 0.6
+	, "0.7" : 0.7
+	, "0.8" : 0.8
+	, "0.9" : 0.9
 	, "1" : 1
 	, "1.5" : 1.5
 	, "2" : 2
