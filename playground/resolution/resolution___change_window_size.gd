@@ -27,6 +27,7 @@ var resolution_list : Dictionary = {
 	, "1152 x 648" : Vector2i( 1152, 648 )
 	, "1280 x 720" : Vector2i( 1280, 720 )
 	, "1920 x 1080" : Vector2i( 1920, 1080 )
+	, "2560 x 1440" : Vector2i( 2560, 1440 )
 }
 var content_scale_mode_list : Dictionary = {
 	  "Disabled" : Window.ContentScaleMode.CONTENT_SCALE_MODE_DISABLED
@@ -54,6 +55,8 @@ func _ready()->void:
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
 	pam.add_split()
+	pam.add_message( "Viewport + Expand가 내 의도에 가장 부합한다." )
+	pam.add_message( "화면을 부드럽게 바꾸고 싶다면 Viewport를 Canvas Item으로 바꿔라." )
 	build_summary( eSceneType.TEST )
 	
 	#
