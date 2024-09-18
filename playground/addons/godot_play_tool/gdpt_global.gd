@@ -26,10 +26,10 @@ var helper_hslider = preload( "res://addons/godot_play_tool/helper/helper_hslide
 
 
 ############################ Override ############################
-func _init():
+func _init()->void:
 	add_to_group( "autoload" )
 
-func _enter_tree():
+func _enter_tree()->void:
 	# 호출 된다.
 	print( "GDPT : Enter Tree" )
 	
@@ -42,7 +42,7 @@ func _enter_tree():
 	)
 
 
-func _exit_tree():
+func _exit_tree()->void:
 	# 호출 안된다. ( 왜? )
 	print( "GDPT : Exit Tree" )
 
@@ -56,14 +56,14 @@ func build_scene_helper()->Node:
 	return canvas_layer
 
 
-func _assert( flag = false ):
+func _assert( flag = false )->void:
 	if on_assert:
 		assert( flag )
 
-func _assert_f( flag = false ):
+func _assert_f( flag = false )->void:
 	assert( flag )
 
 
-func _debug_print( f : Callable ):
+func _debug_print( f : Callable )->void:
 	if on_debug:
 		print( f.call() )

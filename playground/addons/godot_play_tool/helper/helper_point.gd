@@ -3,7 +3,7 @@ extends Node2D
 
 
 
-############################ Variable ############################
+############################  Export  ############################
 @export var color = Color( 0, 1, 0 ):
 	set( value ):
 		color = value
@@ -12,10 +12,10 @@ extends Node2D
 
 
 ############################ Override ############################
-func _init():
+func _init()->void:
 	self.set_z_index( RenderingServer.CANVAS_ITEM_Z_MAX )
 	#self.z_index = RenderingServer.CANVAS_ITEM_Z_MAX
 
 
-func _draw():
+func _draw()->void:
 	draw_circle( Vector2( 0, 0 ), 3, color )

@@ -13,16 +13,16 @@ var last_scene_name : String
 
 
 ############################   User   ############################
-func set_name( _name : String ):
+func set_name( _name : String )->void:
 	name = _name
 
 
-func set_last_scene( _last_scene_name : String, _last_scene_path : String ):
+func set_last_scene( _last_scene_name : String, _last_scene_path : String )->void:
 	last_scene_name = _last_scene_name
 	last_scene_path = _last_scene_path
 
 
-func add_exit():
+func add_exit()->void:
 	container.push_back( GDPTAction.new(
 		"Exit"
 		, Key.KEY_ESCAPE
@@ -41,7 +41,7 @@ func add_exit():
 	) )
 
 
-func add_back( _key : Key ):
+func add_back( _key : Key )->void:
 	container.push_back( GDPTAction.new(
 		  last_scene_name
 		, _key
@@ -54,7 +54,7 @@ func add_back( _key : Key ):
 # add mover 와 같지만 장식의 차이만 달리 준다.
 # 종종 add_back을 부르지 않고 직접 scene을 지정해 같은 기능을 제공할 필요가 있다.
 # 그 상황을 위한 것이다.
-func add_front( _message : String, _key : Key, _scene_path : String ):
+func add_front( _message : String, _key : Key, _scene_path : String )->void:
 	container.push_back( GDPTAction.new(
 		  _message
 		, _key
@@ -64,7 +64,7 @@ func add_front( _message : String, _key : Key, _scene_path : String ):
 		, Color.FOREST_GREEN
 	) )
 
-func add_root( _message : String, _key : Key, _scene_path : String ):
+func add_root( _message : String, _key : Key, _scene_path : String )->void:
 	container.push_back( GDPTAction.new(
 		  _message
 		, _key
@@ -73,7 +73,7 @@ func add_root( _message : String, _key : Key, _scene_path : String ):
 		, Color.SKY_BLUE
 	) )
 
-func add_mover( _message : String, _key : Key, _scene_path : String ):
+func add_mover( _message : String, _key : Key, _scene_path : String )->void:
 	container.push_back( GDPTAction.new(
 		  _message
 		, _key
@@ -138,7 +138,7 @@ func build_mover( _scene_path : String )->Callable:
 	)
 
 
-func add_action( _message : String, _key : Key, _functor : Callable ):
+func add_action( _message : String, _key : Key, _functor : Callable )->void:
 	container.push_back( GDPTAction.new(
 		_message
 		, _key
@@ -147,7 +147,7 @@ func add_action( _message : String, _key : Key, _functor : Callable ):
 	) )
 
 
-func add_split():
+func add_split()->void:
 	container.push_back( GDPTAction.new(
 		"="
 		, Key.KEY_NONE
@@ -156,14 +156,14 @@ func add_split():
 	) )
 
 
-func add_message( _message : String ):
+func add_message( _message : String )->void:
 	container.push_back( GDPTAction.new(
 		( _message + "\n" )
 		, Key.KEY_NONE
 	) )
 
 
-func add_subject( _message : String ):
+func add_subject( _message : String )->void:
 	container.push_back( GDPTAction.new(
 		( "+ " + _message + "\n" )
 		, Key.KEY_NONE
@@ -171,7 +171,7 @@ func add_subject( _message : String ):
 		, GDPTAction.eDecoration.MessageOnly
 		, Color.YELLOW
 	) )
-func add_note( _message : String ):
+func add_note( _message : String )->void:
 	container.push_back( GDPTAction.new(
 		( "    > " + _message + "\n" )
 		, Key.KEY_NONE
@@ -181,14 +181,14 @@ func add_note( _message : String ):
 	) )
 
 
-func add_lf():
+func add_lf()->void:
 	container.push_back( GDPTAction.new(
 		"\n"
 		, Key.KEY_NONE
 	) )
 
 
-func add_lf2():
+func add_lf2()->void:
 	container.push_back( GDPTAction.new(
 		"\n\n"
 		, Key.KEY_NONE
@@ -214,7 +214,7 @@ func build_summary()->String:
 		split_length = name.length() + 2 # 2 is decoration ( '#', ' ' )
 	
 	# calculate length of split string : with action name
-	for j in container:
+	for j : GDPTAction in container:
 		var new_split_length = ( get_keycode_string( j.key ).length() + j.message.length() + 3 ) # 3 is decoration( '[', ']', ' ' )
 		if new_split_length > split_length:
 			split_length = new_split_length
@@ -282,14 +282,14 @@ func build_summary()->String:
 
 
 func get_action( keycode : Key )->GDPTAction:
-	for i in container:
+	for i : GDPTAction in container:
 		if i.key == keycode:
 			return i
 	
 	return null
 
 
-func do( event : InputEvent ):
+func do( event : InputEvent )->void:
 	if !(event is InputEventKey ):
 		return
 	

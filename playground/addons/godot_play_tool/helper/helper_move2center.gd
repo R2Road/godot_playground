@@ -11,14 +11,14 @@ extends Node2D
 
 
 ############################ Override ############################
-func _ready():
+func _ready()->void:
 	do()
 
 
 
 ############################   User   ############################
-func do():
-	var target_world_position
+func do()->void:
+	var target_world_position : Vector2
 	
 	# 목표 world position 확보
 	if get_viewport().get_camera_2d():

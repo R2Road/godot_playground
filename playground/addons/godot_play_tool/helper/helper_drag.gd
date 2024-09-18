@@ -40,11 +40,11 @@ var drag_offset : Vector2
 
 
 ############################ Override ############################
-func _init():
+func _init()->void:
 	self.set_z_index( RenderingServer.CANVAS_ITEM_Z_MAX )
 
 
-func _draw():
+func _draw()->void:
 	if not show_guide:
 		return
 	
@@ -54,7 +54,7 @@ func _draw():
 		draw_rect( rect, color_drag_off, false, out_line_bold )
 
 
-func _process( _delta ):
+func _process( _delta : float )->void:
 	if Engine.is_editor_hint():
 		return
 		
@@ -70,7 +70,7 @@ func _process( _delta ):
 			signal_position_changed.emit( get_parent().position )
 
 
-func _unhandled_input(event):
+func _unhandled_input(event)->void:
 	if Engine.is_editor_hint():
 		return
 		
