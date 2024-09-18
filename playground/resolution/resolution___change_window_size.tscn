@@ -13,9 +13,9 @@ script = ExtResource("1_deuex")
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -121.5
+offset_top = -257.5
 offset_right = 300.0
-offset_bottom = 128.5
+offset_bottom = -7.5
 grow_vertical = 2
 
 [node name="ContentScaleModeItemList" type="ItemList" parent="CanvasLayer"]
@@ -23,19 +23,28 @@ anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 313.0
-offset_top = -121.5
+offset_top = -257.5
 offset_right = 613.0
-offset_bottom = 128.5
+offset_bottom = -7.5
 grow_vertical = 2
 
 [node name="ContentScaleAspectItemList" type="ItemList" parent="CanvasLayer"]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 626.0
-offset_top = -121.5
-offset_right = 926.0
-offset_bottom = 128.5
+offset_top = 7.0
+offset_right = 300.0
+offset_bottom = 257.0
+grow_vertical = 2
+
+[node name="ContentScaleFactorItemList" type="ItemList" parent="CanvasLayer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 313.0
+offset_top = 7.0
+offset_right = 613.0
+offset_bottom = 257.0
 grow_vertical = 2
 
 [node name="helper_0_0" parent="." instance=ExtResource("2_r53d4")]
@@ -79,3 +88,4 @@ position = Vector2(0, 360)
 [connection signal="item_selected" from="CanvasLayer/ResolutionItemList" to="." method="_on_resolution_item_list_item_selected"]
 [connection signal="item_selected" from="CanvasLayer/ContentScaleModeItemList" to="." method="_on_content_scale_mode_item_list_item_selected"]
 [connection signal="item_selected" from="CanvasLayer/ContentScaleAspectItemList" to="." method="_on_content_scale_aspect_item_list_item_selected"]
+[connection signal="item_selected" from="CanvasLayer/ContentScaleFactorItemList" to="." method="_on_content_scale_factor_item_list_item_selected"]

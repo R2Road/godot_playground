@@ -16,6 +16,7 @@ static func scene_path()->String:
 @onready var resolution_item_list : ItemList = $CanvasLayer/ResolutionItemList
 @onready var content_scale_mode_item_list : ItemList = $CanvasLayer/ContentScaleModeItemList
 @onready var content_scale_aspect_item_list : ItemList = $CanvasLayer/ContentScaleAspectItemList
+@onready var content_scale_factor_item_list : ItemList = $CanvasLayer/ContentScaleFactorItemList
 
 
 
@@ -41,20 +42,24 @@ var content_scale_aspect_list : Dictionary = {
 	, "Keep : Height" : Window.ContentScaleAspect.CONTENT_SCALE_ASPECT_KEEP_HEIGHT
 	, "Expand" : Window.ContentScaleAspect.CONTENT_SCALE_ASPECT_EXPAND
 }
+var content_scale_factor_list : Dictionary = {
+	  "0.5" : 0.5
+	, "1" : 1
+	, "1.5" : 1.5
+	, "2" : 2
+	, "2.5" : 2.5
+}
 var default_resolution : Vector2i
 var default_content_scale_mode : Window.ContentScaleMode
 var default_content_scale_aspect : Window.ContentScaleAspect
+var default_content_scale_factor : float
 
 
 
 ############################ Override ############################
 func _ready()->void:
 	pam.set_name( scene_name() )
-	pam.add_split()
-	pam.add_lf()
 	pam.add_back( Key.KEY_ESCAPE )
-	pam.add_lf()
-	pam.add_split()
 	pam.add_message( "Viewport + Expand가 내 의도에 가장 부합한다." )
 	pam.add_message( "화면을 부드럽게 바꾸고 싶다면 Viewport를 Canvas Item으로 바꿔라." )
 	build_summary( eSceneType.TEST )
@@ -66,6 +71,7 @@ func _ready()->void:
 	default_resolution = get_viewport().size
 	default_content_scale_mode = get_tree().root.content_scale_mode
 	default_content_scale_aspect = get_tree().root.content_scale_aspect
+	default_content_scale_factor = get_tree().root.content_scale_factor
 	
 	var current_item_index = 0
 	for i : String in resolution_list:
@@ -93,6 +99,15 @@ func _ready()->void:
 			content_scale_aspect_item_list.select( current_item_index )
 		
 		current_item_index += 1
+	
+	current_item_index = 0
+	for i : String in content_scale_factor_list:
+		content_scale_factor_item_list.add_item( i )
+		
+		if default_content_scale_factor == content_scale_factor_list[i]:
+			content_scale_factor_item_list.select( current_item_index )
+		
+		current_item_index += 1
 
 
 func _exit_tree() -> void:
@@ -115,3 +130,8 @@ func _on_content_scale_mode_item_list_item_selected(index: int) -> void:
 func _on_content_scale_aspect_item_list_item_selected(index: int) -> void:
 	var new_content_scale_aspect = content_scale_aspect_list[content_scale_aspect_item_list.get_item_text( index )]
 	get_tree().root.content_scale_aspect = new_content_scale_aspect
+
+
+func _on_content_scale_factor_item_list_item_selected(index: int) -> void:
+	var new_content_scale_factor = content_scale_factor_list[content_scale_factor_item_list.get_item_text( index )]
+	get_tree().root.content_scale_factor = new_content_scale_factor
