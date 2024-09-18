@@ -1,10 +1,10 @@
-class_name resolution___change_window_size extends GDPTScene
+class_name resolution___option_test extends GDPTScene
 
 
 
 ######################### GDPT Override ##########################
 static func scene_name()->String:
-	return "Resolution : Change Window Size"
+	return "Resolution : Option Test"
 	
 
 static func scene_path()->String:
