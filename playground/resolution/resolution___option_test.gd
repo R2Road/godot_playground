@@ -117,6 +117,8 @@ func _ready()->void:
 func _exit_tree() -> void:
 	get_window().size = default_resolution
 	get_tree().root.content_scale_mode = default_content_scale_mode
+	get_tree().root.content_scale_aspect = default_content_scale_aspect
+	get_tree().root.content_scale_factor = default_content_scale_factor
 
 
 
