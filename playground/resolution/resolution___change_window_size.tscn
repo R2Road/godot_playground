@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://oemsvntyqd3m"]
+[gd_scene load_steps=4 format=3 uid="uid://oemsvntyqd3m"]
 
 [ext_resource type="Script" path="res://resolution/resolution___change_window_size.gd" id="1_deuex"]
+[ext_resource type="PackedScene" uid="uid://dsuaumbxcknhr" path="res://addons/godot_play_tool/helper/helper_0_0.tscn" id="2_r53d4"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="3_pogat"]
 
 [node name="resolution___change_window_size" type="Node2D"]
 script = ExtResource("1_deuex")
@@ -35,6 +37,44 @@ offset_top = -121.5
 offset_right = 926.0
 offset_bottom = 128.5
 grow_vertical = 2
+
+[node name="helper_0_0" parent="." instance=ExtResource("2_r53d4")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="helper_point" parent="Points" instance=ExtResource("3_pogat")]
+z_index = 4096
+position = Vector2(-640, 0)
+
+[node name="helper_point2" parent="Points" instance=ExtResource("3_pogat")]
+z_index = 4096
+position = Vector2(-640, -360)
+
+[node name="helper_point3" parent="Points" instance=ExtResource("3_pogat")]
+z_index = 4096
+position = Vector2(-640, 360)
+
+[node name="helper_point4" parent="Points" instance=ExtResource("3_pogat")]
+z_index = 4096
+position = Vector2(640, 0)
+
+[node name="helper_point5" parent="Points" instance=ExtResource("3_pogat")]
+z_index = 4096
+position = Vector2(640, -360)
+
+[node name="helper_point6" parent="Points" instance=ExtResource("3_pogat")]
+z_index = 4096
+position = Vector2(640, 360)
+
+[node name="helper_point7" parent="Points" instance=ExtResource("3_pogat")]
+z_index = 4096
+position = Vector2(0, -360)
+
+[node name="helper_point8" parent="Points" instance=ExtResource("3_pogat")]
+z_index = 4096
+position = Vector2(0, 360)
 
 [connection signal="item_selected" from="CanvasLayer/ResolutionItemList" to="." method="_on_resolution_item_list_item_selected"]
 [connection signal="item_selected" from="CanvasLayer/ContentScaleModeItemList" to="." method="_on_content_scale_mode_item_list_item_selected"]
