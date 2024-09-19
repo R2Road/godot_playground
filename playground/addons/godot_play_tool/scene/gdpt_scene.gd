@@ -37,11 +37,21 @@ func _init():
 
 ############################   User   ############################
 func build_summary( _scene_type : eSceneType ):
-	var summary_node = $GDPTSceneHelper/Summary
+	var summary_node : RichTextLabel = $GDPTSceneHelper/Summary
 	summary_node.text = pam.build_summary()
 	
 	if eSceneType.ROOT == _scene_type:
-		summary_node.set_position( 
-			( get_viewport().size * 0.5 )
-			- ( summary_node.get_minimum_size() * 0.5 )
-		)
+		summary_node.offset_left = ( -summary_node.get_minimum_size().x * 0.5 )
+		summary_node.offset_top = ( -summary_node.get_minimum_size().y * 0.5 )
+		summary_node.set_anchors_preset( Control.LayoutPreset.PRESET_CENTER, true )
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
