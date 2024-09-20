@@ -2,12 +2,6 @@ class_name config___file_load extends GDPTScene
 
 
 
-############################ Variable ############################
-var path = "res://file/config/config___file_load_helper.cfg"
-var config = ConfigFile.new()
-
-
-
 ######################### GDPT Override ##########################
 static func scene_name()->String:
 	return "Config : File Load"
@@ -29,20 +23,23 @@ func _ready():
 	# Start Practice
 	#
 	
-	# File Name
-	$Label4FileName.text = ( "File : " + path )
-	$Label4FileName.position = Vector2(
-		  ( ( get_viewport().size.x * 0.5 ) - ( $Label4FileName.get_minimum_size().x * 0.5 ) )
-		, ( get_viewport().size.y * 0.2 )
-	)
+	# Ready
+	var config = ConfigFile.new()
 	
 	# File Load
-	config.load( path )
+	var path = "res://file/config/config___file_load_helper.cfg"
+	var load_result = config.load( path )
 	
-	# Show Section List
-	$Label4Sections.text = ( "+ Section List" + "\n" )
-	$Label4Sections.text += "\n"
-	for s in config.get_sections():
-		$Label4Sections.text += s
-		$Label4Sections.text += "\n"	
+	# Show
+	if Error.OK == load_result:
+		$Label4FileContent.text = "+ Load Succeed | " + path
+		$Label4FileContent.text += "\n\n"
+		$Label4FileContent.text += "+ Content"
+		$Label4FileContent.text += "\n"
+		$Label4FileContent.text += config.encode_to_text()
+	else:
+		$Label4FileContent.text = "+ Load Failed | " + path
+	
+	# Code Edit
+	$helper_code.show_code( "res://file/config/config___file_load.gd", 26, 41 )
 	
