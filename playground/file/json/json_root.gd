@@ -16,7 +16,7 @@ static func scene_path()->String:
 func _ready():
 	pam.set_name( json_root.scene_name() )
 	pam.add_split()
-	pam.add_front( various_root.scene_name(),	Key.KEY_ESCAPE, various_root.scene_path() )
+	pam.add_front( file_root.scene_name(),	Key.KEY_ESCAPE, file_root.scene_path() )
 	pam.add_lf()
 	pam.add_mover( json_parse_string.scene_name(),				Key.KEY_1, json_parse_string.scene_path() )
 	pam.add_mover( json_parse.scene_name(),						Key.KEY_2, json_parse.scene_path() )

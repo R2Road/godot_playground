@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bi8xxs1hnl7wg"]
 
-[ext_resource type="Script" path="res://various/config/config_parse.gd" id="1_bd4fm"]
+[ext_resource type="Script" path="res://file/config/config_parse.gd" id="1_bd4fm"]
 [ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="2_2liuv"]
 
 [node name="config_parse" type="Node2D"]
