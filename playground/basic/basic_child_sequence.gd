@@ -10,7 +10,7 @@ static func scene_name()->String:
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( basic_child_sequence.scene_name() )
+	pam.set_name( scene_name() )
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
 	pam.add_action( "Add Child", Key.KEY_1, add_test_node )

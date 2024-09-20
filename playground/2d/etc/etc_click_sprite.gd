@@ -15,7 +15,7 @@ static func scene_name()->String:
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( click_sprite.scene_name() )
+	pam.set_name( scene_name() )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	build_summary( eSceneType.TEST )

@@ -16,7 +16,7 @@ static func scene_path()->String:
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( control_richtextlabel_basic.scene_name() )
+	pam.set_name( scene_name() )
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
 	pam.add_action( "BB : Toggle", Key.KEY_1, func():

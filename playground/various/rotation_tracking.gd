@@ -22,7 +22,7 @@ var tracking_speed = 1
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( rotation_tracking.scene_name() )
+	pam.set_name( scene_name() )
 	pam.add_lf()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()

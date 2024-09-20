@@ -14,7 +14,7 @@ static func scene_path()->String:
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( json_root.scene_name() )
+	pam.set_name( scene_name() )
 	pam.add_split()
 	pam.add_front( file_root.scene_name(),	Key.KEY_ESCAPE, file_root.scene_path() )
 	pam.add_lf()

@@ -14,7 +14,7 @@ static func scene_path()->String:
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( various_root.scene_name() )
+	pam.set_name( scene_name() )
 	pam.add_split()
 	pam.add_front( playground_main.scene_name(),	Key.KEY_ESCAPE, playground_main.scene_path() )
 	pam.add_lf()

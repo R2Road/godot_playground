@@ -14,7 +14,7 @@ static func scene_path()->String:
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( audio_root.scene_name() )
+	pam.set_name( scene_name() )
 	pam.add_split()
 	pam.add_front( various_root.scene_name(),	Key.KEY_ESCAPE, "res://various/various_root.tscn" )
 	pam.add_lf()
