@@ -2,14 +2,6 @@ class_name config___parse extends GDPTScene
 
 
 
-############################ Variable ############################
-var config_string = "
-	[TEst]
-	name = \"is name\"
-"
-
-
-
 ######################### GDPT Override ##########################
 static func scene_name()->String:
 	return "Config : Parse"
@@ -30,22 +22,29 @@ func _ready():
 	#
 	# Start Practice
 	#
+	
+	var source_string = "
+		[TEst]
+		name = \"is name\"
+	"
+	
+	# Ready
 	var config = ConfigFile.new()
-	config.parse( config_string )
 	
-	$Label.text = ( "[get_sections()]" + "\n" )
-	$Label.text += "\n"
-	$Label.text += "\n"
+	# Parse
+	var parse_result = config.parse( source_string )
+	if Error.OK != parse_result:
+		GDPT._assert_f()
 	
-	for s in config.get_sections():
-		$Label.text += s
-		$Label.text += "\n"
+	# Encode 2 Text
+	$Label4Encode.text = ( "+ config.encode_to_text()" + "\n" )
+	$Label4Encode.text += "\n"
+	$Label4Encode.text += config.encode_to_text()
 	
-	#
-	#
-	#
-	$Label4Source.text = ( "<Source String>" + "\n" )
+	# Source String
+	$Label4Source.text = ( "+ Source String" + "\n" )
 	$Label4Source.text += "\n"
-	$Label4Source.text += config_string
+	$Label4Source.text += source_string
 	
-	
+	# Code Edit
+	$helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 26, 37 )
