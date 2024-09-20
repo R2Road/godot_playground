@@ -28,5 +28,6 @@ func _ready():
 	pam.add_root( "Control", 		Key.KEY_E, 		"res://control/control_root.tscn" )
 	pam.add_lf()
 	pam.add_root( various_root.scene_name(),	Key.KEY_A, various_root.scene_path() )
+	pam.add_root( file_root.scene_name(),		Key.KEY_S, file_root.scene_path() )
 	pam.add_split()
 	build_summary( eSceneType.ROOT )

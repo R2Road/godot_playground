@@ -43,6 +43,7 @@ folder_colors={
 "res://addons/": "gray",
 "res://basic/": "green",
 "res://control/": "green",
+"res://file/": "green",
 "res://input/": "green",
 "res://resolution/": "green",
 "res://resources/": "gray",
