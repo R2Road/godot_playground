@@ -23,6 +23,9 @@ var helper_0_0 = preload( "res://addons/godot_play_tool/helper/helper_0_0.tscn" 
 # U.I
 var helper_hslider = preload( "res://addons/godot_play_tool/helper/helper_hslider.tscn" )
 
+# Edit
+var helper_code = preload( "res://addons/godot_play_tool/helper/helper_code.tscn" )
+
 
 
 ############################ Override ############################
