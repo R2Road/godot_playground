@@ -3,7 +3,7 @@ class_name config___file_load extends GDPTScene
 
 
 ############################ Variable ############################
-var path = "res://file/config/config___section_helper.cfg"
+var path = "res://file/config/config___file_load_helper.cfg"
 var config = ConfigFile.new()
 
 
