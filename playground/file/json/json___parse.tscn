@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://file/json/json___parse.gd" id="1_leegh"]
 [ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="2_gao73"]
 
-[node name="json_parse" type="Node2D"]
+[node name="json___parse" type="Node2D"]
 script = ExtResource("1_leegh")
 
 [node name="Label_1" type="Label" parent="."]
