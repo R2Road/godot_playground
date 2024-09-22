@@ -22,32 +22,35 @@ func _ready():
 	#
 	# Start Practice
 	#
-	parse_and_show( $Label_1, "", 0.5, 0.2 )
-	parse_and_show( $Label_2, "[\n1,\n2,\n3", 0.5, 0.4 )
-	parse_and_show( $Label_3, "[2,3,4]", 0.5, 0.6 )
-	parse_and_show( $Label_4, "[2, 3, 4, 5, 6, ]", 0.5, 0.8 )
+	parse_and_show( $Label_1, "", 0.7, 0.2 )
+	parse_and_show( $Label_2, "[\n1,\n2,\n3", 0.7, 0.4 )
+	parse_and_show( $Label_3, "[2,3,4]", 0.7, 0.6 )
+	parse_and_show( $Label_4, "[2, 3, 4, 5, 6, ]", 0.7, 0.8 )
+	
+	# Code Edit
+	$helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 36, 51 )
 
 
 
 ############################   User   ############################
-func parse_and_show( label_node : Label, json_string : String, x : float, y : float  ):
-	var j = JSON.new()
-	var error = j.parse( json_string )
+func parse_and_show( label : Label, json_string : String, x : float, y : float  ):
+	var json = JSON.new()
+	var error = json.parse( json_string )
 	
 	if OK == error:
-		label_node.text = (
-			"string : " + json_string
+		label.text = (
+			  "string : " + json_string
 			+ "\n"
-			+ "result : " + str( j.data )
+			+ "result : " + str( json.data )
 		)
 	else:
-		label_node.text = (
-			"string : " + json_string
+		label.text = (
+			  "string : " + json_string
 			+ "\n"
-			+ "error : " + j.get_error_message() + "   line : " + str( j.get_error_line() )
+			+ "error : " + json.get_error_message() + "   line : " + str( json.get_error_line() )
 		)
 	
-	label_node.set_position(
+	label.set_position(
 		Vector2( get_viewport().size.x * x, get_viewport().size.y * y )
-		- ( label_node.get_minimum_size() * label_node.get_scale() * 0.5 )
+		- ( label.get_minimum_size() * label.get_scale() * 0.5 )
 	)
