@@ -1,4 +1,4 @@
-class_name script_path extends GDPTScene
+class_name script___path extends GDPTScene
 
 
 
@@ -23,7 +23,7 @@ func _ready():
 	#
 	#
 	#
-	$Label.text = "get path in static func : " + script_path.scene_path()
+	$Label.text = "get path in static func : " + scene_path()
 	$Label.text += "\n\n"
 	$Label.text += "get path in script obj : " + get_script().get_path()
 	$Label/helper_move2center.do()

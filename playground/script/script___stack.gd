@@ -1,4 +1,4 @@
-class_name script_stack extends GDPTScene
+class_name script___stack extends GDPTScene
 
 
 
