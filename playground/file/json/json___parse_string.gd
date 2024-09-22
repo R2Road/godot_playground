@@ -1,4 +1,4 @@
-class_name json_parse_string extends GDPTScene
+class_name json___parse_string extends GDPTScene
 
 
 
