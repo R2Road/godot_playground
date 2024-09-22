@@ -1,4 +1,4 @@
-class_name json_container_2_json_string extends GDPTScene
+class_name json___container_2_json_string extends GDPTScene
 
 
 
