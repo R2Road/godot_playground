@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bi8xxs1hnl7wg"]
 
 [ext_resource type="Script" path="res://file/config/config___parse.gd" id="1_bd4fm"]
-[ext_resource type="PackedScene" uid="uid://bfk66wmj0dap3" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="2_g6sw7"]
+[ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="2_g6sw7"]
 
 [node name="config_parse" type="Node2D"]
 script = ExtResource("1_bd4fm")
