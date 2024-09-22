@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmmcd1sihtl6g"]
 
-[ext_resource type="Script" path="res://file/json/json_parse.gd" id="1_cawtk"]
-[ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="2_tgosy"]
+[ext_resource type="Script" path="res://file/json/json___parse.gd" id="1_leegh"]
+[ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="2_gao73"]
 
 [node name="json_parse" type="Node2D"]
-script = ExtResource("1_cawtk")
+script = ExtResource("1_leegh")
 
 [node name="Label_1" type="Label" parent="."]
 offset_right = 1.0
@@ -26,7 +26,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 
-[node name="helper_code" parent="." instance=ExtResource("2_tgosy")]
+[node name="helper_code" parent="." instance=ExtResource("2_gao73")]
 offset_top = 115.0
 offset_right = 724.0
 offset_bottom = 625.0
