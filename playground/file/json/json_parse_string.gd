@@ -22,23 +22,34 @@ func _ready():
 	#
 	# Start Practice
 	#
-	parse_and_show( $Label_1, "", 0.5, 0.2 )
-	parse_and_show( $Label_2, "[1,2,3", 0.5, 0.4 )
-	parse_and_show( $Label_3, "[2,3,4]", 0.5, 0.6 )
-	parse_and_show( $Label_4, "[2, 3, 4, 5, 6, ]", 0.5, 0.8 )
+	parse_and_show( $Label_1, "", 0.7, 0.2 )
+	parse_and_show( $Label_2, "[1,2,3", 0.7, 0.4 )
+	parse_and_show( $Label_3, "[2,3,4]", 0.7, 0.6 )
+	parse_and_show( $Label_4, "[2, 3, 4, 5, 6, ]", 0.7, 0.8 )
 
 
 
 ############################   User   ############################
-func parse_and_show( label_node : Label, json_string : String, x : float, y : float  ):
-	var c = JSON.parse_string( json_string )
+func parse_and_show( label : Label, json_string : String, x : float, y : float  ):
+	var json = JSON.parse_string( json_string )
 	
-	label_node.text = (
-		"string : " + json_string
-		+ "\n"
-		+ "result : " + str( c )
-	)
-	label_node.set_position(
+	if json:
+		label.text = (
+			"string : " + json_string
+			+ "\n"
+			+ "result : " + str( json )
+		)
+	else:
+		label.text = (
+			"string : " + json_string
+			+ "\n"
+			+ "json string has problem"
+		)
+	
+	label.set_position(
 		Vector2( get_viewport().size.x * x, get_viewport().size.y * y )
-		- ( label_node.get_minimum_size() * label_node.get_scale() * 0.5 )
+		- ( label.get_minimum_size() * label.get_scale() * 0.5 )
 	)
+	
+	# Code Edit
+	$helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 33, 47 )

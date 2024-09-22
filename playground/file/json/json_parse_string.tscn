@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctqkajib8hdkf"]
+[gd_scene load_steps=3 format=3 uid="uid://ctqkajib8hdkf"]
 
 [ext_resource type="Script" path="res://file/json/json_parse_string.gd" id="1_nh4gl"]
+[ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="2_w5sgi"]
 
 [node name="json_parse_string" type="Node2D"]
 script = ExtResource("1_nh4gl")
@@ -24,3 +25,8 @@ theme_override_colors/font_color = Color(0, 1, 0, 1)
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
+
+[node name="helper_code" parent="." instance=ExtResource("2_w5sgi")]
+offset_top = 115.0
+offset_right = 659.0
+offset_bottom = 625.0
