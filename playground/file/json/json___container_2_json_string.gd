@@ -22,45 +22,18 @@ func _ready():
 	#
 	# Start Practice
 	#
-	array_2_json_string()
-	dictionary_2_json_string()
-	apply_indent()
+	container_2_json_string( $Array,      0.5, 0.2, "", [ "a", "b", "c" ] )
+	container_2_json_string( $Dictionary, 0.5, 0.3, "", { "a" = 1, "b" = 2, "c" = 3 } )
+	container_2_json_string( $Indent,     0.5, 0.6, "     ", { "a" = 1, "b" = 2, "c" = 3, "d" = [1, 2, 3, 4] } )
 
 
 
 ############################   User   ############################
-func array_2_json_string():
-	var a : Array = [ "a", "b", "c" ]
-	var s = JSON.stringify( a )
+func container_2_json_string( label : Label, x_rate : float, y_rate : float, indent_string : String, container )->void:
+	var s = JSON.stringify( container, indent_string )
 	
-	$Array.text = s
-	$Array.set_position(
-		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.2 )
-		- ( $Array.get_minimum_size() * $Array.get_scale() * 0.5 )
+	label.text = s
+	label.set_position(
+		Vector2( get_viewport().size.x * x_rate, get_viewport().size.y * y_rate )
+		- ( label.get_minimum_size() * label.get_scale() * 0.5 )
 	)
-
-
-func dictionary_2_json_string():
-	var d : Dictionary = { "a" = 1, "b" = 2, "c" = 3 }
-	var s = JSON.stringify( d )
-	
-	$Dictionary.text = s
-	$Dictionary.set_position(
-		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.3 )
-		- ( $Dictionary.get_minimum_size() * $Dictionary.get_scale() * 0.5 )
-	)
-
-
-func apply_indent():
-	var d : Dictionary = { "a" = 1, "b" = 2, "c" = 3, "d" = [1, 2, 3, 4] }
-	var s = JSON.stringify( d, "        " )
-	
-	$Indent.text = s
-	$Indent.set_position(
-		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.6 )
-		- ( $Indent.get_minimum_size() * $Indent.get_scale() * 0.5 )
-	)
-	
-	# Label 은 \t를 정상 출력하지 못한다
-	s = JSON.stringify( d, "\t" )
-	print( s )
