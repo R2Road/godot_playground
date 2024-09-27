@@ -57,11 +57,8 @@ func apply_indent():
 	
 	$Indent.text = s
 	$Indent.set_position(
-		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.4 )
-		- Vector2(
-			$Indent.get_minimum_size().x * ( $Indent.get_scale().x * 0.5 )
-			, $Indent.get_minimum_size().y * ( $Indent.get_scale().y * 0.0 )
-		)
+		Vector2( get_viewport().size.x * 0.5, get_viewport().size.y * 0.6 )
+		- ( $Indent.get_minimum_size() * $Indent.get_scale() * 0.5 )
 	)
 	
 	# Label 은 \t를 정상 출력하지 못한다
