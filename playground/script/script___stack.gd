@@ -27,6 +27,7 @@ func _ready():
 	#
 	#
 	show_stack()
+	$helper_code.show_code( "res://script/script___stack.gd", 35, 43 )
 
 
 
