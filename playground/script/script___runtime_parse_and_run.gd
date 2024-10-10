@@ -41,13 +41,17 @@ var label : Label
 
 func do()->void:
 	label.text = \"[Success] : Dynamically Parse And Call\"
+	label.text += '\n'
+	label.text += '\n'
+	label.text += str( self.get_script().get_script_method_list() )
 	label.get_node_or_null( \"helper_move2center\" ).do()
 "
 	script.reload()
-	print( script.get_script_method_list() )
 	
 	var r = Resource.new()
 	r.set_script( script )
+	
+	self.get_script()
 	
 	
 	r.label = $Label
