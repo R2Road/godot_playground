@@ -16,7 +16,7 @@ func _ready():
 	pam.add_action( "Add Child", Key.KEY_1, add_test_node )
 	pam.add_lf()
 	pam.add_action( "Change Z-order : First > End", Key.KEY_2, func(): change_z( -1 ) )
-	pam.add_action( "Change Z-order : First > Half", Key.KEY_3, func(): change_z( get_child_count() * 0.5 ) )
+	pam.add_action( "Change Z-order : First > Half", Key.KEY_3, func(): change_z( int( get_child_count() * 0.5 ) ) )
 	pam.add_action( "Change Z-order : First > Next", Key.KEY_4, func(): change_z( get_children()[0].get_index() + 1 ) )
 	build_summary( eSceneType.TEST )
 	
