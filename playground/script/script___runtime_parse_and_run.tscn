@@ -10,6 +10,12 @@ script = ExtResource("1_3lxyf")
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
-text = "이 글이 보인다면 뭔가 잘못된거다."
+text = "대기중."
 
 [node name="helper_move2center" parent="Label" instance=ExtResource("2_kdr53")]
+
+[node name="CodeEdit" type="CodeEdit" parent="."]
+offset_left = 2.0
+offset_top = 140.0
+offset_right = 609.0
+offset_bottom = 606.0
