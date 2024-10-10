@@ -23,5 +23,7 @@ func _ready():
 	pam.add_mover( script___path.scene_name(),		Key.KEY_2, script___path.scene_path() )
 	pam.add_mover( script___object.scene_name(),	Key.KEY_3, script___object.scene_path() )
 	pam.add_lf()
+	pam.add_mover( script___runtime_parse_and_run.scene_name(),		Key.KEY_Q, script___runtime_parse_and_run.scene_path() )
+	pam.add_lf()
 	pam.add_split()
 	build_summary( eSceneType.ROOT )
