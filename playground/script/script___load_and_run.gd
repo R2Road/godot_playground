@@ -1,10 +1,10 @@
-class_name script___object extends GDPTScene
+class_name script___load_and_run extends GDPTScene
 
 
 
 ######################### GDPT Override ##########################
 static func scene_name()->String:
-	return "Script Object"
+	return "Script : Load And Run"
 
 
 static func scene_path()->String:
@@ -24,10 +24,10 @@ func _ready():
 	#
 	#
 	var h : script___object_helper = ResourceLoader.load(
-		"res://script/script___object_helper.gd"
+		"res://script/script___load_and_run_helper.gd"
 	).new()
 	
-	h.functor = ( func(): $Label.text = "Call : script___object_helper::functor" )
+	h.functor = ( func(): $Label.text = "Call : script___load_and_run::functor" )
 	
 	h.do()
 	
