@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://co56b2tvcjqqc"]
+
+[ext_resource type="Script" path="res://resolution/resolution___viewport_size.gd" id="1_hfstl"]
+[ext_resource type="PackedScene" uid="uid://dsuaumbxcknhr" path="res://addons/godot_play_tool/helper/helper_0_0.tscn" id="2_5cq5r"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="3_7dec0"]
+
+[node name="resolution___viewport_size" type="Node2D"]
+script = ExtResource("1_hfstl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ViewportSizeItemList" type="ItemList" parent="CanvasLayer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -125.0
+offset_right = 300.0
+offset_bottom = 125.0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_top = 211.0
+offset_right = 299.0
+offset_bottom = 234.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "+ Viewport Size List"
+
+[node name="helper_0_0" parent="." instance=ExtResource("2_5cq5r")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="helper_point" parent="Points" instance=ExtResource("3_7dec0")]
+z_index = 4096
+position = Vector2(-640, 0)
+
+[node name="helper_point2" parent="Points" instance=ExtResource("3_7dec0")]
+z_index = 4096
+position = Vector2(-640, -360)
+
+[node name="helper_point3" parent="Points" instance=ExtResource("3_7dec0")]
+z_index = 4096
+position = Vector2(-640, 360)
+
+[node name="helper_point4" parent="Points" instance=ExtResource("3_7dec0")]
+z_index = 4096
+position = Vector2(640, 0)
+
+[node name="helper_point5" parent="Points" instance=ExtResource("3_7dec0")]
+z_index = 4096
+position = Vector2(640, -360)
+
+[node name="helper_point6" parent="Points" instance=ExtResource("3_7dec0")]
+z_index = 4096
+position = Vector2(640, 360)
+
+[node name="helper_point7" parent="Points" instance=ExtResource("3_7dec0")]
+z_index = 4096
+position = Vector2(0, -360)
+
+[node name="helper_point8" parent="Points" instance=ExtResource("3_7dec0")]
+z_index = 4096
+position = Vector2(0, 360)
+
+[connection signal="item_selected" from="CanvasLayer/ViewportSizeItemList" to="." method="_on_viewport_size_item_list_item_selected"]
