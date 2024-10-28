@@ -2,7 +2,7 @@ class_name editor_root extends GDPTScene
 
 
 
-######################### GDPT Override ##########################
+### GDPT Override ################################################
 static func scene_name()->String:
 	return "Editor Root"
 	
@@ -11,8 +11,7 @@ static func scene_path()->String:
 	return super.scene_path()
 
 
-
-############################ Override ############################
+### Override #####################################################
 func _ready():
 	pam.set_name( scene_name() )
 	pam.add_split()
