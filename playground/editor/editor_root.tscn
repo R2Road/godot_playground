@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhttp203be4kj"]
+
+[ext_resource type="Script" path="res://editor/editor_root.gd" id="1_02kie"]
+
+[node name="editor_root" type="Node2D"]
+script = ExtResource("1_02kie")
