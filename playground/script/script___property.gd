@@ -29,6 +29,7 @@ func _ready():
 	pam.add_lf()
 	pam.add_message( "class 내부에 정의된 class는 이름이 제대로 표시되지 않는다." )
 	pam.add_message( "array 타입의 경우 지정된 데이터 타입을 hint_string 에 저장한다." )
+	pam.add_message( "@export 의경우 usage가 4102" )
 	pam.add_lf()
 	build_summary( eSceneType.TEST )
 	

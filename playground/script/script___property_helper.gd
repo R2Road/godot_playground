@@ -13,6 +13,7 @@ var s : PackedScene
 var c : C
 var cc : script_root
 var a : Array[script_root]
+@export var e : int
 
 
 func f_1()->void:
