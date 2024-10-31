@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxvhpnj3m3tcd"]
+
+[ext_resource type="Script" path="res://script/script___property_access.gd" id="1_cmt6l"]
+[ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="2_8tixi"]
+
+[node name="script___property_access" type="Node2D"]
+script = ExtResource("1_cmt6l")
+
+[node name="helper_code" parent="." instance=ExtResource("2_8tixi")]
+offset_left = 555.0
+offset_top = 201.0
+offset_right = 1279.0
+offset_bottom = 625.0
