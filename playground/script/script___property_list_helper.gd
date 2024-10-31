@@ -1,4 +1,4 @@
-class_name script___property_helper extends RefCounted
+class_name script___property_list_helper extends RefCounted
 
 class C extends RefCounted:
 	var i : int

@@ -1,16 +1,16 @@
-class_name script___property extends GDPTScene
+class_name script___property_list extends GDPTScene
 
 
 
 ############################ Variable ############################
-var helper_script_resource = preload( "res://script/script___property_helper.gd" )
+var helper_script_resource = preload( "res://script/script___property_list_helper.gd" )
 var helper
 
 
 
 ######################### GDPT Override ##########################
 static func scene_name()->String:
-	return "Script : Property"
+	return "Script : Property List"
 
 
 static func scene_path()->String:
@@ -40,7 +40,7 @@ func _ready():
 	helper.set_script( helper_script_resource )
 	
 	show_simply()
-	$helper_code.show_code( "res://script/script___property_helper.gd", 0, 25 )
+	$helper_code.show_code( "res://script/script___property_list_helper.gd", 0, 25 )
 
 
 

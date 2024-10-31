@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdiisnypfh5w2"]
+
+[ext_resource type="Script" path="res://script/script___property_list.gd" id="1_ke8xq"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="2_rgrp6"]
+[ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="3_11juv"]
+
+[node name="script___property_list" type="Node2D"]
+script = ExtResource("1_ke8xq")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+
+[node name="helper_move2center" parent="Label" instance=ExtResource("2_rgrp6")]
+
+[node name="helper_code" parent="." instance=ExtResource("3_11juv")]
+offset_top = 191.0
+offset_right = 542.0
+offset_bottom = 551.0
