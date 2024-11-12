@@ -21,4 +21,6 @@ func _ready():
 	pam.add_mover( json___parse_string.scene_name(),			Key.KEY_1, json___parse_string.scene_path() )
 	pam.add_mover( json___parse.scene_name(),					Key.KEY_2, json___parse.scene_path() )
 	pam.add_mover( json___container_2_json_string.scene_name(),	Key.KEY_3, json___container_2_json_string.scene_path() )
+	pam.add_lf()
+	pam.add_mover( json___container_2_json___with_class.scene_name(),	Key.KEY_Q, json___container_2_json___with_class.scene_path() )
 	build_summary( eSceneType.ROOT )
