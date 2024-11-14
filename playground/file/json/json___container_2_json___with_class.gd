@@ -13,11 +13,15 @@ static func scene_path()->String:
 
 
 ### Variable #####################################################
-class Test extends RefCounted:
+class Test_1 extends RefCounted:
 	var a : int = 1
+
+
+class Test_2 extends RefCounted:
+	var a : int = 2
 	
 	func _to_string() -> String:
-		return "abcd"
+		return "Test 2"
 
 
 
@@ -27,21 +31,27 @@ func _ready():
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
-	pam.add_message( "_to_string() 함수는 Object Class 에 위치한다." )
+	pam.add_note( "Object._to_string() 함수를 활용하면 사용자 정의 Class도 Json으로 출력 된다." )
 	build_summary( eSceneType.TEST )
 	
 	#
 	# Start Practice
 	#	
-	var t = Test.new()
-	print( str( t ) )
+	var t_1 = Test_1.new()
+	print( str( t_1 ) )
 	
-	var d = { "data" = t }
-	container_2_json_string( $Label,      0.7, 0.2, "    ", d )
+	var t_2 = Test_2.new()
+	print( str( t_2 ) )
+	
+	var d = {
+		"test_1" = t_1,
+		"test_2" = t_2
+	}
+	container_2_json_string( $Label,      0.2, 0.5, "    ", d )
 	
 	# Code Edit
-	$helper_code1.show_code( scene_path().replace( ".tscn", ".gd" ), 16, 20 )
-	$helper_code2.show_code( scene_path().replace( ".tscn", ".gd" ), 36, 40 )
+	$helper_code1.show_code( scene_path().replace( ".tscn", ".gd" ), 16, 24 )
+	$helper_code2.show_code( scene_path().replace( ".tscn", ".gd" ), 40, 50 )
 
 
 
