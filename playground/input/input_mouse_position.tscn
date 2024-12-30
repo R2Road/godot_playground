@@ -23,3 +23,16 @@ text = "Message Label"
 [node name="helper_0_0" parent="." instance=ExtResource("2_gxuxf")]
 
 [node name="Camera2D" type="Camera2D" parent="helper_0_0"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 289.0
+offset_top = 135.0
+offset_right = 632.0
+offset_bottom = 350.0
+color = Color(0.466181, 0.466181, 0.466181, 1)
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_right = 63.0
+offset_bottom = 27.0
+text = "Node"

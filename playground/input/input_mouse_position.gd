@@ -26,10 +26,11 @@ func _ready():
 
 func _process( _delta ):
 	$Label.text = (
-		"mouse on display server : %s\n\nmouse on viewport : %s\n\n mouse on global : %s"
+		"mouse on display server : %s\n\nmouse on viewport : %s\n\n mouse on global : %s\n\n mouse on child node : %s"
 		% [
 			str( DisplayServer.mouse_get_position() )
 			, str( get_viewport().get_mouse_position() )
 			, str( get_global_mouse_position() )
+			, str( $ColorRect.get_local_mouse_position() )
 		]
 	)
