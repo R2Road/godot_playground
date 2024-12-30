@@ -25,7 +25,7 @@ func _ready():
 	parse_and_show( $Label_1, "", 0.7, 0.2 )
 	parse_and_show( $Label_2, "[1,2,3", 0.7, 0.4 )
 	parse_and_show( $Label_3, "[2,3,4]", 0.7, 0.6 )
-	parse_and_show( $Label_4, "[2, 3, 4, 5, 6, ]", 0.7, 0.8 )
+	parse_and_show( $Label_4, "{ \"v\" : 1 }", 0.7, 0.8 )
 
 
 
