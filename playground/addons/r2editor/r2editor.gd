@@ -74,7 +74,7 @@ func _make_visible(visible):
 		main_panel_instance.visible = visible
 
 func _get_plugin_name():
-	return "Main Screen Plugin"
+	return "Editor Practice"
 
 func _get_plugin_icon():
 	return EditorInterface.get_editor_theme().get_icon( "Node", "EditorIcons" )
