@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://addons/r2editor/test_editpr_1.gd" id="1_qqjiq"]
 
 [node name="TestEditor1" type="VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
