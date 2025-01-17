@@ -49,6 +49,7 @@ folder_colors={
 "res://resolution/": "green",
 "res://resources/": "gray",
 "res://script/": "green",
+"res://type/": "green",
 "res://various/": "green"
 }
 
