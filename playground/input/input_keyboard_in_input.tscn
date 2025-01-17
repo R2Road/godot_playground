@@ -5,7 +5,14 @@
 [node name="input_keyboard_in_input" type="Node2D"]
 script = ExtResource("1_tmfdb")
 
-[node name="Message" type="Label" parent="."]
+[node name="ReleasedMessage" type="Label" parent="."]
+offset_right = 120.0
+offset_bottom = 23.0
+scale = Vector2(3, 3)
+text = "Message Label"
+horizontal_alignment = 1
+
+[node name="PressedMessage" type="Label" parent="."]
 offset_right = 120.0
 offset_bottom = 23.0
 scale = Vector2(3, 3)
