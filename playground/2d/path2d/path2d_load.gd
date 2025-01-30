@@ -29,7 +29,7 @@ func _ready():
 	$Path2D.curve.add_point( Vector2( 100, 150 ) )
 	
 	for i in $Path2D.curve.point_count:
-		var hp = GDPT.helper_point.instantiate()
+		var hp = GDPT.helper_point_scene.instantiate()
 		hp.set_position( $Path2D.curve.get_point_position( i ) )
 		add_child( hp )
 	

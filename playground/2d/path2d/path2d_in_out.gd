@@ -90,7 +90,7 @@ func _process( delta ):
 ############################   User   ############################
 func show_path( path2d : Path2D ):
 	for i in path2d.curve.point_count:
-		var hp = GDPT.helper_point.instantiate()
+		var hp = GDPT.helper_point_scene.instantiate()
 		hp.set_position( path2d.curve.get_point_position( i ) )
 		add_child( hp )
 		

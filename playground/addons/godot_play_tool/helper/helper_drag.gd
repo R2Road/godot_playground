@@ -2,7 +2,7 @@
 extends Node2D
 
 
-############################  Export  ############################
+### Export #######################################################
 @export var rect : Rect2 = Rect2( -25, -25, 50, 50 ):
 	set( value ):
 		rect = value
@@ -26,20 +26,20 @@ extends Node2D
 
 
 
-############################  Signal  ############################
+### Signal #######################################################
 signal signal_position_changed( _position : Vector2 )
 signal signal_drag_on
 signal signal_drag_off
 
 
 
-############################ Variable ############################
+### Variable #####################################################
 var drag_on = false
 var drag_offset : Vector2
 
 
 
-############################ Override ############################
+### Override #####################################################
 func _init()->void:
 	self.set_z_index( RenderingServer.CANVAS_ITEM_Z_MAX )
 

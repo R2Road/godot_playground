@@ -1,6 +1,6 @@
 extends HSlider
 
-############################ Summary ############################
+### Summary #####################################################
 #
 # + 2024.09.18 by R
 #
@@ -14,6 +14,12 @@ extends HSlider
 
 
 
-########################  Signal Function  #######################
+### Node : Override #############################################
+func _ready()->void:
+	_on_value_changed( self.value )
+
+
+
+### Signal Function #############################################
 func _on_value_changed( value : float )->void:
 	$Value.text = str( value )

@@ -2,12 +2,12 @@ class_name GDPTSceneHelper extends CanvasLayer
 
 
 
-############################ Variable ############################
+### Variable #####################################################
 var play_action_manager : GDPTActionManager = GDPTActionManager.new()
 
 
 
-############################ Override ############################
+### Override #####################################################
 func _init()->void:
 	var summary = RichTextLabel.new()
 	summary.name = "Summary"

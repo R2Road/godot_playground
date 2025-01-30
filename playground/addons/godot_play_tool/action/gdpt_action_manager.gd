@@ -2,7 +2,7 @@ class_name GDPTActionManager extends RefCounted
 
 
 
-############################ Variable ############################
+### Variable #####################################################
 var owner : Node
 var name : String
 var container : Array
@@ -12,7 +12,7 @@ var last_scene_name : String
 
 
 
-############################   User   ############################
+### Interface ####################################################
 func set_name( _name : String )->void:
 	name = _name
 

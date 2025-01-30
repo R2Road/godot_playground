@@ -3,7 +3,7 @@ extends Node2D
 
 
 
-############################  Export  ############################
+### Export #######################################################
 @export var rect : Rect2 = Rect2( 0, 0, 10, 10 ):
 	set( value ):
 		rect = value
@@ -23,7 +23,7 @@ extends Node2D
 
 
 
-############################ Override ############################
+### Override #####################################################
 func _init()->void:
 	self.set_z_index( RenderingServer.CANVAS_ITEM_Z_MAX )
 	#self.z_index = RenderingServer.CANVAS_ITEM_Z_MAX

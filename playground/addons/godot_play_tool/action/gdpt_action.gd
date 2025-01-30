@@ -2,7 +2,7 @@ class_name GDPTAction extends RefCounted
 
 
 
-############################ Variable ############################
+### Variable #####################################################
 enum eDecoration
 {
 	Nothing, # Default
@@ -26,7 +26,7 @@ var color_4_base = Color.WHITE
 
 
 
-############################ Override ############################
+### Override #####################################################
 func _init(
 	  _message : String
 	, _key : Key

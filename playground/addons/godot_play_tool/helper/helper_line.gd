@@ -3,7 +3,7 @@ extends Node2D
 
 
 
-############################  Export  ############################
+### Export #######################################################
 @export var color = Color( 0, 1, 0 ):
 	set( value ):
 		color = value
@@ -23,7 +23,7 @@ extends Node2D
 
 
 
-############################ Override ############################
+### Override #####################################################
 func _init()->void:
 	self.set_z_index( RenderingServer.CANVAS_ITEM_Z_MAX )
 	#self.z_index = RenderingServer.CANVAS_ITEM_Z_MAX

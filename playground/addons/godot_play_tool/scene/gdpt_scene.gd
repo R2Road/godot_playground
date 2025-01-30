@@ -2,7 +2,7 @@ class_name GDPTScene extends Node2D
 
 
 
-############################ Variable ############################
+### Variable #####################################################
 enum eSceneType
 {
 	ROOT,
@@ -11,12 +11,12 @@ enum eSceneType
 
 
 
-############################ Variable ############################
+### Variable #####################################################
 var pam : GDPTActionManager
 
 
 
-######################### GDPT Override ##########################
+### GDPT Override ################################################
 static func scene_name()->String:
 	return "GDPTScene"
 
@@ -26,7 +26,7 @@ static func scene_path()->String:
 
 
 
-############################ Override ############################
+### Override #####################################################
 func _init():
 	add_child( GDPT.build_scene_helper() )
 	
@@ -35,7 +35,7 @@ func _init():
 
 
 
-############################   User   ############################
+### Interface ####################################################
 func build_summary( _scene_type : eSceneType ):
 	var summary_node : RichTextLabel = $GDPTSceneHelper/Summary
 	summary_node.text = pam.build_summary()
