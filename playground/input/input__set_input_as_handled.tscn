@@ -1,0 +1,109 @@
+[gd_scene load_steps=2 format=3 uid="uid://cml7y3rfflea7"]
+
+[ext_resource type="Script" path="res://input/input__set_input_as_handled.gd" id="1_7mt52"]
+
+[node name="input__set_input_as_handled" type="Node2D"]
+script = ExtResource("1_7mt52")
+
+[node name="Keycode" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Keycode"
+
+[node name="Camera2D" type="Camera2D" parent="Keycode"]
+
+[node name="Normal" type="Label" parent="."]
+offset_left = -300.0
+offset_top = -283.0
+offset_right = -299.0
+offset_bottom = -260.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Normal"
+
+[node name="L_1" type="Label" parent="Normal"]
+offset_left = 33.0
+offset_top = 78.0
+offset_right = 73.0
+offset_bottom = 101.0
+text = "L1"
+
+[node name="L_1_1" type="Label" parent="Normal/L_1"]
+offset_top = 45.0
+offset_right = 40.0
+offset_bottom = 68.0
+text = "L11"
+
+[node name="L_1_1_1" type="Label" parent="Normal/L_1/L_1_1"]
+offset_top = 42.0
+offset_right = 40.0
+offset_bottom = 65.0
+text = "L111"
+
+[node name="L_2" type="Label" parent="Normal"]
+offset_left = 182.0
+offset_top = 81.0
+offset_right = 222.0
+offset_bottom = 104.0
+text = "L2"
+
+[node name="L_3" type="Label" parent="Normal"]
+offset_left = 359.0
+offset_top = 82.0
+offset_right = 399.0
+offset_bottom = 105.0
+text = "L3"
+
+[node name="L_4" type="Label" parent="Normal"]
+offset_left = 518.0
+offset_top = 84.0
+offset_right = 558.0
+offset_bottom = 107.0
+text = "L4"
+
+[node name="Block" type="Label" parent="."]
+offset_left = -300.0
+offset_top = 61.0
+offset_right = -241.0
+offset_bottom = 84.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Block"
+
+[node name="L_1" type="Label" parent="Block"]
+offset_left = 33.0
+offset_top = 78.0
+offset_right = 73.0
+offset_bottom = 101.0
+text = "L1"
+
+[node name="L_1_1" type="Label" parent="Block/L_1"]
+offset_top = 45.0
+offset_right = 40.0
+offset_bottom = 68.0
+text = "L11"
+
+[node name="L_1_1_1" type="Label" parent="Block/L_1/L_1_1"]
+offset_top = 42.0
+offset_right = 40.0
+offset_bottom = 65.0
+text = "L111"
+
+[node name="L_2" type="Label" parent="Block"]
+offset_left = 182.0
+offset_top = 81.0
+offset_right = 222.0
+offset_bottom = 104.0
+text = "L2"
+
+[node name="L_3" type="Label" parent="Block"]
+offset_left = 359.0
+offset_top = 82.0
+offset_right = 399.0
+offset_bottom = 105.0
+text = "L3"
+
+[node name="L_4" type="Label" parent="Block"]
+offset_left = 518.0
+offset_top = 84.0
+offset_right = 558.0
+offset_bottom = 107.0
+text = "L4"
