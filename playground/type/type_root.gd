@@ -20,5 +20,6 @@ func _ready():
 	pam.add_front( playground_main.scene_name(),	Key.KEY_ESCAPE, playground_main.scene_path() )
 	pam.add_lf()
 	pam.add_mover( type___string_duplicate.scene_name(),	Key.KEY_1, type___string_duplicate.scene_path() )
+	pam.add_mover( type___string_find.scene_name(),	Key.KEY_2, type___string_find.scene_path() )
 	pam.add_split()
 	build_summary( eSceneType.ROOT )
