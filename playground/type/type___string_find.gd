@@ -28,13 +28,13 @@ func _ready():
 	var s_2 : String = "1234"
 	
 	$Label.text = (
-		  str( s_1.find( s_2 ) )
+		  "[S] : " + str( s_1.find( s_2 ) ) +  "    [F] : "   + str( s_1.find( "abcd" ) )
 		+ "\n"
 		+ str( s_1.find( s_2, s_1.find( s_2 ) + 1 ) )
 		+ "\n"
 		+ str( s_1.find( s_2, s_1.length() ) )
 		+ "\n===================\n"
-		+ str( s_1.rfind( s_2 ) )
+		+ "[S] : " + str( s_1.rfind( s_2 ) ) +  "    [F] : "   + str( s_1.rfind( "abcd" ) )
 		+ "\n"
 		+ str( s_1.rfind( s_2, s_1.rfind( s_2 ) - 1 ) )
 		+ "\n"
