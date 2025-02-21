@@ -24,7 +24,7 @@ func _ready():
 	#
 	container_2_json_string( $Array,      0.5, 0.2, "", [ "a", "b", "c" ] )
 	container_2_json_string( $Dictionary, 0.5, 0.3, "", { "a" = 1, "b" = 2, "c" = 3 } )
-	container_2_json_string( $Indent,     0.5, 0.6, "     ", { "a" = 1, "b" = 2, "c" = 3, "d" = [1, 2, 3, 4] } )
+	container_2_json_string( $Indent,     0.5, 0.6, "     ", { "a" = 1, "b" = 2, "c" = 3, "d" = [1, 2, 3, 4], "v" = Vector2.ZERO } )
 
 
 
