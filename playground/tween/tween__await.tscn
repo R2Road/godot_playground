@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsey1wrnjkqe"]
+
+[ext_resource type="Script" path="res://tween/tween__await.gd" id="1_f1thh"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="3_odatj"]
+[ext_resource type="PackedScene" uid="uid://gpu5f7fm35o4" path="res://addons/godot_play_tool/helper/helper_circle.tscn" id="3_wje75"]
+[ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="4_sihb4"]
+
+[node name="tween__await" type="Node2D"]
+script = ExtResource("1_f1thh")
+
+[node name="helper_circle" parent="." instance=ExtResource("3_wje75")]
+radius = 20.0
+fill = true
+
+[node name="helper_move2center" parent="helper_circle" instance=ExtResource("3_odatj")]
+
+[node name="helper_code" parent="." instance=ExtResource("4_sihb4")]
+offset_top = 179.0
+offset_bottom = 525.0

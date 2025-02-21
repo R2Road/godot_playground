@@ -20,6 +20,7 @@ func _ready():
 	pam.add_front( playground_main.scene_name(),	Key.KEY_ESCAPE, playground_main.scene_path() )
 	pam.add_lf()
 	pam.add_mover( tween__basic.scene_name(),	Key.KEY_1, tween__basic.scene_path() )
+	pam.add_mover( tween__await.scene_name(),	Key.KEY_2, tween__await.scene_path() )
 	pam.add_lf()
 	pam.add_lf()
 	pam.add_mover( tween__shake.scene_name(),	Key.KEY_Q, tween__shake.scene_path() )
