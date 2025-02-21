@@ -24,6 +24,7 @@ func _ready():
 	pam.add_split()
 	pam.add_action( "do 1", KEY_1, do_1 )
 	pam.add_action( "do 2", KEY_2, do_2 )
+	pam.add_action( "do 3", KEY_3, do_3 )
 	build_summary( eSceneType.TEST )
 
 func _process(delta: float) -> void:
@@ -53,3 +54,13 @@ func do_2()->void:
 	
 	tween = create_tween()
 	tween.tween_property( $helper_circle, "position", Vector2( -50, -50 ), 1 ).as_relative()
+
+
+func do_3()->void:
+	if tween:
+		tween.kill()
+	
+	tween = create_tween()
+	tween.set_parallel()
+	tween.tween_property( $helper_circle, "position:x", 50, 1 )
+	tween.tween_property( $helper_circle, "position:y", -50, 1 )
