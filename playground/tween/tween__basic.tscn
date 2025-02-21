@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://iehyxk6o51oh"]
 
-[ext_resource type="Script" path="res://various/tween__basic.gd" id="1_6l0so"]
+[ext_resource type="Script" path="res://tween/tween__basic.gd" id="1_6l0so"]
 [ext_resource type="PackedScene" uid="uid://dsuaumbxcknhr" path="res://addons/godot_play_tool/helper/helper_0_0.tscn" id="2_c3vqq"]
 [ext_resource type="PackedScene" uid="uid://gpu5f7fm35o4" path="res://addons/godot_play_tool/helper/helper_circle.tscn" id="2_llsje"]
 
