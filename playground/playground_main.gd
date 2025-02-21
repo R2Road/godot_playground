@@ -27,6 +27,7 @@ func _ready():
 	pam.add_root( "2D", 			Key.KEY_Q, 		"res://2d/2d_root.tscn" )
 	pam.add_root( "3D", 			Key.KEY_W, 		"res://3d/3d_root.tscn" )
 	pam.add_root( "Control", 		Key.KEY_E, 		"res://control/control_root.tscn" )
+	pam.add_root( tween_root.scene_name(), 	Key.KEY_R, tween_root.scene_path() )
 	pam.add_lf()
 	pam.add_root( various_root.scene_name(),	Key.KEY_A, various_root.scene_path() )
 	pam.add_root( file_root.scene_name(),		Key.KEY_S, file_root.scene_path() )
