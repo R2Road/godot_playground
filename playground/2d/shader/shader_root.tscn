@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://gnhpnda8mq0h"]
 
-[ext_resource type="Script" path="res://2d/shader/shader_root.gd" id="1_2jq2l"]
+[ext_resource type="Script" uid="uid://cs3a14ly6rrqs" path="res://2d/shader/shader_root.gd" id="1_2jq2l"]
 
 [node name="shader_root" type="Node2D"]
 script = ExtResource("1_2jq2l")

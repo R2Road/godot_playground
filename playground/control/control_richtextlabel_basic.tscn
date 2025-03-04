@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://di243b7ppnox1"]
 
-[ext_resource type="Script" path="res://control/control_richtextlabel_basic.gd" id="1_ic50t"]
+[ext_resource type="Script" uid="uid://b8ehd34h0rnp5" path="res://control/control_richtextlabel_basic.gd" id="1_ic50t"]
 
 [node name="ControlRichtextlabel" type="Node2D"]
 script = ExtResource("1_ic50t")

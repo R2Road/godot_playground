@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjyfa1bos83f4"]
 
-[ext_resource type="Script" path="res://2d/sprite/sprite2d_sheet.gd" id="1_ak0h5"]
+[ext_resource type="Script" uid="uid://bm7ngehfid64y" path="res://2d/sprite/sprite2d_sheet.gd" id="1_ak0h5"]
 [ext_resource type="Texture2D" uid="uid://c0opc2hociaip" path="res://resources/sprite/actor001/actor001_sheet.png" id="2_uklwg"]
 
 [node name="sprite2d_sheet" type="Node2D"]

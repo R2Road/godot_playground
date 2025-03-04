@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2rp35k0a13t3"]
 
-[ext_resource type="Script" path="res://control/control_progress_bar_basic.gd" id="1_y2voe"]
+[ext_resource type="Script" uid="uid://cpjr1cqgvxaxw" path="res://control/control_progress_bar_basic.gd" id="1_y2voe"]
 [ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="3_ta4dh"]
 
 [node name="control_progress_bar_basic" type="Node2D"]

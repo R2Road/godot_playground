@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjdq3lyjfewve"]
 
-[ext_resource type="Script" path="res://file/config/config___file_load.gd" id="1_8a0qe"]
-[ext_resource type="PackedScene" uid="uid://bfk66wmj0dap3" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="3_nkgk0"]
+[ext_resource type="Script" uid="uid://bn7r8sqpk7ng2" path="res://file/config/config___file_load.gd" id="1_8a0qe"]
+[ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="3_nkgk0"]
 
 [node name="config___file_load" type="Node2D"]
 script = ExtResource("1_8a0qe")

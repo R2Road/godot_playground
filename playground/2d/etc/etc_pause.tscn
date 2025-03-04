@@ -1,9 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://bd0webfkjsd8v"]
 
-[ext_resource type="Script" path="res://2d/etc/etc_pause.gd" id="1_h3ugp"]
+[ext_resource type="Script" uid="uid://di51xweddwrmq" path="res://2d/etc/etc_pause.gd" id="1_h3ugp"]
 [ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="2_lhcj0"]
 [ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://addons/godot_play_tool/helper/helper_rect.tscn" id="3_7uhep"]
-
 
 [node name="etc_pause" type="Node2D"]
 process_mode = 3

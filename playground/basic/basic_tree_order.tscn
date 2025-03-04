@@ -1,9 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cki2rkufm7nbx"]
 
-[ext_resource type="Script" path="res://basic/basic_tree_order.gd" id="1_2y8fb"]
-[ext_resource type="Script" path="res://basic/basic_tree_order_helper.gd" id="2_ddk68"]
+[ext_resource type="Script" uid="uid://can07v0c6ava2" path="res://basic/basic_tree_order.gd" id="1_2y8fb"]
+[ext_resource type="Script" uid="uid://cfnx0g6sewsit" path="res://basic/basic_tree_order_helper.gd" id="2_ddk68"]
 [ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="2_lnugm"]
-
 
 [node name="basic_treeorder" type="Node2D"]
 script = ExtResource("1_2y8fb")

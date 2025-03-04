@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dehhvb2dvtxyf"]
 
-[ext_resource type="Script" path="res://control/control_nine_patch_rect_basic.gd" id="1_8qdq0"]
+[ext_resource type="Script" uid="uid://dndktlt6iw2lh" path="res://control/control_nine_patch_rect_basic.gd" id="1_8qdq0"]
 [ext_resource type="Texture2D" uid="uid://br7733mi0v430" path="res://resources/sprite/actor001/actor001_win_02.png" id="2_qlicw"]
 [ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="3_smdod"]
 [ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="4_gg17e"]

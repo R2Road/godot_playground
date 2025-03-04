@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dcvnl8p8tt6vl"]
 
-[ext_resource type="Script" path="res://input/input_map_in_project_setting.gd" id="1_w0vxm"]
+[ext_resource type="Script" uid="uid://blughyc6ef3uu" path="res://input/input_map_in_project_setting.gd" id="1_w0vxm"]
 [ext_resource type="Texture2D" uid="uid://lexqerbglvbw" path="res://resources/wiki/input_map.png" id="2_1o5rt"]
 
 [node name="input_map_in_project_setting" type="Node2D"]

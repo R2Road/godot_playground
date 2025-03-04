@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bnme3mn2rbccc"]
 
-[ext_resource type="Script" path="res://basic/basic_child_sequence.gd" id="1_qn3dy"]
+[ext_resource type="Script" uid="uid://8xjbegh6x70v" path="res://basic/basic_child_sequence.gd" id="1_qn3dy"]
 [ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="2_k4ban"]
 
 [node name="basic_child_sequence" type="Node2D"]

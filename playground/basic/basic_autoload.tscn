@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bj4ynb67bq783"]
 
-[ext_resource type="Script" path="res://basic/basic_autoload.gd" id="1_jxdju"]
+[ext_resource type="Script" uid="uid://cjmrep3g658qc" path="res://basic/basic_autoload.gd" id="1_jxdju"]
 [ext_resource type="Texture2D" uid="uid://cp18aqsr2mju8" path="res://resources/wiki/autoload_01.png" id="2_c8nja"]
 [ext_resource type="Texture2D" uid="uid://dg4jg4nkwbj8n" path="res://resources/wiki/autoload_02.png" id="3_7fvd4"]
 [ext_resource type="Texture2D" uid="uid://07j7f8m8llkf" path="res://resources/wiki/autoload_03.png" id="4_gso28"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmmcd1sihtl6g"]
 
-[ext_resource type="Script" path="res://file/json/json___parse.gd" id="1_leegh"]
+[ext_resource type="Script" uid="uid://bbj4qw5smhn1k" path="res://file/json/json___parse.gd" id="1_leegh"]
 [ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="2_gao73"]
 
 [node name="json___parse" type="Node2D"]

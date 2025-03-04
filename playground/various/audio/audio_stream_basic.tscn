@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://csd3hnk5bivco"]
 
-[ext_resource type="Script" path="res://various/audio/audio_stream_basic.gd" id="1_6cfnr"]
+[ext_resource type="Script" uid="uid://ce7nikpg6k1p6" path="res://various/audio/audio_stream_basic.gd" id="1_6cfnr"]
 [ext_resource type="AudioStream" uid="uid://cgguebcum7c7p" path="res://resources/sound/bgm/Somewhere_in_the_Elevator.ogg" id="2_1gn8h"]
 
 [node name="audio_stream_basic" type="Node2D"]

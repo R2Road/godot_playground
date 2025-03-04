@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://be5oewnc5f4n2"]
 
-[ext_resource type="Script" path="res://addons/r2editor/test_editpr_1.gd" id="1_qqjiq"]
+[ext_resource type="Script" uid="uid://bdsm61kgqoeu" path="res://addons/r2editor/test_editpr_1.gd" id="1_qqjiq"]
 
 [node name="TestEditor1" type="VBoxContainer"]
 custom_minimum_size = Vector2(100, 0)

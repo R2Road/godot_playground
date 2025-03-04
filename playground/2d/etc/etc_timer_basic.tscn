@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://4q6nn5dpmxea"]
 
-[ext_resource type="Script" path="res://2d/etc/etc_timer_basic.gd" id="1_v5jbg"]
+[ext_resource type="Script" uid="uid://x20qgq6r1ot8" path="res://2d/etc/etc_timer_basic.gd" id="1_v5jbg"]
 
 [node name="etc_timer" type="Node2D"]
 script = ExtResource("1_v5jbg")

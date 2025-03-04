@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bs1oncl7uj0h1"]
 
-[ext_resource type="Script" path="res://file/file_path___handling.gd" id="1_ero5t"]
+[ext_resource type="Script" uid="uid://d0mmu1mndy3s4" path="res://file/file_path___handling.gd" id="1_ero5t"]
 [ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="2_1ox4r"]
 
 [node name="file_path___handling" type="Node2D"]

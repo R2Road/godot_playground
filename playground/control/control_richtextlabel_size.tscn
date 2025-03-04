@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bpts37ysapt87"]
 
-[ext_resource type="Script" path="res://control/control_richtextlabel_size.gd" id="1_mk07v"]
+[ext_resource type="Script" uid="uid://cr0bc8etiv8eu" path="res://control/control_richtextlabel_size.gd" id="1_mk07v"]
 [ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="2_7rurs"]
 
 [node name="ControlRichtextlabel_Size" type="Node2D"]

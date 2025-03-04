@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cv3rc6tetw6jf"]
 
-[ext_resource type="Script" path="res://various/audio/audio_stream_randomizer.gd" id="1_bt0nj"]
+[ext_resource type="Script" uid="uid://b5u3gdtdjdy5f" path="res://various/audio/audio_stream_randomizer.gd" id="1_bt0nj"]
 [ext_resource type="AudioStream" uid="uid://dbhnb0allu3pg" path="res://resources/sound/audio_stream_randomizer_sfx.tres" id="2_cjbfw"]
 
 [node name="audio_stream_randomizer" type="Node2D"]

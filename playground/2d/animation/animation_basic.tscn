@@ -1,7 +1,22 @@
 [gd_scene load_steps=6 format=3 uid="uid://bsnnhcgf8mjif"]
 
-[ext_resource type="Script" path="res://2d/animation/animation_basic.gd" id="1_8u4ph"]
+[ext_resource type="Script" uid="uid://devcg3cqg6jlb" path="res://2d/animation/animation_basic.gd" id="1_8u4ph"]
 [ext_resource type="PackedScene" uid="uid://6smcc7kp4eg1" path="res://2d/helper/helper_sprite2d_01.tscn" id="2_gesa1"]
+
+[sub_resource type="Animation" id="Animation_1rmmv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("helper_sprite2d_01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_5w1wo"]
 resource_name = "Test01"
@@ -43,25 +58,10 @@ tracks/2/keys = {
 "values": [Color(1, 1, 1, 1), Color(0.826992, 0.354831, 0.460722, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_1rmmv"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("helper_sprite2d_01:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xaf3w"]
 _data = {
-"RESET": SubResource("Animation_1rmmv"),
-"Test01": SubResource("Animation_5w1wo")
+&"RESET": SubResource("Animation_1rmmv"),
+&"Test01": SubResource("Animation_5w1wo")
 }
 
 [node name="animation_basic" type="Node2D"]

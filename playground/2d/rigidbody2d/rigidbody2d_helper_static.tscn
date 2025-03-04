@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://addons/godot_play_tool/helper/helper_rect.tscn" id="1_4664q"]
 [ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="2_jnwlf"]
 
-
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xlyxy"]
 bounce = 1.0
 

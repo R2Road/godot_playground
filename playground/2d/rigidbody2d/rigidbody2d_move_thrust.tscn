@@ -1,9 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://1b67qng8yurr"]
 
-[ext_resource type="Script" path="res://2d/rigidbody2d/rigidbody2d_move_thrust.gd" id="1_qwx1k"]
+[ext_resource type="Script" uid="uid://dxluu0qrckuvm" path="res://2d/rigidbody2d/rigidbody2d_move_thrust.gd" id="1_qwx1k"]
 [ext_resource type="PackedScene" uid="uid://chqiu7b6xye50" path="res://2d/rigidbody2d/rigidbody2d_helper_player.tscn" id="2_4crco"]
 [ext_resource type="PackedScene" uid="uid://cmqwendenqxuy" path="res://addons/godot_play_tool/helper/helper_line.tscn" id="3_svevl"]
-
 
 [node name="rigidbody2d_move_thrust" type="Node2D"]
 script = ExtResource("1_qwx1k")

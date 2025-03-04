@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bemjduspfhrlu"]
 
-[ext_resource type="Script" path="res://input/input_mouse_position.gd" id="1_li8v1"]
+[ext_resource type="Script" uid="uid://mdrcuxacmchy" path="res://input/input_mouse_position.gd" id="1_li8v1"]
 [ext_resource type="PackedScene" uid="uid://dsuaumbxcknhr" path="res://addons/godot_play_tool/helper/helper_0_0.tscn" id="2_gxuxf"]
 
 [node name="input_mouse_position" type="Node2D"]

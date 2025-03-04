@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dkop86lmkcap0"]
 
-[ext_resource type="Script" path="res://basic/basic_file_generate_remove.gd" id="1_jwqr1"]
+[ext_resource type="Script" uid="uid://dfb26buqmluqv" path="res://basic/basic_file_generate_remove.gd" id="1_jwqr1"]
 
 [node name="basic_file_generate_remove" type="Node2D"]
 script = ExtResource("1_jwqr1")

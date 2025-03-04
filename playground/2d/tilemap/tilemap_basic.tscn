@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://br5jxburstvvh"]
 
-[ext_resource type="Script" path="res://2d/tilemap/tilemap_basic.gd" id="1_yq8o1"]
+[ext_resource type="Script" uid="uid://mupx2lldf38i" path="res://2d/tilemap/tilemap_basic.gd" id="1_yq8o1"]
 [ext_resource type="Texture2D" uid="uid://cm77tcetndcfn" path="res://resources/tiles/tilesheet_01.png" id="2_cvyaj"]
 [ext_resource type="Texture2D" uid="uid://b8b441w0egihb" path="res://resources/wiki/tilemap_basic_01.png" id="3_2y0ml"]
 [ext_resource type="Texture2D" uid="uid://ckrs2h3ktx1bh" path="res://resources/wiki/tilemap_basic_02.png" id="4_1xrj0"]

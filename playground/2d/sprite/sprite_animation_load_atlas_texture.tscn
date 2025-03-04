@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bjeavni3nk783"]
 
-[ext_resource type="Script" path="res://2d/sprite/sprite_animation_load_atlas_texture.gd" id="1_f2wjf"]
+[ext_resource type="Script" uid="uid://c70dumfk8iokr" path="res://2d/sprite/sprite_animation_load_atlas_texture.gd" id="1_f2wjf"]
 [ext_resource type="SpriteFrames" uid="uid://djfre4iy8jd0k" path="res://resources/sprite/actor001/sprite2d_animation_actor001_atlas_texture.tres" id="2_ctpr7"]
 
 [node name="sprite_animation_load_atlas_texture" type="Node2D"]

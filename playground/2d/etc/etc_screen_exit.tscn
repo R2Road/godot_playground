@@ -1,8 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqjqs7kpauwg"]
 
-[ext_resource type="Script" path="res://2d/etc/etc_screen_exit.gd" id="1_0nkld"]
+[ext_resource type="Script" uid="uid://cxucqcm5k25th" path="res://2d/etc/etc_screen_exit.gd" id="1_0nkld"]
 [ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://addons/godot_play_tool/helper/helper_rect.tscn" id="2_5usly"]
-
 
 [node name="etc_screen_exit" type="Node2D"]
 script = ExtResource("1_0nkld")

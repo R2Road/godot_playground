@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dcfuess30txm"]
 
-[ext_resource type="Script" path="res://input/input_keyboard_in_input.gd" id="1_tmfdb"]
+[ext_resource type="Script" uid="uid://ct6uaixrtukt4" path="res://input/input_keyboard_in_input.gd" id="1_tmfdb"]
 
 [node name="input_keyboard_in_input" type="Node2D"]
 script = ExtResource("1_tmfdb")

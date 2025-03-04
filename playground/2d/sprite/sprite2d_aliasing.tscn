@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dmaoyvjt4256k"]
 
-[ext_resource type="Script" path="res://2d/sprite/sprite2d_aliasing.gd" id="1_1apsh"]
+[ext_resource type="Script" uid="uid://dgwkfqt5fpq21" path="res://2d/sprite/sprite2d_aliasing.gd" id="1_1apsh"]
 [ext_resource type="Texture2D" uid="uid://dxvweghqhlqmv" path="res://resources/sprite/actor001/actor001_win_01.png" id="2_qq60p"]
 
 [node name="sprite2d_aliasing" type="Node2D"]

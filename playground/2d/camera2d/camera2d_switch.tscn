@@ -1,8 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bxryv7u41kual"]
 
-[ext_resource type="Script" path="res://2d/camera2d/camera2d_switch.gd" id="1_j778w"]
+[ext_resource type="Script" uid="uid://bkxfp6l4xjver" path="res://2d/camera2d/camera2d_switch.gd" id="1_j778w"]
 [ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="2_jp6e3"]
-
 
 [node name="etc_camera2d_swap" type="Node2D"]
 script = ExtResource("1_j778w")

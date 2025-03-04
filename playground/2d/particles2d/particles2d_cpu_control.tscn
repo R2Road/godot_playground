@@ -1,8 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b86mcp01qttq0"]
 
-[ext_resource type="Script" path="res://2d/particles2d/particles2d_cpu_control.gd" id="1_w7qsj"]
+[ext_resource type="Script" uid="uid://dwevjn25hlgyu" path="res://2d/particles2d/particles2d_cpu_control.gd" id="1_w7qsj"]
 [ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="2_m7w3e"]
-
 
 [node name="particles2d_cpu_control" type="Node2D"]
 script = ExtResource("1_w7qsj")
