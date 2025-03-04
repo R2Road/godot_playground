@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://gnhpnda8mq0h"]
+[gd_scene load_steps=2 format=3 uid="uid://bhupaiq5n8aig"]
 
-[ext_resource type="Script" uid="uid://cs3a14ly6rrqs" path="res://2d/shader/shader_root.gd" id="1_2jq2l"]
+[ext_resource type="Script" uid="uid://cs3a14ly6rrqs" path="res://2d/shader/shader_root.gd" id="1_3x2tc"]
 
 [node name="shader_root" type="Node2D"]
-script = ExtResource("1_2jq2l")
+script = ExtResource("1_3x2tc")

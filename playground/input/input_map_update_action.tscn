@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmclg7g7lwa5p"]
+[gd_scene load_steps=2 format=3 uid="uid://b25548cayoxvy"]
 
-[ext_resource type="Script" uid="uid://caupqhix7vmxq" path="res://input/input_map_update_action.gd" id="1_bxqkb"]
+[ext_resource type="Script" uid="uid://caupqhix7vmxq" path="res://input/input_map_update_action.gd" id="1_7ycrs"]
 
 [node name="input_map_update_action" type="Node2D"]
-script = ExtResource("1_bxqkb")
+script = ExtResource("1_7ycrs")
 
 [node name="Message" type="Label" parent="."]
 texture_filter = 1

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlp2jqljtqu1o"]
+[gd_scene load_steps=2 format=3 uid="uid://c8emyybwhwpsb"]
 
-[ext_resource type="Script" uid="uid://cj4jxvpf4ikxl" path="res://2d/area2d/area2d_root.gd" id="1_1d5no"]
+[ext_resource type="Script" uid="uid://cj4jxvpf4ikxl" path="res://2d/area2d/area2d_root.gd" id="1_d1w7k"]
 
 [node name="area2d_root" type="Node2D"]
-script = ExtResource("1_1d5no")
+script = ExtResource("1_d1w7k")
