@@ -30,4 +30,7 @@ func _init()->void:
 
 
 func _draw()->void:
-	draw_rect( rect, color, fill, out_line_bold )
+	if fill:
+		draw_rect( rect, color, fill )
+	else:
+		draw_rect( rect, color, fill, out_line_bold )

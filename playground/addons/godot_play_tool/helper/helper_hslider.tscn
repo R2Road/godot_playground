@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://drl1ho8d50ug8"]
 
-[ext_resource type="Script" path="res://addons/godot_play_tool/helper/helper_hslider.gd" id="1_mul5h"]
+[ext_resource type="Script" uid="uid://b3rfayd6sowlm" path="res://addons/godot_play_tool/helper/helper_hslider.gd" id="1_mul5h"]
 
 [node name="helper_hslider" type="HSlider"]
 offset_right = 200.0

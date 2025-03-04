@@ -1,4 +1,10 @@
-class_name helper_code extends CodeEdit
+class_name GDPTHelper_Code extends BoxContainer
+
+
+
+### Variable #####################################################
+@export var code_edit : CodeEdit
+@export var file_info_label : Label
 
 
 
@@ -18,7 +24,7 @@ func show_code( path : String, line_start : int, line_end : int )->void:
 			code += "\n"
 	
 	# Show
-	self.text = code
+	code_edit.text = code
 	
 	# File Name
-	$file_info.text = path + " | " + str( line_start ) + " ~ " + str( line_end )
+	file_info_label.text = path + " | " + str( line_start ) + " ~ " + str( line_end )

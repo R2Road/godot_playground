@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ckhm8mux0nwj5"]
 
-[ext_resource type="Script" path="res://addons/godot_play_tool/helper/helper_output.gd" id="1_ccbqb"]
+[ext_resource type="Script" uid="uid://bfmwhyql41v7m" path="res://addons/godot_play_tool/helper/helper_output.gd" id="1_ccbqb"]
 
 [node name="helper_output" type="MarginContainer"]
 texture_repeat = 1

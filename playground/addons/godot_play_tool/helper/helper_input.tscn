@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://duucg4nc7dvrv"]
+
+[ext_resource type="Script" uid="uid://ch6lacg3yyvk5" path="res://addons/godot_play_tool/helper/helper_input.gd" id="1_puf16"]
+
+[node name="helper_input" type="Node2D"]
+z_index = 4096
+z_as_relative = false
+script = ExtResource("1_puf16")

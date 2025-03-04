@@ -1,4 +1,4 @@
-class_name helper_output extends MarginContainer
+class_name GDPTHelper_Output extends MarginContainer
 
 
 
@@ -23,10 +23,27 @@ func _ready()->void:
 
 
 ### Interface ####################################################
-func add_normal( message : String )->void:
+func lf()->void:
+	var l = label.duplicate()
+	l.text = ""
+	l.visible = true
+	vbox_container.add_child( l )
+	
+	clamp_output()
+
+func print( message : String )->void:
 	var l = label.duplicate()
 	l.text = message
 	l.visible = true
+	vbox_container.add_child( l )
+	
+	clamp_output()
+
+func print_color( _message : String, _color : Color )->void:
+	var l = label.duplicate()
+	l.text = _message
+	l.visible = true
+	l.set( "theme_override_colors/font_color", _color )
 	vbox_container.add_child( l )
 	
 	clamp_output()
@@ -38,6 +55,11 @@ func clamp_output()->void:
 		for i in gap:
 			print( i )
 			vbox_container.remove_child( vbox_container.get_child( 0 ) )
+
+
+func clear()->void:
+	while 0 < vbox_container.get_child_count():
+		vbox_container.remove_child( vbox_container.get_children()[0] )
 
 
 

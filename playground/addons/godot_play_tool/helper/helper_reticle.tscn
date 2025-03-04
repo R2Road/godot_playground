@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://8pengjsakrxj"]
 
-[ext_resource type="Script" path="res://addons/godot_play_tool/helper/helper_reticle.gd" id="1_ccj56"]
+[ext_resource type="Script" uid="uid://um1m6nyocj48" path="res://addons/godot_play_tool/helper/helper_reticle.gd" id="1_ccj56"]
 
 [node name="helper_reticle" type="Node2D"]
 z_as_relative = false

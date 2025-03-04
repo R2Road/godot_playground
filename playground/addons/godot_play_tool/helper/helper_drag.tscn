@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://sdvpesfvson2"]
 
-[ext_resource type="Script" path="res://addons/godot_play_tool/helper/helper_drag.gd" id="1_4trg0"]
+[ext_resource type="Script" uid="uid://bw4efgujnqjgu" path="res://addons/godot_play_tool/helper/helper_drag.gd" id="1_4trg0"]
 
 [node name="helper_drag" type="Node2D"]
 z_index = 4096

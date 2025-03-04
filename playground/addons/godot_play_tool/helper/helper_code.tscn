@@ -1,20 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpuuwp2254hm2"]
+[gd_scene load_steps=3 format=3 uid="uid://cpuuwp2254hm2"]
 
-[ext_resource type="Script" path="res://addons/godot_play_tool/helper/helper_code.gd" id="1_k6oce"]
+[ext_resource type="Script" uid="uid://d1bveuhvre38c" path="res://addons/godot_play_tool/helper/helper_code.gd" id="1_k6oce"]
 
-[node name="helper_code" type="CodeEdit"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3j4yd"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="helper_code" type="VBoxContainer" node_paths=PackedStringArray("code_edit", "file_info_label")]
 offset_right = 468.0
 offset_bottom = 360.0
-gutters_draw_line_numbers = true
 script = ExtResource("1_k6oce")
+code_edit = NodePath("CodeEdit")
+file_info_label = NodePath("Panel/file_info")
 
-[node name="file_info" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -23.0
-offset_right = 107.0
-grow_vertical = 0
+[node name="CodeEdit" type="CodeEdit" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_readonly_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+gutters_draw_line_numbers = true
+
+[node name="Panel" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3j4yd")
+
+[node name="file_info" type="Label" parent="Panel"]
+layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
 text = "path | 00 ~ 00"
