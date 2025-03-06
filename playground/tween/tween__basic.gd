@@ -43,7 +43,7 @@ func do_1()->void:
 	tween.tween_property( $helper_circle, "position:y", 50, 1 )
 	tween.set_loops( 3 )
 	tween.loop_finished.connect(
-		func( loop_count : int )->void:
+		func( _loop_count : int )->void:
 			$helper_circle.position = Vector2.ZERO
 	)
 
