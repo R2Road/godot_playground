@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://r8gfos274qum"]
+
+[ext_resource type="Script" uid="uid://dumrw17qno31f" path="res://editor/editor___label_property.gd" id="1_4vjob"]
+[ext_resource type="Script" uid="uid://bj1boyglxvtos" path="res://editor/editor___label_property___helper.gd" id="2_euqgt"]
+
+[node name="editor___label_property" type="Node2D"]
+script = ExtResource("1_4vjob")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." node_paths=PackedStringArray("label")]
+script = ExtResource("2_euqgt")
+label = NodePath("Label")
+label_text = "Test"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+horizontal_alignment = 1
