@@ -27,7 +27,7 @@ func _ready():
 	pam.add_action( "do 3", KEY_3, do_3 )
 	build_summary( eSceneType.TEST )
 
-func _process(delta: float) -> void:
+func _process( _delta: float ) -> void:
 	print( "Tween Count : %d" % get_tree().get_processed_tweens().size() )
 
 
