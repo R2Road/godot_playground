@@ -2,19 +2,24 @@ class_name script___property_list extends GDPTScene
 
 
 
-############################ Variable ############################
-var helper_script_resource = preload( "res://script/script___property_list_helper.gd" )
-var helper
-
-
-
 ######################### GDPT Override ##########################
 static func scene_name()->String:
 	return "Script : Property List"
 
-
 static func scene_path()->String:
 	return super.scene_path()
+
+
+
+### Export #######################################################
+@export var helper_code : GDPTHelper_Code
+@export var label : Label
+
+
+
+############################ Variable ############################
+var helper_script_resource = preload( "res://script/script___property_list_helper.gd" )
+var helper
 
 
 
@@ -40,56 +45,52 @@ func _ready():
 	helper.set_script( helper_script_resource )
 	
 	show_simply()
-	$helper_code.show_code( "res://script/script___property_list_helper.gd", 0, 25 )
+	helper_code.show_code( "res://script/script___property_list_helper.gd", 0, 25 )
 
 
 
 ############################   User   ############################
 func show_simply():
-	$Label.text = ""
+	label.text = ""
 	
-	$Label.text += "+ Script Property"
-	$Label.text += "\n\n"
+	label.text += "+ Script Property"
+	label.text += "\n\n"
 	for p in helper.get_script().get_script_property_list():
-		$Label.text += "name : " + p["name"]
-		$Label.text += "    "
-		$Label.text += "type : " + str( p["type"] )
-		$Label.text += "    "
-		$Label.text += "class name : " + str( p["class_name"] )
-		$Label.text += "\n"
+		label.text += "name : " + p["name"]
+		label.text += "    "
+		label.text += "type : " + str( p["type"] )
+		label.text += "    "
+		label.text += "class name : " + str( p["class_name"] )
+		label.text += "\n"
 	
 	
-	$Label.text += "\n\n\n"
+	label.text += "\n\n\n"
 	
 	
-	$Label.text += "+ Script Function"
-	$Label.text += "\n\n"
+	label.text += "+ Script Function"
+	label.text += "\n\n"
 	for p in helper.get_script().get_script_method_list():
-		$Label.text += "name : " + p["name"]
-		$Label.text += "    "
-		$Label.text += "return type : " + str( p["return"]["type"] )
-		$Label.text += "\n"
-	
-	$Label/helper_move2center.do()
+		label.text += "name : " + p["name"]
+		label.text += "    "
+		label.text += "return type : " + str( p["return"]["type"] )
+		label.text += "\n"
 
 
 func show_full():
-	$Label.text = ""
+	label.text = ""
 	
-	$Label.text += "+ Script Property"
-	$Label.text += "\n\n"
+	label.text += "+ Script Property"
+	label.text += "\n\n"
 	for p in helper.get_script().get_script_property_list():
-		$Label.text += str( p )
-		$Label.text += "\n"
+		label.text += str( p )
+		label.text += "\n"
 	
 	
-	$Label.text += "\n\n\n"
+	label.text += "\n\n\n"
 	
 	
-	$Label.text += "+ Script Function"
-	$Label.text += "\n\n"
+	label.text += "+ Script Function"
+	label.text += "\n\n"
 	for p in helper.get_script().get_script_method_list():
-		$Label.text += str( p )
-		$Label.text += "\n"
-	
-	$Label/helper_move2center.do()
+		label.text += str( p )
+		label.text += "\n"

@@ -1,20 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdiisnypfh5w2"]
+[gd_scene load_steps=3 format=3 uid="uid://bdiisnypfh5w2"]
 
 [ext_resource type="Script" uid="uid://cvjua1pwpl4cv" path="res://script/script___property_list.gd" id="1_ke8xq"]
-[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="2_rgrp6"]
 [ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="3_11juv"]
 
-[node name="script___property_list" type="Node2D"]
+[node name="script___property_list" type="Node2D" node_paths=PackedStringArray("helper_code", "label")]
 script = ExtResource("1_ke8xq")
+helper_code = NodePath("CanvasLayer/helper_code")
+label = NodePath("CanvasLayer/Label")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 
-[node name="helper_move2center" parent="Label" instance=ExtResource("2_rgrp6")]
-
-[node name="helper_code" parent="." instance=ExtResource("3_11juv")]
-offset_top = 191.0
-offset_right = 542.0
-offset_bottom = 551.0
+[node name="helper_code" parent="CanvasLayer" instance=ExtResource("3_11juv")]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -445.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 2
