@@ -1,8 +1,60 @@
-[gd_scene load_steps=4 format=3 uid="uid://mu4y835ouw54"]
+[gd_scene load_steps=13 format=3 uid="uid://mu4y835ouw54"]
 
 [ext_resource type="Script" uid="uid://cjnivi3uoydwt" path="res://gdscript/gdscript___thread___wait_to_finish.gd" id="1_iyx3x"]
 [ext_resource type="PackedScene" uid="uid://ckhm8mux0nwj5" path="res://addons/godot_play_tool/helper/helper_output.tscn" id="2_nl5no"]
 [ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="3_qf3i4"]
+[ext_resource type="Texture2D" uid="uid://c0opc2hociaip" path="res://resources/sprite/actor001/actor001_sheet.png" id="4_nl5no"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="5_qf3i4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qf3i4"]
+atlas = ExtResource("4_nl5no")
+region = Rect2(0, 0, 24, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5rua"]
+atlas = ExtResource("4_nl5no")
+region = Rect2(24, 0, 24, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h15to"]
+atlas = ExtResource("4_nl5no")
+region = Rect2(0, 0, 24, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdkd8"]
+atlas = ExtResource("4_nl5no")
+region = Rect2(48, 0, 24, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnavs"]
+atlas = ExtResource("4_nl5no")
+region = Rect2(72, 0, 24, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp1te"]
+atlas = ExtResource("4_nl5no")
+region = Rect2(48, 0, 24, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wbgpk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qf3i4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5rua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h15to")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdkd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnavs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp1te")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="gdscript___thread___wait_to_finish" type="Node2D" node_paths=PackedStringArray("helper_output", "helper_code")]
 script = ExtResource("1_iyx3x")
@@ -30,3 +82,12 @@ offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 0
 grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_wbgpk")
+autoplay = "default"
+frame_progress = 0.493043
+
+[node name="helper_move2center" parent="AnimatedSprite2D" instance=ExtResource("5_qf3i4")]
