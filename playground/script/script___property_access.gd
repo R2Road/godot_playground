@@ -26,22 +26,17 @@ func _ready():
 	build_summary( eSceneType.TEST )
 	
 	# Code Edit
-	$CanvasLayer/helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 35, 47 )
+	$CanvasLayer/helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 35, 42 )
 
 
 
 ############################   User   ############################
 func do()->void:
 	#
-	# Json Data
-	#
-	var dic : Dictionary = JSON.parse_string( "{ \"i\" : 123 }" )
-	
-	#
 	# Setup 2 Resource Class
 	#
 	var helper = script___property_access_helper.new()
 	$CanvasLayer/helper_output.print( str( helper.get( "i" ) ) )
 	
-	helper.set( "i", dic["i"] )
+	helper.set( "i", 123 )
 	$CanvasLayer/helper_output.print( str( helper.get( "i" ) ) )
