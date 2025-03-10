@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3dqipxsh311o"]
+
+[ext_resource type="Script" uid="uid://c8n840ov5vit0" path="res://script/script___property_list_const.gd" id="1_kh5gg"]
+[ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="2_am4bl"]
+[ext_resource type="PackedScene" uid="uid://ckhm8mux0nwj5" path="res://addons/godot_play_tool/helper/helper_output.tscn" id="3_psp8w"]
+
+[node name="script___property_list_const" type="Node2D"]
+script = ExtResource("1_kh5gg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="helper_code" parent="CanvasLayer" instance=ExtResource("2_am4bl")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -696.0
+offset_right = 0.0
+offset_bottom = 296.0
+grow_horizontal = 0
+
+[node name="helper_code2" parent="CanvasLayer" instance=ExtResource("2_am4bl")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -696.0
+offset_top = -299.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="helper_output" parent="CanvasLayer" instance=ExtResource("3_psp8w")]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -147.0
+offset_bottom = 147.0
+grow_vertical = 2
