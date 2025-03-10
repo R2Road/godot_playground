@@ -61,7 +61,7 @@ func _ready():
 	#
 	# Code Edit
 	#
-	helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 68, 97 )
+	helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 67, 96 )
 
 
 func _process(delta: float) -> void:
