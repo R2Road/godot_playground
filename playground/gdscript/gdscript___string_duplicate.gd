@@ -1,4 +1,4 @@
-class_name type___string_duplicate extends GDPTScene
+class_name gdscript___string_duplicate extends GDPTScene
 
 
 
@@ -17,7 +17,7 @@ func _ready():
 	pam.set_name( scene_name() )
 	pam.add_split()
 	pam.add_lf()
-	pam.add_front( type_root.scene_name(),	Key.KEY_ESCAPE, type_root.scene_path() )
+	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_split()
 	build_summary( eSceneType.TEST )
 	

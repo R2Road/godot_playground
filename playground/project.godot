@@ -45,12 +45,12 @@ folder_colors={
 "res://control/": "green",
 "res://editor/": "green",
 "res://file/": "green",
+"res://gdscript/": "green",
 "res://input/": "green",
 "res://resolution/": "green",
 "res://resources/": "gray",
 "res://script/": "green",
 "res://tween/": "green",
-"res://type/": "green",
 "res://various/": "green"
 }
 

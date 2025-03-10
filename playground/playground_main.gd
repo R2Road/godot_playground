@@ -20,7 +20,7 @@ func _ready():
 	pam.add_lf()
 	pam.add_root( basic_root.scene_name(),		Key.KEY_1, 		basic_root.scene_path() )
 	pam.add_root( input_root.scene_name(),		Key.KEY_2, 		input_root.scene_path() )
-	pam.add_root( type_root.scene_name(),		Key.KEY_3, 		type_root.scene_path() )
+	pam.add_root( gdscript_root.scene_name(),	Key.KEY_3, 		gdscript_root.scene_path() )
 	pam.add_root( script_root.scene_name(),		Key.KEY_4, 		script_root.scene_path() )
 	pam.add_root( resolution_root.scene_name(),	Key.KEY_5, 		resolution_root.scene_path() )
 	pam.add_lf()

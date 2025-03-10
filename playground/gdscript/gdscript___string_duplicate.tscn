@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://dx7elrdecgkjh"]
 
-[ext_resource type="Script" uid="uid://3pyipccpo4ae" path="res://type/type___string_duplicate.gd" id="1_waldh"]
+[ext_resource type="Script" uid="uid://3pyipccpo4ae" path="res://gdscript/gdscript___string_duplicate.gd" id="1_waldh"]
 [ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="2_h3lk8"]
 [ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="3_k3kvt"]
 
-[node name="type___string_duplicate" type="Node2D"]
+[node name="gdscript___string_duplicate" type="Node2D"]
 script = ExtResource("1_waldh")
 
 [node name="Label" type="Label" parent="."]
