@@ -25,10 +25,14 @@ const helper_input_packed_scene = preload( "res://addons/godot_play_tool/helper/
 
 # U.I
 const helper_hslider_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_hslider.tscn" )
+const helper_volume_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_volume.tscn" )
 
 # Pragma
 const helper_code_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_code.tscn" )
 const helper_output_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_output.tscn" )
+
+# ETC
+const helper_scene_change_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_scene_change.tscn" )
 
 # Tool
 const helper_controller_packed_script = preload( "res://addons/godot_play_tool/helper/helper_controller.gd" )

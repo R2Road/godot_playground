@@ -1,5 +1,5 @@
 @tool
-extends Node2D
+class_name GDPTHelper_Rect extends Node2D
 
 
 

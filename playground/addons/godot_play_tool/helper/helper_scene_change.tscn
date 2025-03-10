@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxjj7junm8ker"]
+
+[ext_resource type="Script" uid="uid://c4umf85csu2gh" path="res://addons/godot_play_tool/helper/helper_scene_change.gd" id="1_tx3rm"]
+
+[node name="helper_scene_change" type="CanvasLayer" node_paths=PackedStringArray("color_rect_node")]
+script = ExtResource("1_tx3rm")
+color_rect_node = NodePath("ColorRect")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)

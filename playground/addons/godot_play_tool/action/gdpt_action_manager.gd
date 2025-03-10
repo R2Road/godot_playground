@@ -300,4 +300,8 @@ func do( event : InputEvent )->void:
 	if( null == target_action ):
 		return
 	
+	# Input Terminate
+	owner.get_viewport().set_input_as_handled()
+	
+	# Do Action
 	target_action.action.call_deferred()

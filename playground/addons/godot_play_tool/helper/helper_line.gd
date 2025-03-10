@@ -1,5 +1,5 @@
 @tool
-extends Node2D
+class_name GDPTHelper_Line extends Node2D
 
 
 

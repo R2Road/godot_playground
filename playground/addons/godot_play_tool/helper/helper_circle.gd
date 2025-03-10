@@ -1,5 +1,5 @@
 @tool
-extends Node2D
+class_name GDPTHelper_Circle extends Node2D
 
 
 

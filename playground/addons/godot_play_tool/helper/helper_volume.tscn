@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdpp4lylodpy2"]
+
+[ext_resource type="Script" uid="uid://btm7bgoeo5wjp" path="res://addons/godot_play_tool/helper/helper_volume.gd" id="1_027bk"]
+[ext_resource type="PackedScene" uid="uid://drl1ho8d50ug8" path="res://addons/godot_play_tool/helper/helper_hslider.tscn" id="1_28syx"]
+
+[node name="helper_volume" type="MarginContainer" node_paths=PackedStringArray("slider")]
+offset_right = 200.0
+offset_bottom = 38.0
+size_flags_horizontal = 3
+script = ExtResource("1_027bk")
+slider = NodePath("helper_hslider")
+bus_name = "Master"
+volume = 50.0
+
+[node name="helper_hslider" parent="." instance=ExtResource("1_28syx")]
+layout_mode = 2
+title_text = "Master"
+
+[connection signal="value_changed" from="helper_hslider" to="." method="_on_helper_hslider_value_changed"]

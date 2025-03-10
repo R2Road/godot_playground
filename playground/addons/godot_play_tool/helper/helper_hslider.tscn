@@ -2,29 +2,52 @@
 
 [ext_resource type="Script" uid="uid://b3rfayd6sowlm" path="res://addons/godot_play_tool/helper/helper_hslider.gd" id="1_mul5h"]
 
-[node name="helper_hslider" type="HSlider"]
+[node name="helper_hslider" type="Control" node_paths=PackedStringArray("hslider", "value_label", "title_label")]
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 3
+anchors_preset = 0
 offset_right = 200.0
-offset_bottom = 16.0
-value = 50.0
+offset_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
 script = ExtResource("1_mul5h")
+hslider = NodePath("HSlider")
+value_label = NodePath("Value")
+title_label = NodePath("Title")
+title_text = "Text"
+max_value = 100.0
+step = 1.0
+value = 50.0
 metadata/_edit_group_ = true
 
 [node name="Title" type="Label" parent="."]
-layout_mode = 0
-offset_left = 2.0
-offset_top = -20.0
-offset_right = 200.0
-offset_bottom = 3.0
-text = "Title"
+layout_mode = 1
+offset_right = 34.0
+offset_bottom = 23.0
+size_flags_horizontal = 0
+text = "Text"
 
 [node name="Value" type="Label" parent="."]
-layout_mode = 0
-offset_left = 9.0
-offset_top = -20.0
-offset_right = 199.0
-offset_bottom = 3.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_bottom = 23.0
+grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
-text = "0"
+text = "50.0"
 horizontal_alignment = 2
 
-[connection signal="value_changed" from="." to="." method="_on_value_changed"]
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+value = 50.0
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

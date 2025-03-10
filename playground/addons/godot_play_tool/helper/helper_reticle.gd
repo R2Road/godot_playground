@@ -1,5 +1,5 @@
 @tool
-extends Node2D
+class_name GDPTHelper_Reticle extends Node2D
 
 
 
