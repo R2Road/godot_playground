@@ -54,7 +54,7 @@ func _ready():
 	pam.add_action( "Do", Key.KEY_1, do )
 	pam.add_lf()
 	pam.add_message( "wait_to_finish()는 thread 작업이 끝날 때 까지 현재 process가 작동을 안한다." )
-	pam.add_message( "fps 하락으로 대강의 확인 가능." )
+	pam.add_message( "fps 하락과 animation 정지로 확인 가능." )
 	pam.add_split()
 	build_summary( eSceneType.TEST )
 	
