@@ -26,7 +26,7 @@ func _ready():
 	build_summary( eSceneType.TEST )
 	
 	# Code Edit
-	$helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 35, 47 )
+	$CanvasLayer/helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 35, 47 )
 
 
 
@@ -41,7 +41,7 @@ func do()->void:
 	# Setup 2 Resource Class
 	#
 	var helper = script___property_access_helper.new()
-	print( helper.get( "i" ) )
+	$CanvasLayer/helper_output.print( str( helper.get( "i" ) ) )
 	
 	helper.set( "i", dic["i"] )
-	print( helper.get( "i" ) )
+	$CanvasLayer/helper_output.print( str( helper.get( "i" ) ) )
