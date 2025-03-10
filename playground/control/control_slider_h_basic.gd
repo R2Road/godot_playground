@@ -22,8 +22,8 @@ func _ready():
 	#
 	# Start Practice
 	#
-	_on_h_slider_value_changed( $HSlider.value )
+	_on_h_slider_value_changed( $CanvasLayer/HSlider.value )
 
 
 func _on_h_slider_value_changed( _value ):
-	$HSlider/Label.text = str( _value )
+	$CanvasLayer/HSlider/Label.text = str( _value )
