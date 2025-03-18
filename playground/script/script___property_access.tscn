@@ -10,11 +10,21 @@ script = ExtResource("1_cmt6l")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="helper_code" parent="CanvasLayer" instance=ExtResource("2_8tixi")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -466.0
+offset_right = 0.0
+offset_bottom = 343.0
+grow_horizontal = 0
+
+[node name="helper_code2" parent="CanvasLayer" instance=ExtResource("2_8tixi")]
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -466.0
+offset_top = 393.0
 offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 0
