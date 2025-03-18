@@ -45,7 +45,7 @@ func _ready():
 	helper.set_script( helper_script_resource )
 	
 	show_simply()
-	helper_code.show_code( "res://script/script___property_list_helper.gd", 0, 25 )
+	helper_code.show_range( "res://script/script___property_list_helper.gd", 0, 25 )
 
 
 

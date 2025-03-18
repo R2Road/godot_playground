@@ -28,7 +28,7 @@ func _ready():
 	parse_and_show( $Label_4, "{ \"val\" : 1 }", 0.7, 0.8 )
 	
 	# Code Edit
-	$helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 36, 51 )
+	$helper_code.show_range( scene_path().replace( ".tscn", ".gd" ), 36, 51 )
 
 
 

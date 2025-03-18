@@ -52,4 +52,4 @@ func parse_and_show( label : Label, json_string : String, x : float, y : float  
 	)
 	
 	# Code Edit
-	$helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 33, 47 )
+	$helper_code.show_range( scene_path().replace( ".tscn", ".gd" ), 33, 47 )

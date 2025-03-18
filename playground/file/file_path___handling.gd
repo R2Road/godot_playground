@@ -25,7 +25,7 @@ func _ready():
 	do()
 	
 	# Code Edit
-	$helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 33, 51 )
+	$helper_code.show_range( scene_path().replace( ".tscn", ".gd" ), 33, 51 )
 
 
 

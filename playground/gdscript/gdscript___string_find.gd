@@ -41,4 +41,4 @@ func _ready():
 		+ str( s_1.rfind( s_2, s_1.length() ) )
 	)
 	
-	$helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 27, 42 )
+	$helper_code.show_range( scene_path().replace( ".tscn", ".gd" ), 27, 42 )

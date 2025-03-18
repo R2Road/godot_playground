@@ -58,5 +58,5 @@ func _ready():
 	$Label4Source.text += source_string
 	
 	# Code Edit
-	$helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 40, 53 )
+	$helper_code.show_range( scene_path().replace( ".tscn", ".gd" ), 40, 53 )
 	

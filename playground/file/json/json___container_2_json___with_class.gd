@@ -50,8 +50,8 @@ func _ready():
 	container_2_json_string( $Label,      0.2, 0.5, "    ", d )
 	
 	# Code Edit
-	$helper_code1.show_code( scene_path().replace( ".tscn", ".gd" ), 16, 24 )
-	$helper_code2.show_code( scene_path().replace( ".tscn", ".gd" ), 40, 50 )
+	$helper_code1.show_range( scene_path().replace( ".tscn", ".gd" ), 16, 24 )
+	$helper_code2.show_range( scene_path().replace( ".tscn", ".gd" ), 40, 50 )
 
 
 

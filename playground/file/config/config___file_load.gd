@@ -41,5 +41,5 @@ func _ready():
 		$Label4FileContent.text = "+ Load Failed | " + path
 	
 	# Code Edit
-	$helper_code.show_code( "res://file/config/config___file_load.gd", 26, 41 )
+	$helper_code.show_range( "res://file/config/config___file_load.gd", 26, 41 )
 	

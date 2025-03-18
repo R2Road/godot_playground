@@ -25,8 +25,8 @@ func _ready():
 	build_summary( eSceneType.TEST )
 	
 	# Code Edit
-	$CanvasLayer/helper_code.show_code( scene_path().replace( ".tscn", "___helper.gd" ), 1, 10 )
-	$CanvasLayer/helper_code2.show_code( scene_path().replace( ".tscn", ".gd" ), 38, 40 )
+	$CanvasLayer/helper_code.show_range( scene_path().replace( ".tscn", "___helper.gd" ), 1, 10 )
+	$CanvasLayer/helper_code2.show_range( scene_path().replace( ".tscn", ".gd" ), 38, 40 )
 
 
 
