@@ -26,7 +26,7 @@ func _ready():
 	build_summary( eSceneType.TEST )
 	
 	# Code Edit
-	$CanvasLayer/helper_code.show_range( "res://script/script___property_access_helper.gd", 0, 13 )
+	$CanvasLayer/helper_code.show_all( "res://script/script___property_access_helper.gd" )
 	$CanvasLayer/helper_code2.show_range( scene_path().replace( ".tscn", ".gd" ), 35, 45 )
 
 
